@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vibe-design.carefulgardenia8.chatgpt.site/data/schema.json",
+  "title": "vibe-design knowledge dataset",
+  "type": "object",
+  "required": ["version", "name", "language", "updated", "entries"],
+  "properties": {
+    "version": {"const": 1},
+    "name": {"const": "vibe-design"},
+    "language": {"const": "zh-CN"},
+    "updated": {"type": "string", "format": "date"},
+    "entries": {"type": "array", "items": {"$ref": "#/$defs/entry"}}
+  },
+  "$defs": {
+    "entry": {
+      "type": "object",
+      "required": ["id", "title", "english", "category", "summary", "definition", "when", "steps", "avoid", "prompt", "promptAuthor", "source", "related"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z]+(?:-[a-z]+)*$"},
+        "title": {"type": "string"},
+        "english": {"type": "string"},
+        "category": {"enum": ["term", "style", "technique"]},
+        "summary": {"type": "string"},
+        "definition": {"type": "string"},
+        "when": {"type": "string"},
+        "steps": {"type": "array", "items": {"type": "string"}},
+        "avoid": {"type": "string"},
+        "prompt": {"type": "string"},
+        "promptAuthor": {"const": "vibe-design"},
+        "contentType": {"const": "editorial-explanation"},
+        "tags": {"type": "array", "items": {"type": "string"}},
+        "code": {"type": "string"},
+        "related": {"type": "array", "items": {"type": "string"}},
+        "source": {
+          "type": "object",
+          "required": ["author", "handle", "url", "published", "retrievedAt", "verification", "retrievalUrl", "note"],
+          "properties": {
+            "author": {"type": "string"},
+            "handle": {"type": "string"},
+            "url": {"type": "string", "format": "uri"},
+            "published": {"type": "string", "format": "date"},
+            "retrievedAt": {"type": "string", "format": "date"},
+            "verification": {"type": "string"},
+            "retrievalUrl": {"type": "string", "format": "uri"},
+            "note": {"type": "string"},
+            "originalCreator": {"type": "string"},
+            "originalCreatorUrl": {"type": "string", "format": "uri"}
+          }
+        }
+      }
+    }
+  }
+}

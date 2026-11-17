@@ -1,0 +1,42 @@
+{
+  "id": "semantic-components",
+  "title": "按语义选组件",
+  "english": "Semantic components",
+  "category": "technique",
+  "visual": "semantic",
+  "source": {
+    "author": "枯白啃设计",
+    "handle": "@Kubai087",
+    "title": "改善 AI 界面设计的几条建议",
+    "published": "2026-11-14",
+    "url": "https://x.com/Kubai087/status/2121615225816494303",
+    "indexUrl": "https://tech.sinsc.com/items/h4hn7vc8vlxaeqvsa5w9jq8f4",
+    "retrievedAt": "2026-11-17",
+    "verification": "已通过公开帖子预览接口读取文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2121615225816494303",
+    "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。"
+  },
+  "tags": [
+    "组件",
+    "语义",
+    "UX"
+  ],
+  "summary": "先说清用户在做什么，再决定界面应该长什么样。",
+  "definition": "组件的形状之外，还有交互承诺：链接去往一个位置，按钮触发一个动作，开关改变一个持续状态。本站以原帖关于组件语义的建议为起点，补充常见选择规则。",
+  "when": "界面外观统一，但点击、导航和状态变化的行为仍然令人困惑时。",
+  "steps": [
+    "先用动词写出用户操作和预期结果。",
+    "导航使用链接，动作使用按钮，持续开关使用对应表单控件。",
+    "补全焦点、禁用、错误与辅助技术可识别的名称。"
+  ],
+  "avoid": "把所有能点击的东西都写成 div，再用样式模拟按钮。",
+  "prompt": "审查指定组件的任务语义。区分导航、动作、提交与持续状态，使用原生 HTML 元素或项目已有的可访问组件，补全键盘行为和可访问名称，并列出修改理由。",
+  "related": [
+    "toast",
+    "notification",
+    "progressive-disclosure"
+  ],
+  "number": "16",
+  "contentType": "editorial-explanation",
+  "promptAuthor": "vibe-design"
+}

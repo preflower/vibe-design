@@ -1,0 +1,43 @@
+{
+  "id": "nested-radius",
+  "title": "嵌套圆角",
+  "english": "Nested radius",
+  "category": "technique",
+  "visual": "radius",
+  "source": {
+    "author": "枯白啃设计",
+    "handle": "@Kubai087",
+    "title": "999 个小技巧 · 004：递进圆角与连续圆角",
+    "published": "2026-10-28",
+    "url": "https://x.com/Kubai087/status/2115469767650021796",
+    "indexUrl": "https://tech.sinsc.com/items/x3ylz3u0ag3lv2ugg6ogkubce",
+    "retrievedAt": "2026-11-17",
+    "verification": "已通过公开帖子预览接口读取文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2115469767650021796",
+    "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。"
+  },
+  "tags": [
+    "圆角",
+    "布局",
+    "CSS"
+  ],
+  "summary": "圆角也有秩序：让内外轮廓拥有同一个圆心。",
+  "definition": "当一个圆角容器包住另一个元素时，内层圆角应随内缩距离变小。对于等距内缩的普通圆角，内圆角 r = 外圆角 R − 间距 p。这样转角处的留白才会与直边处一样均匀。",
+  "when": "表单、嵌套面板、图片容器，以及带有内层按钮的卡片。",
+  "steps": [
+    "先确定外层圆角和内边距，再计算内层。",
+    "例如外层 32px、间距 12px，内层使用 20px。",
+    "R 小于 p 时用 0 作为下限；圆形、胶囊形和不同形状需要单独判断。"
+  ],
+  "avoid": "给所有层级套同一个大圆角。这个公式适用于等距内缩的圆弧，不能直接保证所有超椭圆轮廓的等距。",
+  "prompt": "检查我指定组件的嵌套圆角。先读取现有圆角与间距 token；对等距内缩的普通圆角使用 r = max(0, R - p)。保留圆形和胶囊形语义，逐项报告计算依据与修改前后的数值。",
+  "code": ".outer { border-radius: 32px; padding: 12px; }\n.inner { border-radius: 20px; }",
+  "related": [
+    "continuous-corners",
+    "spacing-scale",
+    "design-tokens"
+  ],
+  "number": "01",
+  "contentType": "editorial-explanation",
+  "promptAuthor": "vibe-design"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "progressive-disclosure",
+  "title": "渐进披露",
+  "english": "Progressive disclosure",
+  "category": "technique",
+  "visual": "disclosure",
+  "source": {
+    "author": "枯白啃设计",
+    "handle": "@Kubai087",
+    "title": "改善 AI 界面设计的几条建议",
+    "published": "2026-11-14",
+    "url": "https://x.com/Kubai087/status/2121615225816494303",
+    "indexUrl": "https://tech.sinsc.com/items/h4hn7vc8vlxaeqvsa5w9jq8f4",
+    "retrievedAt": "2026-11-17",
+    "verification": "已通过公开帖子预览接口读取文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2121615225816494303",
+    "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。"
+  },
+  "tags": [
+    "文案",
+    "认知负担",
+    "交互"
+  ],
+  "summary": "先给足以开始的信息，再让细节在需要时出现。",
+  "definition": "渐进披露把低频细节放到后续层级，让当前任务保持清楚。本站从原帖关于说明文案的建议延伸这一概念：关键操作条件必须可见，补充背景则可以按需展开。",
+  "when": "高级设置、补充说明和低频选项占据了主要任务区域时。",
+  "steps": [
+    "分清开始任务前必须知道的信息与补充背景。",
+    "把后者放到含义明确的展开入口中。",
+    "确保键盘与触屏都能打开，并保留展开后的阅读位置。"
+  ],
+  "avoid": "把费用、限制、错误原因等关键决策信息藏在 tooltip 里。",
+  "prompt": "按用户完成当前任务所需的信息整理文案。保留影响决策与操作的关键条件，将低频背景放入可访问的展开区域。不要把重要信息放进仅悬停可见的提示。",
+  "related": [
+    "notification",
+    "semantic-components"
+  ],
+  "number": "13",
+  "contentType": "editorial-explanation",
+  "promptAuthor": "vibe-design"
+}

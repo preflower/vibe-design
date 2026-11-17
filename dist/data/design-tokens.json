@@ -1,0 +1,42 @@
+{
+  "id": "design-tokens",
+  "title": "设计变量",
+  "english": "Design tokens",
+  "category": "term",
+  "visual": "tokens",
+  "source": {
+    "author": "枯白啃设计",
+    "handle": "@Kubai087",
+    "title": "改善 AI 界面设计的几条建议",
+    "published": "2026-11-14",
+    "url": "https://x.com/Kubai087/status/2121615225816494303",
+    "indexUrl": "https://tech.sinsc.com/items/h4hn7vc8vlxaeqvsa5w9jq8f4",
+    "retrievedAt": "2026-11-17",
+    "verification": "已通过公开帖子预览接口读取文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2121615225816494303",
+    "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。"
+  },
+  "tags": [
+    "系统",
+    "一致性",
+    "变量"
+  ],
+  "summary": "为颜色、间距和圆角命名，让设计拥有共同的词汇。",
+  "definition": "Design Token 是具有名字的设计决策，例如 surface、text-muted、space-4。组件引用名字，而不是各自写一套数值。修改一个语义变量，可以让相关组件保持一致。",
+  "when": "同一种颜色、间距或状态在多个组件里反复出现时。",
+  "steps": [
+    "先收集界面中实际重复的值。",
+    "区分原始数值与用途名称，例如紫色与主要操作色。",
+    "让组件引用用途名称，再检查交互状态是否完整。"
+  ],
+  "avoid": "只把每一个硬编码数值改成变量，却仍然留下数十个含义相同的名字。",
+  "prompt": "审查当前页面重复的颜色、间距、圆角与字体样式。复用现有变量，合并语义相同的值，给出最小 token 集及组件引用关系；检查悬停、焦点、禁用与错误状态。",
+  "code": ":root {\n  --space-3: 12px;\n  --radius-control: 8px;\n  --color-action: oklch(0.5 0.2 295);\n}\n.button { border-radius: var(--radius-control); }",
+  "related": [
+    "spacing-scale",
+    "semantic-components"
+  ],
+  "number": "02",
+  "contentType": "editorial-explanation",
+  "promptAuthor": "vibe-design"
+}

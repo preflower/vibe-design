@@ -1,0 +1,41 @@
+{
+  "id": "toast",
+  "title": "轻提示",
+  "english": "Toast",
+  "category": "term",
+  "visual": "toast",
+  "source": {
+    "author": "枯白啃设计",
+    "handle": "@Kubai087",
+    "title": "999 个小技巧 · 016：Toast 与 Notification",
+    "published": "2026-11-12",
+    "url": "https://x.com/Kubai087/status/2120871815690232068",
+    "indexUrl": "https://tech.sinsc.com/items/iqcau6s1swfmzg723cqm91wbw",
+    "retrievedAt": "2026-11-17",
+    "verification": "已通过公开帖子预览接口读取文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2120871815690232068",
+    "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。"
+  },
+  "tags": [
+    "反馈",
+    "提示",
+    "交互"
+  ],
+  "summary": "告诉用户「刚才的操作有结果了」，然后轻轻离开。",
+  "definition": "Toast 是与当前操作紧密相关的短暂反馈，例如复制完成。它通常自动消失，可以附带撤销入口。对用户必须处理的问题，应使用持续可见的提示，而不是让信息随 Toast 一起消失。",
+  "when": "保存完成、复制成功，以及无需持续处理的操作结果。",
+  "steps": [
+    "用一句简短文案明确发生了什么。",
+    "非紧急反馈通过 status 区域礼貌播报。",
+    "关键撤销操作提供足够时间，并考虑持久入口。"
+  ],
+  "avoid": "用短暂提示承载无法恢复的错误、必填问题或用户必须阅读的重要信息。",
+  "prompt": "逐条检查当前操作反馈。只把短暂且无需继续处理的结果用作 Toast；必须解决的错误留在对应字段附近。实现礼貌播报，避免抢走键盘焦点。",
+  "related": [
+    "notification",
+    "semantic-components"
+  ],
+  "number": "07",
+  "contentType": "editorial-explanation",
+  "promptAuthor": "vibe-design"
+}

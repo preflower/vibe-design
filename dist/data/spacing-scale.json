@@ -1,0 +1,42 @@
+{
+  "id": "spacing-scale",
+  "title": "间距体系",
+  "english": "Spacing scale",
+  "category": "technique",
+  "visual": "spacing",
+  "source": {
+    "author": "枯白啃设计",
+    "handle": "@Kubai087",
+    "title": "改善 AI 界面设计的几条建议",
+    "published": "2026-11-14",
+    "url": "https://x.com/Kubai087/status/2121615225816494303",
+    "indexUrl": "https://tech.sinsc.com/items/h4hn7vc8vlxaeqvsa5w9jq8f4",
+    "retrievedAt": "2026-11-17",
+    "verification": "已通过公开帖子预览接口读取文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2121615225816494303",
+    "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。"
+  },
+  "tags": [
+    "间距",
+    "布局",
+    "亲密性"
+  ],
+  "summary": "距离表达关系。相关的靠近，不相关的留出呼吸。",
+  "definition": "间距体系是一组有限、重复使用的距离。4px 可以作为基础单位，但真正决定距离的是信息之间的关系：标签和输入框更近，两组表单更远，页面章节之间最远。",
+  "when": "页面间距零碎、分组模糊，或多个组件看起来来自不同系统时。",
+  "steps": [
+    "从 4、8、12、16、24、32、48 等数值中选出够用的一组。",
+    "先确定信息分组，再分配组内与组间距离。",
+    "结合文字行高检查视觉留白，而不是只看盒模型。"
+  ],
+  "avoid": "把所有 gap 都统一成同一个值，导致标题、段落和不同分组失去层次。",
+  "prompt": "根据页面的信息关系整理间距。复用现有 spacing token；没有体系时以 4px 为基础建立最小刻度。区分组内、组间与章节距离，说明每次调整服务于哪一层信息关系。",
+  "related": [
+    "design-tokens",
+    "nested-radius",
+    "alignment"
+  ],
+  "number": "05",
+  "contentType": "editorial-explanation",
+  "promptAuthor": "vibe-design"
+}

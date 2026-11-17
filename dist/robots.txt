@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vibe-design.carefulgardenia8.chatgpt.site/sitemap.xml

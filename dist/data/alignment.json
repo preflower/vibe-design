@@ -1,0 +1,41 @@
+{
+  "id": "alignment",
+  "title": "对齐的秩序",
+  "english": "Alignment",
+  "category": "technique",
+  "visual": "alignment",
+  "source": {
+    "author": "枯白啃设计",
+    "handle": "@Kubai087",
+    "title": "对齐与默认字号体系",
+    "published": "2026-10-28",
+    "url": "https://x.com/Kubai087/status/2115384977227661661",
+    "indexUrl": "https://tech.sinsc.com/items/d2e0wp7nn0utzbxenbhk8jwzj",
+    "retrievedAt": "2026-11-17",
+    "verification": "已通过公开帖子预览接口读取文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2115384977227661661",
+    "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。"
+  },
+  "tags": [
+    "对齐",
+    "布局",
+    "排版"
+  ],
+  "summary": "先建立一条共同的线，信息就有了可以依靠的骨架。",
+  "definition": "对齐给元素建立共同的边缘或基线。列表里的标题、说明与操作如果共享稳定的对齐规则，读者就能更快地扫读和比较。这是本站对原帖排版建议的延伸讲解。",
+  "when": "列表、表单、多列内容和文字层级繁多的界面。",
+  "steps": [
+    "找出属于同一层级或同一组的元素。",
+    "为它们选择统一的左边缘、中心线或文字基线。",
+    "检查图标形状带来的视觉偏差，需要时进行少量光学校正。"
+  ],
+  "avoid": "把不同关系的信息强行居中，或只看几何坐标忽略文字与图形的视觉重量。",
+  "prompt": "检查指定页面的对齐关系。按信息层级和分组识别共同边缘与文字基线，修正无意义的偏移；对图标单独检查视觉重心，解释必要的光学校正。",
+  "related": [
+    "typography-scale",
+    "spacing-scale"
+  ],
+  "number": "11",
+  "contentType": "editorial-explanation",
+  "promptAuthor": "vibe-design"
+}

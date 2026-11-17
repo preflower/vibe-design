@@ -1,0 +1,41 @@
+{
+  "id": "holographic",
+  "title": "镭射质感",
+  "english": "Holographic",
+  "category": "style",
+  "visual": "holo",
+  "source": {
+    "author": "枯白啃设计",
+    "handle": "@Kubai087",
+    "title": "999 个小技巧 · 018：3D 镭射卡片",
+    "published": "2026-11-15",
+    "url": "https://x.com/Kubai087/status/2122226084888588441",
+    "indexUrl": "https://tech.sinsc.com/items/p3bbf5knuoexm9ln929923t0v",
+    "retrievedAt": "2026-11-17",
+    "verification": "已通过公开帖子预览接口读取文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2122226084888588441",
+    "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。"
+  },
+  "tags": [
+    "光影",
+    "3D",
+    "材质"
+  ],
+  "summary": "把角度变成颜色，让一张卡片像真实藏品。",
+  "definition": "界面中的镭射效果通过随观察角度变化的色彩与高光，模拟全息箔材质。Kubai 的卡片案例把倾斜、亮边和深度层次组合在一起；本站示例用 CSS 演示这种视觉关系。",
+  "when": "数字门票、纪念卡、收藏卡和需要被特别看见的物件。",
+  "steps": [
+    "先建立稳定的底色和清晰内容，再添加色彩层。",
+    "让高光跟随指针，控制倾斜幅度。",
+    "给触屏和键盘用户可用的替代交互，减少动态时保持静态。"
+  ],
+  "avoid": "让反光覆盖关键信息，或在大面积阅读区域持续自动晃动。",
+  "prompt": "为指定纪念卡实现 CSS 镭射材质，保留文字对比度。让反光位置随指针变化，倾斜不超过 12 度，并为键盘、触屏与 reduced-motion 提供等效可用状态。",
+  "related": [
+    "skeuomorphism",
+    "continuity"
+  ],
+  "number": "09",
+  "contentType": "editorial-explanation",
+  "promptAuthor": "vibe-design"
+}

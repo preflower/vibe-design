@@ -1,0 +1,41 @@
+{
+  "id": "drag-feedback",
+  "title": "拖拽的反馈",
+  "english": "Drag feedback",
+  "category": "technique",
+  "visual": "drag",
+  "source": {
+    "author": "枯白啃设计",
+    "handle": "@Kubai087",
+    "title": "999 个小技巧 · 005：拖拽排序",
+    "published": "2026-10-29",
+    "url": "https://x.com/Kubai087/status/2116061760168063407",
+    "indexUrl": "https://tech.sinsc.com/items/omzj2u0evettscn13yvf5pbvz",
+    "retrievedAt": "2026-11-17",
+    "verification": "已通过公开帖子预览接口读取文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2116061760168063407",
+    "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。"
+  },
+  "tags": [
+    "拖拽",
+    "动效",
+    "反馈"
+  ],
+  "summary": "拿起、经过、落下，每一步都告诉用户下一步会发生什么。",
+  "definition": "可用的拖拽排序需要区分被拿起的对象、当前落点和附近对象的避让。动效表达空间关系，而排序结果仍然由明确的数据顺序控制。",
+  "when": "任务排序、图标排列、播放队列和可自定义的列表。",
+  "steps": [
+    "拿起时强化当前对象，并显示明确的落点。",
+    "让附近对象用轻微位移预示排序结果。",
+    "提供按钮或键盘替代、取消操作，并播报最终顺序。"
+  ],
+  "avoid": "只支持鼠标拖动，或让排序动画改变命中区域，造成落点来回跳动。",
+  "prompt": "完善指定列表的排序反馈。复用现有拖拽实现，区分拿起、落点、提交与取消。用 transform 表现位移，并提供键盘上下移动、Esc 取消和排序结果播报。",
+  "related": [
+    "continuity",
+    "semantic-components"
+  ],
+  "number": "14",
+  "contentType": "editorial-explanation",
+  "promptAuthor": "vibe-design"
+}

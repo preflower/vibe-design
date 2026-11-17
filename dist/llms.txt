@@ -1,0 +1,34 @@
+# vibe-design
+
+> 给用户与 AI 的静态设计知识库。16 条笔记，选题来自 10 篇公开帖子。
+
+## 阅读约定
+- 正文是本站解释，非原帖逐字摘录。
+- 提示词由 vibe-design 编写。
+- 引用保留 source.url 和 author；转引案例保留 originalCreator。
+- 原帖文本经公开预览接口读取，视频未独立核验。
+- 规则结合实际语义使用；浏览器能力用运行时检测。
+
+## 入口
+- [完整 Markdown](https://vibe-design.carefulgardenia8.chatgpt.site/llms-full.txt)
+- [JSON 数据](https://vibe-design.carefulgardenia8.chatgpt.site/data/entries.json)
+- [JSON Schema](https://vibe-design.carefulgardenia8.chatgpt.site/data/schema.json)
+- [来源政策](https://vibe-design.carefulgardenia8.chatgpt.site/about/#sources)
+
+## 词条
+- [嵌套圆角 / Nested radius](https://vibe-design.carefulgardenia8.chatgpt.site/entries/nested-radius/index.md): 圆角也有秩序：让内外轮廓拥有同一个圆心。
+- [设计变量 / Design tokens](https://vibe-design.carefulgardenia8.chatgpt.site/entries/design-tokens/index.md): 为颜色、间距和圆角命名，让设计拥有共同的词汇。
+- [拟物设计 / Skeuomorphism](https://vibe-design.carefulgardenia8.chatgpt.site/entries/skeuomorphism/index.md): 用真实世界的光、边缘和材质，解释一个数字物件。
+- [连续圆角 / Continuous corners](https://vibe-design.carefulgardenia8.chatgpt.site/entries/continuous-corners/index.md): 让直边进入转角的过程更平顺，轮廓更柔和。
+- [间距体系 / Spacing scale](https://vibe-design.carefulgardenia8.chatgpt.site/entries/spacing-scale/index.md): 距离表达关系。相关的靠近，不相关的留出呼吸。
+- [界面连续性 / UI continuity](https://vibe-design.carefulgardenia8.chatgpt.site/entries/continuity/index.md): 状态变了，用户仍然知道自己刚刚操作了什么。
+- [轻提示 / Toast](https://vibe-design.carefulgardenia8.chatgpt.site/entries/toast/index.md): 告诉用户「刚才的操作有结果了」，然后轻轻离开。
+- [通知 / Notification](https://vibe-design.carefulgardenia8.chatgpt.site/entries/notification/index.md): 事情值得你知道，但不一定值得打断你。
+- [镭射质感 / Holographic](https://vibe-design.carefulgardenia8.chatgpt.site/entries/holographic/index.md): 把角度变成颜色，让一张卡片像真实藏品。
+- [字符艺术 / ASCII art](https://vibe-design.carefulgardenia8.chatgpt.site/entries/ascii/index.md): 用有限的字符密度，重建图像的明暗和轮廓。
+- [对齐的秩序 / Alignment](https://vibe-design.carefulgardenia8.chatgpt.site/entries/alignment/index.md): 先建立一条共同的线，信息就有了可以依靠的骨架。
+- [字号与层级 / Type scale](https://vibe-design.carefulgardenia8.chatgpt.site/entries/typography-scale/index.md): 用有限的文字角色，让重要的先被看见。
+- [渐进披露 / Progressive disclosure](https://vibe-design.carefulgardenia8.chatgpt.site/entries/progressive-disclosure/index.md): 先给足以开始的信息，再让细节在需要时出现。
+- [拖拽的反馈 / Drag feedback](https://vibe-design.carefulgardenia8.chatgpt.site/entries/drag-feedback/index.md): 拿起、经过、落下，每一步都告诉用户下一步会发生什么。
+- [翻页式展开 / Book reveal](https://vibe-design.carefulgardenia8.chatgpt.site/entries/book-reveal/index.md): 把预览藏在封面之后，用翻开这个动作表达更多内容。
+- [按语义选组件 / Semantic components](https://vibe-design.carefulgardenia8.chatgpt.site/entries/semantic-components/index.md): 先说清用户在做什么，再决定界面应该长什么样。

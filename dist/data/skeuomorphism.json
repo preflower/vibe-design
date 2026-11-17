@@ -1,0 +1,44 @@
+{
+  "id": "skeuomorphism",
+  "title": "拟物设计",
+  "english": "Skeuomorphism",
+  "category": "style",
+  "visual": "skeuo",
+  "source": {
+    "author": "枯白啃设计",
+    "handle": "@Kubai087",
+    "title": "拟物类组件的细节观察",
+    "published": "2026-11-06",
+    "url": "https://x.com/Kubai087/status/2118582684008251830",
+    "indexUrl": "https://tech.sinsc.com/items/rh1hip7uc6wgwyc4k7sxa9ckv",
+    "retrievedAt": "2026-11-17",
+    "verification": "已通过公开帖子预览接口读取文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2118582684008251830",
+    "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。",
+    "originalCreator": "Levi Kline (@levibkline)",
+    "originalCreatorUrl": "https://x.com/levibkline/status/2118371924594348505",
+    "relation": "Kubai 点评 Levi Kline 的 Portrait 界面作品"
+  },
+  "tags": [
+    "材质",
+    "光影",
+    "层次"
+  ],
+  "summary": "用真实世界的光、边缘和材质，解释一个数字物件。",
+  "definition": "拟物设计借用实体物件的外观线索，让数字界面具有可感知的材质和层次。本站从 Kubai 对 Portrait 界面的点评出发，演示描边、浅渐变和光影怎样共同建立体积。",
+  "when": "需要触感的播放器、工具按钮、仪表或具有鲜明性格的小型界面。",
+  "steps": [
+    "先确定统一光源，所有明暗遵守同一方向。",
+    "用细描边明确边界，用低强度渐变交代曲面。",
+    "保留足够的文字对比度，让操作含义优先于装饰。"
+  ],
+  "avoid": "每个元素都使用厚重投影和高光，造成多个互相冲突的光源。",
+  "prompt": "为指定控件增加克制的拟物质感。沿用现有尺寸和语义，统一上方光源，用细边缘、轻微表面渐变与接触阴影区分层次。给出普通、按下和键盘焦点状态。",
+  "related": [
+    "holographic",
+    "design-tokens"
+  ],
+  "number": "03",
+  "contentType": "editorial-explanation",
+  "promptAuthor": "vibe-design"
+}

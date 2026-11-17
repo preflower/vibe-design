@@ -1,0 +1,42 @@
+{
+  "id": "book-reveal",
+  "title": "翻页式展开",
+  "english": "Book reveal",
+  "category": "technique",
+  "visual": "book",
+  "source": {
+    "author": "枯白啃设计",
+    "handle": "@Kubai087",
+    "title": "999 个小技巧 · 006：像书一样翻开的卡片",
+    "published": "2026-10-30",
+    "url": "https://x.com/Kubai087/status/2116198373040759107",
+    "indexUrl": "https://tech.sinsc.com/items/cs3dw6anbbene3uvb5kz49eph",
+    "retrievedAt": "2026-11-17",
+    "verification": "已通过公开帖子预览接口读取文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2116198373040759107",
+    "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。"
+  },
+  "tags": [
+    "动效",
+    "3D",
+    "卡片"
+  ],
+  "summary": "把预览藏在封面之后，用翻开这个动作表达更多内容。",
+  "definition": "翻页式展开把卡片分成封面与内页，以书脊为转轴产生层次。封面先动、内页随后展开，形成内容藏在物件内部的空间暗示。",
+  "when": "书籍、文档、作品集与具有真实预览内容的卡片。",
+  "steps": [
+    "把可点击区域固定在静止的外层。",
+    "页面用不同角度与短延迟依次展开。",
+    "键盘焦点也能预览，触屏第一次点击仍完成主要操作。"
+  ],
+  "avoid": "让封面移动时命中区域也跟着移动，或在减少动态模式里仍然大幅旋转。",
+  "prompt": "为指定卡片加入翻页预览，保持外层命中区域与布局不变。封面和内页按层次用 transform 展开，兼容键盘焦点；触屏主要操作不增加额外点击，减少动态时显示静态预览。",
+  "related": [
+    "continuity",
+    "ascii",
+    "skeuomorphism"
+  ],
+  "number": "15",
+  "contentType": "editorial-explanation",
+  "promptAuthor": "vibe-design"
+}
