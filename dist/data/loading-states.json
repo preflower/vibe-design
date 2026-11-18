@@ -1,0 +1,47 @@
+{
+  "id": "loading-states",
+  "title": "等待状态",
+  "english": "Loading states",
+  "category": "technique",
+  "visual": "loading",
+  "source": {
+    "id": "2121449185014845794",
+    "author": "枯白 Kubai",
+    "handle": "@Kubai087",
+    "title": "999 个小技巧 · 017：等待状态与乐观更新",
+    "published": "2026-11-14",
+    "url": "https://x.com/Kubai087/status/2121449185014845794",
+    "retrievedAt": "2026-11-18",
+    "verification": "已通过 FxTwitter 逐条读取原帖文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2121449185014845794",
+    "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+    "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F9kLAAIAAAATMjEyMTk1OTIxMjg0MjczNDAwMAgAAwAAAAIAAA",
+    "episode": 17
+  },
+  "tags": [
+    "Skeleton",
+    "Spinner",
+    "Progress",
+    "等待"
+  ],
+  "summary": "按任务时间和进度可知程度选择等待反馈。",
+  "definition": "短操作适合在触发处标记忙碌，已知布局可用骨架占位，可量化的长任务显示真实进度。非常短的等待可延后提示出现，避免闪烁。",
+  "when": "适合首次加载、文件导入、刷新、同步等异步任务。",
+  "steps": [
+    "在操作触发处表达请求已收到。",
+    "让骨架与真实内容尺寸接近。",
+    "区分等待、成功和失败，并允许取消可以取消的操作。"
+  ],
+  "avoid": "绘制虚假的百分比，或让短请求反复闪现加载指示器。",
+  "prompt": "列出页面里的异步操作，按可量化进度、预计时长和是否占位选择等待方式。对照检查慢网、失败和取消。",
+  "related": [
+    "toast",
+    "notification",
+    "optimistic-ui"
+  ],
+  "number": "28",
+  "contentType": "editorial-explanation",
+  "promptAuthor": "vibe-design",
+  "episode": "017",
+  "secondarySources": []
+}

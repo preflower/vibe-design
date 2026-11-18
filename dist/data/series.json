@@ -1,0 +1,424 @@
+{
+  "coverage": {
+    "retrievedAt": "2026-11-18",
+    "timelinePages": 31,
+    "timelinePosts": 442,
+    "timelineFrom": "2026-02-12",
+    "timelineTo": "2026-11-18",
+    "archivePages": 10,
+    "archivePosts": 192,
+    "candidatePosts": 523
+  },
+  "series": [
+    {
+      "number": "001",
+      "title": "有触感的按钮",
+      "source": {
+        "id": "2114378773655326873",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 001：有触感的按钮",
+        "published": "2026-10-25",
+        "url": "https://x.com/Kubai087/status/2114378773655326873",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2114378773655326873",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "indexUrl": "https://tech.sinsc.com/items/qk01y15dgkgcv95djbpq7nfzt",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5FtMLAAIAAAATMjExNDY2MDUxMjU2NzA3OTI3OAgAAwAAAAIAAA",
+        "episode": 1
+      },
+      "entries": [
+        "tactile-buttons"
+      ]
+    },
+    {
+      "number": "002",
+      "title": "级联菜单安全区",
+      "source": {
+        "id": "2114729985143677258",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 002：级联菜单安全区",
+        "published": "2026-10-26",
+        "url": "https://x.com/Kubai087/status/2114729985143677258",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2114729985143677258",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5FugLAAIAAAATMjExNDk0NjM3NjUxMzc4NjIzNAgAAwAAAAIAAA",
+        "episode": 2
+      },
+      "entries": [
+        "cascade-safe-zone"
+      ]
+    },
+    {
+      "number": "003",
+      "title": "有序抖动与字符艺术",
+      "source": {
+        "id": "2115091203465290087",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 003：有序抖动与字符艺术",
+        "published": "2026-10-27",
+        "url": "https://x.com/Kubai087/status/2115091203465290087",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2115091203465290087",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5Fv0LAAIAAAATMjExNTI1NDEwMzI0MDgxODczMAgAAwAAAAIAAA",
+        "episode": 3
+      },
+      "entries": [
+        "ordered-dither",
+        "ascii"
+      ]
+    },
+    {
+      "number": "004",
+      "title": "嵌套圆角与连续圆角",
+      "source": {
+        "id": "2115469767650021796",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 004：嵌套圆角与连续圆角",
+        "published": "2026-10-28",
+        "url": "https://x.com/Kubai087/status/2115469767650021796",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2115469767650021796",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "indexUrl": "https://tech.sinsc.com/items/x3ylz3u0ag3lv2ugg6ogkubce",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5FyYLAAIAAAATMjExNTcyMjA5Njg5ODk3Nzc5MggAAwAAAAIAAA",
+        "episode": 4
+      },
+      "entries": [
+        "nested-radius",
+        "continuous-corners"
+      ]
+    },
+    {
+      "number": "005",
+      "title": "拖拽排序",
+      "source": {
+        "id": "2115823717024735708",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 005：拖拽排序",
+        "published": "2026-10-29",
+        "url": "https://x.com/Kubai087/status/2115823717024735708",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2115823717024735708",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "indexUrl": "https://tech.sinsc.com/items/nhtioq9fnu3gct8abmszudz2t",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5FzsLAAIAAAATMjExNjE5ODM3MzA0MDc1OTEwNwgAAwAAAAIAAA",
+        "episode": 5
+      },
+      "entries": [
+        "drag-feedback"
+      ]
+    },
+    {
+      "number": "006",
+      "title": "翻页式展开",
+      "source": {
+        "id": "2116198373040759107",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 006：翻页式展开",
+        "published": "2026-10-30",
+        "url": "https://x.com/Kubai087/status/2116198373040759107",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2116198373040759107",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "indexUrl": "https://tech.sinsc.com/items/cs3dw6anbbene3uvb5kz49eph",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F0wLAAIAAAATMjExNjQ5MDQyMzUzNTU0MjM0MQgAAwAAAAIAAA",
+        "episode": 6
+      },
+      "entries": [
+        "book-reveal"
+      ]
+    },
+    {
+      "number": "007",
+      "title": "中英混排",
+      "source": {
+        "id": "2116555064227811412",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 007：中英混排",
+        "published": "2026-10-31",
+        "url": "https://x.com/Kubai087/status/2116555064227811412",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2116555064227811412",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F18LAAIAAAATMjExNzA4NTEyNDI0MDI0ODkwOAgAAwAAAAIAAA",
+        "episode": 7
+      },
+      "entries": [
+        "mixed-typesetting"
+      ]
+    },
+    {
+      "number": "008",
+      "title": "文档与章节导航",
+      "source": {
+        "id": "2116911391437443471",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 008：文档与章节导航",
+        "published": "2026-11-01",
+        "url": "https://x.com/Kubai087/status/2116911391437443471",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2116911391437443471",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F18LAAIAAAATMjExNzA4NTEyNDI0MDI0ODkwOAgAAwAAAAIAAA",
+        "episode": 8
+      },
+      "entries": [
+        "wiki-navigation"
+      ]
+    },
+    {
+      "number": "009",
+      "title": "提示框、气泡与弹窗",
+      "source": {
+        "id": "2117314098165862612",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 009：提示框、气泡与弹窗",
+        "published": "2026-11-03",
+        "url": "https://x.com/Kubai087/status/2117314098165862612",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2117314098165862612",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F28LAAIAAAATMjExNzc4MjMzNzY5ODMyNDg0NggAAwAAAAIAAA",
+        "episode": 9
+      },
+      "entries": [
+        "overlay-choice"
+      ]
+    },
+    {
+      "number": "010",
+      "title": "液态玻璃",
+      "source": {
+        "id": "2117782193108082923",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 010：液态玻璃",
+        "published": "2026-11-04",
+        "url": "https://x.com/Kubai087/status/2117782193108082923",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2117782193108082923",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F28LAAIAAAATMjExNzc4MjMzNzY5ODMyNDg0NggAAwAAAAIAAA",
+        "episode": 10
+      },
+      "entries": [
+        "liquid-glass"
+      ]
+    },
+    {
+      "number": "011",
+      "title": "动画缓动",
+      "source": {
+        "id": "2118143759984803898",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 011：动画缓动",
+        "published": "2026-11-05",
+        "url": "https://x.com/Kubai087/status/2118143759984803898",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2118143759984803898",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F4ILAAIAAAATMjExODI5MjEwMTk2ODY3MDkwMQgAAwAAAAIAAA",
+        "episode": 11
+      },
+      "entries": [
+        "motion-easing"
+      ]
+    },
+    {
+      "number": "012",
+      "title": "消息气泡材质",
+      "source": {
+        "id": "2118508433704169726",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 012：消息气泡材质",
+        "published": "2026-11-06",
+        "url": "https://x.com/Kubai087/status/2118508433704169726",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2118508433704169726",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F5YLAAIAAAATMjExOTM1MDc5MjYyMDc0NTAzMggAAwAAAAIAAA",
+        "episode": 12
+      },
+      "entries": [
+        "message-bubbles"
+      ]
+    },
+    {
+      "number": "013",
+      "title": "扩散光环",
+      "source": {
+        "id": "2119359092334743735",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 013：扩散光环",
+        "published": "2026-11-08",
+        "url": "https://x.com/Kubai087/status/2119359092334743735",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2119359092334743735",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F6YLAAIAAAATMjEyMDAwMzI3MTk5NzkzMjAzMAgAAwAAAAIAAA",
+        "episode": 13,
+        "episodeStatus": "inferred",
+        "episodeNote": "原帖未标数字。根据发布时间、012/014 的顺序与公开系列整理交叉判断为 013。",
+        "episodeEvidenceUrl": "https://www.teapaw.org/x_czyt"
+      },
+      "entries": [
+        "halo-ripple"
+      ]
+    },
+    {
+      "number": "014",
+      "title": "退场与补位",
+      "source": {
+        "id": "2119831380276523207",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 014：退场与补位",
+        "published": "2026-11-10",
+        "url": "https://x.com/Kubai087/status/2119831380276523207",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2119831380276523207",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F6YLAAIAAAATMjEyMDAwMzI3MTk5NzkzMjAzMAgAAwAAAAIAAA",
+        "episode": 14
+      },
+      "entries": [
+        "exit-motion"
+      ]
+    },
+    {
+      "number": "015",
+      "title": "界面连续性",
+      "source": {
+        "id": "2120320609255043510",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 015：界面连续性",
+        "published": "2026-11-11",
+        "url": "https://x.com/Kubai087/status/2120320609255043510",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2120320609255043510",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F7gLAAIAAAATMjEyMDY4Mjk5MzU2MzkyMjU4NggAAwAAAAIAAA",
+        "episode": 15
+      },
+      "entries": [
+        "continuity"
+      ]
+    },
+    {
+      "number": "016",
+      "title": "轻提示与通知",
+      "source": {
+        "id": "2120682993563922586",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 016：轻提示与通知",
+        "published": "2026-11-12",
+        "url": "https://x.com/Kubai087/status/2120682993563922586",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2120682993563922586",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F8gLAAIAAAATMjEyMTQ0OTE4NTAxNDg0NTc5NAgAAwAAAAIAAA",
+        "episode": 16
+      },
+      "entries": [
+        "toast",
+        "notification"
+      ]
+    },
+    {
+      "number": "017",
+      "title": "等待状态与乐观更新",
+      "source": {
+        "id": "2121449185014845794",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 017：等待状态与乐观更新",
+        "published": "2026-11-14",
+        "url": "https://x.com/Kubai087/status/2121449185014845794",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2121449185014845794",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F9kLAAIAAAATMjEyMTk1OTIxMjg0MjczNDAwMAgAAwAAAAIAAA",
+        "episode": 17
+      },
+      "entries": [
+        "loading-states",
+        "optimistic-ui"
+      ]
+    },
+    {
+      "number": "018",
+      "title": "镭射质感",
+      "source": {
+        "id": "2121892029403922717",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 018：镭射质感",
+        "published": "2026-11-15",
+        "url": "https://x.com/Kubai087/status/2121892029403922717",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2121892029403922717",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F9kLAAIAAAATMjEyMTk1OTIxMjg0MjczNDAwMAgAAwAAAAIAAA",
+        "episode": 18
+      },
+      "entries": [
+        "holographic"
+      ]
+    },
+    {
+      "number": "019",
+      "title": "卡片滚动叙事",
+      "source": {
+        "id": "2122492414598459820",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 019：卡片滚动叙事",
+        "published": "2026-11-17",
+        "url": "https://x.com/Kubai087/status/2122492414598459820",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2122492414598459820",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F%2DsLAAIAAAATMjEyMjU0NDI0NzQ5NjkzNzc2NggAAwAAAAIAAA",
+        "episode": 19
+      },
+      "entries": [
+        "scroll-cards"
+      ]
+    }
+  ]
+}

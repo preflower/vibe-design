@@ -5,27 +5,45 @@
   "category": "style",
   "visual": "ascii",
   "source": {
-    "author": "枯白啃设计",
+    "id": "2115091203465290087",
+    "author": "枯白 Kubai",
     "handle": "@Kubai087",
-    "title": "分享 ASCII 首页动画案例",
-    "published": "2026-10-29",
-    "url": "https://x.com/Kubai087/status/2115766256913785271",
-    "indexUrl": "https://tech.sinsc.com/items/mv1pq7sjh73c5u6ypan5ly67b",
-    "retrievedAt": "2026-11-17",
-    "verification": "已通过公开帖子预览接口读取文本",
-    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2115766256913785271",
-    "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。",
-    "originalCreator": "糖串 sensei (@imperry)",
-    "originalCreatorUrl": "https://x.com/imperry/status/2115766055541055884",
-    "relation": "Kubai 引用并评价 @imperry 的实践，技术过程由 @imperry 分享"
+    "title": "999 个小技巧 · 003：有序抖动与字符艺术",
+    "published": "2026-10-27",
+    "url": "https://x.com/Kubai087/status/2115091203465290087",
+    "retrievedAt": "2026-11-18",
+    "verification": "已通过 FxTwitter 逐条读取原帖文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2115091203465290087",
+    "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+    "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5Fv0LAAIAAAATMjExNTI1NDEwMzI0MDgxODczMAgAAwAAAAIAAA",
+    "episode": 3
   },
+  "secondarySources": [
+    {
+      "id": "2115766256913785271",
+      "author": "枯白 Kubai",
+      "handle": "@Kubai087",
+      "title": "字符艺术的首页案例",
+      "published": "2026-10-29",
+      "url": "https://x.com/Kubai087/status/2115766256913785271",
+      "retrievedAt": "2026-11-18",
+      "verification": "已通过 FxTwitter 逐条读取原帖文本",
+      "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2115766256913785271",
+      "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+      "indexUrl": "https://tech.sinsc.com/items/mv1pq7sjh73c5u6ypan5ly67b",
+      "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5FzsLAAIAAAATMjExNjE5ODM3MzA0MDc1OTEwNwgAAwAAAAIAAA",
+      "originalCreator": "糖串 sensei (@imperry)",
+      "originalCreatorUrl": "https://x.com/imperry/status/2115766055541055884",
+      "relation": "Kubai 引用或点评此帖"
+    }
+  ],
   "tags": [
     "字符",
     "复古",
     "图像"
   ],
   "summary": "用有限的字符密度，重建图像的明暗和轮廓。",
-  "definition": "字符艺术用字形代替像素。把图像切成采样格，再根据每格亮度选择疏密不同的字符，就能保留轮廓。此选题来自 Kubai 引用的 @imperry 首页动画实践。",
+  "definition": "字符艺术用字形代替像素。把图像切成采样格，再根据每格亮度选择疏密不同的字符，就能保留轮廓。原帖第 003 期说明了字符采样，并提供可调参数。Kubai 另转引 @imperry 的首页动画作为应用案例。",
   "when": "实验性个人站、技术主题视觉，以及少量具有性格的装饰。",
   "steps": [
     "先选择清晰、明暗对比明确的素材。",
@@ -40,5 +58,6 @@
   ],
   "number": "10",
   "contentType": "editorial-explanation",
-  "promptAuthor": "vibe-design"
+  "promptAuthor": "vibe-design",
+  "episode": "003"
 }

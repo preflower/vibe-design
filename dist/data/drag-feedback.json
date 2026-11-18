@@ -5,16 +5,19 @@
   "category": "technique",
   "visual": "drag",
   "source": {
-    "author": "枯白啃设计",
+    "id": "2115823717024735708",
+    "author": "枯白 Kubai",
     "handle": "@Kubai087",
     "title": "999 个小技巧 · 005：拖拽排序",
     "published": "2026-10-29",
-    "url": "https://x.com/Kubai087/status/2116061760168063407",
-    "indexUrl": "https://tech.sinsc.com/items/omzj2u0evettscn13yvf5pbvz",
-    "retrievedAt": "2026-11-17",
-    "verification": "已通过公开帖子预览接口读取文本",
-    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2116061760168063407",
-    "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。"
+    "url": "https://x.com/Kubai087/status/2115823717024735708",
+    "retrievedAt": "2026-11-18",
+    "verification": "已通过 FxTwitter 逐条读取原帖文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2115823717024735708",
+    "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+    "indexUrl": "https://tech.sinsc.com/items/nhtioq9fnu3gct8abmszudz2t",
+    "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5FzsLAAIAAAATMjExNjE5ODM3MzA0MDc1OTEwNwgAAwAAAAIAAA",
+    "episode": 5
   },
   "tags": [
     "拖拽",
@@ -37,5 +40,7 @@
   ],
   "number": "14",
   "contentType": "editorial-explanation",
-  "promptAuthor": "vibe-design"
+  "promptAuthor": "vibe-design",
+  "episode": "005",
+  "secondarySources": []
 }

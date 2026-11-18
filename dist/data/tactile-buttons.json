@@ -1,0 +1,46 @@
+{
+  "id": "tactile-buttons",
+  "title": "有触感的按钮",
+  "english": "Tactile buttons",
+  "category": "style",
+  "visual": "tactile",
+  "source": {
+    "id": "2114378773655326873",
+    "author": "枯白 Kubai",
+    "handle": "@Kubai087",
+    "title": "999 个小技巧 · 001：有触感的按钮",
+    "published": "2026-10-25",
+    "url": "https://x.com/Kubai087/status/2114378773655326873",
+    "retrievedAt": "2026-11-18",
+    "verification": "已通过 FxTwitter 逐条读取原帖文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2114378773655326873",
+    "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+    "indexUrl": "https://tech.sinsc.com/items/qk01y15dgkgcv95djbpq7nfzt",
+    "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5FtMLAAIAAAATMjExNDY2MDUxMjU2NzA3OTI3OAgAAwAAAAIAAA",
+    "episode": 1
+  },
+  "tags": [
+    "按钮",
+    "拟物",
+    "反馈"
+  ],
+  "summary": "用光影和按压状态，表现可以触碰的表面。",
+  "definition": "按钮的实体感来自明暗、轮廓和按压反馈。原帖将同一语言应用到五种按钮层级，主要动作更突出，次要动作逐步减轻。",
+  "when": "适合层级明确、希望建立触觉反馈的编辑器和播放器。",
+  "steps": [
+    "给主要操作保留最强对比。",
+    "统一上方光源，用顶边高光和底部接触阴影塑造体积。",
+    "按下时缩短阴影，并保留清晰的焦点边框。"
+  ],
+  "avoid": "用相同的体积强化所有按钮，或只靠阴影区别禁用状态。",
+  "prompt": "检查现有按钮层级。复用现有组件，为主要和次要动作分别设计表面、按压与焦点状态；验证每种状态下的文字对比。",
+  "related": [
+    "skeuomorphism",
+    "semantic-components"
+  ],
+  "number": "17",
+  "contentType": "editorial-explanation",
+  "promptAuthor": "vibe-design",
+  "episode": "001",
+  "secondarySources": []
+}

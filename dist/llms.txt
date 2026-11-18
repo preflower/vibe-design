@@ -1,6 +1,6 @@
 # vibe-design
 
-> 给用户与 AI 的静态设计知识库。16 条笔记，选题来自 10 篇公开帖子。
+> 给用户与 AI 的静态设计知识库。37 条笔记，选题来自 31 篇公开帖子。
 
 ## 阅读约定
 - 正文是本站解释，非原帖逐字摘录。
@@ -13,7 +13,8 @@
 - [完整 Markdown](https://vibe-design.carefulgardenia8.chatgpt.site/llms-full.txt)
 - [JSON 数据](https://vibe-design.carefulgardenia8.chatgpt.site/data/entries.json)
 - [JSON Schema](https://vibe-design.carefulgardenia8.chatgpt.site/data/schema.json)
-- [来源政策](https://vibe-design.carefulgardenia8.chatgpt.site/about/#sources)
+- [来源与覆盖范围](https://vibe-design.carefulgardenia8.chatgpt.site/about/#sources)
+- [系列目录 JSON](https://vibe-design.carefulgardenia8.chatgpt.site/data/series.json)
 
 ## 词条
 - [嵌套圆角 / Nested radius](https://vibe-design.carefulgardenia8.chatgpt.site/entries/nested-radius/index.md): 圆角也有秩序：让内外轮廓拥有同一个圆心。
@@ -32,3 +33,24 @@
 - [拖拽的反馈 / Drag feedback](https://vibe-design.carefulgardenia8.chatgpt.site/entries/drag-feedback/index.md): 拿起、经过、落下，每一步都告诉用户下一步会发生什么。
 - [翻页式展开 / Book reveal](https://vibe-design.carefulgardenia8.chatgpt.site/entries/book-reveal/index.md): 把预览藏在封面之后，用翻开这个动作表达更多内容。
 - [按语义选组件 / Semantic components](https://vibe-design.carefulgardenia8.chatgpt.site/entries/semantic-components/index.md): 先说清用户在做什么，再决定界面应该长什么样。
+- [有触感的按钮 / Tactile buttons](https://vibe-design.carefulgardenia8.chatgpt.site/entries/tactile-buttons/index.md): 用光影和按压状态，表现可以触碰的表面。
+- [级联菜单安全区 / Menu aim](https://vibe-design.carefulgardenia8.chatgpt.site/entries/cascade-safe-zone/index.md): 给斜向移动的鼠标留一条进入子菜单的路。
+- [有序抖动 / Ordered dithering](https://vibe-design.carefulgardenia8.chatgpt.site/entries/ordered-dither/index.md): 用规则颗粒模拟有限色阶，保留明暗变化。
+- [中英混排 / Mixed-language typesetting](https://vibe-design.carefulgardenia8.chatgpt.site/entries/mixed-typesetting/index.md): 用真实文案检查中英文、长词与标点的断行。
+- [文档与章节导航 / Documentation navigation](https://vibe-design.carefulgardenia8.chatgpt.site/entries/wiki-navigation/index.md): 让长文档在宽屏和窄屏上都能快速跳转。
+- [提示框、气泡与弹窗 / Overlay choice](https://vibe-design.carefulgardenia8.chatgpt.site/entries/overlay-choice/index.md): 按内容和任务选浮层：解释、局部操作、确认或完整流程。
+- [液态玻璃 / Liquid glass](https://vibe-design.carefulgardenia8.chatgpt.site/entries/liquid-glass/index.md): 层叠透色、边缘高光和折射，建立通透的界面材质。
+- [动画缓动 / Motion easing](https://vibe-design.carefulgardenia8.chatgpt.site/entries/motion-easing/index.md): 用速度变化让入场、位移和退场各有恰当节奏。
+- [消息气泡材质 / Chat bubble material](https://vibe-design.carefulgardenia8.chatgpt.site/entries/message-bubbles/index.md): 给聊天界面选择一套表面语言和匹配的反馈。
+- [扩散光环 / Halo ripple](https://vibe-design.carefulgardenia8.chatgpt.site/entries/halo-ripple/index.md): 让光环从触发位置扩散，为低频动作提供空间反馈。
+- [退场与补位 / Exit motion](https://vibe-design.carefulgardenia8.chatgpt.site/entries/exit-motion/index.md): 元素退出时，让它的位置和相邻内容一起发生可追踪的变化。
+- [等待状态 / Loading states](https://vibe-design.carefulgardenia8.chatgpt.site/entries/loading-states/index.md): 按任务时间和进度可知程度选择等待反馈。
+- [乐观更新 / Optimistic UI](https://vibe-design.carefulgardenia8.chatgpt.site/entries/optimistic-ui/index.md): 对可逆且成功率高的动作，先反馈，再与服务器确认。
+- [卡片滚动叙事 / Scroll-driven cards](https://vibe-design.carefulgardenia8.chatgpt.site/entries/scroll-cards/index.md): 让卡片跟随滚动位置，展开、叠放或切换焦点。
+- [光学对齐 / Optical alignment](https://vibe-design.carefulgardenia8.chatgpt.site/entries/optical-alignment/index.md): 元素的几何中心与看起来的中心有时不在同一处。
+- [上手引导的实时预览 / Live onboarding preview](https://vibe-design.carefulgardenia8.chatgpt.site/entries/onboarding-preview/index.md): 用户一选，预览就反映选择对产品的实际影响。
+- [动态便当布局 / Animated Bento grid](https://vibe-design.carefulgardenia8.chatgpt.site/entries/bento-grid/index.md): 让每个格子说明一个真实功能，并用大小表达优先级。
+- [功能图标的状态 / Icon states](https://vibe-design.carefulgardenia8.chatgpt.site/entries/icon-states/index.md): 用成组图形和明确名称表达开启、关闭、展开与禁用。
+- [图标的体积与简化 / Icon simplification](https://vibe-design.carefulgardenia8.chatgpt.site/entries/icon-simplification/index.md): 减掉次要体积线索，让小图标保留清楚的主轮廓。
+- [玻璃材质的回退 / Glass effect fallback](https://vibe-design.carefulgardenia8.chatgpt.site/entries/glass-fallback/index.md): 先让控件在基础样式中可读，再按能力增加材质效果。
+- [半调纹理 / Halftone texture](https://vibe-design.carefulgardenia8.chatgpt.site/entries/graphic-halftone/index.md): 用有限的点阵密度表达影调，呈现印刷式颗粒。

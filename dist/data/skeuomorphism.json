@@ -5,19 +5,21 @@
   "category": "style",
   "visual": "skeuo",
   "source": {
-    "author": "枯白啃设计",
+    "id": "2118582684008251830",
+    "author": "枯白 Kubai",
     "handle": "@Kubai087",
-    "title": "拟物类组件的细节观察",
+    "title": "拟物控件的光影细节",
     "published": "2026-11-06",
     "url": "https://x.com/Kubai087/status/2118582684008251830",
-    "indexUrl": "https://tech.sinsc.com/items/rh1hip7uc6wgwyc4k7sxa9ckv",
-    "retrievedAt": "2026-11-17",
-    "verification": "已通过公开帖子预览接口读取文本",
+    "retrievedAt": "2026-11-18",
+    "verification": "已通过 FxTwitter 逐条读取原帖文本",
     "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2118582684008251830",
-    "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。",
+    "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+    "indexUrl": "https://tech.sinsc.com/items/rh1hip7uc6wgwyc4k7sxa9ckv",
+    "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F5YLAAIAAAATMjExOTM1MDc5MjYyMDc0NTAzMggAAwAAAAIAAA",
     "originalCreator": "Levi Kline (@levibkline)",
     "originalCreatorUrl": "https://x.com/levibkline/status/2118371924594348505",
-    "relation": "Kubai 点评 Levi Kline 的 Portrait 界面作品"
+    "relation": "Kubai 引用或点评此帖"
   },
   "tags": [
     "材质",
@@ -40,5 +42,7 @@
   ],
   "number": "03",
   "contentType": "editorial-explanation",
-  "promptAuthor": "vibe-design"
+  "promptAuthor": "vibe-design",
+  "episode": null,
+  "secondarySources": []
 }

@@ -1,0 +1,45 @@
+{
+  "id": "cascade-safe-zone",
+  "title": "级联菜单安全区",
+  "english": "Menu aim",
+  "category": "technique",
+  "visual": "cascade",
+  "source": {
+    "id": "2114729985143677258",
+    "author": "枯白 Kubai",
+    "handle": "@Kubai087",
+    "title": "999 个小技巧 · 002：级联菜单安全区",
+    "published": "2026-10-26",
+    "url": "https://x.com/Kubai087/status/2114729985143677258",
+    "retrievedAt": "2026-11-18",
+    "verification": "已通过 FxTwitter 逐条读取原帖文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2114729985143677258",
+    "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+    "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5FugLAAIAAAATMjExNDk0NjM3NjUxMzc4NjIzNAgAAwAAAAIAAA",
+    "episode": 2
+  },
+  "tags": [
+    "菜单",
+    "光标",
+    "延时"
+  ],
+  "summary": "给斜向移动的鼠标留一条进入子菜单的路。",
+  "definition": "父菜单和子菜单横向分列时，指针可能斜穿过其他行。用指针前一位置与子菜单近侧两个角形成三角区，判断用户是否正在朝子菜单移动。",
+  "when": "适合使用鼠标的桌面级联菜单。",
+  "steps": [
+    "判断指针是否进入朝向子菜单的区域。",
+    "只在该区域内短暂延迟切换。",
+    "键盘用方向键进入与返回，触屏通过点击展开。"
+  ],
+  "avoid": "把延时应用到所有路径，或把鼠标轨迹当作键盘操作的前置条件。",
+  "prompt": "检查现有级联菜单的斜向路径。给明确朝向子菜单的鼠标轨迹添加可取消的延时，并独立处理键盘和触摸输入。",
+  "related": [
+    "continuity",
+    "overlay-choice"
+  ],
+  "number": "18",
+  "contentType": "editorial-explanation",
+  "promptAuthor": "vibe-design",
+  "episode": "002",
+  "secondarySources": []
+}

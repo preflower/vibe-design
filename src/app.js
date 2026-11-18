@@ -23,7 +23,7 @@ if (input) {
       card.hidden = !match;
       if (match) total++;
     }
-    const ordered = [...cards].sort((a,b) => sort.value === 'newest' ? b.dataset.date.localeCompare(a.dataset.date) || Number(a.dataset.order)-Number(b.dataset.order) : sort.value === 'title' ? $('h2>span',a).textContent.localeCompare($('h2>span',b).textContent,'en') : Number(a.dataset.order)-Number(b.dataset.order));
+    const ordered = [...cards].sort((a,b) => sort.value === 'newest' ? b.dataset.date.localeCompare(a.dataset.date) || Number(a.dataset.order)-Number(b.dataset.order) : sort.value === 'title' ? $('.row-title>span',a).textContent.localeCompare($('.row-title>span',b).textContent,'en') : Number(a.dataset.order)-Number(b.dataset.order));
     ordered.forEach(card => grid.append(card));
     filters.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.categoryFilter === category)));
     grid.classList.toggle('is-filtered', category !== 'all' || terms.length > 0 || sort.value !== 'curated');
@@ -104,6 +104,9 @@ $$('[data-demo]').forEach(demo => {
       $('.radius-dot',demo).style.top=`${32-value}px`;
       $('.radius-gap',demo).textContent=value;
       output.textContent=`${value}px`;
+    } else if (type === 'stack') {
+      stage.style.setProperty('--spread', String(value / 100));
+      output.textContent = `${value}%`;
     } else if (type === 'spacing') {
       $$('.space-diagram>div',demo).forEach((row,i) => { const n = value*(i+1); row.style.setProperty('--n',`${n}px`); $('code',row).textContent=String(n).padStart(2,'0'); });
       output.textContent=`${value}px`;
@@ -129,6 +132,12 @@ $$('[data-demo]').forEach(demo => {
     const action=button.dataset.demoAction;
     if(action==='toggle') button.setAttribute('aria-pressed','false');
     button.addEventListener('click', () => {
+      if (action === 'easing') {
+        demo.dataset.active = String(demo.dataset.active !== 'true');
+        button.textContent = demo.dataset.active === 'true' ? '回到起点' : '比较缓动曲线';
+        live.textContent = demo.dataset.active === 'true' ? '三种曲线用同样的时间，以不同速度到达终点。' : '已回到起点。';
+        return;
+      }
       if (action === 'toast') { announce('更改已保存。'); return; }
       if (action === 'notification') {
         const hidden=demo.dataset.noticeHidden!=='true';

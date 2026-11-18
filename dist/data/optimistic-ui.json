@@ -1,0 +1,45 @@
+{
+  "id": "optimistic-ui",
+  "title": "乐观更新",
+  "english": "Optimistic UI",
+  "category": "term",
+  "visual": "toast",
+  "source": {
+    "id": "2121449185014845794",
+    "author": "枯白 Kubai",
+    "handle": "@Kubai087",
+    "title": "999 个小技巧 · 017：等待状态与乐观更新",
+    "published": "2026-11-14",
+    "url": "https://x.com/Kubai087/status/2121449185014845794",
+    "retrievedAt": "2026-11-18",
+    "verification": "已通过 FxTwitter 逐条读取原帖文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2121449185014845794",
+    "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+    "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F9kLAAIAAAATMjEyMTk1OTIxMjg0MjczNDAwMAgAAwAAAAIAAA",
+    "episode": 17
+  },
+  "tags": [
+    "异步",
+    "回滚",
+    "状态"
+  ],
+  "summary": "对可逆且成功率高的动作，先反馈，再与服务器确认。",
+  "definition": "界面先显示预期结果，同时发送保存请求。若保存失败，恢复真实状态并说明如何重试。原帖把它归入等待体验的反馈策略。",
+  "when": "适合收藏、赞或个人列表调整等低风险操作。",
+  "steps": [
+    "只对能安全回滚的变更采用。",
+    "跟踪同一对象短时间内的多次请求。",
+    "失败时恢复正确版本，并给出重试入口。"
+  ],
+  "avoid": "让资金、权限或不可逆操作提前显示为已成功。",
+  "prompt": "评估指定操作能否乐观更新。实现等待、成功、请求乱序与失败回滚，保证重复操作后的界面和真实结果一致。",
+  "related": [
+    "loading-states",
+    "toast"
+  ],
+  "number": "29",
+  "contentType": "editorial-explanation",
+  "promptAuthor": "vibe-design",
+  "episode": "017",
+  "secondarySources": []
+}

@@ -5,17 +5,35 @@
   "category": "term",
   "visual": "continuity",
   "source": {
-    "author": "枯白啃设计",
+    "id": "2120320609255043510",
+    "author": "枯白 Kubai",
     "handle": "@Kubai087",
-    "title": "UI 为什么需要连续性",
-    "published": "2026-11-06",
-    "url": "https://x.com/Kubai087/status/2118570408953987093",
-    "indexUrl": "https://tech.sinsc.com/items/zfx8hffnhm4u79fqkj3rfir86",
-    "retrievedAt": "2026-11-17",
-    "verification": "已通过公开帖子预览接口读取文本",
-    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2118570408953987093",
-    "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。"
+    "title": "999 个小技巧 · 015：界面连续性",
+    "published": "2026-11-11",
+    "url": "https://x.com/Kubai087/status/2120320609255043510",
+    "retrievedAt": "2026-11-18",
+    "verification": "已通过 FxTwitter 逐条读取原帖文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2120320609255043510",
+    "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+    "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F7gLAAIAAAATMjEyMDY4Mjk5MzU2MzkyMjU4NggAAwAAAAIAAA",
+    "episode": 15
   },
+  "secondarySources": [
+    {
+      "id": "2118570408953987093",
+      "author": "枯白 Kubai",
+      "handle": "@Kubai087",
+      "title": "界面连续性与视觉锚点",
+      "published": "2026-11-06",
+      "url": "https://x.com/Kubai087/status/2118570408953987093",
+      "retrievedAt": "2026-11-18",
+      "verification": "已通过 FxTwitter 逐条读取原帖文本",
+      "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2118570408953987093",
+      "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+      "indexUrl": "https://tech.sinsc.com/items/zfx8hffnhm4u79fqkj3rfir86",
+      "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F5YLAAIAAAATMjExOTM1MDc5MjYyMDc0NTAzMggAAwAAAAIAAA"
+    }
+  ],
   "tags": [
     "动效",
     "状态",
@@ -38,5 +56,6 @@
   ],
   "number": "06",
   "contentType": "editorial-explanation",
-  "promptAuthor": "vibe-design"
+  "promptAuthor": "vibe-design",
+  "episode": "015"
 }

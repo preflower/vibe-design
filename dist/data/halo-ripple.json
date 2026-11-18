@@ -1,0 +1,48 @@
+{
+  "id": "halo-ripple",
+  "title": "扩散光环",
+  "english": "Halo ripple",
+  "category": "technique",
+  "visual": "halo",
+  "source": {
+    "id": "2119359092334743735",
+    "author": "枯白 Kubai",
+    "handle": "@Kubai087",
+    "title": "999 个小技巧 · 013：扩散光环",
+    "published": "2026-11-08",
+    "url": "https://x.com/Kubai087/status/2119359092334743735",
+    "retrievedAt": "2026-11-18",
+    "verification": "已通过 FxTwitter 逐条读取原帖文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2119359092334743735",
+    "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+    "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F6YLAAIAAAATMjEyMDAwMzI3MTk5NzkzMjAzMAgAAwAAAAIAAA",
+    "episode": 13,
+    "episodeStatus": "inferred",
+    "episodeNote": "原帖未标数字。根据发布时间、012/014 的顺序与公开系列整理交叉判断为 013。",
+    "episodeEvidenceUrl": "https://www.teapaw.org/x_czyt"
+  },
+  "tags": [
+    "冲击波",
+    "光环",
+    "动效"
+  ],
+  "summary": "让光环从触发位置扩散，为低频动作提供空间反馈。",
+  "definition": "原帖演示把光环、局部透镜扭曲、轻微色散与边线反光结合在一起。简化时可先用单层透明环表达扩散方向。",
+  "when": "适合低频入口、展示场景或一次性的界面动作。",
+  "steps": [
+    "把中心放在触发位置。",
+    "限定在内容区单次运行，并保留可读状态。",
+    "减少动态时用短暂颜色变化或可见状态替代。"
+  ],
+  "avoid": "使用大面积高频亮度变化，或让动画挡住操作。",
+  "prompt": "为指定动作设计一次轻量扩散反馈，用单层光环作为基础。保留真实状态与独立的减少动态路径，评估低端设备开销。",
+  "related": [
+    "continuity",
+    "motion-easing"
+  ],
+  "number": "26",
+  "contentType": "editorial-explanation",
+  "promptAuthor": "vibe-design",
+  "episode": "013",
+  "secondarySources": []
+}

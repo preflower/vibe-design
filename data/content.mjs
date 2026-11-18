@@ -1,29 +1,13 @@
-export const updated = '2026-11-17';
+import { expandedEntries } from './expanded.mjs';
+import { sources, series } from './sources.mjs';
+export { sources, series, coverage } from './sources.mjs';
+
+export const updated = '2026-11-18';
 export const origin = 'https://vibe-design.carefulgardenia8.chatgpt.site';
 export const categories = { all: '全部内容', term: '设计术语', style: '设计风格', technique: '设计技巧' };
-const source = (id, date, title, index, extra = {}) => ({
-  author: '枯白啃设计', handle: '@Kubai087', title, published: date,
-  url: `https://x.com/Kubai087/status/${id}`,
-  indexUrl: index ? `https://tech.sinsc.com/items/${index}` : 'https://tech.sinsc.com/media/rss-twitter-kubai087',
-  retrievedAt: updated, verification: '已通过公开帖子预览接口读取文本',
-  retrievalUrl: `https://api.fxtwitter.com/Kubai087/status/${id}`,
-  note: 'X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。', ...extra
-});
-export const sources = {
-  corners: source('2115469767650021796','2026-10-28','999 个小技巧 · 004：递进圆角与连续圆角','x3ylz3u0ag3lv2ugg6ogkubce'),
-  type: source('2115384977227661661','2026-10-28','对齐与默认字号体系','d2e0wp7nn0utzbxenbhk8jwzj'),
-  book: source('2116198373040759107','2026-10-30','999 个小技巧 · 006：像书一样翻开的卡片','cs3dw6anbbene3uvb5kz49eph'),
-  drag: source('2116061760168063407','2026-10-29','999 个小技巧 · 005：拖拽排序','omzj2u0evettscn13yvf5pbvz'),
-  skeuo: source('2118582684008251830','2026-11-06','拟物类组件的细节观察','rh1hip7uc6wgwyc4k7sxa9ckv', { originalCreator: 'Levi Kline (@levibkline)', originalCreatorUrl: 'https://x.com/levibkline/status/2118371924594348505', relation: 'Kubai 点评 Levi Kline 的 Portrait 界面作品' }),
-  continuity: source('2118570408953987093','2026-11-06','UI 为什么需要连续性','zfx8hffnhm4u79fqkj3rfir86'),
-  ascii: source('2115766256913785271','2026-10-29','分享 ASCII 首页动画案例','mv1pq7sjh73c5u6ypan5ly67b', { originalCreator: '糖串 sensei (@imperry)', originalCreatorUrl: 'https://x.com/imperry/status/2115766055541055884', relation: 'Kubai 引用并评价 @imperry 的实践，技术过程由 @imperry 分享' }),
-  feedback: source('2120871815690232068','2026-11-12','999 个小技巧 · 016：Toast 与 Notification','iqcau6s1swfmzg723cqm91wbw'),
-  system: source('2121615225816494303','2026-11-14','改善 AI 界面设计的几条建议','h4hn7vc8vlxaeqvsa5w9jq8f4'),
-  holo: source('2122226084888588441','2026-11-15','999 个小技巧 · 018：3D 镭射卡片','p3bbf5knuoexm9ln929923t0v')
-};
 export const entries = [
   {
-    id: 'nested-radius', title: '嵌套圆角', english: 'Nested radius', category: 'technique', visual: 'radius', source: 'corners', tags: ['圆角','布局','CSS'],
+    id: 'nested-radius', title: '嵌套圆角', english: 'Nested radius', category: 'technique', visual: 'radius', source: 's004', tags: ['圆角','布局','CSS'],
     summary: '圆角也有秩序：让内外轮廓拥有同一个圆心。',
     definition: '当一个圆角容器包住另一个元素时，内层圆角应随内缩距离变小。对于等距内缩的普通圆角，内圆角 r = 外圆角 R − 间距 p。这样转角处的留白才会与直边处一样均匀。',
     when: '表单、嵌套面板、图片容器，以及带有内层按钮的卡片。',
@@ -53,7 +37,7 @@ export const entries = [
     related: ['holographic','design-tokens']
   },
   {
-    id: 'continuous-corners', title: '连续圆角', english: 'Continuous corners', category: 'term', visual: 'corners', source: 'corners', tags: ['超椭圆','CSS','形状'],
+    id: 'continuous-corners', title: '连续圆角', english: 'Continuous corners', category: 'term', visual: 'corners', source: 's004', tags: ['超椭圆','CSS','形状'],
     summary: '让直边进入转角的过程更平顺，轮廓更柔和。',
     definition: '普通圆角由直线接圆弧，连接处的曲率会发生跳变。连续圆角通过不同的曲线形状缓和这个变化。超椭圆是构建这类柔和轮廓的一种方法，并不代表任意参数都具备相同效果。',
     when: '应用图标、大型面板和需要柔和轮廓的容器。',
@@ -73,7 +57,7 @@ export const entries = [
     related: ['design-tokens','nested-radius','alignment']
   },
   {
-    id: 'continuity', title: '界面连续性', english: 'UI continuity', category: 'term', visual: 'continuity', source: 'continuity', tags: ['动效','状态','交互'],
+    id: 'continuity', title: '界面连续性', english: 'UI continuity', category: 'term', visual: 'continuity', source: 's015', secondarySources: ['continuity'], tags: ['动效','状态','交互'],
     summary: '状态变了，用户仍然知道自己刚刚操作了什么。',
     definition: '界面连续性让用户在状态切换时保留对元素身份、位置和关系的理解。例如按钮展开成菜单时，菜单从触发位置生长出来，比远处突然出现一个面板更容易追踪。',
     when: '菜单、抽屉、手风琴、详情展开，以及其他会改变空间关系的交互。',
@@ -83,7 +67,7 @@ export const entries = [
     related: ['book-reveal','drag-feedback','toast']
   },
   {
-    id: 'toast', title: '轻提示', english: 'Toast', category: 'term', visual: 'toast', source: 'feedback', tags: ['反馈','提示','交互'],
+    id: 'toast', title: '轻提示', english: 'Toast', category: 'term', visual: 'toast', source: 's016', tags: ['反馈','提示','交互'],
     summary: '告诉用户「刚才的操作有结果了」，然后轻轻离开。',
     definition: 'Toast 是与当前操作紧密相关的短暂反馈，例如复制完成。它通常自动消失，可以附带撤销入口。对用户必须处理的问题，应使用持续可见的提示，而不是让信息随 Toast 一起消失。',
     when: '保存完成、复制成功，以及无需持续处理的操作结果。',
@@ -93,7 +77,7 @@ export const entries = [
     related: ['notification','semantic-components']
   },
   {
-    id: 'notification', title: '通知', english: 'Notification', category: 'term', visual: 'notification', source: 'feedback', tags: ['反馈','信息','状态'],
+    id: 'notification', title: '通知', english: 'Notification', category: 'term', visual: 'notification', source: 's016', tags: ['反馈','信息','状态'],
     summary: '事情值得你知道，但不一定值得打断你。',
     definition: '通知可以由系统事件或他人的动作触发，与当前操作不一定直接相关。这里讨论的是产品内通知：消息会保留到用户处理或关闭，必要时可以在通知中心再次找到。',
     when: '协作消息、后台任务完成，以及可以稍后查看的系统动态。',
@@ -103,7 +87,7 @@ export const entries = [
     related: ['toast','progressive-disclosure']
   },
   {
-    id: 'holographic', title: '镭射质感', english: 'Holographic', category: 'style', visual: 'holo', source: 'holo', tags: ['光影','3D','材质'],
+    id: 'holographic', title: '镭射质感', english: 'Holographic', category: 'style', visual: 'holo', source: 's018', tags: ['光影','3D','材质'],
     summary: '把角度变成颜色，让一张卡片像真实藏品。',
     definition: '界面中的镭射效果通过随观察角度变化的色彩与高光，模拟全息箔材质。Kubai 的卡片案例把倾斜、亮边和深度层次组合在一起；本站示例用 CSS 演示这种视觉关系。',
     when: '数字门票、纪念卡、收藏卡和需要被特别看见的物件。',
@@ -113,9 +97,9 @@ export const entries = [
     related: ['skeuomorphism','continuity']
   },
   {
-    id: 'ascii', title: '字符艺术', english: 'ASCII art', category: 'style', visual: 'ascii', source: 'ascii', tags: ['字符','复古','图像'],
+    id: 'ascii', title: '字符艺术', english: 'ASCII art', category: 'style', visual: 'ascii', source: 's003', secondarySources: ['ascii'], tags: ['字符','复古','图像'],
     summary: '用有限的字符密度，重建图像的明暗和轮廓。',
-    definition: '字符艺术用字形代替像素。把图像切成采样格，再根据每格亮度选择疏密不同的字符，就能保留轮廓。此选题来自 Kubai 引用的 @imperry 首页动画实践。',
+    definition: '字符艺术用字形代替像素。把图像切成采样格，再根据每格亮度选择疏密不同的字符，就能保留轮廓。原帖第 003 期说明了字符采样，并提供可调参数。Kubai 另转引 @imperry 的首页动画作为应用案例。',
     when: '实验性个人站、技术主题视觉，以及少量具有性格的装饰。',
     steps: ['先选择清晰、明暗对比明确的素材。','用等宽字体并补偿字符格的宽高比例。','让画面保持装饰语义，提供文本说明与静态版本。'],
     avoid: '用字符图替代正文、持续刷新大面积 DOM，或让屏幕阅读器逐字朗读图案。',
@@ -153,7 +137,7 @@ export const entries = [
     related: ['notification','semantic-components']
   },
   {
-    id: 'drag-feedback', title: '拖拽的反馈', english: 'Drag feedback', category: 'technique', visual: 'drag', source: 'drag', tags: ['拖拽','动效','反馈'],
+    id: 'drag-feedback', title: '拖拽的反馈', english: 'Drag feedback', category: 'technique', visual: 'drag', source: 's005', tags: ['拖拽','动效','反馈'],
     summary: '拿起、经过、落下，每一步都告诉用户下一步会发生什么。',
     definition: '可用的拖拽排序需要区分被拿起的对象、当前落点和附近对象的避让。动效表达空间关系，而排序结果仍然由明确的数据顺序控制。',
     when: '任务排序、图标排列、播放队列和可自定义的列表。',
@@ -163,7 +147,7 @@ export const entries = [
     related: ['continuity','semantic-components']
   },
   {
-    id: 'book-reveal', title: '翻页式展开', english: 'Book reveal', category: 'technique', visual: 'book', source: 'book', tags: ['动效','3D','卡片'],
+    id: 'book-reveal', title: '翻页式展开', english: 'Book reveal', category: 'technique', visual: 'book', source: 's006', tags: ['动效','3D','卡片'],
     summary: '把预览藏在封面之后，用翻开这个动作表达更多内容。',
     definition: '翻页式展开把卡片分成封面与内页，以书脊为转轴产生层次。封面先动、内页随后展开，形成内容藏在物件内部的空间暗示。',
     when: '书籍、文档、作品集与具有真实预览内容的卡片。',
@@ -181,5 +165,14 @@ export const entries = [
     avoid: '把所有能点击的东西都写成 div，再用样式模拟按钮。',
     prompt: '审查指定组件的任务语义。区分导航、动作、提交与持续状态，使用原生 HTML 元素或项目已有的可访问组件，补全键盘行为和可访问名称，并列出修改理由。',
     related: ['toast','notification','progressive-disclosure']
-  }
-].map((entry, i) => ({ ...entry, number: String(i + 1).padStart(2, '0'), contentType: 'editorial-explanation', promptAuthor: 'vibe-design', source: sources[entry.source] }));
+  },
+  ...expandedEntries
+].map((entry, index) => ({
+  ...entry,
+  number: String(index + 1).padStart(2, '0'),
+  contentType: 'editorial-explanation',
+  promptAuthor: 'vibe-design',
+  episode: series.find(issue => issue.entries.includes(entry.id))?.number ?? null,
+  source: sources[entry.source],
+  secondarySources: (entry.secondarySources || []).map(key => sources[key])
+}));

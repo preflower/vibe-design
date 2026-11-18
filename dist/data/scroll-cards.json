@@ -1,0 +1,45 @@
+{
+  "id": "scroll-cards",
+  "title": "卡片滚动叙事",
+  "english": "Scroll-driven cards",
+  "category": "technique",
+  "visual": "stack",
+  "source": {
+    "id": "2122492414598459820",
+    "author": "枯白 Kubai",
+    "handle": "@Kubai087",
+    "title": "999 个小技巧 · 019：卡片滚动叙事",
+    "published": "2026-11-17",
+    "url": "https://x.com/Kubai087/status/2122492414598459820",
+    "retrievedAt": "2026-11-18",
+    "verification": "已通过 FxTwitter 逐条读取原帖文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2122492414598459820",
+    "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+    "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F%2DsLAAIAAAATMjEyMjU0NDI0NzQ5NjkzNzc2NggAAwAAAAIAAA",
+    "episode": 19
+  },
+  "tags": [
+    "滚动",
+    "卡片",
+    "作品集"
+  ],
+  "summary": "让卡片跟随滚动位置，展开、叠放或切换焦点。",
+  "definition": "原帖展示层叠、飞出、横向展廊、封面轮播和图片展开。共同点是滚动进度直接决定画面，暂停时停在当前状态，反向时顺应回退。",
+  "when": "适合产品功能演示或作品集中的短章节。",
+  "steps": [
+    "先让内容按自然顺序可读。",
+    "挑一种能解释内容关系的运动。",
+    "给触屏、键盘和减少动态模式保留完整内容。"
+  ],
+  "avoid": "劫持整页滚动或将重要信息放在必须操作特效才能到达的位置。",
+  "prompt": "给指定卡片组增加一种滚动驱动效果，保持原生滚动、内容顺序和键盘可达。验证逆向滚动、窄屏及静态回退。",
+  "related": [
+    "continuity",
+    "motion-easing"
+  ],
+  "number": "30",
+  "contentType": "editorial-explanation",
+  "promptAuthor": "vibe-design",
+  "episode": "019",
+  "secondarySources": []
+}

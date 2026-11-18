@@ -1,0 +1,45 @@
+{
+  "id": "message-bubbles",
+  "title": "消息气泡材质",
+  "english": "Chat bubble material",
+  "category": "style",
+  "visual": "bubbles",
+  "source": {
+    "id": "2118508433704169726",
+    "author": "枯白 Kubai",
+    "handle": "@Kubai087",
+    "title": "999 个小技巧 · 012：消息气泡材质",
+    "published": "2026-11-06",
+    "url": "https://x.com/Kubai087/status/2118508433704169726",
+    "retrievedAt": "2026-11-18",
+    "verification": "已通过 FxTwitter 逐条读取原帖文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2118508433704169726",
+    "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+    "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F5YLAAIAAAATMjExOTM1MDc5MjYyMDc0NTAzMggAAwAAAAIAAA",
+    "episode": 12
+  },
+  "tags": [
+    "对话",
+    "气泡",
+    "材质"
+  ],
+  "summary": "给聊天界面选择一套表面语言和匹配的反馈。",
+  "definition": "原帖以磨砂、像素、Aqua、共享渐变、拟物和纯色六种方案探索气泡。材质也要服务发言方识别、文本阅读和连续消息分组。",
+  "when": "适合需要形成清晰视觉语言的聊天或 Agent 界面。",
+  "steps": [
+    "从纯色方案建立正文对比。",
+    "连续同一发送方用一致的间距和形状关系。",
+    "让等待、发送和流式更新保持布局稳定。"
+  ],
+  "avoid": "用材质颜色作为发言方的唯一标记，或让长文悬浮在复杂背景上。",
+  "prompt": "为指定聊天界面提出纯色基线与一种有特色的表面，对照检查长文本、流式输出、深浅背景和减少动态模式。",
+  "related": [
+    "liquid-glass",
+    "tactile-buttons"
+  ],
+  "number": "25",
+  "contentType": "editorial-explanation",
+  "promptAuthor": "vibe-design",
+  "episode": "012",
+  "secondarySources": []
+}

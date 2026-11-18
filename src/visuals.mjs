@@ -14,6 +14,49 @@ export function asciiArt(density = 1) {
   }
   return out;
 }
+function ditherPattern() {
+  const bayer = [[0, 8, 2, 10], [12, 4, 14, 6], [3, 11, 1, 9], [15, 7, 13, 5]];
+  return Array.from({ length: 20 }, (_, y) =>
+    Array.from({ length: 32 }, (_, x) => {
+      const radius = Math.hypot((x - 15) / 18, (y - 9) / 11);
+      const value = Math.max(0, 1 - radius);
+      return `<i${value > (bayer[y % 4][x % 4] + .5) / 16 ? " data-on" : ""}></i>`;
+    }).join("")
+  ).join("");
+}
+const dither = ditherPattern();
+const newArt = {
+  tactile: '<div class="tactile-sample"><span>主要操作</span><span>次要操作</span></div>',
+  cascade: '<div class="cascade-sample"><div><span>移动至</span><span>复制</span></div><i>↗</i><div><span>工作区</span><span>收藏夹</span></div></div>',
+  halftone: '<div class="halftone-sample"><i></i></div>',
+  stack: '<div class="stack-art"><div class="stack-card">OUT</div><div class="stack-card">MOVE</div><div class="stack-card">SCROLL STUDY<span>STACK.</span><i>↓</i></div></div>',
+  dither: `<div class="dither-sample">${dither}</div>`,
+  glass: '<i class="glass-bead"></i><div class="glass-sample">GLASS</div>',
+  easing: '<div class="easing-sample"><div class="easing-track">Linear<i></i></div><div class="easing-track">Ease out<i></i></div><div class="easing-track">In / out<i></i></div></div>',
+  bubbles: '<div class="bubbles-sample"><i>试试换一种材质</i><i>对比文字和背景</i><i>保留可读性</i></div>',
+  halo: '<div class="halo-sample"></div>',
+  leaving: '<div class="leaving-sample"><i></i><i></i><i></i></div>',
+  loading: '<div class="loading-sample"><i></i><i></i><i></i><i></i></div>',
+  optical: '<div class="optical-sample"><span><i>▶</i>几何中心</span><span><i>▶</i>光学修正</span></div>',
+  wiki: '<div class="wiki-sample"><span></span><span></span><span></span></div>',
+  overlay: '<div class="overlay-sample"><span>Tooltip</span><span>Popover</span><span>Drawer</span><span>Dialog</span></div>',
+  bento: '<div class="bento-sample"><i></i><i></i><i></i><i></i></div>'
+};
+const demoCaptions = {
+  tactile: '用相同的光源和不同的表面高度区分操作层级。',
+  cascade: '有色三角表示从最近指针位置通向子菜单的区域。',
+  halftone: '点径与覆盖面积随视觉区域变化，用点阵表现明暗。',
+  dither: '点阵模拟了有限色阶下的亮暗过渡。',
+  glass: '示意叠色、高光与背景模糊。浏览器支持不足时使用实体填充。',
+  bubbles: '三条消息演示了气泡形状、对齐与文字对比。',
+  halo: '静态示意。外圈表示从触发点向周围扩散的高光。',
+  leaving: '中间卡片即将离场，留下的位置由相邻卡片填补。',
+  loading: '骨架屏使用与最终内容相近的结构，减少原位替换时的跳动。',
+  optical: '对比图形的几何中心与小幅偏移后的视觉位置。',
+  wiki: '左侧导航、中间正文、右侧页内目录。',
+  overlay: '四种常见浮层，含义取决于内容和焦点行为。',
+  bento: '共用网格里，主要功能块占用更多空间。'
+};
 export function art(type) {
   const arts = {
     radius: '<div class="radius-outer"><span class="measure outer-measure">R 32</span><div class="radius-inner"><span class="radius-dot"></span><span class="radius-formula">r = R − p</span><span class="measure inner-measure">r 20</span></div><span class="radius-gap">12</span></div><span class="art-caption">同一个圆心，恰好的距离。</span>',
@@ -33,12 +76,15 @@ export function art(type) {
     book: '<div class="little-book"><div class="book-page page-3"></div><div class="book-page page-2"></div><div class="book-page page-1"></div><div class="book-cover"><small>FIELD NOTES / 016</small><strong>Things<br>worth<br>noticing.</strong><span>设计里的小心思 ↗</span></div></div>',
     semantic: '<div class="semantic-sheet"><div><span>去一个地方</span><span class="semantic-link">阅读指南 ↗</span></div><div><span>做一件事情</span><span class="semantic-button">开始创作</span></div><div><span>改变一个状态</span><span class="semantic-switch"><i></i></span></div></div>'
   };
-  return `<div class="art art-${type}" aria-hidden="true">${arts[type] || ''}</div>`;
+  return `<div class="art art-${type}" aria-hidden="true">${newArt[type] || arts[type] || ''}</div>`;
 }
 export function demo(entry) {
   let control = '';
   const button = (text, action = 'toggle') => `<button class="button small" data-demo-action="${action}" type="button">${text}</button>`;
-  if (entry.visual === 'radius') control = '<label>内缩距离 <input type="range" min="4" max="24" step="4" value="12" data-demo-range="radius"><output>12px</output></label>';
+  if (entry.visual === 'stack') control = '<label>卡片展开程度 <input type="range" min="0" max="100" value="0" data-demo-range="stack"><output>0%</output></label>';
+  else if (entry.visual === 'easing') control = button('比较缓动曲线', 'easing');
+  else if (demoCaptions[entry.visual]) control = `<p class="demo-caption">${demoCaptions[entry.visual]}</p>`;
+  else if (entry.visual === 'radius') control = '<label>内缩距离 <input type="range" min="4" max="24" step="4" value="12" data-demo-range="radius"><output>12px</output></label>';
   else if (entry.visual === 'spacing') control = '<label>基础间距 <input type="range" min="4" max="12" step="2" value="8" data-demo-range="spacing"><output>8px</output></label>';
   else if (entry.visual === 'ascii') control = '<label>字符密度 <input type="range" min="5" max="15" value="10" data-demo-range="ascii"><output>1.0×</output></label>';
   else if (entry.visual === 'type') control = '<label>标题大小 <input type="range" min="40" max="88" step="4" value="68" data-demo-range="type"><output>68px</output></label>';

@@ -1,0 +1,45 @@
+{
+  "id": "ordered-dither",
+  "title": "有序抖动",
+  "english": "Ordered dithering",
+  "category": "style",
+  "visual": "dither",
+  "source": {
+    "id": "2115091203465290087",
+    "author": "枯白 Kubai",
+    "handle": "@Kubai087",
+    "title": "999 个小技巧 · 003：有序抖动与字符艺术",
+    "published": "2026-10-27",
+    "url": "https://x.com/Kubai087/status/2115091203465290087",
+    "retrievedAt": "2026-11-18",
+    "verification": "已通过 FxTwitter 逐条读取原帖文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2115091203465290087",
+    "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+    "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5Fv0LAAIAAAATMjExNTI1NDEwMzI0MDgxODczMAgAAwAAAAIAAA",
+    "episode": 3
+  },
+  "tags": [
+    "Dither",
+    "像素",
+    "纹理"
+  ],
+  "summary": "用规则颗粒模拟有限色阶，保留明暗变化。",
+  "definition": "有序抖动把图像限制在少数色阶，通过重复阈值图案分布亮暗像素。原帖使用 Bayer 矩阵，让颗粒尺寸与色阶数量可以独立调节。",
+  "when": "适合像素风海报、背景纹理和低色阶视觉实验。",
+  "steps": [
+    "先决定保留多少明暗级别。",
+    "用周期阈值调整每个像素的量化结果。",
+    "把调节范围限定在能辨认主体并保持文字清晰的位置。"
+  ],
+  "avoid": "把抖动用于正文或功能图标，损失边缘辨识度。",
+  "prompt": "给指定图像做有序抖动预览，提供开关与色阶数量控制。原图保留可访问名称，效果绑定在装饰图层。",
+  "related": [
+    "ascii",
+    "graphic-halftone"
+  ],
+  "number": "19",
+  "contentType": "editorial-explanation",
+  "promptAuthor": "vibe-design",
+  "episode": "003",
+  "secondarySources": []
+}

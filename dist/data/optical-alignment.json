@@ -1,0 +1,45 @@
+{
+  "id": "optical-alignment",
+  "title": "光学对齐",
+  "english": "Optical alignment",
+  "category": "term",
+  "visual": "optical",
+  "source": {
+    "id": "2122514434069537097",
+    "author": "枯白 Kubai",
+    "handle": "@Kubai087",
+    "title": "光学对齐的视觉重量",
+    "published": "2026-11-17",
+    "url": "https://x.com/Kubai087/status/2122514434069537097",
+    "retrievedAt": "2026-11-18",
+    "verification": "已通过 FxTwitter 逐条读取原帖文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2122514434069537097",
+    "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+    "indexUrl": "https://tech.sinsc.com/items/p1tq0w6e3h4r08jyc165uzqo4",
+    "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F%2DsLAAIAAAATMjEyMjU0NDI0NzQ5NjkzNzc2NggAAwAAAAIAAA"
+  },
+  "tags": [
+    "图标",
+    "视觉重心",
+    "对齐"
+  ],
+  "summary": "元素的几何中心与看起来的中心有时不在同一处。",
+  "definition": "尖角、不对称轮廓和字形的视觉重量会偏离边界框中心。原帖推荐观察模糊后的形状，抓住较大的明暗区域再微调。",
+  "when": "适合三角播放图标、文字与图标并排以及不规则品牌标志。",
+  "steps": [
+    "先用几何对齐建立基线。",
+    "在目标大小比较视觉重量，做小幅偏移。",
+    "保留点击区域与外部网格，只修正图形本身。"
+  ],
+  "avoid": "为每个形状使用同一个固定偏移，或同时移动整个点击区域。",
+  "prompt": "检查指定图标在按钮中的视觉重心。输出几何居中与微调后的对比，保持点击区域、焦点轮廓与布局基线稳定。",
+  "related": [
+    "alignment",
+    "tactile-buttons"
+  ],
+  "number": "31",
+  "contentType": "editorial-explanation",
+  "promptAuthor": "vibe-design",
+  "episode": null,
+  "secondarySources": []
+}

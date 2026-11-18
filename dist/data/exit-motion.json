@@ -1,0 +1,45 @@
+{
+  "id": "exit-motion",
+  "title": "退场与补位",
+  "english": "Exit motion",
+  "category": "technique",
+  "visual": "leaving",
+  "source": {
+    "id": "2119831380276523207",
+    "author": "枯白 Kubai",
+    "handle": "@Kubai087",
+    "title": "999 个小技巧 · 014：退场与补位",
+    "published": "2026-11-10",
+    "url": "https://x.com/Kubai087/status/2119831380276523207",
+    "retrievedAt": "2026-11-18",
+    "verification": "已通过 FxTwitter 逐条读取原帖文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2119831380276523207",
+    "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+    "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F6YLAAIAAAATMjEyMDAwMzI3MTk5NzkzMjAzMAgAAwAAAAIAAA",
+    "episode": 14
+  },
+  "tags": [
+    "退场",
+    "删除",
+    "列表"
+  ],
+  "summary": "元素退出时，让它的位置和相邻内容一起发生可追踪的变化。",
+  "definition": "退场动效既描述移除对象，也交代空位如何被填补。原帖探索多种表现方式，日常列表可以用简短淡出和自然补位表达同一因果。",
+  "when": "适合可删除的卡片、队列或临时浮层。",
+  "steps": [
+    "先决定删除后焦点去哪里。",
+    "让离场与相邻元素补位连贯，并保留撤销入口。",
+    "快速连续删除与减少动态时仍应可操作。"
+  ],
+  "avoid": "把删除变成必须等待的长动画，或让邻居重排时选错项目。",
+  "prompt": "为指定列表设计退出与补位。将实际数据操作和动画分开，检查焦点、撤销、连续删除和减少动态时的表现。",
+  "related": [
+    "continuity",
+    "motion-easing"
+  ],
+  "number": "27",
+  "contentType": "editorial-explanation",
+  "promptAuthor": "vibe-design",
+  "episode": "014",
+  "secondarySources": []
+}

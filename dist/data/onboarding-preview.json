@@ -1,0 +1,44 @@
+{
+  "id": "onboarding-preview",
+  "title": "上手引导的实时预览",
+  "english": "Live onboarding preview",
+  "category": "technique",
+  "visual": "wiki",
+  "source": {
+    "id": "2120033693012291853",
+    "author": "枯白 Kubai",
+    "handle": "@Kubai087",
+    "title": "上手引导的实时反馈与步骤关系",
+    "published": "2026-11-10",
+    "url": "https://x.com/Kubai087/status/2120033693012291853",
+    "retrievedAt": "2026-11-18",
+    "verification": "已通过 FxTwitter 逐条读取原帖文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2120033693012291853",
+    "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+    "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F7gLAAIAAAATMjEyMDY4Mjk5MzU2MzkyMjU4NggAAwAAAAIAAA"
+  },
+  "tags": [
+    "Onboarding",
+    "预览",
+    "步骤"
+  ],
+  "summary": "用户一选，预览就反映选择对产品的实际影响。",
+  "definition": "原帖建议把选择与界面结果放在同一个过程里，并用步骤关系交代进度。实时反馈应回答「这个选项会改变什么」。",
+  "when": "适合首次设置主题、工作区结构、偏好和功能组合。",
+  "steps": [
+    "让控件与预览使用同一份状态。",
+    "用清楚的步骤名称展示进程。",
+    "在移动端保持选择和结果相邻。"
+  ],
+  "avoid": "用固定轮播假装实时结果，或只给百分比而不告诉用户剩余任务。",
+  "prompt": "为指定上手流程设计真实预览与命名步骤，支持回退、不丢失选择，并检查移动端预览是否贴近当前控件。",
+  "related": [
+    "wiki-navigation",
+    "progressive-disclosure"
+  ],
+  "number": "32",
+  "contentType": "editorial-explanation",
+  "promptAuthor": "vibe-design",
+  "episode": null,
+  "secondarySources": []
+}

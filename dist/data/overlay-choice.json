@@ -1,0 +1,46 @@
+{
+  "id": "overlay-choice",
+  "title": "提示框、气泡与弹窗",
+  "english": "Overlay choice",
+  "category": "term",
+  "visual": "overlay",
+  "source": {
+    "id": "2117314098165862612",
+    "author": "枯白 Kubai",
+    "handle": "@Kubai087",
+    "title": "999 个小技巧 · 009：提示框、气泡与弹窗",
+    "published": "2026-11-03",
+    "url": "https://x.com/Kubai087/status/2117314098165862612",
+    "retrievedAt": "2026-11-18",
+    "verification": "已通过 FxTwitter 逐条读取原帖文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2117314098165862612",
+    "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+    "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F28LAAIAAAATMjExNzc4MjMzNzY5ODMyNDg0NggAAwAAAAIAAA",
+    "episode": 9
+  },
+  "tags": [
+    "Tooltip",
+    "Popover",
+    "Dialog",
+    "Drawer"
+  ],
+  "summary": "按内容和任务选浮层：解释、局部操作、确认或完整流程。",
+  "definition": "Tooltip 提供简短说明。Popover 能承载局部操作。Dialog 用于需要集中处理的任务，Drawer 可在工作时保留上下文；主要任务也可以成为独立页面。",
+  "when": "适合在各种浮层组件之间犹豫的产品界面。",
+  "steps": [
+    "先标清浮层是否包含操作。",
+    "确认方式按操作后果和可撤销性选择。",
+    "依赖背景信息的表单考虑侧栏，长流程优先给独立空间。"
+  ],
+  "avoid": "把按钮嵌入仅悬停可见的提示框，或为所有低风险操作加重确认。",
+  "prompt": "审查指明的浮层，将短说明、互动面板、关键确认和长表单分别匹配组件。验证焦点、Esc、触屏和关闭后的返回位置。",
+  "related": [
+    "toast",
+    "progressive-disclosure"
+  ],
+  "number": "22",
+  "contentType": "editorial-explanation",
+  "promptAuthor": "vibe-design",
+  "episode": "009",
+  "secondarySources": []
+}

@@ -1,0 +1,45 @@
+{
+  "id": "liquid-glass",
+  "title": "液态玻璃",
+  "english": "Liquid glass",
+  "category": "style",
+  "visual": "glass",
+  "source": {
+    "id": "2117782193108082923",
+    "author": "枯白 Kubai",
+    "handle": "@Kubai087",
+    "title": "999 个小技巧 · 010：液态玻璃",
+    "published": "2026-11-04",
+    "url": "https://x.com/Kubai087/status/2117782193108082923",
+    "retrievedAt": "2026-11-18",
+    "verification": "已通过 FxTwitter 逐条读取原帖文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2117782193108082923",
+    "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+    "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F28LAAIAAAATMjExNzc4MjMzNzY5ODMyNDg0NggAAwAAAAIAAA",
+    "episode": 10
+  },
+  "tags": [
+    "玻璃",
+    "折射",
+    "材质"
+  ],
+  "summary": "层叠透色、边缘高光和折射，建立通透的界面材质。",
+  "definition": "原帖将材质拆成背景处理、阴影、折射、着色、高光和文字处理。本站示意聚焦背景与层次，折射应依据平台和性能预算另外评估。",
+  "when": "适合短时浮层或面积有限的播放控件。",
+  "steps": [
+    "先确定浅深背景的可读性。",
+    "让边缘高光只提示材质厚度。",
+    "低性能和高对比场景提供可读的实体填充。"
+  ],
+  "avoid": "在高速滚动的长列表或文字密集表面铺满高开销滤镜。",
+  "prompt": "给指定控件设计玻璃材质和实体回退。记录每层的作用，在亮暗与复杂背景下量测文字对比，测试滚动性能。",
+  "related": [
+    "holographic",
+    "skeuomorphism"
+  ],
+  "number": "23",
+  "contentType": "editorial-explanation",
+  "promptAuthor": "vibe-design",
+  "episode": "010",
+  "secondarySources": []
+}

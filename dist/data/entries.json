@@ -3,7 +3,7 @@
   "version": 1,
   "name": "vibe-design",
   "language": "zh-CN",
-  "updated": "2026-11-17",
+  "updated": "2026-11-18",
   "editorialPolicy": "解释与提示词为本站编写；保留原帖来源与读取方式。",
   "entries": [
     {
@@ -13,16 +13,19 @@
       "category": "technique",
       "visual": "radius",
       "source": {
-        "author": "枯白啃设计",
+        "id": "2115469767650021796",
+        "author": "枯白 Kubai",
         "handle": "@Kubai087",
-        "title": "999 个小技巧 · 004：递进圆角与连续圆角",
+        "title": "999 个小技巧 · 004：嵌套圆角与连续圆角",
         "published": "2026-10-28",
         "url": "https://x.com/Kubai087/status/2115469767650021796",
-        "indexUrl": "https://tech.sinsc.com/items/x3ylz3u0ag3lv2ugg6ogkubce",
-        "retrievedAt": "2026-11-17",
-        "verification": "已通过公开帖子预览接口读取文本",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
         "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2115469767650021796",
-        "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。"
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "indexUrl": "https://tech.sinsc.com/items/x3ylz3u0ag3lv2ugg6ogkubce",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5FyYLAAIAAAATMjExNTcyMjA5Njg5ODk3Nzc5MggAAwAAAAIAAA",
+        "episode": 4
       },
       "tags": [
         "圆角",
@@ -47,7 +50,9 @@
       ],
       "number": "01",
       "contentType": "editorial-explanation",
-      "promptAuthor": "vibe-design"
+      "promptAuthor": "vibe-design",
+      "episode": "004",
+      "secondarySources": []
     },
     {
       "id": "design-tokens",
@@ -56,16 +61,18 @@
       "category": "term",
       "visual": "tokens",
       "source": {
-        "author": "枯白啃设计",
+        "id": "2121615225816494303",
+        "author": "枯白 Kubai",
         "handle": "@Kubai087",
-        "title": "改善 AI 界面设计的几条建议",
+        "title": "改善 AI 界面的设计建议",
         "published": "2026-11-14",
         "url": "https://x.com/Kubai087/status/2121615225816494303",
-        "indexUrl": "https://tech.sinsc.com/items/h4hn7vc8vlxaeqvsa5w9jq8f4",
-        "retrievedAt": "2026-11-17",
-        "verification": "已通过公开帖子预览接口读取文本",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
         "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2121615225816494303",
-        "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。"
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "indexUrl": "https://tech.sinsc.com/items/h4hn7vc8vlxaeqvsa5w9jq8f4",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F9kLAAIAAAATMjEyMTk1OTIxMjg0MjczNDAwMAgAAwAAAAIAAA"
       },
       "tags": [
         "系统",
@@ -89,7 +96,9 @@
       ],
       "number": "02",
       "contentType": "editorial-explanation",
-      "promptAuthor": "vibe-design"
+      "promptAuthor": "vibe-design",
+      "episode": null,
+      "secondarySources": []
     },
     {
       "id": "skeuomorphism",
@@ -98,19 +107,21 @@
       "category": "style",
       "visual": "skeuo",
       "source": {
-        "author": "枯白啃设计",
+        "id": "2118582684008251830",
+        "author": "枯白 Kubai",
         "handle": "@Kubai087",
-        "title": "拟物类组件的细节观察",
+        "title": "拟物控件的光影细节",
         "published": "2026-11-06",
         "url": "https://x.com/Kubai087/status/2118582684008251830",
-        "indexUrl": "https://tech.sinsc.com/items/rh1hip7uc6wgwyc4k7sxa9ckv",
-        "retrievedAt": "2026-11-17",
-        "verification": "已通过公开帖子预览接口读取文本",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
         "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2118582684008251830",
-        "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "indexUrl": "https://tech.sinsc.com/items/rh1hip7uc6wgwyc4k7sxa9ckv",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F5YLAAIAAAATMjExOTM1MDc5MjYyMDc0NTAzMggAAwAAAAIAAA",
         "originalCreator": "Levi Kline (@levibkline)",
         "originalCreatorUrl": "https://x.com/levibkline/status/2118371924594348505",
-        "relation": "Kubai 点评 Levi Kline 的 Portrait 界面作品"
+        "relation": "Kubai 引用或点评此帖"
       },
       "tags": [
         "材质",
@@ -133,7 +144,9 @@
       ],
       "number": "03",
       "contentType": "editorial-explanation",
-      "promptAuthor": "vibe-design"
+      "promptAuthor": "vibe-design",
+      "episode": null,
+      "secondarySources": []
     },
     {
       "id": "continuous-corners",
@@ -142,16 +155,19 @@
       "category": "term",
       "visual": "corners",
       "source": {
-        "author": "枯白啃设计",
+        "id": "2115469767650021796",
+        "author": "枯白 Kubai",
         "handle": "@Kubai087",
-        "title": "999 个小技巧 · 004：递进圆角与连续圆角",
+        "title": "999 个小技巧 · 004：嵌套圆角与连续圆角",
         "published": "2026-10-28",
         "url": "https://x.com/Kubai087/status/2115469767650021796",
-        "indexUrl": "https://tech.sinsc.com/items/x3ylz3u0ag3lv2ugg6ogkubce",
-        "retrievedAt": "2026-11-17",
-        "verification": "已通过公开帖子预览接口读取文本",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
         "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2115469767650021796",
-        "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。"
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "indexUrl": "https://tech.sinsc.com/items/x3ylz3u0ag3lv2ugg6ogkubce",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5FyYLAAIAAAATMjExNTcyMjA5Njg5ODk3Nzc5MggAAwAAAAIAAA",
+        "episode": 4
       },
       "tags": [
         "超椭圆",
@@ -174,7 +190,9 @@
       ],
       "number": "04",
       "contentType": "editorial-explanation",
-      "promptAuthor": "vibe-design"
+      "promptAuthor": "vibe-design",
+      "episode": "004",
+      "secondarySources": []
     },
     {
       "id": "spacing-scale",
@@ -183,16 +201,18 @@
       "category": "technique",
       "visual": "spacing",
       "source": {
-        "author": "枯白啃设计",
+        "id": "2121615225816494303",
+        "author": "枯白 Kubai",
         "handle": "@Kubai087",
-        "title": "改善 AI 界面设计的几条建议",
+        "title": "改善 AI 界面的设计建议",
         "published": "2026-11-14",
         "url": "https://x.com/Kubai087/status/2121615225816494303",
-        "indexUrl": "https://tech.sinsc.com/items/h4hn7vc8vlxaeqvsa5w9jq8f4",
-        "retrievedAt": "2026-11-17",
-        "verification": "已通过公开帖子预览接口读取文本",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
         "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2121615225816494303",
-        "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。"
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "indexUrl": "https://tech.sinsc.com/items/h4hn7vc8vlxaeqvsa5w9jq8f4",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F9kLAAIAAAATMjEyMTk1OTIxMjg0MjczNDAwMAgAAwAAAAIAAA"
       },
       "tags": [
         "间距",
@@ -216,7 +236,9 @@
       ],
       "number": "05",
       "contentType": "editorial-explanation",
-      "promptAuthor": "vibe-design"
+      "promptAuthor": "vibe-design",
+      "episode": null,
+      "secondarySources": []
     },
     {
       "id": "continuity",
@@ -225,17 +247,35 @@
       "category": "term",
       "visual": "continuity",
       "source": {
-        "author": "枯白啃设计",
+        "id": "2120320609255043510",
+        "author": "枯白 Kubai",
         "handle": "@Kubai087",
-        "title": "UI 为什么需要连续性",
-        "published": "2026-11-06",
-        "url": "https://x.com/Kubai087/status/2118570408953987093",
-        "indexUrl": "https://tech.sinsc.com/items/zfx8hffnhm4u79fqkj3rfir86",
-        "retrievedAt": "2026-11-17",
-        "verification": "已通过公开帖子预览接口读取文本",
-        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2118570408953987093",
-        "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。"
+        "title": "999 个小技巧 · 015：界面连续性",
+        "published": "2026-11-11",
+        "url": "https://x.com/Kubai087/status/2120320609255043510",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2120320609255043510",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F7gLAAIAAAATMjEyMDY4Mjk5MzU2MzkyMjU4NggAAwAAAAIAAA",
+        "episode": 15
       },
+      "secondarySources": [
+        {
+          "id": "2118570408953987093",
+          "author": "枯白 Kubai",
+          "handle": "@Kubai087",
+          "title": "界面连续性与视觉锚点",
+          "published": "2026-11-06",
+          "url": "https://x.com/Kubai087/status/2118570408953987093",
+          "retrievedAt": "2026-11-18",
+          "verification": "已通过 FxTwitter 逐条读取原帖文本",
+          "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2118570408953987093",
+          "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+          "indexUrl": "https://tech.sinsc.com/items/zfx8hffnhm4u79fqkj3rfir86",
+          "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F5YLAAIAAAATMjExOTM1MDc5MjYyMDc0NTAzMggAAwAAAAIAAA"
+        }
+      ],
       "tags": [
         "动效",
         "状态",
@@ -258,7 +298,8 @@
       ],
       "number": "06",
       "contentType": "editorial-explanation",
-      "promptAuthor": "vibe-design"
+      "promptAuthor": "vibe-design",
+      "episode": "015"
     },
     {
       "id": "toast",
@@ -267,16 +308,18 @@
       "category": "term",
       "visual": "toast",
       "source": {
-        "author": "枯白啃设计",
+        "id": "2120682993563922586",
+        "author": "枯白 Kubai",
         "handle": "@Kubai087",
-        "title": "999 个小技巧 · 016：Toast 与 Notification",
+        "title": "999 个小技巧 · 016：轻提示与通知",
         "published": "2026-11-12",
-        "url": "https://x.com/Kubai087/status/2120871815690232068",
-        "indexUrl": "https://tech.sinsc.com/items/iqcau6s1swfmzg723cqm91wbw",
-        "retrievedAt": "2026-11-17",
-        "verification": "已通过公开帖子预览接口读取文本",
-        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2120871815690232068",
-        "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。"
+        "url": "https://x.com/Kubai087/status/2120682993563922586",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2120682993563922586",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F8gLAAIAAAATMjEyMTQ0OTE4NTAxNDg0NTc5NAgAAwAAAAIAAA",
+        "episode": 16
       },
       "tags": [
         "反馈",
@@ -299,7 +342,9 @@
       ],
       "number": "07",
       "contentType": "editorial-explanation",
-      "promptAuthor": "vibe-design"
+      "promptAuthor": "vibe-design",
+      "episode": "016",
+      "secondarySources": []
     },
     {
       "id": "notification",
@@ -308,16 +353,18 @@
       "category": "term",
       "visual": "notification",
       "source": {
-        "author": "枯白啃设计",
+        "id": "2120682993563922586",
+        "author": "枯白 Kubai",
         "handle": "@Kubai087",
-        "title": "999 个小技巧 · 016：Toast 与 Notification",
+        "title": "999 个小技巧 · 016：轻提示与通知",
         "published": "2026-11-12",
-        "url": "https://x.com/Kubai087/status/2120871815690232068",
-        "indexUrl": "https://tech.sinsc.com/items/iqcau6s1swfmzg723cqm91wbw",
-        "retrievedAt": "2026-11-17",
-        "verification": "已通过公开帖子预览接口读取文本",
-        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2120871815690232068",
-        "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。"
+        "url": "https://x.com/Kubai087/status/2120682993563922586",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2120682993563922586",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F8gLAAIAAAATMjEyMTQ0OTE4NTAxNDg0NTc5NAgAAwAAAAIAAA",
+        "episode": 16
       },
       "tags": [
         "反馈",
@@ -340,7 +387,9 @@
       ],
       "number": "08",
       "contentType": "editorial-explanation",
-      "promptAuthor": "vibe-design"
+      "promptAuthor": "vibe-design",
+      "episode": "016",
+      "secondarySources": []
     },
     {
       "id": "holographic",
@@ -349,16 +398,18 @@
       "category": "style",
       "visual": "holo",
       "source": {
-        "author": "枯白啃设计",
+        "id": "2121892029403922717",
+        "author": "枯白 Kubai",
         "handle": "@Kubai087",
-        "title": "999 个小技巧 · 018：3D 镭射卡片",
+        "title": "999 个小技巧 · 018：镭射质感",
         "published": "2026-11-15",
-        "url": "https://x.com/Kubai087/status/2122226084888588441",
-        "indexUrl": "https://tech.sinsc.com/items/p3bbf5knuoexm9ln929923t0v",
-        "retrievedAt": "2026-11-17",
-        "verification": "已通过公开帖子预览接口读取文本",
-        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2122226084888588441",
-        "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。"
+        "url": "https://x.com/Kubai087/status/2121892029403922717",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2121892029403922717",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F9kLAAIAAAATMjEyMTk1OTIxMjg0MjczNDAwMAgAAwAAAAIAAA",
+        "episode": 18
       },
       "tags": [
         "光影",
@@ -381,7 +432,9 @@
       ],
       "number": "09",
       "contentType": "editorial-explanation",
-      "promptAuthor": "vibe-design"
+      "promptAuthor": "vibe-design",
+      "episode": "018",
+      "secondarySources": []
     },
     {
       "id": "ascii",
@@ -390,27 +443,45 @@
       "category": "style",
       "visual": "ascii",
       "source": {
-        "author": "枯白啃设计",
+        "id": "2115091203465290087",
+        "author": "枯白 Kubai",
         "handle": "@Kubai087",
-        "title": "分享 ASCII 首页动画案例",
-        "published": "2026-10-29",
-        "url": "https://x.com/Kubai087/status/2115766256913785271",
-        "indexUrl": "https://tech.sinsc.com/items/mv1pq7sjh73c5u6ypan5ly67b",
-        "retrievedAt": "2026-11-17",
-        "verification": "已通过公开帖子预览接口读取文本",
-        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2115766256913785271",
-        "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。",
-        "originalCreator": "糖串 sensei (@imperry)",
-        "originalCreatorUrl": "https://x.com/imperry/status/2115766055541055884",
-        "relation": "Kubai 引用并评价 @imperry 的实践，技术过程由 @imperry 分享"
+        "title": "999 个小技巧 · 003：有序抖动与字符艺术",
+        "published": "2026-10-27",
+        "url": "https://x.com/Kubai087/status/2115091203465290087",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2115091203465290087",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5Fv0LAAIAAAATMjExNTI1NDEwMzI0MDgxODczMAgAAwAAAAIAAA",
+        "episode": 3
       },
+      "secondarySources": [
+        {
+          "id": "2115766256913785271",
+          "author": "枯白 Kubai",
+          "handle": "@Kubai087",
+          "title": "字符艺术的首页案例",
+          "published": "2026-10-29",
+          "url": "https://x.com/Kubai087/status/2115766256913785271",
+          "retrievedAt": "2026-11-18",
+          "verification": "已通过 FxTwitter 逐条读取原帖文本",
+          "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2115766256913785271",
+          "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+          "indexUrl": "https://tech.sinsc.com/items/mv1pq7sjh73c5u6ypan5ly67b",
+          "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5FzsLAAIAAAATMjExNjE5ODM3MzA0MDc1OTEwNwgAAwAAAAIAAA",
+          "originalCreator": "糖串 sensei (@imperry)",
+          "originalCreatorUrl": "https://x.com/imperry/status/2115766055541055884",
+          "relation": "Kubai 引用或点评此帖"
+        }
+      ],
       "tags": [
         "字符",
         "复古",
         "图像"
       ],
       "summary": "用有限的字符密度，重建图像的明暗和轮廓。",
-      "definition": "字符艺术用字形代替像素。把图像切成采样格，再根据每格亮度选择疏密不同的字符，就能保留轮廓。此选题来自 Kubai 引用的 @imperry 首页动画实践。",
+      "definition": "字符艺术用字形代替像素。把图像切成采样格，再根据每格亮度选择疏密不同的字符，就能保留轮廓。原帖第 003 期说明了字符采样，并提供可调参数。Kubai 另转引 @imperry 的首页动画作为应用案例。",
       "when": "实验性个人站、技术主题视觉，以及少量具有性格的装饰。",
       "steps": [
         "先选择清晰、明暗对比明确的素材。",
@@ -425,7 +496,8 @@
       ],
       "number": "10",
       "contentType": "editorial-explanation",
-      "promptAuthor": "vibe-design"
+      "promptAuthor": "vibe-design",
+      "episode": "003"
     },
     {
       "id": "alignment",
@@ -434,16 +506,21 @@
       "category": "technique",
       "visual": "alignment",
       "source": {
-        "author": "枯白啃设计",
+        "id": "2115384977227661661",
+        "author": "枯白 Kubai",
         "handle": "@Kubai087",
         "title": "对齐与默认字号体系",
         "published": "2026-10-28",
         "url": "https://x.com/Kubai087/status/2115384977227661661",
-        "indexUrl": "https://tech.sinsc.com/items/d2e0wp7nn0utzbxenbhk8jwzj",
-        "retrievedAt": "2026-11-17",
-        "verification": "已通过公开帖子预览接口读取文本",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
         "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2115384977227661661",
-        "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。"
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "indexUrl": "https://tech.sinsc.com/items/d2e0wp7nn0utzbxenbhk8jwzj",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5FxILAAIAAAATMjExNTQ0MzQ0NjQwMDAzMjkxNggAAwAAAAIAAA",
+        "originalCreator": "@jaydwivedi_",
+        "originalCreatorUrl": "https://x.com/jaydwivedi_/status/2115379248013717822",
+        "relation": "Kubai 引用或点评此帖"
       },
       "tags": [
         "对齐",
@@ -466,7 +543,9 @@
       ],
       "number": "11",
       "contentType": "editorial-explanation",
-      "promptAuthor": "vibe-design"
+      "promptAuthor": "vibe-design",
+      "episode": null,
+      "secondarySources": []
     },
     {
       "id": "typography-scale",
@@ -475,16 +554,21 @@
       "category": "technique",
       "visual": "type",
       "source": {
-        "author": "枯白啃设计",
+        "id": "2115384977227661661",
+        "author": "枯白 Kubai",
         "handle": "@Kubai087",
         "title": "对齐与默认字号体系",
         "published": "2026-10-28",
         "url": "https://x.com/Kubai087/status/2115384977227661661",
-        "indexUrl": "https://tech.sinsc.com/items/d2e0wp7nn0utzbxenbhk8jwzj",
-        "retrievedAt": "2026-11-17",
-        "verification": "已通过公开帖子预览接口读取文本",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
         "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2115384977227661661",
-        "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。"
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "indexUrl": "https://tech.sinsc.com/items/d2e0wp7nn0utzbxenbhk8jwzj",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5FxILAAIAAAATMjExNTQ0MzQ0NjQwMDAzMjkxNggAAwAAAAIAAA",
+        "originalCreator": "@jaydwivedi_",
+        "originalCreatorUrl": "https://x.com/jaydwivedi_/status/2115379248013717822",
+        "relation": "Kubai 引用或点评此帖"
       },
       "tags": [
         "字体",
@@ -507,7 +591,9 @@
       ],
       "number": "12",
       "contentType": "editorial-explanation",
-      "promptAuthor": "vibe-design"
+      "promptAuthor": "vibe-design",
+      "episode": null,
+      "secondarySources": []
     },
     {
       "id": "progressive-disclosure",
@@ -516,16 +602,18 @@
       "category": "technique",
       "visual": "disclosure",
       "source": {
-        "author": "枯白啃设计",
+        "id": "2121615225816494303",
+        "author": "枯白 Kubai",
         "handle": "@Kubai087",
-        "title": "改善 AI 界面设计的几条建议",
+        "title": "改善 AI 界面的设计建议",
         "published": "2026-11-14",
         "url": "https://x.com/Kubai087/status/2121615225816494303",
-        "indexUrl": "https://tech.sinsc.com/items/h4hn7vc8vlxaeqvsa5w9jq8f4",
-        "retrievedAt": "2026-11-17",
-        "verification": "已通过公开帖子预览接口读取文本",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
         "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2121615225816494303",
-        "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。"
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "indexUrl": "https://tech.sinsc.com/items/h4hn7vc8vlxaeqvsa5w9jq8f4",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F9kLAAIAAAATMjEyMTk1OTIxMjg0MjczNDAwMAgAAwAAAAIAAA"
       },
       "tags": [
         "文案",
@@ -548,7 +636,9 @@
       ],
       "number": "13",
       "contentType": "editorial-explanation",
-      "promptAuthor": "vibe-design"
+      "promptAuthor": "vibe-design",
+      "episode": null,
+      "secondarySources": []
     },
     {
       "id": "drag-feedback",
@@ -557,16 +647,19 @@
       "category": "technique",
       "visual": "drag",
       "source": {
-        "author": "枯白啃设计",
+        "id": "2115823717024735708",
+        "author": "枯白 Kubai",
         "handle": "@Kubai087",
         "title": "999 个小技巧 · 005：拖拽排序",
         "published": "2026-10-29",
-        "url": "https://x.com/Kubai087/status/2116061760168063407",
-        "indexUrl": "https://tech.sinsc.com/items/omzj2u0evettscn13yvf5pbvz",
-        "retrievedAt": "2026-11-17",
-        "verification": "已通过公开帖子预览接口读取文本",
-        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2116061760168063407",
-        "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。"
+        "url": "https://x.com/Kubai087/status/2115823717024735708",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2115823717024735708",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "indexUrl": "https://tech.sinsc.com/items/nhtioq9fnu3gct8abmszudz2t",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5FzsLAAIAAAATMjExNjE5ODM3MzA0MDc1OTEwNwgAAwAAAAIAAA",
+        "episode": 5
       },
       "tags": [
         "拖拽",
@@ -589,7 +682,9 @@
       ],
       "number": "14",
       "contentType": "editorial-explanation",
-      "promptAuthor": "vibe-design"
+      "promptAuthor": "vibe-design",
+      "episode": "005",
+      "secondarySources": []
     },
     {
       "id": "book-reveal",
@@ -598,16 +693,19 @@
       "category": "technique",
       "visual": "book",
       "source": {
-        "author": "枯白啃设计",
+        "id": "2116198373040759107",
+        "author": "枯白 Kubai",
         "handle": "@Kubai087",
-        "title": "999 个小技巧 · 006：像书一样翻开的卡片",
+        "title": "999 个小技巧 · 006：翻页式展开",
         "published": "2026-10-30",
         "url": "https://x.com/Kubai087/status/2116198373040759107",
-        "indexUrl": "https://tech.sinsc.com/items/cs3dw6anbbene3uvb5kz49eph",
-        "retrievedAt": "2026-11-17",
-        "verification": "已通过公开帖子预览接口读取文本",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
         "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2116198373040759107",
-        "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。"
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "indexUrl": "https://tech.sinsc.com/items/cs3dw6anbbene3uvb5kz49eph",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F0wLAAIAAAATMjExNjQ5MDQyMzUzNTU0MjM0MQgAAwAAAAIAAA",
+        "episode": 6
       },
       "tags": [
         "动效",
@@ -631,7 +729,9 @@
       ],
       "number": "15",
       "contentType": "editorial-explanation",
-      "promptAuthor": "vibe-design"
+      "promptAuthor": "vibe-design",
+      "episode": "006",
+      "secondarySources": []
     },
     {
       "id": "semantic-components",
@@ -640,16 +740,18 @@
       "category": "technique",
       "visual": "semantic",
       "source": {
-        "author": "枯白啃设计",
+        "id": "2121615225816494303",
+        "author": "枯白 Kubai",
         "handle": "@Kubai087",
-        "title": "改善 AI 界面设计的几条建议",
+        "title": "改善 AI 界面的设计建议",
         "published": "2026-11-14",
         "url": "https://x.com/Kubai087/status/2121615225816494303",
-        "indexUrl": "https://tech.sinsc.com/items/h4hn7vc8vlxaeqvsa5w9jq8f4",
-        "retrievedAt": "2026-11-17",
-        "verification": "已通过公开帖子预览接口读取文本",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
         "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2121615225816494303",
-        "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。"
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "indexUrl": "https://tech.sinsc.com/items/h4hn7vc8vlxaeqvsa5w9jq8f4",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F9kLAAIAAAATMjEyMTk1OTIxMjg0MjczNDAwMAgAAwAAAAIAAA"
       },
       "tags": [
         "组件",
@@ -673,7 +775,961 @@
       ],
       "number": "16",
       "contentType": "editorial-explanation",
-      "promptAuthor": "vibe-design"
+      "promptAuthor": "vibe-design",
+      "episode": null,
+      "secondarySources": []
+    },
+    {
+      "id": "tactile-buttons",
+      "title": "有触感的按钮",
+      "english": "Tactile buttons",
+      "category": "style",
+      "visual": "tactile",
+      "source": {
+        "id": "2114378773655326873",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 001：有触感的按钮",
+        "published": "2026-10-25",
+        "url": "https://x.com/Kubai087/status/2114378773655326873",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2114378773655326873",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "indexUrl": "https://tech.sinsc.com/items/qk01y15dgkgcv95djbpq7nfzt",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5FtMLAAIAAAATMjExNDY2MDUxMjU2NzA3OTI3OAgAAwAAAAIAAA",
+        "episode": 1
+      },
+      "tags": [
+        "按钮",
+        "拟物",
+        "反馈"
+      ],
+      "summary": "用光影和按压状态，表现可以触碰的表面。",
+      "definition": "按钮的实体感来自明暗、轮廓和按压反馈。原帖将同一语言应用到五种按钮层级，主要动作更突出，次要动作逐步减轻。",
+      "when": "适合层级明确、希望建立触觉反馈的编辑器和播放器。",
+      "steps": [
+        "给主要操作保留最强对比。",
+        "统一上方光源，用顶边高光和底部接触阴影塑造体积。",
+        "按下时缩短阴影，并保留清晰的焦点边框。"
+      ],
+      "avoid": "用相同的体积强化所有按钮，或只靠阴影区别禁用状态。",
+      "prompt": "检查现有按钮层级。复用现有组件，为主要和次要动作分别设计表面、按压与焦点状态；验证每种状态下的文字对比。",
+      "related": [
+        "skeuomorphism",
+        "semantic-components"
+      ],
+      "number": "17",
+      "contentType": "editorial-explanation",
+      "promptAuthor": "vibe-design",
+      "episode": "001",
+      "secondarySources": []
+    },
+    {
+      "id": "cascade-safe-zone",
+      "title": "级联菜单安全区",
+      "english": "Menu aim",
+      "category": "technique",
+      "visual": "cascade",
+      "source": {
+        "id": "2114729985143677258",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 002：级联菜单安全区",
+        "published": "2026-10-26",
+        "url": "https://x.com/Kubai087/status/2114729985143677258",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2114729985143677258",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5FugLAAIAAAATMjExNDk0NjM3NjUxMzc4NjIzNAgAAwAAAAIAAA",
+        "episode": 2
+      },
+      "tags": [
+        "菜单",
+        "光标",
+        "延时"
+      ],
+      "summary": "给斜向移动的鼠标留一条进入子菜单的路。",
+      "definition": "父菜单和子菜单横向分列时，指针可能斜穿过其他行。用指针前一位置与子菜单近侧两个角形成三角区，判断用户是否正在朝子菜单移动。",
+      "when": "适合使用鼠标的桌面级联菜单。",
+      "steps": [
+        "判断指针是否进入朝向子菜单的区域。",
+        "只在该区域内短暂延迟切换。",
+        "键盘用方向键进入与返回，触屏通过点击展开。"
+      ],
+      "avoid": "把延时应用到所有路径，或把鼠标轨迹当作键盘操作的前置条件。",
+      "prompt": "检查现有级联菜单的斜向路径。给明确朝向子菜单的鼠标轨迹添加可取消的延时，并独立处理键盘和触摸输入。",
+      "related": [
+        "continuity",
+        "overlay-choice"
+      ],
+      "number": "18",
+      "contentType": "editorial-explanation",
+      "promptAuthor": "vibe-design",
+      "episode": "002",
+      "secondarySources": []
+    },
+    {
+      "id": "ordered-dither",
+      "title": "有序抖动",
+      "english": "Ordered dithering",
+      "category": "style",
+      "visual": "dither",
+      "source": {
+        "id": "2115091203465290087",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 003：有序抖动与字符艺术",
+        "published": "2026-10-27",
+        "url": "https://x.com/Kubai087/status/2115091203465290087",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2115091203465290087",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5Fv0LAAIAAAATMjExNTI1NDEwMzI0MDgxODczMAgAAwAAAAIAAA",
+        "episode": 3
+      },
+      "tags": [
+        "Dither",
+        "像素",
+        "纹理"
+      ],
+      "summary": "用规则颗粒模拟有限色阶，保留明暗变化。",
+      "definition": "有序抖动把图像限制在少数色阶，通过重复阈值图案分布亮暗像素。原帖使用 Bayer 矩阵，让颗粒尺寸与色阶数量可以独立调节。",
+      "when": "适合像素风海报、背景纹理和低色阶视觉实验。",
+      "steps": [
+        "先决定保留多少明暗级别。",
+        "用周期阈值调整每个像素的量化结果。",
+        "把调节范围限定在能辨认主体并保持文字清晰的位置。"
+      ],
+      "avoid": "把抖动用于正文或功能图标，损失边缘辨识度。",
+      "prompt": "给指定图像做有序抖动预览，提供开关与色阶数量控制。原图保留可访问名称，效果绑定在装饰图层。",
+      "related": [
+        "ascii",
+        "graphic-halftone"
+      ],
+      "number": "19",
+      "contentType": "editorial-explanation",
+      "promptAuthor": "vibe-design",
+      "episode": "003",
+      "secondarySources": []
+    },
+    {
+      "id": "mixed-typesetting",
+      "title": "中英混排",
+      "english": "Mixed-language typesetting",
+      "category": "technique",
+      "visual": "type",
+      "source": {
+        "id": "2116555064227811412",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 007：中英混排",
+        "published": "2026-10-31",
+        "url": "https://x.com/Kubai087/status/2116555064227811412",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2116555064227811412",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F18LAAIAAAATMjExNzA4NTEyNDI0MDI0ODkwOAgAAwAAAAIAAA",
+        "episode": 7
+      },
+      "tags": [
+        "排版",
+        "i18n",
+        "换行"
+      ],
+      "summary": "用真实文案检查中英文、长词与标点的断行。",
+      "definition": "同一个容器在不同语言下会出现不同的字宽和断行。原帖建议结合实际布局选择文案，并用 CSS 处理对齐、句读与行宽。",
+      "when": "适合国际化产品、按钮标签和窄屏正文。",
+      "steps": [
+        "用真实的双语内容走查最短和最长场景。",
+        "对短标题评估平衡换行，正文保留自然换行。",
+        "指定正确的 lang，针对浏览器支持情况测试避头尾和自动字间距。"
+      ],
+      "avoid": "用固定高度或禁止换行隐藏断行问题。",
+      "prompt": "检查指定页面的中英混排。用长短文案和窄屏复现问题，先调整布局与措辞，再用渐进增强的排版属性补足。",
+      "related": [
+        "typography-scale",
+        "alignment"
+      ],
+      "number": "20",
+      "contentType": "editorial-explanation",
+      "promptAuthor": "vibe-design",
+      "episode": "007",
+      "secondarySources": []
+    },
+    {
+      "id": "wiki-navigation",
+      "title": "文档与章节导航",
+      "english": "Documentation navigation",
+      "category": "technique",
+      "visual": "wiki",
+      "source": {
+        "id": "2116911391437443471",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 008：文档与章节导航",
+        "published": "2026-11-01",
+        "url": "https://x.com/Kubai087/status/2116911391437443471",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2116911391437443471",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F18LAAIAAAATMjExNzA4NTEyNDI0MDI0ODkwOAgAAwAAAAIAAA",
+        "episode": 8
+      },
+      "tags": [
+        "Wiki",
+        "目录",
+        "响应式"
+      ],
+      "summary": "让长文档在宽屏和窄屏上都能快速跳转。",
+      "definition": "把站点导航、当前文章和章节目录分开。桌面给较长目录独立滚动空间，移动端把章节入口收进容易找到的控件里。",
+      "when": "适合多级帮助文档、指南与可深链的长文章。",
+      "steps": [
+        "使用真实标题与稳定锚点。",
+        "在窄屏提供有名称的章节菜单，跳转后将焦点移到目标。",
+        "长目录提示可继续滚动，文末给相关下一步。"
+      ],
+      "avoid": "做两个同时抢占屏幕的固定导航，或让跳转目标被固定栏盖住。",
+      "prompt": "重排指定文档页导航。保留锚点 URL，分别验证桌面目录滚动、手机章节跳转、键盘焦点与文末相关入口。",
+      "related": [
+        "progressive-disclosure",
+        "alignment"
+      ],
+      "number": "21",
+      "contentType": "editorial-explanation",
+      "promptAuthor": "vibe-design",
+      "episode": "008",
+      "secondarySources": []
+    },
+    {
+      "id": "overlay-choice",
+      "title": "提示框、气泡与弹窗",
+      "english": "Overlay choice",
+      "category": "term",
+      "visual": "overlay",
+      "source": {
+        "id": "2117314098165862612",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 009：提示框、气泡与弹窗",
+        "published": "2026-11-03",
+        "url": "https://x.com/Kubai087/status/2117314098165862612",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2117314098165862612",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F28LAAIAAAATMjExNzc4MjMzNzY5ODMyNDg0NggAAwAAAAIAAA",
+        "episode": 9
+      },
+      "tags": [
+        "Tooltip",
+        "Popover",
+        "Dialog",
+        "Drawer"
+      ],
+      "summary": "按内容和任务选浮层：解释、局部操作、确认或完整流程。",
+      "definition": "Tooltip 提供简短说明。Popover 能承载局部操作。Dialog 用于需要集中处理的任务，Drawer 可在工作时保留上下文；主要任务也可以成为独立页面。",
+      "when": "适合在各种浮层组件之间犹豫的产品界面。",
+      "steps": [
+        "先标清浮层是否包含操作。",
+        "确认方式按操作后果和可撤销性选择。",
+        "依赖背景信息的表单考虑侧栏，长流程优先给独立空间。"
+      ],
+      "avoid": "把按钮嵌入仅悬停可见的提示框，或为所有低风险操作加重确认。",
+      "prompt": "审查指明的浮层，将短说明、互动面板、关键确认和长表单分别匹配组件。验证焦点、Esc、触屏和关闭后的返回位置。",
+      "related": [
+        "toast",
+        "progressive-disclosure"
+      ],
+      "number": "22",
+      "contentType": "editorial-explanation",
+      "promptAuthor": "vibe-design",
+      "episode": "009",
+      "secondarySources": []
+    },
+    {
+      "id": "liquid-glass",
+      "title": "液态玻璃",
+      "english": "Liquid glass",
+      "category": "style",
+      "visual": "glass",
+      "source": {
+        "id": "2117782193108082923",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 010：液态玻璃",
+        "published": "2026-11-04",
+        "url": "https://x.com/Kubai087/status/2117782193108082923",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2117782193108082923",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F28LAAIAAAATMjExNzc4MjMzNzY5ODMyNDg0NggAAwAAAAIAAA",
+        "episode": 10
+      },
+      "tags": [
+        "玻璃",
+        "折射",
+        "材质"
+      ],
+      "summary": "层叠透色、边缘高光和折射，建立通透的界面材质。",
+      "definition": "原帖将材质拆成背景处理、阴影、折射、着色、高光和文字处理。本站示意聚焦背景与层次，折射应依据平台和性能预算另外评估。",
+      "when": "适合短时浮层或面积有限的播放控件。",
+      "steps": [
+        "先确定浅深背景的可读性。",
+        "让边缘高光只提示材质厚度。",
+        "低性能和高对比场景提供可读的实体填充。"
+      ],
+      "avoid": "在高速滚动的长列表或文字密集表面铺满高开销滤镜。",
+      "prompt": "给指定控件设计玻璃材质和实体回退。记录每层的作用，在亮暗与复杂背景下量测文字对比，测试滚动性能。",
+      "related": [
+        "holographic",
+        "skeuomorphism"
+      ],
+      "number": "23",
+      "contentType": "editorial-explanation",
+      "promptAuthor": "vibe-design",
+      "episode": "010",
+      "secondarySources": []
+    },
+    {
+      "id": "motion-easing",
+      "title": "动画缓动",
+      "english": "Motion easing",
+      "category": "term",
+      "visual": "easing",
+      "source": {
+        "id": "2118143759984803898",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 011：动画缓动",
+        "published": "2026-11-05",
+        "url": "https://x.com/Kubai087/status/2118143759984803898",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2118143759984803898",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F4ILAAIAAAATMjExODI5MjEwMTk2ODY3MDkwMQgAAwAAAAIAAA",
+        "episode": 11
+      },
+      "tags": [
+        "动画",
+        "缓动",
+        "速度曲线"
+      ],
+      "summary": "用速度变化让入场、位移和退场各有恰当节奏。",
+      "definition": "缓动曲线决定时间与完成进度的关系。减速曲线可让浮层迅速出现后稳定落位，缓入缓出可让位置变化两端平稳。",
+      "when": "适合菜单、选中指示条、通知和拖动归位。",
+      "steps": [
+        "从运动目的选择曲线。",
+        "约束时长，确保下一次操作能立即响应。",
+        "复用少量按角色命名的动效 token。"
+      ],
+      "avoid": "给弹窗、按钮和长时间循环套同一曲线，或夸大回弹幅度。",
+      "prompt": "整理当前动效的目的与速度曲线，给入场、退场、位置切换各一个角色。验证快速反复操作与减少动态偏好。",
+      "related": [
+        "continuity",
+        "drag-feedback"
+      ],
+      "number": "24",
+      "contentType": "editorial-explanation",
+      "promptAuthor": "vibe-design",
+      "episode": "011",
+      "secondarySources": []
+    },
+    {
+      "id": "message-bubbles",
+      "title": "消息气泡材质",
+      "english": "Chat bubble material",
+      "category": "style",
+      "visual": "bubbles",
+      "source": {
+        "id": "2118508433704169726",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 012：消息气泡材质",
+        "published": "2026-11-06",
+        "url": "https://x.com/Kubai087/status/2118508433704169726",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2118508433704169726",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F5YLAAIAAAATMjExOTM1MDc5MjYyMDc0NTAzMggAAwAAAAIAAA",
+        "episode": 12
+      },
+      "tags": [
+        "对话",
+        "气泡",
+        "材质"
+      ],
+      "summary": "给聊天界面选择一套表面语言和匹配的反馈。",
+      "definition": "原帖以磨砂、像素、Aqua、共享渐变、拟物和纯色六种方案探索气泡。材质也要服务发言方识别、文本阅读和连续消息分组。",
+      "when": "适合需要形成清晰视觉语言的聊天或 Agent 界面。",
+      "steps": [
+        "从纯色方案建立正文对比。",
+        "连续同一发送方用一致的间距和形状关系。",
+        "让等待、发送和流式更新保持布局稳定。"
+      ],
+      "avoid": "用材质颜色作为发言方的唯一标记，或让长文悬浮在复杂背景上。",
+      "prompt": "为指定聊天界面提出纯色基线与一种有特色的表面，对照检查长文本、流式输出、深浅背景和减少动态模式。",
+      "related": [
+        "liquid-glass",
+        "tactile-buttons"
+      ],
+      "number": "25",
+      "contentType": "editorial-explanation",
+      "promptAuthor": "vibe-design",
+      "episode": "012",
+      "secondarySources": []
+    },
+    {
+      "id": "halo-ripple",
+      "title": "扩散光环",
+      "english": "Halo ripple",
+      "category": "technique",
+      "visual": "halo",
+      "source": {
+        "id": "2119359092334743735",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 013：扩散光环",
+        "published": "2026-11-08",
+        "url": "https://x.com/Kubai087/status/2119359092334743735",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2119359092334743735",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F6YLAAIAAAATMjEyMDAwMzI3MTk5NzkzMjAzMAgAAwAAAAIAAA",
+        "episode": 13,
+        "episodeStatus": "inferred",
+        "episodeNote": "原帖未标数字。根据发布时间、012/014 的顺序与公开系列整理交叉判断为 013。",
+        "episodeEvidenceUrl": "https://www.teapaw.org/x_czyt"
+      },
+      "tags": [
+        "冲击波",
+        "光环",
+        "动效"
+      ],
+      "summary": "让光环从触发位置扩散，为低频动作提供空间反馈。",
+      "definition": "原帖演示把光环、局部透镜扭曲、轻微色散与边线反光结合在一起。简化时可先用单层透明环表达扩散方向。",
+      "when": "适合低频入口、展示场景或一次性的界面动作。",
+      "steps": [
+        "把中心放在触发位置。",
+        "限定在内容区单次运行，并保留可读状态。",
+        "减少动态时用短暂颜色变化或可见状态替代。"
+      ],
+      "avoid": "使用大面积高频亮度变化，或让动画挡住操作。",
+      "prompt": "为指定动作设计一次轻量扩散反馈，用单层光环作为基础。保留真实状态与独立的减少动态路径，评估低端设备开销。",
+      "related": [
+        "continuity",
+        "motion-easing"
+      ],
+      "number": "26",
+      "contentType": "editorial-explanation",
+      "promptAuthor": "vibe-design",
+      "episode": "013",
+      "secondarySources": []
+    },
+    {
+      "id": "exit-motion",
+      "title": "退场与补位",
+      "english": "Exit motion",
+      "category": "technique",
+      "visual": "leaving",
+      "source": {
+        "id": "2119831380276523207",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 014：退场与补位",
+        "published": "2026-11-10",
+        "url": "https://x.com/Kubai087/status/2119831380276523207",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2119831380276523207",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F6YLAAIAAAATMjEyMDAwMzI3MTk5NzkzMjAzMAgAAwAAAAIAAA",
+        "episode": 14
+      },
+      "tags": [
+        "退场",
+        "删除",
+        "列表"
+      ],
+      "summary": "元素退出时，让它的位置和相邻内容一起发生可追踪的变化。",
+      "definition": "退场动效既描述移除对象，也交代空位如何被填补。原帖探索多种表现方式，日常列表可以用简短淡出和自然补位表达同一因果。",
+      "when": "适合可删除的卡片、队列或临时浮层。",
+      "steps": [
+        "先决定删除后焦点去哪里。",
+        "让离场与相邻元素补位连贯，并保留撤销入口。",
+        "快速连续删除与减少动态时仍应可操作。"
+      ],
+      "avoid": "把删除变成必须等待的长动画，或让邻居重排时选错项目。",
+      "prompt": "为指定列表设计退出与补位。将实际数据操作和动画分开，检查焦点、撤销、连续删除和减少动态时的表现。",
+      "related": [
+        "continuity",
+        "motion-easing"
+      ],
+      "number": "27",
+      "contentType": "editorial-explanation",
+      "promptAuthor": "vibe-design",
+      "episode": "014",
+      "secondarySources": []
+    },
+    {
+      "id": "loading-states",
+      "title": "等待状态",
+      "english": "Loading states",
+      "category": "technique",
+      "visual": "loading",
+      "source": {
+        "id": "2121449185014845794",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 017：等待状态与乐观更新",
+        "published": "2026-11-14",
+        "url": "https://x.com/Kubai087/status/2121449185014845794",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2121449185014845794",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F9kLAAIAAAATMjEyMTk1OTIxMjg0MjczNDAwMAgAAwAAAAIAAA",
+        "episode": 17
+      },
+      "tags": [
+        "Skeleton",
+        "Spinner",
+        "Progress",
+        "等待"
+      ],
+      "summary": "按任务时间和进度可知程度选择等待反馈。",
+      "definition": "短操作适合在触发处标记忙碌，已知布局可用骨架占位，可量化的长任务显示真实进度。非常短的等待可延后提示出现，避免闪烁。",
+      "when": "适合首次加载、文件导入、刷新、同步等异步任务。",
+      "steps": [
+        "在操作触发处表达请求已收到。",
+        "让骨架与真实内容尺寸接近。",
+        "区分等待、成功和失败，并允许取消可以取消的操作。"
+      ],
+      "avoid": "绘制虚假的百分比，或让短请求反复闪现加载指示器。",
+      "prompt": "列出页面里的异步操作，按可量化进度、预计时长和是否占位选择等待方式。对照检查慢网、失败和取消。",
+      "related": [
+        "toast",
+        "notification",
+        "optimistic-ui"
+      ],
+      "number": "28",
+      "contentType": "editorial-explanation",
+      "promptAuthor": "vibe-design",
+      "episode": "017",
+      "secondarySources": []
+    },
+    {
+      "id": "optimistic-ui",
+      "title": "乐观更新",
+      "english": "Optimistic UI",
+      "category": "term",
+      "visual": "toast",
+      "source": {
+        "id": "2121449185014845794",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 017：等待状态与乐观更新",
+        "published": "2026-11-14",
+        "url": "https://x.com/Kubai087/status/2121449185014845794",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2121449185014845794",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F9kLAAIAAAATMjEyMTk1OTIxMjg0MjczNDAwMAgAAwAAAAIAAA",
+        "episode": 17
+      },
+      "tags": [
+        "异步",
+        "回滚",
+        "状态"
+      ],
+      "summary": "对可逆且成功率高的动作，先反馈，再与服务器确认。",
+      "definition": "界面先显示预期结果，同时发送保存请求。若保存失败，恢复真实状态并说明如何重试。原帖把它归入等待体验的反馈策略。",
+      "when": "适合收藏、赞或个人列表调整等低风险操作。",
+      "steps": [
+        "只对能安全回滚的变更采用。",
+        "跟踪同一对象短时间内的多次请求。",
+        "失败时恢复正确版本，并给出重试入口。"
+      ],
+      "avoid": "让资金、权限或不可逆操作提前显示为已成功。",
+      "prompt": "评估指定操作能否乐观更新。实现等待、成功、请求乱序与失败回滚，保证重复操作后的界面和真实结果一致。",
+      "related": [
+        "loading-states",
+        "toast"
+      ],
+      "number": "29",
+      "contentType": "editorial-explanation",
+      "promptAuthor": "vibe-design",
+      "episode": "017",
+      "secondarySources": []
+    },
+    {
+      "id": "scroll-cards",
+      "title": "卡片滚动叙事",
+      "english": "Scroll-driven cards",
+      "category": "technique",
+      "visual": "stack",
+      "source": {
+        "id": "2122492414598459820",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 019：卡片滚动叙事",
+        "published": "2026-11-17",
+        "url": "https://x.com/Kubai087/status/2122492414598459820",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2122492414598459820",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F%2DsLAAIAAAATMjEyMjU0NDI0NzQ5NjkzNzc2NggAAwAAAAIAAA",
+        "episode": 19
+      },
+      "tags": [
+        "滚动",
+        "卡片",
+        "作品集"
+      ],
+      "summary": "让卡片跟随滚动位置，展开、叠放或切换焦点。",
+      "definition": "原帖展示层叠、飞出、横向展廊、封面轮播和图片展开。共同点是滚动进度直接决定画面，暂停时停在当前状态，反向时顺应回退。",
+      "when": "适合产品功能演示或作品集中的短章节。",
+      "steps": [
+        "先让内容按自然顺序可读。",
+        "挑一种能解释内容关系的运动。",
+        "给触屏、键盘和减少动态模式保留完整内容。"
+      ],
+      "avoid": "劫持整页滚动或将重要信息放在必须操作特效才能到达的位置。",
+      "prompt": "给指定卡片组增加一种滚动驱动效果，保持原生滚动、内容顺序和键盘可达。验证逆向滚动、窄屏及静态回退。",
+      "related": [
+        "continuity",
+        "motion-easing"
+      ],
+      "number": "30",
+      "contentType": "editorial-explanation",
+      "promptAuthor": "vibe-design",
+      "episode": "019",
+      "secondarySources": []
+    },
+    {
+      "id": "optical-alignment",
+      "title": "光学对齐",
+      "english": "Optical alignment",
+      "category": "term",
+      "visual": "optical",
+      "source": {
+        "id": "2122514434069537097",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "光学对齐的视觉重量",
+        "published": "2026-11-17",
+        "url": "https://x.com/Kubai087/status/2122514434069537097",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2122514434069537097",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "indexUrl": "https://tech.sinsc.com/items/p1tq0w6e3h4r08jyc165uzqo4",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F%2DsLAAIAAAATMjEyMjU0NDI0NzQ5NjkzNzc2NggAAwAAAAIAAA"
+      },
+      "tags": [
+        "图标",
+        "视觉重心",
+        "对齐"
+      ],
+      "summary": "元素的几何中心与看起来的中心有时不在同一处。",
+      "definition": "尖角、不对称轮廓和字形的视觉重量会偏离边界框中心。原帖推荐观察模糊后的形状，抓住较大的明暗区域再微调。",
+      "when": "适合三角播放图标、文字与图标并排以及不规则品牌标志。",
+      "steps": [
+        "先用几何对齐建立基线。",
+        "在目标大小比较视觉重量，做小幅偏移。",
+        "保留点击区域与外部网格，只修正图形本身。"
+      ],
+      "avoid": "为每个形状使用同一个固定偏移，或同时移动整个点击区域。",
+      "prompt": "检查指定图标在按钮中的视觉重心。输出几何居中与微调后的对比，保持点击区域、焦点轮廓与布局基线稳定。",
+      "related": [
+        "alignment",
+        "tactile-buttons"
+      ],
+      "number": "31",
+      "contentType": "editorial-explanation",
+      "promptAuthor": "vibe-design",
+      "episode": null,
+      "secondarySources": []
+    },
+    {
+      "id": "onboarding-preview",
+      "title": "上手引导的实时预览",
+      "english": "Live onboarding preview",
+      "category": "technique",
+      "visual": "wiki",
+      "source": {
+        "id": "2120033693012291853",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "上手引导的实时反馈与步骤关系",
+        "published": "2026-11-10",
+        "url": "https://x.com/Kubai087/status/2120033693012291853",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2120033693012291853",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F7gLAAIAAAATMjEyMDY4Mjk5MzU2MzkyMjU4NggAAwAAAAIAAA"
+      },
+      "tags": [
+        "Onboarding",
+        "预览",
+        "步骤"
+      ],
+      "summary": "用户一选，预览就反映选择对产品的实际影响。",
+      "definition": "原帖建议把选择与界面结果放在同一个过程里，并用步骤关系交代进度。实时反馈应回答「这个选项会改变什么」。",
+      "when": "适合首次设置主题、工作区结构、偏好和功能组合。",
+      "steps": [
+        "让控件与预览使用同一份状态。",
+        "用清楚的步骤名称展示进程。",
+        "在移动端保持选择和结果相邻。"
+      ],
+      "avoid": "用固定轮播假装实时结果，或只给百分比而不告诉用户剩余任务。",
+      "prompt": "为指定上手流程设计真实预览与命名步骤，支持回退、不丢失选择，并检查移动端预览是否贴近当前控件。",
+      "related": [
+        "wiki-navigation",
+        "progressive-disclosure"
+      ],
+      "number": "32",
+      "contentType": "editorial-explanation",
+      "promptAuthor": "vibe-design",
+      "episode": null,
+      "secondarySources": []
+    },
+    {
+      "id": "bento-grid",
+      "title": "动态便当布局",
+      "english": "Animated Bento grid",
+      "category": "technique",
+      "visual": "bento",
+      "source": {
+        "id": "2115393082472681875",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "动态 Bento 功能展示",
+        "published": "2026-10-28",
+        "url": "https://x.com/Kubai087/status/2115393082472681875",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2115393082472681875",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "indexUrl": "https://tech.sinsc.com/items/c4eblgomcmlbio9j3kcq8yy2y",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5FxILAAIAAAATMjExNTQ0MzQ0NjQwMDAzMjkxNggAAwAAAAIAAA"
+      },
+      "tags": [
+        "Bento",
+        "网格",
+        "功能演示"
+      ],
+      "summary": "让每个格子说明一个真实功能，并用大小表达优先级。",
+      "definition": "Bento 以共用网格组合大小不同的内容块。原帖给功能格加入小动画，用局部演示说明用户能完成什么。",
+      "when": "适合产品功能页和少量彼此关联的功能说明。",
+      "steps": [
+        "先按重要度分配格子尺寸。",
+        "每格配一段自足的标题与微型演示。",
+        "窄屏保持有意义的阅读顺序。"
+      ],
+      "avoid": "填满等权格子或让所有动画同时争夺注意力。",
+      "prompt": "将现有功能整理为 Bento 网格，按用户目标分组。用一种短动作呈现每格的真实用途，并提供静态可读版本。",
+      "related": [
+        "scroll-cards",
+        "continuity"
+      ],
+      "number": "33",
+      "contentType": "editorial-explanation",
+      "promptAuthor": "vibe-design",
+      "episode": null,
+      "secondarySources": []
+    },
+    {
+      "id": "icon-states",
+      "title": "功能图标的状态",
+      "english": "Icon states",
+      "category": "technique",
+      "visual": "semantic",
+      "source": {
+        "id": "2117125759487934952",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "功能图标的语义与状态",
+        "published": "2026-11-02",
+        "url": "https://x.com/Kubai087/status/2117125759487934952",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2117125759487934952",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "indexUrl": "https://tech.sinsc.com/items/kpftzo4c5ujq1y4y9ylc32osl",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F28LAAIAAAATMjExNzc4MjMzNzY5ODMyNDg0NggAAwAAAAIAAA"
+      },
+      "tags": [
+        "图标",
+        "开关",
+        "语义"
+      ],
+      "summary": "用成组图形和明确名称表达开启、关闭、展开与禁用。",
+      "definition": "功能图标延续控件语义。原帖提出用线性、实心和带斜线等变体表达状态，文字或辅助技术也应能读到状态。",
+      "when": "适合工具栏、收藏按钮、静音和显示开关。",
+      "steps": [
+        "为每个状态写下动作名称与可感知区别。",
+        "在小尺寸检查同组图标的形状和一致性。",
+        "给控件提供可访问名称与程序可读状态。"
+      ],
+      "avoid": "只改颜色或只换图形，不让键盘和辅助技术知道当前状态。",
+      "prompt": "核对工具栏图标的状态，优先复用同组图标。验证高对比、小尺寸、键盘和辅助技术对未选中、选中与禁用的区分。",
+      "related": [
+        "semantic-components",
+        "icon-simplification"
+      ],
+      "number": "34",
+      "contentType": "editorial-explanation",
+      "promptAuthor": "vibe-design",
+      "episode": null,
+      "secondarySources": []
+    },
+    {
+      "id": "icon-simplification",
+      "title": "图标的体积与简化",
+      "english": "Icon simplification",
+      "category": "technique",
+      "visual": "optical",
+      "source": {
+        "id": "2115674219602452656",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "简化 AI 生成图标的体积表达",
+        "published": "2026-10-29",
+        "url": "https://x.com/Kubai087/status/2115674219602452656",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2115674219602452656",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "indexUrl": "https://tech.sinsc.com/items/nrm50sy775qm4kayhzq2334g1",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5FyYLAAIAAAATMjExNTcyMjA5Njg5ODk3Nzc5MggAAwAAAAIAAA"
+      },
+      "tags": [
+        "图标",
+        "渐变",
+        "小尺寸"
+      ],
+      "summary": "减掉次要体积线索，让小图标保留清楚的主轮廓。",
+      "definition": "原帖从 AI 生成图标出发，建议减少不必要的高光、阴影和纹理，用更简单的色阶建立主体。",
+      "when": "适合小尺寸 App 图标和被过度渲染的图形。",
+      "steps": [
+        "先在实际使用尺寸辨认轮廓。",
+        "精简光源与主要明暗层级。",
+        "用目标圆角遮罩检查裁切和边缘空间。"
+      ],
+      "avoid": "只在放大画布比较精细度，或让背景材质压过主体。",
+      "prompt": "重审指定图标的小尺寸可读性。给出主体简化方案、实际大小对比和不同系统裁切下的预览。",
+      "related": [
+        "icon-states",
+        "skeuomorphism"
+      ],
+      "number": "35",
+      "contentType": "editorial-explanation",
+      "promptAuthor": "vibe-design",
+      "episode": null,
+      "secondarySources": []
+    },
+    {
+      "id": "glass-fallback",
+      "title": "玻璃材质的回退",
+      "english": "Glass effect fallback",
+      "category": "technique",
+      "visual": "glass",
+      "source": {
+        "id": "2118292026756321720",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "Glasswork 玻璃效果的适配",
+        "published": "2026-11-05",
+        "url": "https://x.com/Kubai087/status/2118292026756321720",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2118292026756321720",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F4ILAAIAAAATMjExODI5MjEwMTk2ODY3MDkwMQgAAwAAAAIAAA"
+      },
+      "tags": [
+        "玻璃",
+        "兼容",
+        "性能"
+      ],
+      "summary": "先让控件在基础样式中可读，再按能力增加材质效果。",
+      "definition": "原帖介绍 Glasswork 对浏览器和视频背景的适配。本站把这一思路整理成层层增强的做法，先保证填充和文字，再加入滤镜等视觉层。",
+      "when": "适合跨浏览器发布的玻璃浮层与媒体背景控件。",
+      "steps": [
+        "建立不依赖效果的表面。",
+        "通过 CSS 能力检测逐层增强并检查目标设备。",
+        "大面积视频背景测试低速设备与滚动。"
+      ],
+      "avoid": "只根据浏览器名称判断支持，或将背景模糊设为文字可读的必要条件。",
+      "prompt": "为指定玻璃控件建立实体回退和增强层。列出已验证的浏览器与设备，对比复杂视频背景下的可读性和帧率。",
+      "related": [
+        "liquid-glass",
+        "continuous-corners"
+      ],
+      "number": "36",
+      "contentType": "editorial-explanation",
+      "promptAuthor": "vibe-design",
+      "episode": null,
+      "secondarySources": []
+    },
+    {
+      "id": "graphic-halftone",
+      "title": "半调纹理",
+      "english": "Halftone texture",
+      "category": "style",
+      "visual": "halftone",
+      "source": {
+        "id": "2114946376513786234",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "落地页卡片的半调纹理",
+        "published": "2026-10-27",
+        "url": "https://x.com/Kubai087/status/2114946376513786234",
+        "retrievedAt": "2026-11-18",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2114946376513786234",
+        "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+        "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5Fv0LAAIAAAATMjExNTI1NDEwMzI0MDgxODczMAgAAwAAAAIAAA",
+        "originalCreator": "@simoomdesign",
+        "originalCreatorUrl": "https://x.com/simoomdesign/status/2114628102458663022",
+        "relation": "Kubai 引用或点评此帖"
+      },
+      "tags": [
+        "半调",
+        "印刷",
+        "图像"
+      ],
+      "summary": "用有限的点阵密度表达影调，呈现印刷式颗粒。",
+      "definition": "半调用重复单元中的点大小、密度或覆盖面积表现明暗。Kubai 点评一组落地页卡片时，把半调和 ASCII、Dither 视作不同的纹理选项。",
+      "when": "适合图片处理、海报和有印刷风格的局部背景。",
+      "steps": [
+        "选择轮廓明确的素材。",
+        "确定点径与实际显示尺寸的关系。",
+        "保持前景标题与纹理区域的对比。"
+      ],
+      "avoid": "把半调与抖动当成完全相同的算法，或在细小文字下铺高对比点纹。",
+      "prompt": "给指定装饰图试做半调版本，提供纹理开关，在实际尺寸比较主体和文字可读性。",
+      "related": [
+        "ordered-dither",
+        "ascii"
+      ],
+      "number": "37",
+      "contentType": "editorial-explanation",
+      "promptAuthor": "vibe-design",
+      "episode": null,
+      "secondarySources": []
     }
   ]
 }

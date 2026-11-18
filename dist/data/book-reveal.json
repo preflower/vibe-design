@@ -5,16 +5,19 @@
   "category": "technique",
   "visual": "book",
   "source": {
-    "author": "枯白啃设计",
+    "id": "2116198373040759107",
+    "author": "枯白 Kubai",
     "handle": "@Kubai087",
-    "title": "999 个小技巧 · 006：像书一样翻开的卡片",
+    "title": "999 个小技巧 · 006：翻页式展开",
     "published": "2026-10-30",
     "url": "https://x.com/Kubai087/status/2116198373040759107",
-    "indexUrl": "https://tech.sinsc.com/items/cs3dw6anbbene3uvb5kz49eph",
-    "retrievedAt": "2026-11-17",
-    "verification": "已通过公开帖子预览接口读取文本",
+    "retrievedAt": "2026-11-18",
+    "verification": "已通过 FxTwitter 逐条读取原帖文本",
     "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2116198373040759107",
-    "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。"
+    "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+    "indexUrl": "https://tech.sinsc.com/items/cs3dw6anbbene3uvb5kz49eph",
+    "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F0wLAAIAAAATMjExNjQ5MDQyMzUzNTU0MjM0MQgAAwAAAAIAAA",
+    "episode": 6
   },
   "tags": [
     "动效",
@@ -38,5 +41,7 @@
   ],
   "number": "15",
   "contentType": "editorial-explanation",
-  "promptAuthor": "vibe-design"
+  "promptAuthor": "vibe-design",
+  "episode": "006",
+  "secondarySources": []
 }

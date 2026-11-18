@@ -1,0 +1,45 @@
+{
+  "id": "wiki-navigation",
+  "title": "文档与章节导航",
+  "english": "Documentation navigation",
+  "category": "technique",
+  "visual": "wiki",
+  "source": {
+    "id": "2116911391437443471",
+    "author": "枯白 Kubai",
+    "handle": "@Kubai087",
+    "title": "999 个小技巧 · 008：文档与章节导航",
+    "published": "2026-11-01",
+    "url": "https://x.com/Kubai087/status/2116911391437443471",
+    "retrievedAt": "2026-11-18",
+    "verification": "已通过 FxTwitter 逐条读取原帖文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2116911391437443471",
+    "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+    "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F18LAAIAAAATMjExNzA4NTEyNDI0MDI0ODkwOAgAAwAAAAIAAA",
+    "episode": 8
+  },
+  "tags": [
+    "Wiki",
+    "目录",
+    "响应式"
+  ],
+  "summary": "让长文档在宽屏和窄屏上都能快速跳转。",
+  "definition": "把站点导航、当前文章和章节目录分开。桌面给较长目录独立滚动空间，移动端把章节入口收进容易找到的控件里。",
+  "when": "适合多级帮助文档、指南与可深链的长文章。",
+  "steps": [
+    "使用真实标题与稳定锚点。",
+    "在窄屏提供有名称的章节菜单，跳转后将焦点移到目标。",
+    "长目录提示可继续滚动，文末给相关下一步。"
+  ],
+  "avoid": "做两个同时抢占屏幕的固定导航，或让跳转目标被固定栏盖住。",
+  "prompt": "重排指定文档页导航。保留锚点 URL，分别验证桌面目录滚动、手机章节跳转、键盘焦点与文末相关入口。",
+  "related": [
+    "progressive-disclosure",
+    "alignment"
+  ],
+  "number": "21",
+  "contentType": "editorial-explanation",
+  "promptAuthor": "vibe-design",
+  "episode": "008",
+  "secondarySources": []
+}

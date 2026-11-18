@@ -5,16 +5,21 @@
   "category": "technique",
   "visual": "type",
   "source": {
-    "author": "枯白啃设计",
+    "id": "2115384977227661661",
+    "author": "枯白 Kubai",
     "handle": "@Kubai087",
     "title": "对齐与默认字号体系",
     "published": "2026-10-28",
     "url": "https://x.com/Kubai087/status/2115384977227661661",
-    "indexUrl": "https://tech.sinsc.com/items/d2e0wp7nn0utzbxenbhk8jwzj",
-    "retrievedAt": "2026-11-17",
-    "verification": "已通过公开帖子预览接口读取文本",
+    "retrievedAt": "2026-11-18",
+    "verification": "已通过 FxTwitter 逐条读取原帖文本",
     "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2115384977227661661",
-    "note": "X 直连访问受限。通过第三方公开预览读取帖子文本；未独立核验帖子中的视频演示。"
+    "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+    "indexUrl": "https://tech.sinsc.com/items/d2e0wp7nn0utzbxenbhk8jwzj",
+    "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5FxILAAIAAAATMjExNTQ0MzQ0NjQwMDAzMjkxNggAAwAAAAIAAA",
+    "originalCreator": "@jaydwivedi_",
+    "originalCreatorUrl": "https://x.com/jaydwivedi_/status/2115379248013717822",
+    "relation": "Kubai 引用或点评此帖"
   },
   "tags": [
     "字体",
@@ -37,5 +42,7 @@
   ],
   "number": "12",
   "contentType": "editorial-explanation",
-  "promptAuthor": "vibe-design"
+  "promptAuthor": "vibe-design",
+  "episode": null,
+  "secondarySources": []
 }

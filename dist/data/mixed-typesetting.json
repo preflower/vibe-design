@@ -1,0 +1,45 @@
+{
+  "id": "mixed-typesetting",
+  "title": "中英混排",
+  "english": "Mixed-language typesetting",
+  "category": "technique",
+  "visual": "type",
+  "source": {
+    "id": "2116555064227811412",
+    "author": "枯白 Kubai",
+    "handle": "@Kubai087",
+    "title": "999 个小技巧 · 007：中英混排",
+    "published": "2026-10-31",
+    "url": "https://x.com/Kubai087/status/2116555064227811412",
+    "retrievedAt": "2026-11-18",
+    "verification": "已通过 FxTwitter 逐条读取原帖文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2116555064227811412",
+    "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+    "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F18LAAIAAAATMjExNzA4NTEyNDI0MDI0ODkwOAgAAwAAAAIAAA",
+    "episode": 7
+  },
+  "tags": [
+    "排版",
+    "i18n",
+    "换行"
+  ],
+  "summary": "用真实文案检查中英文、长词与标点的断行。",
+  "definition": "同一个容器在不同语言下会出现不同的字宽和断行。原帖建议结合实际布局选择文案，并用 CSS 处理对齐、句读与行宽。",
+  "when": "适合国际化产品、按钮标签和窄屏正文。",
+  "steps": [
+    "用真实的双语内容走查最短和最长场景。",
+    "对短标题评估平衡换行，正文保留自然换行。",
+    "指定正确的 lang，针对浏览器支持情况测试避头尾和自动字间距。"
+  ],
+  "avoid": "用固定高度或禁止换行隐藏断行问题。",
+  "prompt": "检查指定页面的中英混排。用长短文案和窄屏复现问题，先调整布局与措辞，再用渐进增强的排版属性补足。",
+  "related": [
+    "typography-scale",
+    "alignment"
+  ],
+  "number": "20",
+  "contentType": "editorial-explanation",
+  "promptAuthor": "vibe-design",
+  "episode": "007",
+  "secondarySources": []
+}

@@ -23,7 +23,9 @@ npm run check
 
 ## 内容维护
 
-- `data/content.mjs`：唯一内容源，定义词条、来源和关联。
+- `data/content.mjs`：整合词条与来源，定义分类和关联。
+- `data/sources.mjs`：31 篇核对过的原帖元数据、系列对应关系及检索覆盖范围。
+- `data/expanded.mjs`：新版新增词条。
 - `data/schema.json`：机器可读数据的 JSON Schema。
 - `src/visuals.mjs`：本站编写的 HTML/CSS 示意图与交互控件。
 - `src/styles.css`：设计变量、布局、图示与响应式样式。
@@ -39,6 +41,9 @@ npm run check
 - `/llms.txt`：说明与词条索引。
 - `/llms-full.txt`：完整 Markdown，可下载用于离线上下文。
 - `/data/entries.json`：全部结构化词条。
+- `/series/`：系列目录，可直接打开原帖。
+- `/data/series.json`：系列目录与期号说明。
+- `/data/sources.json`：原帖清单及检索范围。
 - `/data/schema.json`：数据结构。
 - `/entries/{id}/index.md`：单条 Markdown。
 - `/data/{id}.json`：单条 JSON。
@@ -47,6 +52,6 @@ npm run check
 
 ## 来源与创作范围
 
-首批 16 条笔记选题来自 10 篇 @Kubai087 公开帖子。通过公开收录索引发现链接，再通过 FxTwitter 公开帖子预览读取文本。X 直连受限；没有声称读取完整时间线，也没有独立核验视频。
+新版 37 条笔记选题来自 31 篇 @Kubai087 公开帖子。2026-11-18 分页读取了公开时间线镜像 31 页和独立索引 10 页，合并去重后得到 523 个候选帖子 ID。时间线镜像返回的帖子日期是 2026-02-12 至 2026-11-18。选中的原帖经 FxTwitter 逐条核对正文、作者和日期。013 期号由发布时间、相邻期数和公开整理推定。镜像存在缺口，收录不覆盖完整账号历史。
 
 本站没有复制完整帖子、原帖提示词或媒体文件，图示由本站用 HTML/CSS 绘制。定义和实践提示词属于二次整理。涉及引用作品时保留已知原作者，如 Levi Kline 与 @imperry。本项目并非原作者官方网站，也未获官方背书。
