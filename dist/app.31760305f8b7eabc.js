@@ -9,6 +9,54 @@ function announce(message) {
   toast.classList.add('visible');
   toastTimer = setTimeout(() => toast.classList.remove('visible'), 3500);
 }
+// Project rows of the photographed label onto the turning barrel. The back
+// uses bare metal sampled from above the label; the end caps keep their outline.
+function rollingBarrel(gate) {
+  const shell = $('.cs-cassette-front', gate);
+  const photo = $('img', shell);
+  if (!photo.naturalWidth) return;
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+  canvas.className = 'cs-turning-label';
+  canvas.width = Math.min(photo.naturalWidth, 1024);
+  canvas.height = 180;
+  shell.append(canvas);
+  const angles = Array.from({length:canvas.height}, (_, row) =>
+    Math.asin(2 * (row + .5) / canvas.height - 1));
+  // A periodic strip keeps both edges of the photographed face continuous
+  // with the metal back as either edge turns towards the camera.
+  const texture = document.createElement('canvas');
+  texture.width = canvas.width;
+  texture.height = 720;
+  const source = texture.getContext('2d');
+  const turn = 2 * Math.PI;
+  const stripe = (y, row) => source.drawImage(photo, photo.naturalWidth * .064,
+    y * photo.naturalHeight, photo.naturalWidth * .789, 1, 0, row, texture.width, 1);
+  for (let row = 0; row < texture.height; row++) {
+    const a = row / texture.height * turn;
+    const edge = .095 + .895 * (.5 + .5 * Math.sin(a));
+    stripe(edge, row);
+    if (Math.cos(a) < 0) {
+      const blend = Math.min(1, -Math.cos(a) * 3);
+      source.globalAlpha = blend * blend * (3 - 2 * blend);
+      stripe(.18 + .035 * Math.sin(a), row);
+      source.globalAlpha = 1;
+    }
+  }
+  return {
+    draw(angle) {
+      for (let row = 0; row < angles.length; row++) {
+        const phase = (angles[row] - angle) / turn;
+        const y = (phase - Math.floor(phase)) * (texture.height - 1);
+        ctx.drawImage(texture, 0, y, texture.width, 1, 0, row, canvas.width, 1);
+      }
+      canvas.style.opacity = Math.min(1, Math.abs(angle) / .14);
+    },
+    remove() { canvas.remove(); }
+  };
+}
+
 // Sample the live strip through a cylindrical lens at the gate. The map
 // is cached by lens size; its strength follows the tension of the moving strip.
 function mountFilmTransport(roll, playEntrance) {
@@ -24,8 +72,46 @@ function mountFilmTransport(roll, playEntrance) {
   let previousPosition = 0;
   let previousTime = 0;
   let scheduled = 0;
-  let entrance;
-  let awaitingExposure = [];
+  let advanceEntrance;
+  let nextExposure = 0;
+  const frames = $$('.cs-frame', film);
+  if (!motion.matches) for (const frame of frames) frame.dataset.exposure = 'latent';
+
+  function exposeNext(time) {
+    if (motion.matches) return false;
+    const lip = Math.min(innerHeight, gate.getBoundingClientRect().top) - 12;
+    for (const frame of film.querySelectorAll('.cs-frame[data-exposure="latent"]:not([hidden])')) {
+      const rect = frame.getBoundingClientRect();
+      if (rect.top >= lip) break;
+      if (rect.bottom <= 0) continue;
+      if (time >= nextExposure) {
+        const image = $('.cs-image-link img', frame);
+        if (image && !image.complete) {
+          image.loading = 'eager';
+          return false;
+        }
+        frame.dataset.exposure = 'developing';
+        nextExposure = time + 90;
+      }
+      return true;
+    }
+    return false;
+  }
+  function finishExposure(frame) {
+    delete frame.dataset.exposure;
+  }
+  for (const event of ['animationend','animationcancel']) {
+    film.addEventListener(event, e => {
+      if (e.animationName === 'film-exposure') finishExposure(e.target.closest('.cs-frame'));
+    });
+  }
+  film.addEventListener('focusin', event => {
+    const frame = event.target.closest('.cs-frame');
+    if (frame) finishExposure(frame);
+  });
+  film.addEventListener('load', wake, true);
+  film.addEventListener('error', wake, true);
+  film.addEventListener('archivechange', wake);
 
   const light = document.createElement('canvas');
   light.width = 96;
@@ -70,14 +156,8 @@ function mountFilmTransport(roll, playEntrance) {
   }
   function update(time) {
     scheduled = 0;
-    if (awaitingExposure.length) {
-      const lip = gate.getBoundingClientRect().top;
-      awaitingExposure = awaitingExposure.filter(frame => {
-        if (frame.getBoundingClientRect().top > lip - 12) return true;
-        frame.dataset.exposure = 'developing';
-        return false;
-      });
-    }
+    advanceEntrance?.(time);
+    const exposing = exposeNext(time);
     const position = feedPosition();
     const elapsed = Math.max(1, time - previousTime);
     const speed = (position - previousPosition) / Math.min(64, elapsed);
@@ -88,7 +168,7 @@ function mountFilmTransport(roll, playEntrance) {
     tension += (target - tension) * (1 - Math.exp(-Math.min(elapsed,64) / response));
     if (Math.abs(tension) < .002 && target === 0) tension = 0;
     shade();
-    if (!motion.matches && (target || tension || entrance?.playState === 'running')) wake();
+    if (!motion.matches && (target || tension || advanceEntrance || exposing)) wake();
   }
   function wake() {
     if (!scheduled) scheduled = requestAnimationFrame(update);
@@ -124,40 +204,80 @@ function mountFilmTransport(roll, playEntrance) {
   previousPosition = feedPosition();
   previousTime = performance.now();
   window.addEventListener('scroll', wake, {passive:true});
-  motion.addEventListener('change', () => { tension = 0; shade(); });
+  motion.addEventListener('change', () => {
+    tension = 0;
+    shade();
+    if (motion.matches) frames.forEach(finishExposure);
+  });
+  wake();
 
   const navigation = performance.getEntriesByType('navigation')[0];
   if (!playEntrance || motion.matches || location.hash || scrollY || navigation?.type === 'back_forward') return;
-  const travel = Math.max(0, gate.getBoundingClientRect().top - roll.getBoundingClientRect().top);
-  if (!travel) return;
-  try {
-    if (sessionStorage.getItem('film-entrance-seen')) return;
-    sessionStorage.setItem('film-entrance-seen', '1');
-  } catch { /* The entrance can still play when storage is unavailable. */ }
-  const lip = gate.getBoundingClientRect().top;
-  const frames = $$('.cs-frame:not([hidden])', film).filter(frame => frame.getBoundingClientRect().top < lip);
-  for (const frame of frames) frame.dataset.exposure = 'latent';
-  awaitingExposure = [...frames];
-  function clearExposure() {
-    awaitingExposure = [];
-    for (const frame of frames) delete frame.dataset.exposure;
-  }
+  const feed = $('.cs-feed', roll);
+  const startOfFilm = feed.getBoundingClientRect().top;
+  const rest = gate.getBoundingClientRect();
+  if (startOfFilm >= rest.top) return;
+  const barrel = rollingBarrel(gate);
+  const start = -rest.height;
+  const distance = rest.top - start;
+  // Integrate a smooth velocity ramp. The roll cruises through the leader;
+  // the leader's position controls only clipping, never the barrel's speed.
+  const accelerate = 260;
+  const brake = 510;
+  const duration = 1800;
+  const cruiseSpeed = distance / (duration - (accelerate + brake) / 2);
+  const rampDistance = t => t ** 3 * (1 - t / 2);
+  const started = performance.now();
+  // Clip in each block's own coordinates so the wipe also covers navigation
+  // outside the archive, without putting a layer in front of the cassette.
+  const revealBlocks = $$('.site-header, .cs-controls').map(element => ({
+    element, bounds:element.getBoundingClientRect()
+  }));
+  const interrupt = new AbortController();
+  roll.classList.add('is-rolling-in');
+
   function finishEntrance() {
-    entrance.finish();
-    clearExposure();
+    advanceEntrance = null;
+    interrupt.abort();
+    gate.style.removeProperty('transform');
+    for (const {element} of revealBlocks) element.style.removeProperty('clip-path');
+    lens.style.removeProperty('clip-path');
+    roll.classList.remove('is-rolling-in', 'film-attached');
+    barrel?.remove();
+    wake();
   }
-  entrance = film.animate([
-    {transform:'translateY('+travel+'px)'}, {transform:'translateY(0)'}
-  ], {duration:1450,easing:'cubic-bezier(.36,0,.23,1)'});
+  advanceEntrance = time => {
+    const elapsed = Math.max(0, Math.min(duration, time - started - 80));
+    const remaining = duration - elapsed;
+    let y = start + cruiseSpeed * (elapsed - accelerate / 2);
+    if (elapsed < accelerate) {
+      y = start + cruiseSpeed * accelerate * rampDistance(elapsed / accelerate);
+    } else if (remaining < brake) {
+      y = rest.top - cruiseSpeed * brake * rampDistance(remaining / brake);
+    }
+    gate.style.transform = 'translateY(' + (y - rest.top) + 'px)';
+    const edge = y + rest.height * .0242;
+    for (const {element, bounds} of revealBlocks) {
+      element.style.clipPath = edge >= bounds.bottom ? '' :
+        'inset(0 0 calc(100% - ' + Math.max(0, edge - bounds.top) + 'px) 0)';
+    }
+    // Pin the leader at its final position. Only the length behind the
+    // moving mouth is visible, including a small overlap under the velvet.
+    const length = Math.max(0, edge - startOfFilm);
+    roll.classList.toggle('film-attached', length > 0);
+    lens.style.clipPath = length >= lensHeight ? '' :
+      'inset(max(0px, calc(72% - ' + length + 'px)) 0 0)';
+    // The cassette backing masks the strip throughout motion and at rest.
+    barrel?.draw((y - rest.top) / (rest.height * .45));
+    if (remaining === 0) finishEntrance();
+  };
+  advanceEntrance(started);
   previousPosition = feedPosition();
   wake();
-  entrance.addEventListener('finish', () => {
-    for (const frame of awaitingExposure) frame.dataset.exposure = 'developing';
-    awaitingExposure = [];
-    setTimeout(clearExposure, 1000);
-  }, {once:true});
-  film.addEventListener('focusin', finishEntrance, {once:true});
-  motion.addEventListener('change', finishEntrance, {once:true});
+  for (const event of ['wheel','touchstart','keydown','resize','scroll']) {
+    window.addEventListener(event, finishEntrance, {once:true, passive:true, signal:interrupt.signal});
+  }
+  motion.addEventListener('change', finishEntrance, {signal:interrupt.signal});
 }
 
 const grid = $('.cs-gallery');
@@ -250,6 +370,7 @@ if (grid) {
     const hint = topicButtons.find(button => button.dataset.topicFilter === topic)?.title;
     $('#result-count').textContent = `${total} 条设计笔记${terms.length ? ' · 搜索结果' : ''}${hint ? ' · ' + hint : ''}`;
     $('.cs-empty').hidden = total !== 0;
+    grid.dispatchEvent(new Event('archivechange', {bubbles:true}));
   }
 
   function sortNotes() {

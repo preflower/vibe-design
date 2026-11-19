@@ -36,10 +36,6 @@
 .cs-view>span { margin-right:4px; }
 .cs-view button,.cs-bar select { border:1px solid var(--cs-rule); }
 .cs-view button[aria-pressed="true"] { color:var(--cs-mark); border-color:var(--cs-mark); }
-.cs-film { position:relative; padding:23px 17px 12px; background:var(--cs-film); border:1px solid #43463f; }
-.cs-film::before,.cs-film::after { content:""; position:absolute; left:13px; right:13px; height:6px; background:repeating-linear-gradient(to right,#50534a 0 11px,transparent 11px 31px); }
-.cs-film::before { top:7px; }
-.cs-film::after { bottom:6px; }
 .cs-gallery { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:0 12px; }
 .cs-film[data-size="large"] .cs-gallery { grid-template-columns:repeat(2,minmax(0,1fr)); }
 .cs-frame { min-width:0; margin:0; }
@@ -85,8 +81,6 @@
   .cs-quick { gap:7px; }
   .cs-gallery { grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 7px; }
   .cs-film[data-size="large"] .cs-gallery { grid-template-columns:minmax(0,1fr); }
-  .cs-film { padding:18px 8px 11px; }
-  .cs-film::before,.cs-film::after { height:4px; }
   .cs-bar { flex-wrap:wrap; gap:6px; }
   .cs-filters { gap:2px; }
   .cs-bar button,.cs-bar select { padding:6px; }
@@ -149,7 +143,6 @@
   --film-left:5.2%;
   --film-right:11.3%;
   --rail:clamp(22px,2.6vw,42px);
-  --film-border:1px;
 }
 @media(min-width:741px) {
   .cs-controls {
@@ -164,20 +157,22 @@
 }
 .cs-roll { min-width:0; position:relative; isolation:isolate; }
 .cs-film {
+  position:relative;
   container:film-sheet / inline-size;
-  background:#131412;
   padding:clamp(18px,2vw,36px) var(--rail) clamp(100px,10vw,150px);
-  border:var(--film-border) solid #565750;
-  border-block:0;
-  box-shadow:0 0 30px #10110f;
+  isolation:isolate;
+  background:linear-gradient(110deg,#484942,#383935 48%,#454640);
 }
-.cs-film::before,.cs-film::after {
-  inset:0 auto 0 6px;
-  height:auto;
-  width:calc(var(--rail) - 13px);
-  background:repeating-linear-gradient(to bottom,#72736b 0 1px,#40413d 1px 9px,transparent 9px 26px);
+/* Punch both rows out of the same emulsion layer. Only the backing light
+   shows through the cuts; the gallery stays outside the mask. */
+.cs-film::before {
+  --perforation:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 38' width='32' height='38'%3E%3Crect x='8' y='11' width='16' height='11' rx='2.6'/%3E%3C/svg%3E");
+  content:""; position:absolute; inset:0; z-index:-1; pointer-events:none;
+  background:linear-gradient(95deg,#191a17,#131412 24%,#121310 72%,#191a17);
+  mask:linear-gradient(white,white),var(--perforation) left top / var(--rail) auto repeat-y,
+    var(--perforation) right top / var(--rail) auto repeat-y;
+  mask-composite:subtract,add;
 }
-.cs-film::after { left:auto;right:6px; }
 .cs-gallery { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
 /* Three 240px frames and two 12px gutters fit between the rails. */
 @container film-sheet (min-width:744px) {
@@ -232,7 +227,6 @@
   .cs-bar { padding:7px 0;gap:6px; }
 
   .cs-film { --rail:18px;padding-top:12px; }
-  .cs-film::before {left:4px}.cs-film::after {right:4px}
   .cs-gallery { gap:8px; }
 
   .cs-film[data-size="standard"] .cs-image-link { aspect-ratio:1.12; }
@@ -265,12 +259,30 @@
 /* Develop the emulsion inside each frame while leaving the film rails exposed. */
 @media (prefers-reduced-motion:no-preference) {
   .cs-frame[data-exposure="latent"] > * { opacity:0; }
-  .cs-frame[data-exposure="developing"] .cs-image-link { animation:film-exposure 900ms ease-out both; }
-  .cs-frame[data-exposure="developing"] figcaption { animation:film-caption 560ms 180ms ease-out both; }
+  .cs-frame[data-exposure="developing"] .cs-image-link { animation:film-exposure 1150ms linear both; }
+  .cs-frame[data-exposure="developing"] figcaption { animation:film-caption 500ms 290ms ease-out both; }
   @keyframes film-exposure {
-    0% { opacity:0; filter:brightness(.48) contrast(.55); }
-    45% { opacity:.58; filter:brightness(.84) contrast(.8); }
-    100% { opacity:1; filter:none; }
+    0% { opacity:0; filter:blur(5px) contrast(.55) brightness(.42); }
+    22% { opacity:.85; filter:blur(4px) contrast(.58) brightness(.53); }
+    58% { opacity:1; filter:blur(1.8px) contrast(.8) brightness(.84); }
+    100% { opacity:1; filter:blur(0) contrast(1) brightness(1); }
   }
   @keyframes film-caption { from { opacity:0; } to { opacity:1; } }
+}
+
+.cs-roll {z-index:5;}
+/* Match the velvet-to-metal backing at rest and cover the unreleased film
+   while the moving cassette is above its dock. */
+.cs-cartridge::before {
+  content:""; position:absolute; left:var(--film-left); right:var(--film-right);
+  top:5%; bottom:0; background:linear-gradient(to bottom,transparent,var(--cs-wall) calc(var(--body-height) * .03));
+  box-shadow:0 99vh 0 99vh var(--cs-wall);
+  clip-path:inset(0 0 -200vh);
+}
+.is-rolling-in .cs-cassette-front {pointer-events:none;}
+.is-rolling-in:not(.film-attached) .cs-bend {visibility:hidden;}
+.cs-turning-label {
+  position:absolute;left:6.4%;top:9.5%;width:78.9%;height:89.5%;
+  filter:grayscale(1);pointer-events:none;
+  mask-image:linear-gradient(to right,transparent,#000 1.2%,#000 98.8%,transparent);
 }
