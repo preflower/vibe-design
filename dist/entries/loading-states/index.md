@@ -1,7 +1,7 @@
 # 等待状态 / Loading states
 
 ID: loading-states
-分类: 设计技巧
+分类: 设计规范
 标签: Skeleton, Spinner, Progress, 等待
 
 按任务时间和进度可知程度选择等待反馈。

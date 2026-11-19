@@ -1,7 +1,7 @@
 # 半调纹理 / Halftone texture
 
 ID: graphic-halftone
-分类: 设计风格
+分类: 设计技巧
 标签: 半调, 印刷, 图像
 
 用有限的点阵密度表达影调，呈现印刷式颗粒。

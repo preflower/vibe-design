@@ -3,7 +3,7 @@ import { readFile, readdir, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { mediaFor } from '../src/contact-media.mjs';
 import { fileURLToPath } from 'node:url';
-import { entries, series, sources, topics } from '../data/content.mjs';
+import { categories, entries, series, sources, topics } from '../data/content.mjs';
 const root=fileURLToPath(new URL('../dist',import.meta.url));
 const ids=new Set(entries.map(e=>e.id));
 assert.equal(ids.size,entries.length,'Duplicate IDs');
@@ -21,6 +21,7 @@ for (const issue of series) {
 const dataset=JSON.parse(await readFile(path.join(root,'data/entries.json'),'utf8'));
 assert.deepEqual(dataset.entries,entries,'Machine data differs from source');
 for(const entry of entries){
+ assert.ok(entry.category !== 'all' && Object.hasOwn(categories,entry.category), `Invalid category: ${entry.id}`);
  assert.ok(entry.topic !== 'all' && Object.hasOwn(topics,entry.topic), `Missing or invalid topic: ${entry.id}`);
  assert.match(entry.source.url,/^https:\/\/x\.com\/Kubai087\/status\/\d+$/);
  assert.ok(entry.prompt.trim());

@@ -8,7 +8,7 @@
   "entries": [
     {
       "id": "nested-radius",
-      "topic": "layout",
+      "topic": "system",
       "title": "嵌套圆角",
       "english": "Nested radius",
       "category": "guideline",
@@ -61,7 +61,7 @@
     },
     {
       "id": "design-tokens",
-      "topic": "layout",
+      "topic": "system",
       "title": "设计变量",
       "english": "Design tokens",
       "category": "term",
@@ -214,10 +214,10 @@
     },
     {
       "id": "spacing-scale",
-      "topic": "layout",
+      "topic": "system",
       "title": "间距体系",
       "english": "Spacing scale",
-      "category": "technique",
+      "category": "guideline",
       "visual": "spacing",
       "source": {
         "id": "2121615225816494303",
@@ -268,7 +268,7 @@
       "topic": "motion",
       "title": "界面连续性",
       "english": "UI continuity",
-      "category": "term",
+      "category": "guideline",
       "visual": "continuity",
       "source": {
         "id": "2120320609255043510",
@@ -345,7 +345,7 @@
     },
     {
       "id": "toast",
-      "topic": "components",
+      "topic": "feedback",
       "title": "轻提示",
       "english": "Toast",
       "category": "term",
@@ -395,7 +395,7 @@
     },
     {
       "id": "notification",
-      "topic": "components",
+      "topic": "feedback",
       "title": "通知",
       "english": "Notification",
       "category": "term",
@@ -448,7 +448,7 @@
       "topic": "visual",
       "title": "镭射质感",
       "english": "Holographic",
-      "category": "style",
+      "category": "technique",
       "visual": "holo",
       "source": {
         "id": "2121892029403922717",
@@ -566,7 +566,7 @@
       "topic": "layout",
       "title": "对齐的秩序",
       "english": "Alignment",
-      "category": "technique",
+      "category": "guideline",
       "visual": "alignment",
       "source": {
         "id": "2115384977227661661",
@@ -617,7 +617,7 @@
       "topic": "layout",
       "title": "字号与层级",
       "english": "Type scale",
-      "category": "technique",
+      "category": "guideline",
       "visual": "type",
       "source": {
         "id": "2115384977227661661",
@@ -715,7 +715,7 @@
     },
     {
       "id": "drag-feedback",
-      "topic": "motion",
+      "topic": "feedback",
       "title": "拖拽的反馈",
       "english": "Drag feedback",
       "category": "technique",
@@ -821,7 +821,7 @@
       "topic": "components",
       "title": "按语义选组件",
       "english": "Semantic components",
-      "category": "technique",
+      "category": "guideline",
       "visual": "semantic",
       "source": {
         "id": "2121615225816494303",
@@ -869,10 +869,10 @@
     },
     {
       "id": "tactile-buttons",
-      "topic": "components",
+      "topic": "visual",
       "title": "有触感的按钮",
       "english": "Tactile buttons",
-      "category": "style",
+      "category": "technique",
       "visual": "tactile",
       "source": {
         "id": "2114378773655326873",
@@ -973,7 +973,7 @@
       "topic": "visual",
       "title": "有序抖动",
       "english": "Ordered dithering",
-      "category": "style",
+      "category": "technique",
       "visual": "dither",
       "source": {
         "id": "2115091203465290087",
@@ -1123,7 +1123,7 @@
       "topic": "components",
       "title": "提示框、气泡与弹窗",
       "english": "Overlay choice",
-      "category": "term",
+      "category": "guideline",
       "visual": "overlay",
       "source": {
         "id": "2117314098165862612",
@@ -1425,10 +1425,10 @@
     },
     {
       "id": "loading-states",
-      "topic": "components",
+      "topic": "feedback",
       "title": "等待状态",
       "english": "Loading states",
-      "category": "technique",
+      "category": "guideline",
       "visual": "loading",
       "source": {
         "id": "2121449185014845794",
@@ -1477,10 +1477,10 @@
     },
     {
       "id": "optimistic-ui",
-      "topic": "components",
+      "topic": "feedback",
       "title": "乐观更新",
       "english": "Optimistic UI",
-      "category": "term",
+      "category": "technique",
       "visual": "toast",
       "source": {
         "id": "2121449185014845794",
@@ -1580,7 +1580,7 @@
       "topic": "layout",
       "title": "光学对齐",
       "english": "Optical alignment",
-      "category": "term",
+      "category": "technique",
       "visual": "optical",
       "source": {
         "id": "2122514434069537097",
@@ -1625,7 +1625,7 @@
     },
     {
       "id": "onboarding-preview",
-      "topic": "components",
+      "topic": "feedback",
       "title": "上手引导的实时预览",
       "english": "Live onboarding preview",
       "category": "technique",
@@ -1722,10 +1722,10 @@
     },
     {
       "id": "icon-states",
-      "topic": "components",
+      "topic": "feedback",
       "title": "功能图标的状态",
       "english": "Icon states",
-      "category": "technique",
+      "category": "guideline",
       "visual": "semantic",
       "source": {
         "id": "2117125759487934952",
@@ -1870,7 +1870,7 @@
       "topic": "visual",
       "title": "半调纹理",
       "english": "Halftone texture",
-      "category": "style",
+      "category": "technique",
       "visual": "halftone",
       "source": {
         "id": "2114946376513786234",
@@ -1920,7 +1920,7 @@
       "topic": "components",
       "title": "选择控件的取舍",
       "english": "Choice controls",
-      "category": "technique",
+      "category": "guideline",
       "visual": "semantic",
       "source": {
         "id": "2123217190052827633",

@@ -61,7 +61,7 @@
         "english": {
           "type": "string"
         },
-        "topic": { "enum": ["layout", "visual", "components", "motion"] },
+        "topic": { "enum": ["layout", "visual", "components", "feedback", "motion", "system"] },
         "category": {
           "enum": [
             "term",

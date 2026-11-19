@@ -1,7 +1,7 @@
 # 有触感的按钮 / Tactile buttons
 
 ID: tactile-buttons
-分类: 设计风格
+分类: 设计技巧
 标签: 按钮, 拟物, 反馈
 
 用光影和按压状态，表现可以触碰的表面。

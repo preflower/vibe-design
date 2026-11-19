@@ -2,7 +2,7 @@ import { mkdir, writeFile, cp, rm, readFile, readdir } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
-import { entries, categories, sources, series, coverage, updated, origin as defaultOrigin } from '../data/content.mjs';
+import { entries, topics, categories, sources, series, coverage, updated, origin as defaultOrigin } from '../data/content.mjs';
 import { arrow, external, searchIcon } from '../src/visuals.mjs';
 import { coverFor } from '../src/contact-media.mjs';
 import { mediaFor } from '../src/contact-media.mjs';
@@ -67,7 +67,7 @@ for (const name of ['styles.css', 'contact.css', 'contact-home.css']) {
 }
 const searchIndex = entries.map(entry => ({
   id:entry.id, title:entry.title, english:entry.english, cover:localAsset(coverFor(entry)?.url),
-  keywords:[entry.title,entry.english,entry.summary,entry.definition,...entry.tags,
+  keywords:[entry.title,entry.english,topics[entry.topic],categories[entry.category],entry.summary,entry.definition,...entry.tags,
     ...(entry.episode ? [entry.episode,String(Number(entry.episode)),'999 个小技巧'] : [])].join(' ').toLowerCase()
 }));
 const indexFile = await emitAsset('search-index.js', 'export default ' + JSON.stringify(searchIndex) + ';');

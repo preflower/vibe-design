@@ -1,10 +1,10 @@
 export const expandedEntries = [
   {
     "id": "tactile-buttons",
-    "topic": "components",
+    "topic": "visual",
     "title": "有触感的按钮",
     "english": "Tactile buttons",
-    "category": "style",
+    "category": "technique",
     "visual": "tactile",
     "source": "s001",
     "tags": [
@@ -60,7 +60,7 @@ export const expandedEntries = [
     "topic": "visual",
     "title": "有序抖动",
     "english": "Ordered dithering",
-    "category": "style",
+    "category": "technique",
     "visual": "dither",
     "source": "s003",
     "tags": [
@@ -144,7 +144,7 @@ export const expandedEntries = [
     "topic": "components",
     "title": "提示框、气泡与弹窗",
     "english": "Overlay choice",
-    "category": "term",
+    "category": "guideline",
     "visual": "overlay",
     "source": "s009",
     "tags": [
@@ -310,10 +310,10 @@ export const expandedEntries = [
   },
   {
     "id": "loading-states",
-    "topic": "components",
+    "topic": "feedback",
     "title": "等待状态",
     "english": "Loading states",
-    "category": "technique",
+    "category": "guideline",
     "visual": "loading",
     "source": "s017",
     "tags": [
@@ -340,10 +340,10 @@ export const expandedEntries = [
   },
   {
     "id": "optimistic-ui",
-    "topic": "components",
+    "topic": "feedback",
     "title": "乐观更新",
     "english": "Optimistic UI",
-    "category": "term",
+    "category": "technique",
     "visual": "toast",
     "source": "s017",
     "tags": [
@@ -399,7 +399,7 @@ export const expandedEntries = [
     "topic": "layout",
     "title": "光学对齐",
     "english": "Optical alignment",
-    "category": "term",
+    "category": "technique",
     "visual": "optical",
     "source": "optical",
     "tags": [
@@ -424,7 +424,7 @@ export const expandedEntries = [
   },
   {
     "id": "onboarding-preview",
-    "topic": "components",
+    "topic": "feedback",
     "title": "上手引导的实时预览",
     "english": "Live onboarding preview",
     "category": "technique",
@@ -480,10 +480,10 @@ export const expandedEntries = [
   },
   {
     "id": "icon-states",
-    "topic": "components",
+    "topic": "feedback",
     "title": "功能图标的状态",
     "english": "Icon states",
-    "category": "technique",
+    "category": "guideline",
     "visual": "semantic",
     "source": "icons",
     "tags": [
@@ -567,7 +567,7 @@ export const expandedEntries = [
     "topic": "visual",
     "title": "半调纹理",
     "english": "Halftone texture",
-    "category": "style",
+    "category": "technique",
     "visual": "halftone",
     "source": "halftone",
     "tags": [
@@ -591,7 +591,7 @@ export const expandedEntries = [
     ]
   },
   {
-    id: 'choice-controls', topic: 'components', title: '选择控件的取舍', english: 'Choice controls', category: 'technique', visual: 'semantic',
+    id: 'choice-controls', topic: 'components', title: '选择控件的取舍', english: 'Choice controls', category: 'guideline', visual: 'semantic',
     source: 's020', tags: ['表单','开关','复选框','单选','下拉菜单','分段选择'],
     summary: '先看选择何时生效，再看它是设置一个值，还是执行一个动作。',
     definition: '在设置里拨动「允许通知」，用户预期它立即生效。表单里的订阅选项则可能要等保存后才生效。两者都只有选与不选两种状态，提交时机决定了控件给人的承诺。',

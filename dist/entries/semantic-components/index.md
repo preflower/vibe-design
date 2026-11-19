@@ -1,7 +1,7 @@
 # 按语义选组件 / Semantic components
 
 ID: semantic-components
-分类: 设计技巧
+分类: 设计规范
 标签: 组件, 语义, UX
 
 先说清用户在做什么，再决定界面应该长什么样。

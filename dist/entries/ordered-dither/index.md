@@ -1,7 +1,7 @@
 # 有序抖动 / Ordered dithering
 
 ID: ordered-dither
-分类: 设计风格
+分类: 设计技巧
 标签: Dither, 像素, 纹理
 
 用规则颗粒模拟有限色阶，保留明暗变化。

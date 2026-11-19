@@ -1,7 +1,7 @@
 # 提示框、气泡与弹窗 / Overlay choice
 
 ID: overlay-choice
-分类: 设计术语
+分类: 设计规范
 标签: Tooltip, Popover, Dialog, Drawer
 
 按内容和任务选浮层：解释、局部操作、确认或完整流程。

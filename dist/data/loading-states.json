@@ -1,9 +1,9 @@
 {
   "id": "loading-states",
-  "topic": "components",
+  "topic": "feedback",
   "title": "等待状态",
   "english": "Loading states",
-  "category": "technique",
+  "category": "guideline",
   "visual": "loading",
   "source": {
     "id": "2121449185014845794",

@@ -1,7 +1,7 @@
 # 光学对齐 / Optical alignment
 
 ID: optical-alignment
-分类: 设计术语
+分类: 设计技巧
 标签: 图标, 视觉重心, 对齐
 
 元素的几何中心与看起来的中心有时不在同一处。

@@ -1,9 +1,9 @@
 {
   "id": "optimistic-ui",
-  "topic": "components",
+  "topic": "feedback",
   "title": "乐观更新",
   "english": "Optimistic UI",
-  "category": "term",
+  "category": "technique",
   "visual": "toast",
   "source": {
     "id": "2121449185014845794",

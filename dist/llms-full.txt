@@ -236,7 +236,7 @@ When done, list every radius you changed as "element: old -> new".
 # 间距体系 / Spacing scale
 
 ID: spacing-scale
-分类: 设计技巧
+分类: 设计规范
 标签: 间距, 布局, 亲密性
 
 距离表达关系。相关的靠近，不相关的留出呼吸。
@@ -287,7 +287,7 @@ ID: spacing-scale
 # 界面连续性 / UI continuity
 
 ID: continuity
-分类: 设计术语
+分类: 设计规范
 标签: 动效, 状态, 交互
 
 状态变了，用户仍然知道自己刚刚操作了什么。
@@ -644,7 +644,7 @@ For each one I pick, show me a short before and after (values and motion), in my
 # 镭射质感 / Holographic
 
 ID: holographic
-分类: 设计风格
+分类: 设计技巧
 标签: 光影, 3D, 材质
 
 把角度变成颜色，让一张卡片像真实藏品。
@@ -912,7 +912,7 @@ Follow the page's light or dark theme and the project's tokens.
 # 对齐的秩序 / Alignment
 
 ID: alignment
-分类: 设计技巧
+分类: 设计规范
 标签: 对齐, 布局, 排版
 
 先建立一条共同的线，信息就有了可以依靠的骨架。
@@ -955,7 +955,7 @@ ID: alignment
 # 字号与层级 / Type scale
 
 ID: typography-scale
-分类: 设计技巧
+分类: 设计规范
 标签: 字体, 排版, 层级
 
 用有限的文字角色，让重要的先被看见。
@@ -1351,7 +1351,7 @@ tokens, and keep the cover exactly as the card is today.
 # 按语义选组件 / Semantic components
 
 ID: semantic-components
-分类: 设计技巧
+分类: 设计规范
 标签: 组件, 语义, UX
 
 先说清用户在做什么，再决定界面应该长什么样。
@@ -1402,7 +1402,7 @@ ID: semantic-components
 # 有触感的按钮 / Tactile buttons
 
 ID: tactile-buttons
-分类: 设计风格
+分类: 设计技巧
 标签: 按钮, 拟物, 反馈
 
 用光影和按压状态，表现可以触碰的表面。
@@ -1569,7 +1569,7 @@ Keep every timing value as a named constant in one place, and keep the safe-zone
 # 有序抖动 / Ordered dithering
 
 ID: ordered-dither
-分类: 设计风格
+分类: 设计技巧
 标签: Dither, 像素, 纹理
 
 用规则颗粒模拟有限色阶，保留明暗变化。
@@ -1859,7 +1859,7 @@ Polish the layout of my docs or help center pages: the header, the page list, th
 # 提示框、气泡与弹窗 / Overlay choice
 
 ID: overlay-choice
-分类: 设计术语
+分类: 设计规范
 标签: Tooltip, Popover, Dialog, Drawer
 
 按内容和任务选浮层：解释、局部操作、确认或完整流程。
@@ -2560,7 +2560,7 @@ These are suggestions; check them against my stack and its versions, and prefer 
 # 等待状态 / Loading states
 
 ID: loading-states
-分类: 设计技巧
+分类: 设计规范
 标签: Skeleton, Spinner, Progress, 等待
 
 按任务时间和进度可知程度选择等待反馈。
@@ -2679,7 +2679,7 @@ These are suggestions; check them against my stack and its versions, and prefer 
 # 乐观更新 / Optimistic UI
 
 ID: optimistic-ui
-分类: 设计术语
+分类: 设计技巧
 标签: 异步, 回滚, 状态
 
 对可逆且成功率高的动作，先反馈，再与服务器确认。
@@ -2947,7 +2947,7 @@ Check these against my stack and versions.
 # 光学对齐 / Optical alignment
 
 ID: optical-alignment
-分类: 设计术语
+分类: 设计技巧
 标签: 图标, 视觉重心, 对齐
 
 元素的几何中心与看起来的中心有时不在同一处。
@@ -3130,7 +3130,7 @@ Overall: quiet, neutral, precise. Hairlines instead of borders, soft shadows tin
 # 功能图标的状态 / Icon states
 
 ID: icon-states
-分类: 设计技巧
+分类: 设计规范
 标签: 图标, 开关, 语义
 
 用成组图形和明确名称表达开启、关闭、展开与禁用。
@@ -3266,7 +3266,7 @@ ID: glass-fallback
 # 半调纹理 / Halftone texture
 
 ID: graphic-halftone
-分类: 设计风格
+分类: 设计技巧
 标签: 半调, 印刷, 图像
 
 用有限的点阵密度表达影调，呈现印刷式颗粒。
@@ -3312,7 +3312,7 @@ ID: graphic-halftone
 # 选择控件的取舍 / Choice controls
 
 ID: choice-controls
-分类: 设计技巧
+分类: 设计规范
 标签: 表单, 开关, 复选框, 单选, 下拉菜单, 分段选择
 
 先看选择何时生效，再看它是设置一个值，还是执行一个动作。

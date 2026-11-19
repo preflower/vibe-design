@@ -5,11 +5,11 @@ export { sources, series, coverage } from './sources.mjs';
 
 export const updated = '2026-11-19';
 export const origin = 'https://vibe-design.carefulgardenia8.chatgpt.site';
-export const topics = { all:'全部内容', layout:'布局与排版', visual:'图形与材质', components:'组件与反馈', motion:'动效与过渡' };
+export const topics = { all:'全部内容', layout:'页面怎么排', visual:'外观怎么做', components:'控件怎么用', feedback:'操作后怎么反馈', motion:'元素怎么动', system:'怎样保持一致' };
 export const categories = { all: '全部内容', term: '设计术语', style: '设计风格', guideline: '设计规范', technique: '设计技巧' };
 export const entries = [
   {
-    id: 'nested-radius', topic: 'layout', title: '嵌套圆角', english: 'Nested radius', category: 'guideline', visual: 'radius', source: 's004', tags: ['圆角','布局','CSS'],
+    id: 'nested-radius', topic: 'system', title: '嵌套圆角', english: 'Nested radius', category: 'guideline', visual: 'radius', source: 's004', tags: ['圆角','布局','CSS'],
     summary: '圆角也有秩序：让内外轮廓拥有同一个圆心。',
     definition: '当一个圆角容器包住另一个元素时，内层圆角应随内缩距离变小。对于等距内缩的普通圆角，内圆角 r = 外圆角 R − 间距 p。这样转角处的留白才会与直边处一样均匀。',
     when: '表单、嵌套面板、图片容器，以及带有内层按钮的卡片。',
@@ -19,7 +19,7 @@ export const entries = [
     code: '.outer { border-radius: 32px; padding: 12px; }\n.inner { border-radius: 20px; }', related: ['continuous-corners','spacing-scale','design-tokens']
   },
   {
-    id: 'design-tokens', topic: 'layout', title: '设计变量', english: 'Design tokens', category: 'term', visual: 'tokens', source: 'system', tags: ['系统','一致性','变量'],
+    id: 'design-tokens', topic: 'system', title: '设计变量', english: 'Design tokens', category: 'term', visual: 'tokens', source: 'system', tags: ['系统','一致性','变量'],
     summary: '为颜色、间距和圆角命名，让设计拥有共同的词汇。',
     definition: 'Design Token 是具有名字的设计决策，例如 surface、text-muted、space-4。组件引用名字，而不是各自写一套数值。修改一个语义变量，可以让相关组件保持一致。',
     when: '同一种颜色、间距或状态在多个组件里反复出现时。',
@@ -49,7 +49,7 @@ export const entries = [
     code: '.shape { border-radius: 32px; }\n@supports (corner-shape: superellipse(1.25)) {\n  .shape { corner-shape: superellipse(1.25); }\n}', related: ['nested-radius']
   },
   {
-    id: 'spacing-scale', topic: 'layout', title: '间距体系', english: 'Spacing scale', category: 'technique', visual: 'spacing', source: 'system', tags: ['间距','布局','亲密性'],
+    id: 'spacing-scale', topic: 'system', title: '间距体系', english: 'Spacing scale', category: 'guideline', visual: 'spacing', source: 'system', tags: ['间距','布局','亲密性'],
     summary: '距离表达关系。相关的靠近，不相关的留出呼吸。',
     definition: '间距体系是一组有限、重复使用的距离。4px 可以作为基础单位，但真正决定距离的是信息之间的关系：标签和输入框更近，两组表单更远，页面章节之间最远。',
     when: '页面间距零碎、分组模糊，或多个组件看起来来自不同系统时。',
@@ -59,7 +59,7 @@ export const entries = [
     related: ['design-tokens','nested-radius','alignment']
   },
   {
-    id: 'continuity', topic: 'motion', title: '界面连续性', english: 'UI continuity', category: 'term', visual: 'continuity', source: 's015', secondarySources: ['continuity','menuAnchor'], tags: ['动效','状态','交互'],
+    id: 'continuity', topic: 'motion', title: '界面连续性', english: 'UI continuity', category: 'guideline', visual: 'continuity', source: 's015', secondarySources: ['continuity','menuAnchor'], tags: ['动效','状态','交互'],
     summary: '状态变了，用户仍然知道自己刚刚操作了什么。',
     definition: '界面连续性让用户在状态切换时保留对元素身份、位置和关系的理解。例如按钮展开成菜单时，菜单从触发位置生长出来，比远处突然出现一个面板更容易追踪。',
     when: '菜单、抽屉、手风琴、详情展开，以及其他会改变空间关系的交互。',
@@ -69,7 +69,7 @@ export const entries = [
     related: ['book-reveal','drag-feedback','toast']
   },
   {
-    id: 'toast', topic: 'components', title: '轻提示', english: 'Toast', category: 'term', visual: 'toast', source: 's016', tags: ['反馈','提示','交互'],
+    id: 'toast', topic: 'feedback', title: '轻提示', english: 'Toast', category: 'term', visual: 'toast', source: 's016', tags: ['反馈','提示','交互'],
     summary: '告诉用户「刚才的操作有结果了」，然后轻轻离开。',
     definition: 'Toast 是与当前操作紧密相关的短暂反馈，例如复制完成。它通常自动消失，可以附带撤销入口。对用户必须处理的问题，应使用持续可见的提示，而不是让信息随 Toast 一起消失。',
     when: '保存完成、复制成功，以及无需持续处理的操作结果。',
@@ -79,7 +79,7 @@ export const entries = [
     related: ['notification','semantic-components']
   },
   {
-    id: 'notification', topic: 'components', title: '通知', english: 'Notification', category: 'term', visual: 'notification', source: 's016', tags: ['反馈','信息','状态'],
+    id: 'notification', topic: 'feedback', title: '通知', english: 'Notification', category: 'term', visual: 'notification', source: 's016', tags: ['反馈','信息','状态'],
     summary: '事情值得你知道，但不一定值得打断你。',
     definition: '通知可以由系统事件或他人的动作触发，与当前操作不一定直接相关。这里讨论的是产品内通知：消息会保留到用户处理或关闭，必要时可以在通知中心再次找到。',
     when: '协作消息、后台任务完成，以及可以稍后查看的系统动态。',
@@ -89,7 +89,7 @@ export const entries = [
     related: ['toast','progressive-disclosure']
   },
   {
-    id: 'holographic', topic: 'visual', title: '镭射质感', english: 'Holographic', category: 'style', visual: 'holo', source: 's018', tags: ['光影','3D','材质'],
+    id: 'holographic', topic: 'visual', title: '镭射质感', english: 'Holographic', category: 'technique', visual: 'holo', source: 's018', tags: ['光影','3D','材质'],
     summary: '把角度变成颜色，让一张卡片像真实藏品。',
     definition: '界面中的镭射效果通过随观察角度变化的色彩与高光，模拟全息箔材质。Kubai 的卡片案例把倾斜、亮边和深度层次组合在一起。',
     when: '数字门票、纪念卡、收藏卡和需要被特别看见的物件。',
@@ -109,7 +109,7 @@ export const entries = [
     related: ['book-reveal','typography-scale']
   },
   {
-    id: 'alignment', topic: 'layout', title: '对齐的秩序', english: 'Alignment', category: 'technique', visual: 'alignment', source: 'type', tags: ['对齐','布局','排版'],
+    id: 'alignment', topic: 'layout', title: '对齐的秩序', english: 'Alignment', category: 'guideline', visual: 'alignment', source: 'type', tags: ['对齐','布局','排版'],
     summary: '先建立一条共同的线，信息就有了可以依靠的骨架。',
     definition: '对齐给元素建立共同的边缘或基线。列表里的标题、说明与操作如果共享稳定的对齐规则，读者就能更快地扫读和比较。这是本站对原帖排版建议的延伸讲解。',
     when: '列表、表单、多列内容和文字层级繁多的界面。',
@@ -119,7 +119,7 @@ export const entries = [
     related: ['typography-scale','spacing-scale']
   },
   {
-    id: 'typography-scale', topic: 'layout', title: '字号与层级', english: 'Type scale', category: 'technique', visual: 'type', source: 'type', tags: ['字体','排版','层级'],
+    id: 'typography-scale', topic: 'layout', title: '字号与层级', english: 'Type scale', category: 'guideline', visual: 'type', source: 'type', tags: ['字体','排版','层级'],
     summary: '用有限的文字角色，让重要的先被看见。',
     definition: '字号体系把标题、正文、标签和辅助信息分配到有限的文字角色。层级由字号、字重、行高和空间共同建立，不能只靠把所有标题放大。本站将原帖的字号建议整理为实践步骤。',
     when: '页面字号过多、标题与正文难区分，或辅助文字喧宾夺主时。',
@@ -139,7 +139,7 @@ export const entries = [
     related: ['notification','semantic-components']
   },
   {
-    id: 'drag-feedback', topic: 'motion', title: '拖拽的反馈', english: 'Drag feedback', category: 'technique', visual: 'drag', source: 's005', tags: ['拖拽','动效','反馈'],
+    id: 'drag-feedback', topic: 'feedback', title: '拖拽的反馈', english: 'Drag feedback', category: 'technique', visual: 'drag', source: 's005', tags: ['拖拽','动效','反馈'],
     summary: '拿起、经过、落下，每一步都告诉用户下一步会发生什么。',
     definition: '可用的拖拽排序需要区分被拿起的对象、当前落点和附近对象的避让。动效表达空间关系，而排序结果仍然由明确的数据顺序控制。',
     when: '任务排序、图标排列、播放队列和可自定义的列表。',
@@ -159,7 +159,7 @@ export const entries = [
     related: ['continuity','ascii','skeuomorphism']
   },
   {
-    id: 'semantic-components', topic: 'components', title: '按语义选组件', english: 'Semantic components', category: 'technique', visual: 'semantic', source: 'system', tags: ['组件','语义','UX'],
+    id: 'semantic-components', topic: 'components', title: '按语义选组件', english: 'Semantic components', category: 'guideline', visual: 'semantic', source: 'system', tags: ['组件','语义','UX'],
     summary: '先说清用户在做什么，再决定界面应该长什么样。',
     definition: '组件的形状之外，还有交互承诺：链接去往一个位置，按钮触发一个动作，开关改变一个持续状态。本站以原帖关于组件语义的建议为起点，补充常见选择规则。',
     when: '界面外观统一，但点击、导航和状态变化的行为仍然令人困惑时。',

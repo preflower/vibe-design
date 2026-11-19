@@ -1,9 +1,9 @@
 {
   "id": "tactile-buttons",
-  "topic": "components",
+  "topic": "visual",
   "title": "有触感的按钮",
   "english": "Tactile buttons",
-  "category": "style",
+  "category": "technique",
   "visual": "tactile",
   "source": {
     "id": "2114378773655326873",
