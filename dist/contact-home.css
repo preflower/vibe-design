@@ -222,8 +222,7 @@
   /* Preserve the photographed gate at 5.2%–88.7% of the cassette.
      Cropping the end caps leaves the film itself inside the viewport. */
   .cs-roll {
-    margin-left:-4%;margin-right:-11%;transform-origin:left center;
-    transform:translateX(calc(3.47826% * var(--end-reveal,0))) scaleX(calc(1 - .130435 * var(--end-reveal,0)));
+    margin-left:-4%;margin-right:-11%;
   }
   .cs-controls { position:static;padding:22px 0 6px; }
   .cs-heading { gap:12px;padding:0 0 10px; }
