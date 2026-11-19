@@ -141,7 +141,7 @@ export const expandedEntries = [
   },
   {
     "id": "overlay-choice",
-    "topic": "components",
+    "topic": "system",
     "title": "提示框、气泡与弹窗",
     "english": "Overlay choice",
     "category": "guideline",
@@ -480,7 +480,7 @@ export const expandedEntries = [
   },
   {
     "id": "icon-states",
-    "topic": "feedback",
+    "topic": "system",
     "title": "功能图标的状态",
     "english": "Icon states",
     "category": "guideline",
@@ -591,7 +591,7 @@ export const expandedEntries = [
     ]
   },
   {
-    id: 'choice-controls', topic: 'components', title: '选择控件的取舍', english: 'Choice controls', category: 'guideline', visual: 'semantic',
+    id: 'choice-controls', topic: 'system', title: '选择控件的取舍', english: 'Choice controls', category: 'guideline', visual: 'semantic',
     source: 's020', tags: ['表单','开关','复选框','单选','下拉菜单','分段选择'],
     summary: '先看选择何时生效，再看它是设置一个值，还是执行一个动作。',
     definition: '在设置里拨动「允许通知」，用户预期它立即生效。表单里的订阅选项则可能要等保存后才生效。两者都只有选与不选两种状态，提交时机决定了控件给人的承诺。',

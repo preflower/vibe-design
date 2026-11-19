@@ -19,7 +19,7 @@ export function detailBody(entry) {
   const related = entry.related.map(id => entries.find(note => note.id === id)).filter(Boolean);
   const next = entries[(entries.indexOf(entry) + 1) % entries.length];
   return `<main class="film-note" id="main"><nav class="film-trail" aria-label="面包屑"><a href="/">设计笔记</a> / <a href="/?topic=${entry.topic}">${topics[entry.topic]}</a></nav>
-  <section class="film-lead${media.length ? '' : ' text-lead'}"><header class="film-title"><p class="film-id"><b>${entry.number}</b> / ${String(entries.length).padStart(2,'0')} · ${categories[entry.category]}</p><h1>${entry.title}</h1><i lang="en">${entry.english}</i><p class="abstract">${entry.summary}</p>
+  <section class="film-lead${media.length ? '' : ' text-lead'}"><header class="film-title"><p class="film-id"><b>${entry.number}</b> / ${String(entries.length).padStart(2,'0')} · 类型：${categories[entry.category]}</p><h1>${entry.title}</h1><i lang="en">${entry.english}</i><p class="abstract">${entry.summary}</p>
   <div class="film-tags">${entry.tags.map(tag => `<a href="/?q=${encodeURIComponent(tag)}"># ${tag}</a>`).join('')}</div>${entry.episode ? `<a class="film-issue" href="/series/#issue-${entry.episode}">《999 个小技巧》${entry.source.episodeStatus === 'inferred' ? '约 ' : ''}第 ${entry.episode} 期 ↗</a>` : ''}</header>
   ${media.length ? `<div class="film-strip">${media.map((item,index)=>sourceFrame(item,entry,index,media.length)).join('')}</div>` : ''}</section>
   <div class="film-reading"><aside><nav aria-label="本篇目录"><a href="#definition">概念与场景</a><a href="#practice">实践步骤</a><a href="#prompt">提示词</a><a href="#source">来源</a></nav><div class="film-formats"><a href="/entries/${entry.id}/index.md">Markdown ↗</a><a href="/data/${entry.id}.json">JSON ↗</a></div></aside>

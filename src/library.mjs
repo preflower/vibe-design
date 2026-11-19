@@ -23,7 +23,7 @@ function filmFrame(entry, index) {
     </a>
     <figcaption><div class="cs-caption"><span class="cs-number">${entry.number}</span><a class="cs-note-link" href="/entries/${entry.id}/">${entry.title}</a>
       <a class="cs-source-link" href="${escapeAttribute(cover?.sourceUrl || entry.source.url)}" target="_blank" rel="noopener noreferrer">原帖 ↗</a></div>
-      <small class="cs-type">${entry.english} · ${categories[entry.category]}${cover ? ' · ' + (cover.type === 'video' ? '视频' : '图片') : ''}</small><p class="cs-summary">${entry.summary}</p></figcaption></figure>`;
+      <small class="cs-type">${entry.english} · 主题：${topics[entry.topic]} · 类型：${categories[entry.category]}${cover ? ' · ' + (cover.type === 'video' ? '视频' : '图片') : ''}</small><p class="cs-summary">${entry.summary}</p></figcaption></figure>`;
 }
 
 export const library = `<main id="main" class="contact-home">

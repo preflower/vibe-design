@@ -5,14 +5,14 @@ export { sources, series, coverage } from './sources.mjs';
 
 export const updated = '2026-11-19';
 export const origin = 'https://vibe-design.carefulgardenia8.chatgpt.site';
-export const topics = { all:'全部内容', layout:'布局与排版', visual:'视觉表现', components:'界面组件', feedback:'交互反馈', motion:'动效设计', system:'设计系统' };
+export const topics = { all:'全部内容', layout:'布局与排版', visual:'视觉表现', components:'交互模式', feedback:'交互反馈', motion:'动效设计', system:'设计系统与规范' };
 export const topicHints = {
   layout:'页面怎么排，标题和正文怎么分层',
   visual:'外观怎么做，怎样表现光影和材质',
-  components:'控件怎么用，何时选按钮、开关或菜单',
+  components:'怎样展开内容、浏览章节或操作多级菜单',
   feedback:'操作后怎么反馈，让人知道进度和结果',
   motion:'元素怎么动，展开和退出怎样衔接',
-  system:'怎样保持一致，让圆角、间距等规则能反复使用'
+  system:'怎样让不同页面遵循同一套规则，包括字号、间距、组件选用和状态表达'
 };
 export const categories = { all: '全部内容', term: '设计术语', style: '设计风格', guideline: '设计规范', technique: '设计技巧' };
 export const entries = [
@@ -127,7 +127,7 @@ export const entries = [
     related: ['typography-scale','spacing-scale']
   },
   {
-    id: 'typography-scale', topic: 'layout', title: '字号与层级', english: 'Type scale', category: 'guideline', visual: 'type', source: 'type', tags: ['字体','排版','层级'],
+    id: 'typography-scale', topic: 'system', title: '字号与层级', english: 'Type scale', category: 'guideline', visual: 'type', source: 'type', tags: ['字体','排版','层级'],
     summary: '用有限的文字角色，让重要的先被看见。',
     definition: '字号体系把标题、正文、标签和辅助信息分配到有限的文字角色。层级由字号、字重、行高和空间共同建立，不能只靠把所有标题放大。本站将原帖的字号建议整理为实践步骤。',
     when: '页面字号过多、标题与正文难区分，或辅助文字喧宾夺主时。',
@@ -167,7 +167,7 @@ export const entries = [
     related: ['continuity','ascii','skeuomorphism']
   },
   {
-    id: 'semantic-components', topic: 'components', title: '按语义选组件', english: 'Semantic components', category: 'guideline', visual: 'semantic', source: 'system', tags: ['组件','语义','UX'],
+    id: 'semantic-components', topic: 'system', title: '按语义选组件', english: 'Semantic components', category: 'guideline', visual: 'semantic', source: 'system', tags: ['组件','语义','UX'],
     summary: '先说清用户在做什么，再决定界面应该长什么样。',
     definition: '组件的形状之外，还有交互承诺：链接去往一个位置，按钮触发一个动作，开关改变一个持续状态。本站以原帖关于组件语义的建议为起点，补充常见选择规则。',
     when: '界面外观统一，但点击、导航和状态变化的行为仍然令人困惑时。',

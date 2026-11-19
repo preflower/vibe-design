@@ -614,7 +614,7 @@
     },
     {
       "id": "typography-scale",
-      "topic": "layout",
+      "topic": "system",
       "title": "字号与层级",
       "english": "Type scale",
       "category": "guideline",
@@ -818,7 +818,7 @@
     },
     {
       "id": "semantic-components",
-      "topic": "components",
+      "topic": "system",
       "title": "按语义选组件",
       "english": "Semantic components",
       "category": "guideline",
@@ -1120,7 +1120,7 @@
     },
     {
       "id": "overlay-choice",
-      "topic": "components",
+      "topic": "system",
       "title": "提示框、气泡与弹窗",
       "english": "Overlay choice",
       "category": "guideline",
@@ -1722,7 +1722,7 @@
     },
     {
       "id": "icon-states",
-      "topic": "feedback",
+      "topic": "system",
       "title": "功能图标的状态",
       "english": "Icon states",
       "category": "guideline",
@@ -1917,7 +1917,7 @@
     },
     {
       "id": "choice-controls",
-      "topic": "components",
+      "topic": "system",
       "title": "选择控件的取舍",
       "english": "Choice controls",
       "category": "guideline",
