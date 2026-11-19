@@ -6,10 +6,10 @@ export { sources, series, coverage } from './sources.mjs';
 export const updated = '2026-11-19';
 export const origin = 'https://vibe-design.carefulgardenia8.chatgpt.site';
 export const topics = { all:'全部内容', layout:'布局与排版', visual:'图形与材质', components:'组件与反馈', motion:'动效与过渡' };
-export const categories = { all: '全部内容', term: '设计术语', style: '设计风格', technique: '设计技巧' };
+export const categories = { all: '全部内容', term: '设计术语', style: '设计风格', guideline: '设计规范', technique: '设计技巧' };
 export const entries = [
   {
-    id: 'nested-radius', topic: 'visual', title: '嵌套圆角', english: 'Nested radius', category: 'technique', visual: 'radius', source: 's004', tags: ['圆角','布局','CSS'],
+    id: 'nested-radius', topic: 'layout', title: '嵌套圆角', english: 'Nested radius', category: 'guideline', visual: 'radius', source: 's004', tags: ['圆角','布局','CSS'],
     summary: '圆角也有秩序：让内外轮廓拥有同一个圆心。',
     definition: '当一个圆角容器包住另一个元素时，内层圆角应随内缩距离变小。对于等距内缩的普通圆角，内圆角 r = 外圆角 R − 间距 p。这样转角处的留白才会与直边处一样均匀。',
     when: '表单、嵌套面板、图片容器，以及带有内层按钮的卡片。',

@@ -8,10 +8,10 @@
   "entries": [
     {
       "id": "nested-radius",
-      "topic": "visual",
+      "topic": "layout",
       "title": "嵌套圆角",
       "english": "Nested radius",
-      "category": "technique",
+      "category": "guideline",
       "visual": "radius",
       "source": {
         "id": "2115469767650021796",

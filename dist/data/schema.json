@@ -73,6 +73,7 @@
           "enum": [
             "term",
             "style",
+            "guideline",
             "technique"
           ]
         },

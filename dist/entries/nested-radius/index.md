@@ -1,7 +1,7 @@
 # 嵌套圆角 / Nested radius
 
 ID: nested-radius
-分类: 设计技巧
+分类: 设计规范
 标签: 圆角, 布局, CSS
 
 圆角也有秩序：让内外轮廓拥有同一个圆心。
