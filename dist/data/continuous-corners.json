@@ -1,9 +1,9 @@
 {
   "id": "continuous-corners",
-  "topic": "visual",
+  "topic": "system",
   "title": "连续圆角",
   "english": "Continuous corners",
-  "category": "term",
+  "category": "guideline",
   "visual": "corners",
   "source": {
     "id": "2115469767650021796",
@@ -25,11 +25,11 @@
     "CSS",
     "形状"
   ],
-  "summary": "让直边进入转角的过程更平顺，轮廓更柔和。",
+  "summary": "在设计规范里约定哪些组件使用连续圆角，让同类组件在各页面保持相同的轮廓。",
   "definition": "普通圆角由直线接圆弧，连接处的曲率会发生跳变。连续圆角通过不同的曲线形状缓和这个变化。超椭圆是构建这类柔和轮廓的一种方法，并不代表任意参数都具备相同效果。",
   "when": "应用图标、大型面板和需要柔和轮廓的容器。",
   "steps": [
-    "保留普通 border-radius 作为基础轮廓。",
+    "先约定采用连续圆角的组件，例如大面板；这些组件共用同一曲线，并保留普通圆角作为回退。",
     "把 corner-shape 作为渐进增强，用 @supports 检测。",
     "在目标浏览器检查实际轮廓，圆形和胶囊仍保留 round。"
   ],

@@ -249,7 +249,9 @@ if (grid) {
 
   function readUrl() {
     const params = new URLSearchParams(location.search);
-    task = paths.has(params.get('task')) ? params.get('task') : 'all';
+    const legacyFeedback = params.get('task') === 'feedback';
+    const requestedTask = legacyFeedback ? 'controls' : params.get('task');
+    task = paths.has(requestedTask) ? requestedTask : 'all';
     archiveQuery = params.get('q') || '';
     category = notes.some(note => note.dataset.category === params.get('category')) ? params.get('category') : 'all';
     sort.value = ['newest', 'title'].includes(params.get('sort')) ? params.get('sort') : 'curated';
@@ -257,7 +259,8 @@ if (grid) {
     const requestedTopic = params.get('film');
     oldGroup = legacyTopics[requestedTopic] || requestedTopic || '';
     if (!notes.some(note => note.dataset.filmGroup === oldGroup)) oldGroup = '';
-    topic = topicButtons.some(b => b.dataset.topicFilter === params.get('topic')) ? params.get('topic') : 'all';
+    const requestedFilter = params.get('topic') || (legacyFeedback ? 'feedback' : 'all');
+    topic = topicButtons.some(b => b.dataset.topicFilter === requestedFilter) ? requestedFilter : 'all';
     size = params.get('size') === 'large' ? 'large' : 'standard';
     sortNotes();
     refreshFilm();

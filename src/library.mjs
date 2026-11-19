@@ -11,24 +11,22 @@ const tasks = [
   { id:'direction', label:'确定视觉风格', hint:'比较拟物、玻璃与字符艺术', notes:[
     'skeuomorphism','liquid-glass','ascii'
   ] },
-  { id:'build', label:'建立设计规范', hint:'新项目先统一字号、间距与组件用法', notes:[
-    'design-tokens','typography-scale','spacing-scale','nested-radius','semantic-components','choice-controls','icon-states'
+  { id:'build', label:'建立设计规范', hint:'统一字号、间距、圆角和组件用法', notes:[
+    'design-tokens','typography-scale','spacing-scale','nested-radius','continuous-corners','semantic-components','choice-controls','icon-states'
   ] },
   { id:'layout', label:'组织页面内容', hint:'排版、对齐、分组与章节导航', notes:[
     'bento-grid','typography-scale','spacing-scale','alignment','optical-alignment','mixed-typesetting',
     'progressive-disclosure','wiki-navigation'
   ] },
-  { id:'controls', label:'选择和使用组件', hint:'选开关还是复选框，菜单怎样展开', notes:[
-    'semantic-components','choice-controls','overlay-choice','cascade-safe-zone','progressive-disclosure','icon-states'
-  ] },
-  { id:'feedback', label:'设计操作反馈', hint:'提交后怎样提示等待、成功或失败', notes:[
+  { id:'controls', label:'设计组件与反馈', hint:'选用控件，处理等待、成功和失败', notes:[
+    'semantic-components','choice-controls','overlay-choice','cascade-safe-zone','progressive-disclosure',
     'loading-states','optimistic-ui','toast','notification','onboarding-preview','drag-feedback','icon-states'
   ] },
   { id:'animate', label:'编排界面动效', hint:'找按压、展开、退场和滚动的参考', notes:[
     'tactile-buttons','book-reveal','drag-feedback','exit-motion','scroll-cards','halo-ripple','continuity','motion-easing'
   ] },
-  { id:'details', label:'打磨视觉细节', hint:'做圆角、图标、材质和纹理', notes:[
-    'nested-radius','continuous-corners','optical-alignment','icon-simplification','tactile-buttons',
+  { id:'details', label:'打磨视觉细节', hint:'调整图标、材质和纹理', notes:[
+    'optical-alignment','icon-simplification','tactile-buttons',
     'message-bubbles','holographic','glass-fallback','ordered-dither','graphic-halftone'
   ] }
 ];

@@ -17,10 +17,10 @@
 - [系列目录 JSON](https://vibe-design.carefulgardenia8.chatgpt.site/data/series.json)
 
 ## 词条
-- [嵌套圆角 / Nested radius](https://vibe-design.carefulgardenia8.chatgpt.site/entries/nested-radius/index.md): 圆角也有秩序：让内外轮廓拥有同一个圆心。
+- [嵌套圆角 / Nested radius](https://vibe-design.carefulgardenia8.chatgpt.site/entries/nested-radius/index.md): 为卡片、面板和控件约定圆角；遇到等距嵌套，再按间距计算内层半径。
 - [设计变量 / Design tokens](https://vibe-design.carefulgardenia8.chatgpt.site/entries/design-tokens/index.md): 为颜色、间距和圆角命名，让设计拥有共同的词汇。
 - [拟物设计 / Skeuomorphism](https://vibe-design.carefulgardenia8.chatgpt.site/entries/skeuomorphism/index.md): 用真实世界的光、边缘和材质，解释一个数字物件。
-- [连续圆角 / Continuous corners](https://vibe-design.carefulgardenia8.chatgpt.site/entries/continuous-corners/index.md): 让直边进入转角的过程更平顺，轮廓更柔和。
+- [连续圆角 / Continuous corners](https://vibe-design.carefulgardenia8.chatgpt.site/entries/continuous-corners/index.md): 在设计规范里约定哪些组件使用连续圆角，让同类组件在各页面保持相同的轮廓。
 - [间距体系 / Spacing scale](https://vibe-design.carefulgardenia8.chatgpt.site/entries/spacing-scale/index.md): 距离表达关系。相关的靠近，不相关的留出呼吸。
 - [界面连续性 / UI continuity](https://vibe-design.carefulgardenia8.chatgpt.site/entries/continuity/index.md): 状态变了，用户仍然知道自己刚刚操作了什么。
 - [轻提示 / Toast](https://vibe-design.carefulgardenia8.chatgpt.site/entries/toast/index.md): 告诉用户「刚才的操作有结果了」，然后轻轻离开。

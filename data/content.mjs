@@ -18,10 +18,10 @@ export const categories = { all: '全部内容', term: '设计术语', style: '�
 export const entries = [
   {
     id: 'nested-radius', topic: 'system', title: '嵌套圆角', english: 'Nested radius', category: 'guideline', visual: 'radius', source: 's004', tags: ['圆角','布局','CSS'],
-    summary: '圆角也有秩序：让内外轮廓拥有同一个圆心。',
+    summary: '为卡片、面板和控件约定圆角；遇到等距嵌套，再按间距计算内层半径。',
     definition: '当一个圆角容器包住另一个元素时，内层圆角应随内缩距离变小。对于等距内缩的普通圆角，内圆角 r = 外圆角 R − 间距 p。这样转角处的留白才会与直边处一样均匀。',
     when: '表单、嵌套面板、图片容器，以及带有内层按钮的卡片。',
-    steps: ['先确定外层圆角和内边距，再计算内层。','例如外层 32px、间距 12px，内层使用 20px。','R 小于 p 时用 0 作为下限；圆形、胶囊形和不同形状需要单独判断。'],
+    steps: ['先从项目的圆角变量中选取容器半径，再按内缩距离计算内层圆角。','例如外层 32px、间距 12px，内层使用 20px。','R 小于 p 时用 0 作为下限；圆形、胶囊形和不同形状需要单独判断。'],
     avoid: '给所有层级套同一个大圆角。这个公式适用于等距内缩的圆弧，不能直接保证所有超椭圆轮廓的等距。',
     prompt: '检查我指定组件的嵌套圆角。先读取现有圆角与间距 token；对等距内缩的普通圆角使用 r = max(0, R - p)。保留圆形和胶囊形语义，逐项报告计算依据与修改前后的数值。',
     code: '.outer { border-radius: 32px; padding: 12px; }\n.inner { border-radius: 20px; }', related: ['continuous-corners','spacing-scale','design-tokens']
@@ -47,11 +47,11 @@ export const entries = [
     related: ['holographic','design-tokens']
   },
   {
-    id: 'continuous-corners', topic: 'visual', title: '连续圆角', english: 'Continuous corners', category: 'term', visual: 'corners', source: 's004', tags: ['超椭圆','CSS','形状'],
-    summary: '让直边进入转角的过程更平顺，轮廓更柔和。',
+    id: 'continuous-corners', topic: 'system', title: '连续圆角', english: 'Continuous corners', category: 'guideline', visual: 'corners', source: 's004', tags: ['超椭圆','CSS','形状'],
+    summary: '在设计规范里约定哪些组件使用连续圆角，让同类组件在各页面保持相同的轮廓。',
     definition: '普通圆角由直线接圆弧，连接处的曲率会发生跳变。连续圆角通过不同的曲线形状缓和这个变化。超椭圆是构建这类柔和轮廓的一种方法，并不代表任意参数都具备相同效果。',
     when: '应用图标、大型面板和需要柔和轮廓的容器。',
-    steps: ['保留普通 border-radius 作为基础轮廓。','把 corner-shape 作为渐进增强，用 @supports 检测。','在目标浏览器检查实际轮廓，圆形和胶囊仍保留 round。'],
+    steps: ['先约定采用连续圆角的组件，例如大面板；这些组件共用同一曲线，并保留普通圆角作为回退。','把 corner-shape 作为渐进增强，用 @supports 检测。','在目标浏览器检查实际轮廓，圆形和胶囊仍保留 round。'],
     avoid: '把特定浏览器版本的兼容结论当作永久事实。本站用运行时能力检测，并展示明确的回退状态。',
     prompt: '为指定容器添加连续圆角的渐进增强。先保留现有 border-radius，在 @supports 内设置 corner-shape。圆形与胶囊保持 round，并说明不支持时的回退外观。',
     code: '.shape { border-radius: 32px; }\n@supports (corner-shape: superellipse(1.25)) {\n  .shape { corner-shape: superellipse(1.25); }\n}', related: ['nested-radius']
