@@ -48,10 +48,10 @@ export const seriesPage = `<main id="main" class="prose-page series-page">
   <div class="book-shelf"><details class="series-book">
     <summary aria-label="《999 个小技巧》目录">
       <span class="book-cover"><span class="book-face">
-        <span class="book-imprint"><img src="/vibe-design-icon.png?v=gecko-alpha" alt="">Vibe Design</span>
+        <span class="book-imprint"><img src="/vibe-design-icon.png" alt="">Vibe Design</span>
         <strong class="book-title"><span>999</span>个小技巧</strong>
         <span class="book-range">第 ${series[0].number}—${series.at(-1).number} 期</span>
-      </span><span class="book-inside" aria-hidden="true"><img src="/vibe-design-icon.png?v=gecko-alpha" alt="">Vibe Design</span></span>
+      </span><span class="book-inside" aria-hidden="true"><img src="/vibe-design-icon.png" alt="">Vibe Design</span></span>
       <span class="book-action"><span class="when-closed">展开目录</span><span class="when-open">收起目录</span><b aria-hidden="true"></b></span>
     </summary>
   <div class="book-paper" role="region" aria-label="999 个小技巧目录" tabindex="0"><h2 class="book-contents-title">目录</h2>

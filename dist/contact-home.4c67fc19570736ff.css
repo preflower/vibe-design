@@ -209,7 +209,7 @@
 /* Grade only the photographed shell, retaining the velvet fibres and grain. */
 .cs-cassette-front::after {
   content:"";position:absolute;inset:0;
-  mask:url("./film-cassette.webp") center / 100% 100% no-repeat;
+  mask:url("./film-cassette.cd27c7ed2d1c8c24.webp") center / 100% 100% no-repeat;
   background:
     radial-gradient(ellipse 60% 18% at 24% 19%,rgb(255 253 244 / .14),transparent 84%),
     linear-gradient(102deg,transparent 28%,rgb(13 14 13 / .08) 61%,rgb(8 9 8 / .32)),
