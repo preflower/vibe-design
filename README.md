@@ -1,4 +1,6 @@
-# vibe-design
+# Vibe Design
+
+[在线预览](https://preflower.github.io/vite-design/)
 
 静态设计知识库，面向用户与 AI。使用原生 HTML、CSS 与 JavaScript，Node.js 在构建时生成独立词条页；零第三方运行时或构建依赖。
 
@@ -10,7 +12,7 @@
 npm run dev
 ```
 
-预览：http://127.0.0.1:4173 。修改 `src/` 或 `data/` 后自动重新构建，刷新浏览器即可看到结果。
+本地开发时，打开终端输出的地址。修改 `src/` 或 `data/` 后自动重新构建，刷新浏览器即可看到结果。
 
 ## 构建与验证
 
@@ -49,7 +51,7 @@ npm run check
 - `/entries/{id}/index.md`：单条 Markdown。
 - `/data/{id}.json`：单条 JSON。
 
-当前 Sites 部署默认私有。外部 AI 无登录能力时，请使用下载的文件。部署到其他域名时，先更新 `data/content.mjs` 中的 `origin`，以及 `data/schema.json` 的 `$id`，再重新构建。
+以上路径均相对于在线站点首页。推送到 `main` 后，GitHub Actions 自动构建、检查并发布到 GitHub Pages。
 
 ## 来源与创作范围
 
