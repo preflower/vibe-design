@@ -25,6 +25,7 @@ function mountFilmTransport(roll, playEntrance) {
   let previousTime = 0;
   let scheduled = 0;
   let entrance;
+  let awaitingExposure = [];
 
   const light = document.createElement('canvas');
   light.width = 96;
@@ -69,6 +70,14 @@ function mountFilmTransport(roll, playEntrance) {
   }
   function update(time) {
     scheduled = 0;
+    if (awaitingExposure.length) {
+      const lip = gate.getBoundingClientRect().top;
+      awaitingExposure = awaitingExposure.filter(frame => {
+        if (frame.getBoundingClientRect().top > lip - 12) return true;
+        frame.dataset.exposure = 'developing';
+        return false;
+      });
+    }
     const position = feedPosition();
     const elapsed = Math.max(1, time - previousTime);
     const speed = (position - previousPosition) / Math.min(64, elapsed);
@@ -120,13 +129,35 @@ function mountFilmTransport(roll, playEntrance) {
   const navigation = performance.getEntriesByType('navigation')[0];
   if (!playEntrance || motion.matches || location.hash || scrollY || navigation?.type === 'back_forward') return;
   const travel = Math.max(0, gate.getBoundingClientRect().top - roll.getBoundingClientRect().top);
+  if (!travel) return;
+  try {
+    if (sessionStorage.getItem('film-entrance-seen')) return;
+    sessionStorage.setItem('film-entrance-seen', '1');
+  } catch { /* The entrance can still play when storage is unavailable. */ }
+  const lip = gate.getBoundingClientRect().top;
+  const frames = $$('.cs-frame:not([hidden])', film).filter(frame => frame.getBoundingClientRect().top < lip);
+  for (const frame of frames) frame.dataset.exposure = 'latent';
+  awaitingExposure = [...frames];
+  function clearExposure() {
+    awaitingExposure = [];
+    for (const frame of frames) delete frame.dataset.exposure;
+  }
+  function finishEntrance() {
+    entrance.finish();
+    clearExposure();
+  }
   entrance = film.animate([
     {transform:'translateY('+travel+'px)'}, {transform:'translateY(0)'}
   ], {duration:1450,easing:'cubic-bezier(.36,0,.23,1)'});
   previousPosition = feedPosition();
   wake();
-  film.addEventListener('focusin', () => entrance.finish(), {once:true});
-  motion.addEventListener('change', () => entrance.finish(), {once:true});
+  entrance.addEventListener('finish', () => {
+    for (const frame of awaitingExposure) frame.dataset.exposure = 'developing';
+    awaitingExposure = [];
+    setTimeout(clearExposure, 1000);
+  }, {once:true});
+  film.addEventListener('focusin', finishEntrance, {once:true});
+  motion.addEventListener('change', finishEntrance, {once:true});
 }
 
 const grid = $('.cs-gallery');

@@ -261,3 +261,16 @@
   .cs-task-list {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));}
   .cs-task-list button {padding:7px 9px;}
 }
+
+/* Develop the emulsion inside each frame while leaving the film rails exposed. */
+@media (prefers-reduced-motion:no-preference) {
+  .cs-frame[data-exposure="latent"] > * { opacity:0; }
+  .cs-frame[data-exposure="developing"] .cs-image-link { animation:film-exposure 900ms ease-out both; }
+  .cs-frame[data-exposure="developing"] figcaption { animation:film-caption 560ms 180ms ease-out both; }
+  @keyframes film-exposure {
+    0% { opacity:0; filter:brightness(.48) contrast(.55); }
+    45% { opacity:.58; filter:brightness(.84) contrast(.8); }
+    100% { opacity:1; filter:none; }
+  }
+  @keyframes film-caption { from { opacity:0; } to { opacity:1; } }
+}
