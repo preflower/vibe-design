@@ -69,7 +69,11 @@ function mountFilmTransport(roll) {
   }
   function update(time) {
     scheduled = 0;
-    const position = feedPosition();
+    const gateBox = gate.getBoundingClientRect();
+    const hiddenDepth = -parseFloat(getComputedStyle(gate).bottom);
+    const reveal = Math.max(0, Math.min(1, 1 - (gateBox.bottom - innerHeight) / hiddenDepth));
+    roll.style.setProperty('--end-reveal', reveal.toFixed(4));
+    const position = gateBox.top - film.getBoundingClientRect().top;
     const elapsed = Math.max(1, time - previousTime);
     const speed = (position - previousPosition) / Math.min(64, elapsed);
     previousPosition = position;
@@ -110,6 +114,8 @@ function mountFilmTransport(roll) {
   calibrate();
   new ResizeObserver(calibrate).observe(lens);
 
+  new ResizeObserver(wake).observe(roll);
+  window.addEventListener('resize', wake);
   previousPosition = feedPosition();
   previousTime = performance.now();
   window.addEventListener('scroll', wake, {passive:true});

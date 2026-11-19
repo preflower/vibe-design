@@ -190,8 +190,10 @@
 .cs-feed { margin-inline:var(--film-left) var(--film-right);margin-bottom:-12px;overflow:clip; }
 
 .cs-cartridge {
-  position:sticky;bottom:0;z-index:2;
-  height:clamp(96px,min(24vw,23svh),208px);
+  --body-height:clamp(158px,min(39.6vw,38svh),343px);
+  --peek:clamp(54px,min(14vw,12svh),108px);
+  position:sticky;bottom:calc(var(--peek) - var(--body-height));z-index:2;
+  height:var(--body-height);
   pointer-events:none;
 }
 /* Keep the velvet edge transparent over the film. The opaque backing
@@ -201,12 +203,12 @@
   background:linear-gradient(to bottom,transparent 5%,var(--cs-wall) 8%);
 }
 .cs-cassette-front img {
-  display:block;width:100%;height:165%;object-fit:fill;
+  display:block;width:100%;height:100%;object-fit:fill;
   filter:grayscale(1) drop-shadow(2px 5px 4px rgb(0 0 0 / .32));
 }
 /* Grade only the photographed shell, retaining the velvet fibres and grain. */
 .cs-cassette-front::after {
-  content:"";position:absolute;inset:0 0 auto;height:165%;
+  content:"";position:absolute;inset:0;
   mask:url("./film-cassette.webp") center / 100% 100% no-repeat;
   background:
     radial-gradient(ellipse 60% 18% at 24% 19%,rgb(255 253 244 / .14),transparent 84%),
@@ -219,7 +221,10 @@
   .cs-controls { margin-inline:3%; }
   /* Preserve the photographed gate at 5.2%–88.7% of the cassette.
      Cropping the end caps leaves the film itself inside the viewport. */
-  .cs-roll { margin-left:-4%;margin-right:-11%; }
+  .cs-roll {
+    margin-left:-4%;margin-right:-11%;transform-origin:left center;
+    transform:translateX(calc(3.47826% * var(--end-reveal,0))) scaleX(calc(1 - .130435 * var(--end-reveal,0)));
+  }
   .cs-controls { position:static;padding:22px 0 6px; }
   .cs-heading { gap:12px;padding:0 0 10px; }
   .cs-bar {flex-direction:column;align-items:stretch;}
@@ -238,7 +243,7 @@
 .cs-cartridge { --lens-height:clamp(80px,9vw,132px); }
 .cs-optics { position:absolute; }
 .cs-bend {
-  position:absolute;left:var(--film-left);right:var(--film-right);top:4%;height:var(--lens-height);
+  position:absolute;left:var(--film-left);right:var(--film-right);top:2.42%;height:var(--lens-height);
   transform:translateY(-72%);pointer-events:none;
 }
 .cs-bend.is-ready { backdrop-filter:url(#cs-film-curve); }
