@@ -252,3 +252,13 @@
 .cs-cassette-front { pointer-events:auto; }
 @media(prefers-reduced-motion:reduce) { .cs-bend {display:none;} }
 
+
+.cs-task-list {display:flex; flex-wrap:wrap; gap:6px; margin:12px 0;}
+.cs-task-list button {flex:1 1 170px; border:1px solid var(--cs-rule); background:transparent; color:var(--cs-paper); padding:9px 12px; text-align:start; font:inherit; cursor:pointer;}
+.cs-task-list button:first-child {flex:0 0 auto;}
+.cs-task-list button[aria-pressed="true"] {background:var(--cs-paper); color:var(--cs-film);}
+.cs-task-list small {display:block; font-size:12px; margin-top:3px;}
+@media(max-width:650px) {
+  .cs-task-list {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));}
+  .cs-task-list button {padding:7px 9px;}
+}

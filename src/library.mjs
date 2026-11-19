@@ -7,6 +7,19 @@ const counts = Object.fromEntries(Object.keys(topics).map(topic => [
   topic, topic === 'all' ? entries.length : entries.filter(entry => entry.topic === topic).length
 ]));
 
+const tasks = [
+  { id:'build', label:'从零搭建应用', hint:'从基础样式到组件规则、导航与反馈', notes:[
+    'design-tokens','spacing-scale','typography-scale','nested-radius','alignment','semantic-components',
+    'choice-controls','overlay-choice','wiki-navigation','icon-states','loading-states','toast','notification'
+  ] },
+  { id:'animate', label:'找组件动效', hint:'看按钮按压、卡片展开和列表进退', notes:[
+    'tactile-buttons','book-reveal','drag-feedback','exit-motion','halo-ripple','scroll-cards','continuity','motion-easing'
+  ] },
+  { id:'direction', label:'选整体风格', hint:'比较拟物、玻璃和字符艺术的视觉语言', notes:[
+    'skeuomorphism','liquid-glass','ascii'
+  ] }
+];
+
 const graphicNotes = new Set(['graphic-halftone','ascii','ordered-dither','mixed-typesetting','typography-scale','alignment','spacing-scale','optical-alignment','icon-simplification']);
 const materialNotes = new Set(['holographic','liquid-glass','message-bubbles','glass-fallback','halo-ripple','skeuomorphism']);
 // Retain the original group membership for bookmarked ?film= links.
@@ -16,7 +29,7 @@ function filmFrame(entry, index) {
   const topic = graphicNotes.has(entry.id) ? '图形与排版' : materialNotes.has(entry.id) ? '光与材质' : '界面与交互';
   const search = [entry.title, entry.english, entry.summary, entry.definition, ...entry.tags];
   if (entry.episode) search.push(entry.episode, String(Number(entry.episode)), '999 个小技巧');
-  return `<figure class="cs-frame" data-entry${cover?.previewVideo ? ` data-preview-video="${escapeAttribute(cover.previewVideo)}"` : ''} data-topic="${entry.topic}" data-film-group="${topic}" data-category="${entry.category}" data-order="${index}" data-date="${entry.source.published}"
+  return `<figure class="cs-frame" data-entry="${entry.id}"${cover?.previewVideo ? ` data-preview-video="${escapeAttribute(cover.previewVideo)}"` : ''} data-topic="${entry.topic}" data-film-group="${topic}" data-category="${entry.category}" data-order="${index}" data-date="${entry.source.published}"
       data-english="${escapeAttribute(entry.english)}" data-search="${escapeAttribute(search.join(' ').toLowerCase())}">
     <a href="/entries/${entry.id}/" class="cs-image-link" aria-label="阅读《${entry.title}》">
       ${cover ? `<img src="${escapeAttribute(cover.url)}" alt="${escapeAttribute(cover.alt || entry.source.title)}" loading="${index < 3 ? 'eager' : 'lazy'}" decoding="async"><span class="cs-unavailable" hidden>预览图未能载入</span>` : `<span>${entry.english}</span>`}
@@ -29,8 +42,12 @@ function filmFrame(entry, index) {
 export const library = `<main id="main" class="contact-home">
   <section id="library" aria-label="设计笔记"><div class="cs-controls"><div class="cs-heading"><div><h1 lang="en">Vibe Design</h1><p class="cs-intro">从真实界面学设计，查看原帖示例和可复制的提示词。</p></div>
 </div>
+    <div class="cs-task-list" role="group" aria-label="按开发任务浏览">
+      <button type="button" data-task="all" aria-pressed="true">全部笔记</button>
+      ${tasks.map(task => `<button type="button" data-task="${task.id}" data-notes="${task.notes.join(' ')}" aria-pressed="false"><strong>${task.label}</strong><small>${task.hint}</small></button>`).join('')}
+    </div>
     <div class="cs-bar"><div class="cs-filters" role="group" aria-label="按主题筛选">
-      ${Object.entries(topics).map(([id,label])=>`<button type="button" data-topic-filter="${id}"${topicHints[id] ? ` title="${topicHints[id]}"` : ''} aria-pressed="${id==='all'}">${label} <small>${counts[id]}</small></button>`).join('')}</div>
+      ${Object.entries(topics).map(([id,label])=>`<button type="button" data-topic-filter="${id}"${topicHints[id] ? ` title="${topicHints[id]}"` : ''} aria-pressed="${id==='all'}">${id === 'all' ? '全部主题' : label} <small>${counts[id]}</small></button>`).join('')}</div>
       <div class="cs-view">
       <select id="sort" aria-label="笔记排序"><option value="curated">编排顺序</option><option value="newest">按原帖日期</option><option value="title">英文名称</option></select>
       <button type="button" data-film-size="standard" aria-pressed="true">标准</button><button type="button" data-film-size="large" aria-pressed="false">放大</button></div></div>

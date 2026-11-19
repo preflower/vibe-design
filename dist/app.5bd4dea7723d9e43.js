@@ -134,6 +134,9 @@ if (grid) {
   let archiveQuery = '';
   const notes = $$('[data-entry]', grid);
   const topicButtons = $$('[data-topic-filter]');
+  const taskButtons = $$('[data-task]');
+  const paths = new Map(taskButtons.map(button => [button.dataset.task, (button.dataset.notes || '').split(' ')]));
+  let task = 'all';
   let topic = 'all';
   let oldGroup = '';
   const sizeButtons = $$('[data-film-size]');
@@ -192,14 +195,26 @@ if (grid) {
   function refreshArchive() {
     stopPreview();
     const terms = archiveQuery.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    const counts = {all:0};
     let total = 0;
     for (const note of notes) {
-      note.hidden = (category !== 'all' && note.dataset.category !== category) ||
+      const inTask = task === 'all' || paths.get(task).includes(note.dataset.entry);
+      if (inTask) {
+        counts.all++;
+        counts[note.dataset.topic] = (counts[note.dataset.topic] || 0) + 1;
+      }
+      note.hidden = !inTask || (category !== 'all' && note.dataset.category !== category) ||
         (oldGroup && note.dataset.filmGroup !== oldGroup) ||
         (topic !== 'all' && note.dataset.topic !== topic) ||
         !terms.every(term => note.dataset.search.includes(term));
       if (!note.hidden) total++;
     }
+    for (const button of topicButtons) {
+      const count = counts[button.dataset.topicFilter] || 0;
+      button.hidden = !count && button.dataset.topicFilter !== topic;
+      $('small', button).textContent = count;
+    }
+    markSelected(taskButtons, 'task', task);
     markSelected(topicButtons, 'topicFilter', category === 'all' && !oldGroup ? topic : '');
     const hint = topicButtons.find(button => button.dataset.topicFilter === topic)?.title;
     $('#result-count').textContent = `${total} 条设计笔记${terms.length ? ' · 搜索结果' : ''}${hint ? ' · ' + hint : ''}`;
@@ -210,6 +225,10 @@ if (grid) {
     const ordered = [...notes].sort((a, b) => {
       if (sort.value === 'newest') return b.dataset.date.localeCompare(a.dataset.date) || Number(a.dataset.order) - Number(b.dataset.order);
       if (sort.value === 'title') return a.dataset.english.localeCompare(b.dataset.english, 'en');
+      if (task !== 'all') {
+        const order = paths.get(task);
+        return order.indexOf(a.dataset.entry) - order.indexOf(b.dataset.entry);
+      }
       return Number(a.dataset.order) - Number(b.dataset.order);
     });
     grid.replaceChildren(...ordered);
@@ -218,7 +237,7 @@ if (grid) {
   function saveUrl() {
     const url = new URL(location.href);
     const values = {
-      q: archiveQuery.trim(), category: category === 'all' ? '' : category, sort: sort.value === 'curated' ? '' : sort.value,
+      task: task === 'all' ? '' : task, q: archiveQuery.trim(), category: category === 'all' ? '' : category, sort: sort.value === 'curated' ? '' : sort.value,
       film: oldGroup, topic: topic === 'all' ? '' : topic, size: size === 'standard' ? '' : size
     };
     for (const [name, value] of Object.entries(values)) {
@@ -230,6 +249,7 @@ if (grid) {
 
   function readUrl() {
     const params = new URLSearchParams(location.search);
+    task = paths.has(params.get('task')) ? params.get('task') : 'all';
     archiveQuery = params.get('q') || '';
     category = notes.some(note => note.dataset.category === params.get('category')) ? params.get('category') : 'all';
     sort.value = ['newest', 'title'].includes(params.get('sort')) ? params.get('sort') : 'curated';
@@ -247,12 +267,17 @@ if (grid) {
   function applySearch() { refreshArchive(); saveUrl(); }
   function applyFilm() { refreshFilm(); saveUrl(); }
   sizeButtons.forEach(button => button.addEventListener('click', () => { size = button.dataset.filmSize; applyFilm(); }));
+  taskButtons.forEach(button => button.addEventListener('click', () => {
+    task = button.dataset.task;
+    topic = 'all'; category = 'all'; oldGroup = ''; archiveQuery = ''; sort.value = 'curated';
+    sortNotes(); applySearch();
+  }));
   topicButtons.forEach(button => button.addEventListener('click', () => {
     category = 'all'; oldGroup = ''; topic = button.dataset.topicFilter; applySearch();
   }));
   sort.addEventListener('change', () => { sortNotes(); applySearch(); });
   $('#reset-filters').addEventListener('click', () => {
-    archiveQuery = ''; category = 'all'; oldGroup = ''; topic = 'all'; sort.value = 'curated';
+    task = 'all'; archiveQuery = ''; category = 'all'; oldGroup = ''; topic = 'all'; sort.value = 'curated';
     sortNotes(); applySearch(); topicButtons[0].focus();
   });
   $$('.cs-image-link img').forEach(img => {
