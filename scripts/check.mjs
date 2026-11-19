@@ -7,6 +7,17 @@ import { categories, entries, series, sources, topics } from '../data/content.mj
 const root=fileURLToPath(new URL('../dist',import.meta.url));
 const ids=new Set(entries.map(e=>e.id));
 assert.equal(ids.size,entries.length,'Duplicate IDs');
+const home = await readFile(path.join(root, 'index.html'), 'utf8');
+const reachable = new Set();
+for (const [,task,notes] of home.matchAll(/data-task="([^"]+)" data-notes="([^"]+)"/g)) {
+ const members = notes.split(' ');
+ assert.equal(new Set(members).size, members.length, `Duplicate entry in task: ${task}`);
+ for (const id of members) {
+  assert.ok(ids.has(id), `Unknown entry in ${task}: ${id}`);
+  reachable.add(id);
+ }
+}
+assert.deepEqual(reachable, ids, 'Every entry needs a developer task');
 const sourceIds = new Set(Object.values(sources).map(source => source.id));
 assert.equal(sourceIds.size, Object.keys(sources).length, 'Duplicate post IDs');
 const exportedSeries = JSON.parse(await readFile(path.join(root, 'data/series.json'), 'utf8'));

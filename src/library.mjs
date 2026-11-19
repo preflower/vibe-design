@@ -8,15 +8,28 @@ const counts = Object.fromEntries(Object.keys(topics).map(topic => [
 ]));
 
 const tasks = [
-  { id:'build', label:'从零搭建应用', hint:'从基础样式到组件规则、导航与反馈', notes:[
-    'design-tokens','spacing-scale','typography-scale','nested-radius','alignment','semantic-components',
-    'choice-controls','overlay-choice','wiki-navigation','icon-states','loading-states','toast','notification'
-  ] },
-  { id:'animate', label:'找组件动效', hint:'看按钮按压、卡片展开和列表进退', notes:[
-    'tactile-buttons','book-reveal','drag-feedback','exit-motion','halo-ripple','scroll-cards','continuity','motion-easing'
-  ] },
-  { id:'direction', label:'选整体风格', hint:'比较拟物、玻璃和字符艺术的视觉语言', notes:[
+  { id:'direction', label:'确定视觉风格', hint:'比较拟物、玻璃与字符艺术', notes:[
     'skeuomorphism','liquid-glass','ascii'
+  ] },
+  { id:'build', label:'建立设计规范', hint:'新项目先统一字号、间距与组件用法', notes:[
+    'design-tokens','typography-scale','spacing-scale','nested-radius','semantic-components','choice-controls','icon-states'
+  ] },
+  { id:'layout', label:'组织页面内容', hint:'排版、对齐、分组与章节导航', notes:[
+    'bento-grid','typography-scale','spacing-scale','alignment','optical-alignment','mixed-typesetting',
+    'progressive-disclosure','wiki-navigation'
+  ] },
+  { id:'controls', label:'选择和使用组件', hint:'选开关还是复选框，菜单怎样展开', notes:[
+    'semantic-components','choice-controls','overlay-choice','cascade-safe-zone','progressive-disclosure','icon-states'
+  ] },
+  { id:'feedback', label:'设计操作反馈', hint:'提交后怎样提示等待、成功或失败', notes:[
+    'loading-states','optimistic-ui','toast','notification','onboarding-preview','drag-feedback','icon-states'
+  ] },
+  { id:'animate', label:'编排界面动效', hint:'找按压、展开、退场和滚动的参考', notes:[
+    'tactile-buttons','book-reveal','drag-feedback','exit-motion','scroll-cards','halo-ripple','continuity','motion-easing'
+  ] },
+  { id:'details', label:'打磨视觉细节', hint:'做圆角、图标、材质和纹理', notes:[
+    'nested-radius','continuous-corners','optical-alignment','icon-simplification','tactile-buttons',
+    'message-bubbles','holographic','glass-fallback','ordered-dither','graphic-halftone'
   ] }
 ];
 
