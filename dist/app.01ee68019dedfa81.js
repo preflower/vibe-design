@@ -11,7 +11,7 @@ function announce(message) {
 }
 // Sample the live strip through a cylindrical lens at the gate. The map
 // is cached by lens size; its strength follows the tension of the moving strip.
-function mountFilmTransport(roll) {
+function mountFilmTransport(roll, playEntrance) {
   const film = $('.cs-film', roll);
   const gate = $('.cs-cartridge', roll);
   const lens = $('.cs-bend', gate);
@@ -118,7 +118,7 @@ function mountFilmTransport(roll) {
   motion.addEventListener('change', () => { tension = 0; shade(); });
 
   const navigation = performance.getEntriesByType('navigation')[0];
-  if (motion.matches || location.hash || scrollY || navigation?.type === 'back_forward') return;
+  if (!playEntrance || motion.matches || location.hash || scrollY || navigation?.type === 'back_forward') return;
   const travel = Math.max(0, gate.getBoundingClientRect().top - roll.getBoundingClientRect().top);
   entrance = film.animate([
     {transform:'translateY('+travel+'px)'}, {transform:'translateY(0)'}
@@ -261,7 +261,22 @@ if (grid) {
   });
   window.addEventListener('popstate', readUrl);
   readUrl();
-  mountFilmTransport($('.cs-roll'));
+  async function revealHome() {
+    const root = document.documentElement;
+    const gate = $('.cs-cassette-front img');
+    const covers = $$('.cs-frame:not([hidden]) .cs-image-link img', grid).filter(img => {
+      const rect = img.getBoundingClientRect();
+      return rect.bottom > 0 && rect.top < innerHeight;
+    });
+    for (const img of covers) img.loading = 'eager';
+    await Promise.allSettled([gate, ...covers].map(img => img.decode()));
+    requestAnimationFrame(() => {
+      const pending = root.classList.contains('home-pending');
+      root.classList.remove('home-pending');
+      mountFilmTransport($('.cs-roll'), pending);
+    });
+  }
+  revealHome();
 }
 $$('[data-copy]').forEach(button => button.addEventListener('click', async () => {
   const target = document.getElementById(button.dataset.copy);
