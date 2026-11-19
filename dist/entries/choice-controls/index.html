@@ -1,0 +1,46 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#20211f"><title>选择控件的取舍 · Vibe Design</title><meta name="description" content="先看选择何时生效，再看它是设置一个值，还是执行一个动作。"><link rel="canonical" href="https://vibe-design.carefulgardenia8.chatgpt.site/entries/choice-controls/"><meta property="og:title" content="选择控件的取舍 · Vibe Design"><meta property="og:description" content="先看选择何时生效，再看它是设置一个值，还是执行一个动作。"><meta property="og:type" content="website"><meta property="og:locale" content="zh_CN"><link rel="icon" href="/vibe-design-icon.png?v=gecko-alpha" type="image/png"><link rel="icon" media="(prefers-color-scheme: dark)" href="/vibe-design-icon-light.png" type="image/png"><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/contact.css"><link rel="alternate" type="application/json" href="/data/entries.json" title="结构化知识库"><link rel="alternate" type="text/markdown" href="/llms-full.txt" title="完整 Markdown"><script type="module" src="/app.js"></script></head><body><a class="skip-link" href="#main">跳到正文</a><header class="site-header"><a class="brand" href="/" aria-label="Vibe Design 首页"><img class="brand-icon" src="/vibe-design-icon-light.png" width="28" height="28" alt=""><span>Vibe Design</span></a><nav aria-label="主导航"><a href="/" aria-current="page">首页</a><a href="/series/" >书籍</a><a href="/about/" >关于</a></nav><button class="global-search" type="button" aria-haspopup="dialog" aria-label="全站搜索"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.6"/><path d="m16 16 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button></header><dialog class="search-palette" aria-label="搜索设计笔记">
+      <div class="palette-bar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.6"/><path d="m16 16 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><input id="search" type="text" role="combobox" aria-label="搜索设计笔记" aria-expanded="true" aria-controls="palette-results" aria-autocomplete="list" autocomplete="off" placeholder="搜索笔记、术语或关键词"><button type="button" class="palette-close" aria-label="关闭搜索">Esc</button></div>
+      <div id="palette-results" role="listbox" aria-label="匹配的笔记"></div><p class="palette-empty" hidden>没有找到匹配的笔记</p>
+      <div class="palette-help"><span role="status"></span><span>↑ ↓ 选择　↵ 打开</span></div>
+    </dialog><main class="film-note" id="main"><nav class="film-trail" aria-label="面包屑"><a href="/">设计笔记</a> / <a href="/?topic=components">组件与反馈</a></nav>
+  <section class="film-lead"><header class="film-title"><p class="film-id"><b>38</b> / 38 · 设计技巧</p><h1>选择控件的取舍</h1><i lang="en">Choice controls</i><p class="abstract">先看选择何时生效，再看它是设置一个值，还是执行一个动作。</p>
+  <div class="film-tags"><a href="/?q=%E8%A1%A8%E5%8D%95"># 表单</a><a href="/?q=%E5%BC%80%E5%85%B3"># 开关</a><a href="/?q=%E5%A4%8D%E9%80%89%E6%A1%86"># 复选框</a><a href="/?q=%E5%8D%95%E9%80%89"># 单选</a><a href="/?q=%E4%B8%8B%E6%8B%89%E8%8F%9C%E5%8D%95"># 下拉菜单</a><a href="/?q=%E5%88%86%E6%AE%B5%E9%80%89%E6%8B%A9"># 分段选择</a></div><a class="film-issue" href="/series/#issue-020">《999 个小技巧》第 020 期 ↗</a></header>
+  <div class="film-strip"><figure class="source-frame"><div class="media-window"><video controls playsinline preload="none" aria-label="开关、复选框、单选和下拉的使用场景" poster="/assets/source-media/2123217190052827633-1.jpg"><source src="/assets/source-media/2123106760907177984.mp4" type="video/mp4"></video></div><figcaption><span>原帖视频</span><span class="media-credit">@Kubai087 · <a href="https://x.com/Kubai087/status/2123217190052827633">查看来源帖 ↗</a></span></figcaption></figure></div></section>
+  <div class="film-reading"><aside><nav aria-label="本篇目录"><a href="#definition">概念与场景</a><a href="#practice">实践步骤</a><a href="#prompt">提示词</a><a href="#source">来源</a></nav><div class="film-formats"><a href="/entries/choice-controls/index.md">Markdown ↗</a><a href="/data/choice-controls.json">JSON ↗</a></div></aside>
+  <article><section id="definition"><h2>概念与场景</h2><p>在设置里拨动「允许通知」，用户预期它立即生效。表单里的订阅选项则可能要等保存后才生效。两者都只有选与不选两种状态，提交时机决定了控件给人的承诺。</p><h3>适用场景</h3><p>审查设置页、填写后统一提交的表单，以及工具栏里的下拉入口时。</p></section>
+  <section id="practice"><h2>实践步骤</h2><ol><li>写下每个选择何时生效。独立且即时的开关项用 Switch，随表单保存的多选项用复选框。</li><li>区分值和动作。选语言后字段显示当前语言；选菜单里的「导出」则启动导出，入口名称保持原样。</li><li>比较选项数和长度。两到五个简短互斥项可平铺为分段选择；选项多或文字长时用下拉选择，必要时加入搜索和空状态。</li><li>需要同时展示所有候选项时，单选用 Radio，多选用复选框。若允许暂不决定，为单选题提供明确选项。</li></ol><h3>常见误区</h3><p>把「开」和「关」做成两枚单选按钮，或让本应随表单保存的选择悄悄立即生效。</p></section>
+  <section id="prompt"><div class="film-actions"><h2>作者原版提示词</h2><button type="button" data-copy="prompt-text">复制提示词</button></div><pre class="copy-prompt" id="prompt-text" tabindex="0">Review the choice controls in my product (switches, checkboxes, radio buttons, segmented controls, selects and dropdown menus) and decide for each one whether it is the right control. Diagnose first; change only what I approve, in my own code and components, without new dependencies.
+
+1. Read the product
+Find every place a person picks something, turns something on or off, or runs an action from a list. For each, note what it sets or does, how many options it has, how many can be picked, and whether it takes effect at once or on Save.
+
+2. How to choose
+a. Switch or checkbox: when it takes effect.
+- Switch: takes effect the moment it is flipped (settings that save on their own, no Save button).
+- Checkbox: one answer in a form, applied on Submit or Save.
+- One thing on or off is one switch, never two radios (On / Off). If both sides have names of their own (Light / Dark), it is a choice of one: see (c).
+
+b. Select or dropdown menu: a value or an action.
+- Select: holds a value; after a pick the field shows it, and the picked option has a tick in the list.
+- Dropdown menu: holds actions (Export, Duplicate, Delete). A pick runs it, the button keeps its name, and the result shows elsewhere. Menus go in page headers, toolbars and row ends, not among form fields. A split button pairs a main action with a menu of related ones (Send, with Send later and Save as draft beside it).
+- Tabs switch to other content and set nothing; a segmented control sets a value or the view of the same content.
+
+c. One of several: by the number of options.
+- 2 to 5 short options: a segmented control.
+- 2 to 5 that each need a line: radio buttons, stacked under the label.
+- 6 or more, or labels that change or grow (names, dates, items people add): a select, so the layout never shifts.
+- Hundreds (time zones, countries, people): a select with search, and a clear message when nothing matches.
+
+d. Radio or checkbox: how many can be picked.
+- Radio: exactly one, all options in view, as in a survey question. It can't be cleared once picked, so add a &quot;none&quot; option (Not sure yet) when that is a fair answer.
+- Checkbox: any number, none included.
+- Inside a select: a tick for one value, never radio circles; a checkbox before each option for several, with the picks shown as chips in the field.
+
+3. Report before changing
+Give me a table, one row per control: where, what it sets or does, the control now, the control it should be (or &quot;right as it is&quot;), why in one line, and anything else that changes (a Save button, a &quot;none&quot; option, an action moved out of a form). Flag every change in behaviour, ask about cases that could go either way, and wait for me to choose.
+
+4. Change what I approve
+Use my components, or the platform's own controls when I have none. Keep the values people already saved. Check that switches act at once and checkboxes on submit, selects show their value, menu buttons keep their name, and everything works by keyboard and screen reader.</pre><small>@Kubai087 <a href="https://x.com/Kubai087/status/2123219668165140511">查看原文 ↗</a></small></section>
+  <section id="source"><h2>来源</h2><a class="film-origin" href="https://x.com/Kubai087/status/2123217190052827633">999 个小技巧 · 020：选择控件的取舍 ↗</a><p>枯白 Kubai · @Kubai087 · 2026-11-19</p>
+  <small>已通过 FxTwitter 逐条读取原帖文本 · 整理于 2026-11-19</small></section></article></div>
+  <section class="film-related"><h2>相关笔记</h2><div><a href="/entries/semantic-components/"><span>按语义选组件</span><small lang="en">Semantic components</small></a><a href="/entries/overlay-choice/"><span>提示框、气泡与弹窗</span><small lang="en">Overlay choice</small></a><a href="/entries/icon-states/"><span>功能图标的状态</span><small lang="en">Icon states</small></a></div></section><a class="film-next" href="/entries/nested-radius/">下一篇 · 嵌套圆角 →</a></main><div class="toast-message" role="status" aria-live="polite"></div></body></html>

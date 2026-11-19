@@ -1,67 +1,63 @@
-import { art, arrow, external, searchIcon } from './visuals.mjs';
-import { categories, coverage, entries, series } from '../data/content.mjs';
+import { arrow, external } from './visuals.mjs';
+import { categories, entries, series, topics } from '../data/content.mjs';
+import { coverFor } from './contact-media.mjs';
 
 const escapeAttribute = value => value.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
-const counts = Object.fromEntries(Object.keys(categories).map(category => [
-  category, category === 'all' ? entries.length : entries.filter(entry => entry.category === category).length
+const counts = Object.fromEntries(Object.keys(topics).map(topic => [
+  topic, topic === 'all' ? entries.length : entries.filter(entry => entry.topic === topic).length
 ]));
 
-function entryRow(entry, index) {
+const graphicNotes = new Set(['graphic-halftone','ascii','ordered-dither','mixed-typesetting','typography-scale','alignment','spacing-scale','optical-alignment','icon-simplification']);
+const materialNotes = new Set(['holographic','liquid-glass','message-bubbles','glass-fallback','halo-ripple','skeuomorphism']);
+// Retain the original group membership for bookmarked ?film= links.
+
+function filmFrame(entry, index) {
+  const cover = coverFor(entry);
+  const topic = graphicNotes.has(entry.id) ? '图形与排版' : materialNotes.has(entry.id) ? '光与材质' : '界面与交互';
   const search = [entry.title, entry.english, entry.summary, entry.definition, ...entry.tags];
   if (entry.episode) search.push(entry.episode, String(Number(entry.episode)), '999 个小技巧');
-  const episodeLabel = entry.episode ? `<span class="issue-chip">${entry.source.episodeStatus === 'inferred' ? '约 ' : '#'}${entry.episode}</span>` : '';
-  return `<article class="entry-card atlas-row" data-id="${entry.id}" data-category="${entry.category}"
-    data-order="${index}" data-date="${entry.source.published}" data-search="${escapeAttribute(search.join(' ').toLowerCase())}">
-    <a href="/entries/${entry.id}/" class="entry-link">
-      <div class="row-preview">${art(entry.visual)}</div>
-      <div class="row-title"><h3>${entry.title}</h3><span>${entry.english}</span></div>
-      <p>${entry.summary}</p>
-      <div class="row-meta"><span class="category-label category-${entry.category}">${categories[entry.category]}</span>${episodeLabel}</div>
-      <span class="entry-arrow">${arrow}</span>
+  return `<figure class="cs-frame" data-entry${cover?.previewVideo ? ` data-preview-video="${escapeAttribute(cover.previewVideo)}"` : ''} data-topic="${entry.topic}" data-film-group="${topic}" data-category="${entry.category}" data-order="${index}" data-date="${entry.source.published}"
+      data-english="${escapeAttribute(entry.english)}" data-search="${escapeAttribute(search.join(' ').toLowerCase())}">
+    <a href="/entries/${entry.id}/" class="cs-image-link" aria-label="阅读《${entry.title}》">
+      ${cover ? `<img src="${escapeAttribute(cover.url)}" alt="${escapeAttribute(cover.alt || entry.source.title)}" loading="${index < 3 ? 'eager' : 'lazy'}" decoding="async"><span class="cs-unavailable" hidden>预览图未能载入</span>` : `<span>${entry.english}</span>`}
     </a>
-  </article>`;
+    <figcaption><div class="cs-caption"><span class="cs-number">${entry.number}</span><a class="cs-note-link" href="/entries/${entry.id}/">${entry.title}</a>
+      <a class="cs-source-link" href="${escapeAttribute(cover?.sourceUrl || entry.source.url)}" target="_blank" rel="noopener noreferrer">原帖 ↗</a></div>
+      <small class="cs-type">${entry.english} · ${categories[entry.category]}${cover ? ' · ' + (cover.type === 'video' ? '视频' : '图片') : ''}</small><p class="cs-summary">${entry.summary}</p></figcaption></figure>`;
 }
 
-export const library = `<main id="main" class="atlas">
-  <section class="atlas-intro" aria-labelledby="atlas-title">
-    <div class="atlas-intro-copy">
-      <span class="atlas-overline"><i></i> VIBE DESIGN / 知识库</span>
-      <h1 id="atlas-title">界面设计<br><em>拆解档案<span>。</span></em></h1>
-      <p>查术语、看风格、试技巧。每条都有原帖和可交给 AI 的资料。</p>
-      <div class="atlas-actions"><a class="button atlas-primary" href="#library">浏览知识库 ${arrow}</a><a class="atlas-secondary" href="/ai/">给 AI 的资料 ${external}</a></div>
-    </div>
-    <a class="atlas-feature" href="/entries/scroll-cards/">
-      <div class="atlas-feature-meta"><span>最新收录 · 019</span><span aria-hidden="true">↗</span></div>
-      ${art('stack')}
-      <div class="atlas-feature-title"><div><strong>卡片滚动叙事</strong><span>Scroll-driven cards</span></div><span>查看示例 ${arrow}</span></div>
-    </a>
-  </section>
-  <section id="library" class="atlas-library" aria-labelledby="library-title">
-    <aside class="atlas-rail">
-      <h2 id="library-title">知识库索引</h2>
-      <div class="category-tabs" role="group" aria-label="按分类筛选">
-        ${Object.entries(categories).map(([id,label])=>`<button type="button" data-category-filter="${id}" aria-pressed="${id === 'all'}">${label}<span>${counts[id]}</span></button>`).join('')}
-      </div>
-      <a class="rail-series" href="/series/"><span>《999 个小技巧》</span><span>001–019 ${external}</span></a>
-      <a class="rail-sources" href="/about/#sources">来源与覆盖范围 ${external}</a>
-    </aside>
-    <div class="atlas-results">
-      <form class="search-form" role="search">
-        <div class="search-box">${searchIcon}<input id="search" type="search" aria-label="搜索设计知识" placeholder="搜圆角、动效、Tooltip 或期号…" autocomplete="off" name="q"><span class="search-key" aria-hidden="true">/</span><button class="clear-search" type="button" aria-label="清空搜索" hidden>×</button></div>
-      </form>
-      <div class="results-info"><span id="result-count" role="status" aria-live="polite">${entries.length} 条设计笔记</span><label class="sort-label">排序 <select id="sort" aria-label="内容排序"><option value="curated">推荐顺序</option><option value="newest">原帖最新</option><option value="title">名称 A–Z</option></select></label></div>
-      <div class="entries-grid atlas-rows">${entries.map(entryRow).join('')}</div>
-      <div class="empty-state" hidden><h2>没有找到词条</h2><p>换一个关键词，或回到全部内容。</p><button class="button" id="reset-filters" type="button">查看全部笔记 ${arrow}</button></div>
-    </div>
-  </section>
-</main>`;
+export const library = `<main id="main" class="contact-home">
+  <section id="library" aria-label="设计笔记"><div class="cs-controls"><div class="cs-heading"><div><h1 lang="en">Vibe Design</h1><p class="cs-intro">从真实界面学设计，查看原帖示例和可复制的提示词。</p></div>
+</div>
+    <div class="cs-bar"><div class="cs-filters" role="group" aria-label="按主题筛选">
+      ${Object.entries(topics).map(([id,label])=>`<button type="button" data-topic-filter="${id}" aria-pressed="${id==='all'}">${label} <small>${counts[id]}</small></button>`).join('')}</div>
+      <div class="cs-view">
+      <select id="sort" aria-label="笔记排序"><option value="curated">编排顺序</option><option value="newest">按原帖日期</option><option value="title">英文名称</option></select>
+      <button type="button" data-film-size="standard" aria-pressed="true">标准</button><button type="button" data-film-size="large" aria-pressed="false">放大</button></div></div>
+    <div id="result-count" role="status">${entries.length} 条设计笔记</div></div>
+    <div class="cs-roll"><div class="cs-feed"><div class="cs-film" data-size="standard"><div class="cs-gallery">${entries.map(filmFrame).join('')}</div>
+      <div class="cs-empty" hidden><p>没有符合条件的笔记。</p><button id="reset-filters" type="button">查看全部笔记</button></div></div></div>
+    <div class="cs-cartridge" aria-hidden="true"><svg class="cs-optics" width="0" height="0" aria-hidden="true"><defs>
+      <filter id="cs-film-curve" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+        <feImage preserveAspectRatio="none" result="coordinates"/>
+        <feDisplacementMap in="SourceGraphic" in2="coordinates" xChannelSelector="R" yChannelSelector="G"/>
+      </filter></defs></svg><div class="cs-bend"></div><div class="cs-cassette-front"><img src="/film-cassette.webp" alt="" width="1536" height="856" decoding="sync"></div></div></div></section></main>`;
 
 export const seriesPage = `<main id="main" class="prose-page series-page">
-  <h1>999 个小技巧</h1>
-  <p class="page-intro">按原帖期号查看每个主题。已找到第 001–019 期的对应帖子，其中 013 根据发布时间、相邻期数与公开整理推定。</p>
+  <h1>书籍</h1>
+  <div class="book-shelf"><details class="series-book">
+    <summary aria-label="《999 个小技巧》目录">
+      <span class="book-cover"><span class="book-face">
+        <span class="book-imprint"><img src="/vibe-design-icon.png?v=gecko-alpha" alt="">Vibe Design</span>
+        <strong class="book-title"><span>999</span>个小技巧</strong>
+        <span class="book-range">第 ${series[0].number}—${series.at(-1).number} 期</span>
+      </span><span class="book-inside" aria-hidden="true"><img src="/vibe-design-icon.png?v=gecko-alpha" alt="">Vibe Design</span></span>
+      <span class="book-action"><span class="when-closed">展开目录</span><span class="when-open">收起目录</span><b aria-hidden="true"></b></span>
+    </summary>
+  <div class="book-paper" role="region" aria-label="999 个小技巧目录" tabindex="0"><h2 class="book-contents-title">目录</h2>
   <div class="series-list">
     ${series.map(issue => `<article class="series-row" id="issue-${issue.number}">
-      <div class="series-number">${issue.number}${issue.source.episodeStatus === 'inferred' ? '<span>期号推定</span>' : ''}</div>
+      <div class="series-number">${issue.number}</div>
       <div><h2>${issue.title}</h2><div class="series-notes">${issue.entries.map(id => {
         const entry = entries.find(note => note.id === id);
         return `<a href="/entries/${id}/">${entry.title} ${arrow}</a>`;
@@ -70,12 +66,10 @@ export const seriesPage = `<main id="main" class="prose-page series-page">
         <a href="${issue.source.url}" target="_blank" rel="noopener noreferrer" aria-label="第 ${issue.number} 期原帖">原帖 ${external}</a></div>
     </article>`).join('')}
   </div>
-  <p class="series-evidence">${series[12].source.episodeNote} <a href="${series[12].source.episodeEvidenceUrl}">查看交叉线索 ${external}</a></p>
-  <div class="inline-code-links"><a href="/data/series.json">下载系列 JSON ${external}</a><a href="/about/#sources">查看来源与覆盖范围 ${external}</a></div>
+  <div class="inline-code-links"><a href="/data/series.json">下载系列 JSON ${external}</a><a href="/about/#sources">查看原帖来源 ${external}</a></div>
+  </div></details></div>
+  <dialog class="book-reader" aria-label="阅读《999 个小技巧》"></dialog>
 </main>`;
-
-export const coverageCopy = `<p>截至 ${coverage.retrievedAt}，读取了公开时间线 ${coverage.timelinePages} 页和独立收录索引 ${coverage.archivePages} 页，合并去重后得到 ${coverage.candidatePosts} 个候选帖子 ID。时间线镜像返回的帖子日期为 ${coverage.timelineFrom} 至 ${coverage.timelineTo}。索引也包含转发与重复发布。</p>
-  <p>从中选出与设计知识相关的帖子，再通过 FxTwitter 核对作者、正文和日期。候选量是检索范围，收录量以本页已核对的来源列表为准。镜像会遗漏历史帖子，因此范围仍有边界。</p>`;
 
 export function secondarySources(entry) {
   const links = entry.secondarySources.map(source => {
@@ -84,25 +78,13 @@ export function secondarySources(entry) {
       : '';
     return `<p class="creator-credit"><a href="${source.url}" target="_blank" rel="noopener noreferrer">延伸来源 · ${source.title} ${external}</a>${creator}</p>`;
   });
-  if (entry.source.episodeNote) links.push(`<p class="creator-credit">${entry.source.episodeNote}</p>`);
   return links.join('');
 }
 
 export function aboutPage(sources) {
   const posts = Object.values(sources).sort((a, b) => b.published.localeCompare(a.published));
   return `<main id="main" class="prose-page about-page">
-    <h1>内容与来源</h1>
-    <p class="page-intro">vibe-design 是给用户和 AI 的静态设计知识库。本站收录 ${entries.length} 条笔记，来自 ${posts.length} 篇 @Kubai087 公开帖子。</p>
-    <section id="sources">
-      <h2>这次查了哪些内容</h2>
-      ${coverageCopy}
-      <p>使用了 <a href="https://teapawt.org/Kubai087">公开时间线镜像</a>和<a href="https://tech.sinsc.com/media/rss-twitter-kubai087">收录索引</a>。解释、示例和提示词由本站撰写。</p>
+    <h1 id="sources">原帖来源</h1>
       <div class="source-table">${posts.map(post => `<a href="${post.url}" target="_blank" rel="noopener noreferrer"><time datetime="${post.published}">${post.published}</time><span>${post.title}</span>${external}</a>`).join('')}</div>
-    </section>
-    <section>
-      <h2>内容如何更新</h2>
-      <p>维护源数据后重新生成 HTML、Markdown 和 JSON。搜索和示例在浏览器本地运行。最近整理于 ${coverage.retrievedAt}。</p>
-      <div class="inline-code-links"><a href="/data/sources.json">下载来源清单 ${external}</a><a href="/ai/">查看 AI 读取方式 ${external}</a></div>
-    </section>
   </main>`;
 }

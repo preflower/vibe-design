@@ -1,5 +1,6 @@
 {
   "id": "wiki-navigation",
+  "topic": "components",
   "title": "文档与章节导航",
   "english": "Documentation navigation",
   "category": "technique",
@@ -14,7 +15,7 @@
     "retrievedAt": "2026-11-18",
     "verification": "已通过 FxTwitter 逐条读取原帖文本",
     "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2116911391437443471",
-    "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+    "note": "文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。",
     "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F18LAAIAAAATMjExNzA4NTEyNDI0MDI0ODkwOAgAAwAAAAIAAA",
     "episode": 8
   },
@@ -32,14 +33,18 @@
     "长目录提示可继续滚动，文末给相关下一步。"
   ],
   "avoid": "做两个同时抢占屏幕的固定导航，或让跳转目标被固定栏盖住。",
-  "prompt": "重排指定文档页导航。保留锚点 URL，分别验证桌面目录滚动、手机章节跳转、键盘焦点与文末相关入口。",
+  "prompt": "Polish the layout of my docs or help center pages: the header, the page list, the outline and the end of each article. Keep the content, copy, colours and fonts. Change only how these parts sit, scroll and respond.\n\n0. Start from what exists\n- Find the shared docs layout, the site header, the page list (sidebar), the outline (table of contents) and the footer. Change those, so every page inherits the result.\n- Use CSS and a little plain JS. Add no scroll or animation libraries.\n\n1. Think of the page as three layers\n- The article and the footer scroll with the page.\n- The page list and the outline are position: sticky. They stop where they start, so they never jump when scrolling begins, and the end of the layout pushes them up at the bottom.\n- The header becomes position: fixed only after the page's opening (banner or hero) has left the screen. Before that it belongs to the page and scrolls away with it.\n\n2. Header: it scrolls away, then comes back floating\n- At the top it is clear, with no background.\n- Once the reader has scrolled and the banner's bottom edge is at or above the top of the screen (getBoundingClientRect().bottom <= 0), show it as a floating bar: position: fixed; a translucent white background; backdrop-filter: blur(18px); a soft shadow.\n- It enters in 320ms ease-out, from translateY(-24px) with blur(8px) and opacity 0. It leaves in 120ms when the reader scrolls back up to the banner. If the reader scrolls down again during the exit, cancel it and keep the bar.\n- Give headings a scroll-margin-top so anchor links never land under the bar.\n\n3. Page list: it scrolls on its own, and shows where there is more\n- Hide its scrollbar and let it scroll by itself.\n- Fade an edge only while more of the list waits beyond it. Toggle data-more-above and data-more-below on scroll and resize, and drive a mask-image: linear-gradient(...) with them: about 40px at the top and 56px at the bottom, each with a short fully clear strip at the very edge, so a half-cut row never shows as a faint line.\n- Add a small round arrow on each edge that has more. A click scrolls the list by 60% of its visible height, smoothly. Arrows are for the mouse only (tabindex=\"-1\", aria-hidden=\"true\"); keyboard focus already scrolls the list.\n- On load, bring the current page into view. Keep the list's scroll position in sessionStorage, so moving to another page does not reset it.\n- If there is a search box, let \"/\" focus it.\n\n4. Outline: mark the section being read\n- The current section is the last heading above a line 20% down the viewport.\n- Mark its link with aria-current=\"location\" and style that: border-left-color and text in the accent colour.\n- Update it on scroll, at most once per animation frame.\n\n5. End of the article: help first, then the next page\n- If the reader is still stuck, a \"Still need help?\" card with one or two real channels (the issue tracker, the community, a contact).\n- Then previous and next links, with each page's title. The first page links back to the home page.\n- Then the footer.\n\n6. Narrow screens\n- Hide the outline on tablets and the page list on phones. Put both in one bar fixed at the bottom: the page list on its left half, the outline on its right half.\n- The right half shows the name of the section being read, updated by the same 20% line, and truncated with an ellipsis when it is long.\n- A tap on either half opens its list as a sheet from the bottom edge (a dialog opened with showModal()), sliding up 24px as it fades in, with no dimming behind it. Mark the current entry and scroll it into view (scrollIntoView({ block: \"center\" })).\n- A tap on an entry, the close button, outside the sheet or Esc closes it; a section link then scrolls to its heading.\n- Make the tap targets one size up from the desktop list.\n\n7. Motion\n- Under prefers-reduced-motion: reduce, turn off smooth scrolling and the header's enter and exit animations.\n\n8. When done\n- List every file and selector you changed.\n- Check four states on my own pages: the top of a page, the middle, the end, and a phone-width window.\n- Show a screenshot of each.",
   "related": [
     "progressive-disclosure",
     "alignment"
   ],
   "number": "21",
   "contentType": "editorial-explanation",
-  "promptAuthor": "vibe-design",
+  "promptAuthor": "@Kubai087",
+  "promptKind": "original",
+  "promptSourceUrls": [
+    "https://x.com/Kubai087/status/2116917025348231369"
+  ],
   "episode": "008",
   "secondarySources": []
 }

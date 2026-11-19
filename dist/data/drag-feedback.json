@@ -1,5 +1,6 @@
 {
   "id": "drag-feedback",
+  "topic": "motion",
   "title": "拖拽的反馈",
   "english": "Drag feedback",
   "category": "technique",
@@ -14,7 +15,7 @@
     "retrievedAt": "2026-11-18",
     "verification": "已通过 FxTwitter 逐条读取原帖文本",
     "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2115823717024735708",
-    "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+    "note": "文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。",
     "indexUrl": "https://tech.sinsc.com/items/nhtioq9fnu3gct8abmszudz2t",
     "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5FzsLAAIAAAATMjExNjE5ODM3MzA0MDc1OTEwNwgAAwAAAAIAAA",
     "episode": 5
@@ -33,14 +34,18 @@
     "提供按钮或键盘替代、取消操作，并播报最终顺序。"
   ],
   "avoid": "只支持鼠标拖动，或让排序动画改变命中区域，造成落点来回跳动。",
-  "prompt": "完善指定列表的排序反馈。复用现有拖拽实现，区分拿起、落点、提交与取消。用 transform 表现位移，并提供键盘上下移动、Esc 取消和排序结果播报。",
+  "prompt": "Make drag-to-reorder in my product feel like this. Apply it to the lists,\nrows and docks I name, and reuse any drag helper the project already has.\n\n1. Cursor: a pointing hand over anything draggable, a grabbing hand while\n   dragging.\n2. Lift: the picked item follows the pointer, raised off the list so it\n   never hides where it will land: above a horizontal row, or pulled aside\n   and shrunk to about 90% in a vertical list. Its old slot closes up.\n3. Drop hint: a faint, thin line in the gap where it will land (vertical in\n   a row, horizontal in a list), about 15% of the text color. It grows from\n   its middle when it appears and glides to each new gap. No line over the\n   item's own slot.\n4. Ripple: items on both sides of the line lean away from it. Counting n\n   from the line (0 = the item touching it), item n moves\n   A x 0.7^n (A is about 10px for icons, 8px for cards)\n   and starts 24ms x n later, on a quick spring that barely overshoots and\n   settles in about 0.25s. Nearer items move sooner and further, so the\n   push spreads out like a ripple.\n5. Drop: the item takes the gap and every item springs into its new place.\n   Escape or dropping outside the list cancels, and everything springs back.\n6. Give each motion its own curve (hand-like for the pointer, a small pop\n   for the lift, springs for settling) instead of one ease-out everywhere.\n\nMove things with transforms, not layout. Let the keyboard reorder too, and\nwith reduced motion keep only the line.",
   "related": [
     "continuity",
     "semantic-components"
   ],
   "number": "14",
   "contentType": "editorial-explanation",
-  "promptAuthor": "vibe-design",
+  "promptAuthor": "@Kubai087",
+  "promptKind": "original",
+  "promptSourceUrls": [
+    "https://x.com/Kubai087/status/2115823717024735708"
+  ],
   "episode": "005",
   "secondarySources": []
 }

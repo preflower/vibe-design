@@ -1,5 +1,6 @@
 {
   "id": "tactile-buttons",
+  "topic": "components",
   "title": "有触感的按钮",
   "english": "Tactile buttons",
   "category": "style",
@@ -14,7 +15,7 @@
     "retrievedAt": "2026-11-18",
     "verification": "已通过 FxTwitter 逐条读取原帖文本",
     "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2114378773655326873",
-    "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+    "note": "文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。",
     "indexUrl": "https://tech.sinsc.com/items/qk01y15dgkgcv95djbpq7nfzt",
     "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5FtMLAAIAAAATMjExNDY2MDUxMjU2NzA3OTI3OAgAAwAAAAIAAA",
     "episode": 1
@@ -33,14 +34,18 @@
     "按下时缩短阴影，并保留清晰的焦点边框。"
   ],
   "avoid": "用相同的体积强化所有按钮，或只靠阴影区别禁用状态。",
-  "prompt": "检查现有按钮层级。复用现有组件，为主要和次要动作分别设计表面、按压与焦点状态；验证每种状态下的文字对比。",
+  "prompt": "Define a tactile, skeuomorphic Button component with five variants, from\nstrongest to weakest: primary, secondary, tertiary, ghost, text.\nIf the project already has a component library or design system, do not\nadd a new component: restyle its existing Button through its own variant\nand token system, and keep its API, props and accessibility as they are.\nOtherwise create one reusable Button with `variant` and `size` props.\n\nStyle: calm and precise, like the Lumno browser extension and the Cloudflare\ndashboard. Neutral grays only, no brand hues. Lit from straight above.\nNo glossy Web 2.0 shine, no glow, no large blur.\n\nVariants:\n1. primary   - near-black slate face (#404859 -> #273042), white label\n2. secondary - raised white key (#FFFFFF -> #F4F5F7), dark gray label\n3. tertiary  - soft gray key (#F3F4F6 -> #E7E9EC), dark gray label\n4. ghost     - no face at rest; faint gray fill on hover; a recessed well\n               when pressed\n5. text      - gray label with a thin underline and an arrow that nudges\n               right on hover\n\nEvery filled variant is the same five material layers; only the values\nchange, so define them once as tokens and let each variant set its own:\n1. Face: 180deg linear gradient, top 6-8% lighter than bottom.\n2. Edge: 1px solid border one step darker than the bottom of the face\n   (primary #12161F, secondary rgba(15,23,42,.14), tertiary rgba(15,23,42,.1)).\n3. Top highlight: inset 0 1px 0 white (18% on slate, 85-100% on light\n   faces). Put every inset layer in the button's own box-shadow, before the\n   drop layers, never on a pseudo-element overlay: inset shadows on the\n   element follow the inner radius (outer radius minus border), so the\n   corners line up in every state.\n4. Bottom shade: inset 0 -1px 0 black (22% on slate, 6% on light faces).\n5. Drop shadow in two layers: a tight contact shadow 0 1px 2px plus a soft\n   lift 0 4px 10px -3px (18% and 28% on slate, about a third of that on\n   light faces).\n\nStates (hover, pressed/active, focus-visible, disabled):\n- Hover: face one step lighter; the lift grows to 0 8px 16px -5px.\n- Pressed: translateY(1px); flip the gradient (darker on top); the outer\n  shadow collapses to 0 1px 1px; the top highlight becomes an inner shadow,\n  inset 0 1px 2px black (40% on slate, 12-16% on light faces). Light faces\n  keep a 1px white line below, 0 1px 0 rgba(255,255,255,.9), like a key\n  pressed into paper.\n- Give rest and pressed the same number of inset layers (pad with\n  inset 0 0 0 transparent) so the shadow animates instead of jumping.\n- Focus-visible and disabled follow the library's existing conventions.\n- Timing: 120ms for transform, 140ms for shadows, 160ms for colors.\n\nSizes: all values above are for the 14px label size: height 40px,\npadding 0 18px, radius 10px, label weight 600, optional 16px leading icon.\nOn the slate face add a label text-shadow 0 -1px 0 rgba(0,0,0,.28).\nScale the material with the type, never keep it at fixed pixels: express\nevery length (height, padding, radius, border, icon, the 1px press offset,\nand every shadow offset, blur and spread) as a multiple of a size unit\nu = label size / 14. Provide two sizes: md (14px label, u = 1px) and\nlg (16px label, u = 16/14 px, so height 45.7px, radius 11.4px, lift shadow\n0 4.6px 11.4px -3.4px).",
   "related": [
     "skeuomorphism",
     "semantic-components"
   ],
   "number": "17",
   "contentType": "editorial-explanation",
-  "promptAuthor": "vibe-design",
+  "promptAuthor": "@Kubai087",
+  "promptKind": "original",
+  "promptSourceUrls": [
+    "https://x.com/Kubai087/status/2114378773655326873"
+  ],
   "episode": "001",
   "secondarySources": []
 }

@@ -6,6 +6,9 @@ ID: motion-easing
 
 用速度变化让入场、位移和退场各有恰当节奏。
 
+## 来源媒体
+- [视频 · @Kubai087](https://x.com/Kubai087/status/2118143759984803898)
+
 ## 解释（本站整理）
 缓动曲线决定时间与完成进度的关系。减速曲线可让浮层迅速出现后稳定落位，缓入缓出可让位置变化两端平稳。
 
@@ -20,8 +23,53 @@ ID: motion-easing
 ## 应避免的问题
 给弹窗、按钮和长时间循环套同一曲线，或夸大回弹幅度。
 
-## 提示词（vibe-design 编写，非原帖摘录）
-整理当前动效的目的与速度曲线，给入场、退场、位置切换各一个角色。验证快速反复操作与减少动态偏好。
+## 作者原帖指令与提示词（@Kubai087）
+Give the motion in my product the right easing curves, so things arrive, leave and move the way they should feel. Work inside my existing code and design system: keep what each animation does, how far it goes and what triggers it. Change how it moves over time, and its duration where that is off.
+
+0. Start from what exists
+- Find every transition and animation: CSS transitions and keyframes, animation libraries (Framer Motion, GSAP, the Web Animations API) and hand-written requestAnimationFrame loops. List each with its component, its trigger, its duration and its curve.
+- Flag the ones left on the CSS default `ease`, `linear` on something that moves, and `ease-in` on something that appears.
+
+1. The curves as tokens
+Define them once, next to the other motion tokens, and use only these:
+- --ease-out: cubic-bezier(0, 0, .58, 1). Anything that enters: toasts, menus, popovers, dialogs, drawers.
+- --ease-out-strong: cubic-bezier(.22, 1, .36, 1). Small parts settling in right after a click: an icon, a label, a selected pill. It feels the most responsive.
+- --ease-in: cubic-bezier(.42, 0, 1, 1). Anything that leaves, and only that: a toast timing out, a dialog or drawer closing, a menu collapsing, a list item swiped away. It starts slow and leaves at full speed, so on an entrance it feels late and then stops with a bump.
+- --ease-in-out: cubic-bezier(.42, 0, .58, 1). Something that stays on screen and only changes place or size: the indicator under tabs or a segmented control, a carousel turning a page, items making room during a reorder, a sidebar resizing, smooth-scrolling to an anchor. Not for coming in: its slow start reads as lag.
+- --ease-overshoot: cubic-bezier(.34, 1.56, .64, 1). Runs about 10% past its place and comes back. Small, playful confirmations: a checkbox tick, a like, a badge count popping in, a switch knob settling. Never on a dialog, a drawer or anything larger than about 64px, and not on actions people repeat all day.
+- --ease-spring: linear(0, .32, .78, 1.04, 1.09, 1.06, 1.02, 1, .99, .99, 1). Things let go after a drag or a swipe, so they settle like an object: a bottom sheet snapping open or back, a card returning after a half swipe, pull-to-refresh springing back, a reordered item dropping into place. Prefer the animation library's own spring fed with the release velocity; use this token only where there is none, and fall back to --ease-out-strong where linear() is not supported.
+- linear: only for things that run rather than move: spinners, progress bars, marquees.
+- The CSS default `ease` is not a choice. Replace it wherever a curve was left unset.
+
+2. Durations
+- Small UI (toasts, tooltips, menus, checks): 150-250ms in, 120-200ms out. Exits are shorter than entrances.
+- Medium (dialogs, popovers with content, drawers): 250-350ms.
+- Large or full-screen (sheets, page transitions): 350-500ms. Longer feels slow.
+- Springs and overshoots: about 1.5x the plain duration, since the settle takes time.
+- Keep the durations as tokens beside the curves (--duration-sm, -md, -lg).
+
+3. Apply them by role
+- Entrances: ease-out, coming from where the thing belongs (a toast from the top edge, a menu from its trigger), over a short distance (8-24px), growing from 96% and fading in a little sooner than it moves. A light blur (about 8px) that clears as it lands is a nice touch on toasts.
+- Exits: ease-in, the same path reversed, and shorter.
+- Moves on screen: ease-in-out.
+- Parts inside something that has just appeared (its icon, its text, a count) may follow 100-200ms later on the strong ease-out, so it lands in steps rather than all at once.
+- Gestures: while the pointer or finger moves, follow it 1:1 with no easing. On release, finish on the spring, from the release velocity if the library allows.
+- Hover and press: 100-150ms ease-out. Never animate layout on hover.
+- Animate transform and opacity (filter sparingly), not top, left, width or height, which lay out and repaint every frame.
+
+4. Keep it consistent and accessible
+- One curve per role across the product. Don't tune each component by hand.
+- Respect prefers-reduced-motion: keep the opacity changes, drop movement and scale, and turn springs and overshoots into a plain 150ms fade.
+- Never make a user wait on an animation: nothing blocks input, and a new action interrupts the old animation from where it is.
+
+5. Deliver
+- First list every animation you found, its current curve and duration, and the role and curve you will give it.
+- Then add the tokens, switch each animation over, and list every file you touched.
+- Don't change what animates, how far it goes or what triggers it. If an animation has no clear role, ask me first.
+
+提示词原文：https://x.com/Kubai087/status/2118143923571048817
+
+提示词原文：https://x.com/Kubai087/status/2118144019545067872
 
 ## 来源
 - 原帖: https://x.com/Kubai087/status/2118143759984803898
@@ -29,7 +77,7 @@ ID: motion-easing
 - 发布: 2026-11-05
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2118143759984803898
-- 收录时间: 2026-11-18
-- 文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。
+- 收录时间: 2026-11-19
+- 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
-本站解释、示例和提示词为二次创作。
+笔记解释由本站整理。

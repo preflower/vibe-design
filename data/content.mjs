@@ -1,13 +1,15 @@
+import originalPrompts from './original-prompts.json' with { type: 'json' };
 import { expandedEntries } from './expanded.mjs';
 import { sources, series } from './sources.mjs';
 export { sources, series, coverage } from './sources.mjs';
 
-export const updated = '2026-11-18';
+export const updated = '2026-11-19';
 export const origin = 'https://vibe-design.carefulgardenia8.chatgpt.site';
+export const topics = { all:'全部内容', layout:'布局与排版', visual:'图形与材质', components:'组件与反馈', motion:'动效与过渡' };
 export const categories = { all: '全部内容', term: '设计术语', style: '设计风格', technique: '设计技巧' };
 export const entries = [
   {
-    id: 'nested-radius', title: '嵌套圆角', english: 'Nested radius', category: 'technique', visual: 'radius', source: 's004', tags: ['圆角','布局','CSS'],
+    id: 'nested-radius', topic: 'visual', title: '嵌套圆角', english: 'Nested radius', category: 'technique', visual: 'radius', source: 's004', tags: ['圆角','布局','CSS'],
     summary: '圆角也有秩序：让内外轮廓拥有同一个圆心。',
     definition: '当一个圆角容器包住另一个元素时，内层圆角应随内缩距离变小。对于等距内缩的普通圆角，内圆角 r = 外圆角 R − 间距 p。这样转角处的留白才会与直边处一样均匀。',
     when: '表单、嵌套面板、图片容器，以及带有内层按钮的卡片。',
@@ -17,7 +19,7 @@ export const entries = [
     code: '.outer { border-radius: 32px; padding: 12px; }\n.inner { border-radius: 20px; }', related: ['continuous-corners','spacing-scale','design-tokens']
   },
   {
-    id: 'design-tokens', title: '设计变量', english: 'Design tokens', category: 'term', visual: 'tokens', source: 'system', tags: ['系统','一致性','变量'],
+    id: 'design-tokens', topic: 'layout', title: '设计变量', english: 'Design tokens', category: 'term', visual: 'tokens', source: 'system', tags: ['系统','一致性','变量'],
     summary: '为颜色、间距和圆角命名，让设计拥有共同的词汇。',
     definition: 'Design Token 是具有名字的设计决策，例如 surface、text-muted、space-4。组件引用名字，而不是各自写一套数值。修改一个语义变量，可以让相关组件保持一致。',
     when: '同一种颜色、间距或状态在多个组件里反复出现时。',
@@ -27,7 +29,7 @@ export const entries = [
     code: ':root {\n  --space-3: 12px;\n  --radius-control: 8px;\n  --color-action: oklch(0.5 0.2 295);\n}\n.button { border-radius: var(--radius-control); }', related: ['spacing-scale','semantic-components']
   },
   {
-    id: 'skeuomorphism', title: '拟物设计', english: 'Skeuomorphism', category: 'style', visual: 'skeuo', source: 'skeuo', tags: ['材质','光影','层次'],
+    id: 'skeuomorphism', topic: 'visual', title: '拟物设计', english: 'Skeuomorphism', category: 'style', visual: 'skeuo', source: 'skeuo', tags: ['材质','光影','层次'],
     summary: '用真实世界的光、边缘和材质，解释一个数字物件。',
     definition: '拟物设计借用实体物件的外观线索，让数字界面具有可感知的材质和层次。本站从 Kubai 对 Portrait 界面的点评出发，演示描边、浅渐变和光影怎样共同建立体积。',
     when: '需要触感的播放器、工具按钮、仪表或具有鲜明性格的小型界面。',
@@ -37,7 +39,7 @@ export const entries = [
     related: ['holographic','design-tokens']
   },
   {
-    id: 'continuous-corners', title: '连续圆角', english: 'Continuous corners', category: 'term', visual: 'corners', source: 's004', tags: ['超椭圆','CSS','形状'],
+    id: 'continuous-corners', topic: 'visual', title: '连续圆角', english: 'Continuous corners', category: 'term', visual: 'corners', source: 's004', tags: ['超椭圆','CSS','形状'],
     summary: '让直边进入转角的过程更平顺，轮廓更柔和。',
     definition: '普通圆角由直线接圆弧，连接处的曲率会发生跳变。连续圆角通过不同的曲线形状缓和这个变化。超椭圆是构建这类柔和轮廓的一种方法，并不代表任意参数都具备相同效果。',
     when: '应用图标、大型面板和需要柔和轮廓的容器。',
@@ -47,7 +49,7 @@ export const entries = [
     code: '.shape { border-radius: 32px; }\n@supports (corner-shape: superellipse(1.25)) {\n  .shape { corner-shape: superellipse(1.25); }\n}', related: ['nested-radius']
   },
   {
-    id: 'spacing-scale', title: '间距体系', english: 'Spacing scale', category: 'technique', visual: 'spacing', source: 'system', tags: ['间距','布局','亲密性'],
+    id: 'spacing-scale', topic: 'layout', title: '间距体系', english: 'Spacing scale', category: 'technique', visual: 'spacing', source: 'system', tags: ['间距','布局','亲密性'],
     summary: '距离表达关系。相关的靠近，不相关的留出呼吸。',
     definition: '间距体系是一组有限、重复使用的距离。4px 可以作为基础单位，但真正决定距离的是信息之间的关系：标签和输入框更近，两组表单更远，页面章节之间最远。',
     when: '页面间距零碎、分组模糊，或多个组件看起来来自不同系统时。',
@@ -57,17 +59,17 @@ export const entries = [
     related: ['design-tokens','nested-radius','alignment']
   },
   {
-    id: 'continuity', title: '界面连续性', english: 'UI continuity', category: 'term', visual: 'continuity', source: 's015', secondarySources: ['continuity'], tags: ['动效','状态','交互'],
+    id: 'continuity', topic: 'motion', title: '界面连续性', english: 'UI continuity', category: 'term', visual: 'continuity', source: 's015', secondarySources: ['continuity','menuAnchor'], tags: ['动效','状态','交互'],
     summary: '状态变了，用户仍然知道自己刚刚操作了什么。',
     definition: '界面连续性让用户在状态切换时保留对元素身份、位置和关系的理解。例如按钮展开成菜单时，菜单从触发位置生长出来，比远处突然出现一个面板更容易追踪。',
     when: '菜单、抽屉、手风琴、详情展开，以及其他会改变空间关系的交互。',
-    steps: ['识别状态变化前后仍然属于同一个对象的元素。','以触发位置作为视觉锚点，保持动作因果。','检查周围内容的变化，并提供减少动态效果的版本。'],
+    steps: ['识别状态变化前后仍然属于同一个对象的元素。','菜单在按钮下方打开时，让缩放原点靠近按钮。若菜单翻到按钮上方，原点也移到菜单下缘。','检查周围内容的变化，并提供减少动态效果的版本。'],
     avoid: '把所有出现和消失都处理成淡入淡出，或者为了过渡延迟用户操作。',
     prompt: '检查指定流程的状态切换，找出丢失空间锚点和对象身份的位置。优先用 transform 与 opacity 建立短而可打断的过渡，处理快速反复操作与 reduced-motion。',
     related: ['book-reveal','drag-feedback','toast']
   },
   {
-    id: 'toast', title: '轻提示', english: 'Toast', category: 'term', visual: 'toast', source: 's016', tags: ['反馈','提示','交互'],
+    id: 'toast', topic: 'components', title: '轻提示', english: 'Toast', category: 'term', visual: 'toast', source: 's016', tags: ['反馈','提示','交互'],
     summary: '告诉用户「刚才的操作有结果了」，然后轻轻离开。',
     definition: 'Toast 是与当前操作紧密相关的短暂反馈，例如复制完成。它通常自动消失，可以附带撤销入口。对用户必须处理的问题，应使用持续可见的提示，而不是让信息随 Toast 一起消失。',
     when: '保存完成、复制成功，以及无需持续处理的操作结果。',
@@ -77,7 +79,7 @@ export const entries = [
     related: ['notification','semantic-components']
   },
   {
-    id: 'notification', title: '通知', english: 'Notification', category: 'term', visual: 'notification', source: 's016', tags: ['反馈','信息','状态'],
+    id: 'notification', topic: 'components', title: '通知', english: 'Notification', category: 'term', visual: 'notification', source: 's016', tags: ['反馈','信息','状态'],
     summary: '事情值得你知道，但不一定值得打断你。',
     definition: '通知可以由系统事件或他人的动作触发，与当前操作不一定直接相关。这里讨论的是产品内通知：消息会保留到用户处理或关闭，必要时可以在通知中心再次找到。',
     when: '协作消息、后台任务完成，以及可以稍后查看的系统动态。',
@@ -87,9 +89,9 @@ export const entries = [
     related: ['toast','progressive-disclosure']
   },
   {
-    id: 'holographic', title: '镭射质感', english: 'Holographic', category: 'style', visual: 'holo', source: 's018', tags: ['光影','3D','材质'],
+    id: 'holographic', topic: 'visual', title: '镭射质感', english: 'Holographic', category: 'style', visual: 'holo', source: 's018', tags: ['光影','3D','材质'],
     summary: '把角度变成颜色，让一张卡片像真实藏品。',
-    definition: '界面中的镭射效果通过随观察角度变化的色彩与高光，模拟全息箔材质。Kubai 的卡片案例把倾斜、亮边和深度层次组合在一起；本站示例用 CSS 演示这种视觉关系。',
+    definition: '界面中的镭射效果通过随观察角度变化的色彩与高光，模拟全息箔材质。Kubai 的卡片案例把倾斜、亮边和深度层次组合在一起。',
     when: '数字门票、纪念卡、收藏卡和需要被特别看见的物件。',
     steps: ['先建立稳定的底色和清晰内容，再添加色彩层。','让高光跟随指针，控制倾斜幅度。','给触屏和键盘用户可用的替代交互，减少动态时保持静态。'],
     avoid: '让反光覆盖关键信息，或在大面积阅读区域持续自动晃动。',
@@ -97,7 +99,7 @@ export const entries = [
     related: ['skeuomorphism','continuity']
   },
   {
-    id: 'ascii', title: '字符艺术', english: 'ASCII art', category: 'style', visual: 'ascii', source: 's003', secondarySources: ['ascii'], tags: ['字符','复古','图像'],
+    id: 'ascii', topic: 'visual', title: '字符艺术', english: 'ASCII art', category: 'style', visual: 'ascii', source: 's003', secondarySources: ['ascii'], tags: ['字符','复古','图像'],
     summary: '用有限的字符密度，重建图像的明暗和轮廓。',
     definition: '字符艺术用字形代替像素。把图像切成采样格，再根据每格亮度选择疏密不同的字符，就能保留轮廓。原帖第 003 期说明了字符采样，并提供可调参数。Kubai 另转引 @imperry 的首页动画作为应用案例。',
     when: '实验性个人站、技术主题视觉，以及少量具有性格的装饰。',
@@ -107,7 +109,7 @@ export const entries = [
     related: ['book-reveal','typography-scale']
   },
   {
-    id: 'alignment', title: '对齐的秩序', english: 'Alignment', category: 'technique', visual: 'alignment', source: 'type', tags: ['对齐','布局','排版'],
+    id: 'alignment', topic: 'layout', title: '对齐的秩序', english: 'Alignment', category: 'technique', visual: 'alignment', source: 'type', tags: ['对齐','布局','排版'],
     summary: '先建立一条共同的线，信息就有了可以依靠的骨架。',
     definition: '对齐给元素建立共同的边缘或基线。列表里的标题、说明与操作如果共享稳定的对齐规则，读者就能更快地扫读和比较。这是本站对原帖排版建议的延伸讲解。',
     when: '列表、表单、多列内容和文字层级繁多的界面。',
@@ -117,7 +119,7 @@ export const entries = [
     related: ['typography-scale','spacing-scale']
   },
   {
-    id: 'typography-scale', title: '字号与层级', english: 'Type scale', category: 'technique', visual: 'type', source: 'type', tags: ['字体','排版','层级'],
+    id: 'typography-scale', topic: 'layout', title: '字号与层级', english: 'Type scale', category: 'technique', visual: 'type', source: 'type', tags: ['字体','排版','层级'],
     summary: '用有限的文字角色，让重要的先被看见。',
     definition: '字号体系把标题、正文、标签和辅助信息分配到有限的文字角色。层级由字号、字重、行高和空间共同建立，不能只靠把所有标题放大。本站将原帖的字号建议整理为实践步骤。',
     when: '页面字号过多、标题与正文难区分，或辅助文字喧宾夺主时。',
@@ -127,7 +129,7 @@ export const entries = [
     related: ['alignment','design-tokens']
   },
   {
-    id: 'progressive-disclosure', title: '渐进披露', english: 'Progressive disclosure', category: 'technique', visual: 'disclosure', source: 'system', tags: ['文案','认知负担','交互'],
+    id: 'progressive-disclosure', topic: 'components', title: '渐进披露', english: 'Progressive disclosure', category: 'technique', visual: 'disclosure', source: 'system', tags: ['文案','认知负担','交互'],
     summary: '先给足以开始的信息，再让细节在需要时出现。',
     definition: '渐进披露把低频细节放到后续层级，让当前任务保持清楚。本站从原帖关于说明文案的建议延伸这一概念：关键操作条件必须可见，补充背景则可以按需展开。',
     when: '高级设置、补充说明和低频选项占据了主要任务区域时。',
@@ -137,7 +139,7 @@ export const entries = [
     related: ['notification','semantic-components']
   },
   {
-    id: 'drag-feedback', title: '拖拽的反馈', english: 'Drag feedback', category: 'technique', visual: 'drag', source: 's005', tags: ['拖拽','动效','反馈'],
+    id: 'drag-feedback', topic: 'motion', title: '拖拽的反馈', english: 'Drag feedback', category: 'technique', visual: 'drag', source: 's005', tags: ['拖拽','动效','反馈'],
     summary: '拿起、经过、落下，每一步都告诉用户下一步会发生什么。',
     definition: '可用的拖拽排序需要区分被拿起的对象、当前落点和附近对象的避让。动效表达空间关系，而排序结果仍然由明确的数据顺序控制。',
     when: '任务排序、图标排列、播放队列和可自定义的列表。',
@@ -147,7 +149,7 @@ export const entries = [
     related: ['continuity','semantic-components']
   },
   {
-    id: 'book-reveal', title: '翻页式展开', english: 'Book reveal', category: 'technique', visual: 'book', source: 's006', tags: ['动效','3D','卡片'],
+    id: 'book-reveal', topic: 'motion', title: '翻页式展开', english: 'Book reveal', category: 'technique', visual: 'book', source: 's006', tags: ['动效','3D','卡片'],
     summary: '把预览藏在封面之后，用翻开这个动作表达更多内容。',
     definition: '翻页式展开把卡片分成封面与内页，以书脊为转轴产生层次。封面先动、内页随后展开，形成内容藏在物件内部的空间暗示。',
     when: '书籍、文档、作品集与具有真实预览内容的卡片。',
@@ -157,7 +159,7 @@ export const entries = [
     related: ['continuity','ascii','skeuomorphism']
   },
   {
-    id: 'semantic-components', title: '按语义选组件', english: 'Semantic components', category: 'technique', visual: 'semantic', source: 'system', tags: ['组件','语义','UX'],
+    id: 'semantic-components', topic: 'components', title: '按语义选组件', english: 'Semantic components', category: 'technique', visual: 'semantic', source: 'system', tags: ['组件','语义','UX'],
     summary: '先说清用户在做什么，再决定界面应该长什么样。',
     definition: '组件的形状之外，还有交互承诺：链接去往一个位置，按钮触发一个动作，开关改变一个持续状态。本站以原帖关于组件语义的建议为起点，补充常见选择规则。',
     when: '界面外观统一，但点击、导航和状态变化的行为仍然令人困惑时。',
@@ -167,12 +169,19 @@ export const entries = [
     related: ['toast','notification','progressive-disclosure']
   },
   ...expandedEntries
-].map((entry, index) => ({
-  ...entry,
-  number: String(index + 1).padStart(2, '0'),
-  contentType: 'editorial-explanation',
-  promptAuthor: 'vibe-design',
-  episode: series.find(issue => issue.entries.includes(entry.id))?.number ?? null,
-  source: sources[entry.source],
-  secondarySources: (entry.secondarySources || []).map(key => sources[key])
-}));
+].map((entry, index) => {
+  const source = sources[entry.source];
+  const original = originalPrompts[source.id];
+  return {
+    ...entry,
+    number: String(index + 1).padStart(2, '0'),
+    contentType: 'editorial-explanation',
+    prompt: original?.text ?? entry.prompt,
+    promptAuthor: original ? source.handle : 'vibe-design',
+    promptKind: original ? (original.kind || 'original') : 'editorial',
+    promptSourceUrls: original?.urls ?? [],
+    episode: series.find(issue => issue.entries.includes(entry.id))?.number ?? null,
+    source,
+    secondarySources: (entry.secondarySources || []).map(key => sources[key])
+  };
+});

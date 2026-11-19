@@ -6,6 +6,9 @@ ID: nested-radius
 
 圆角也有秩序：让内外轮廓拥有同一个圆心。
 
+## 来源媒体
+- [视频 · @Kubai087](https://x.com/Kubai087/status/2115469767650021796)
+
 ## 解释（本站整理）
 当一个圆角容器包住另一个元素时，内层圆角应随内缩距离变小。对于等距内缩的普通圆角，内圆角 r = 外圆角 R − 间距 p。这样转角处的留白才会与直边处一样均匀。
 
@@ -20,8 +23,22 @@ ID: nested-radius
 ## 应避免的问题
 给所有层级套同一个大圆角。这个公式适用于等距内缩的圆弧，不能直接保证所有超椭圆轮廓的等距。
 
-## 提示词（vibe-design 编写，非原帖摘录）
-检查我指定组件的嵌套圆角。先读取现有圆角与间距 token；对等距内缩的普通圆角使用 r = max(0, R - p)。保留圆形和胶囊形语义，逐项报告计算依据与修改前后的数值。
+## 作者原帖指令与提示词（@Kubai087）
+Make the corner radii in this UI consistent, then switch them to continuous corners. Work on the screen or components I name; ask me if I have not named them. If the project has radius tokens, change those instead of hard-coding values.
+
+Inner radius = outer radius - padding (r = R - p)
+Go from the outside in: dialog or card -> panels, inputs, buttons -> chips and tags. A box p inside a container with radius R gets R - p, so both corners share one center. Example: dialog 32, padding 16 -> panels and buttons 16; a chip 8 inside a 16 panel -> 8.
+Boxes on the same level share one radius. Never go below 4.
+
+Pills and circles stay fully round.
+Keep every padding, gap and radius on a 4px grid.
+Continuous corners
+Keep border-radius and add the curve as progressive enhancement: @ supports (corner-shape: superellipse(1.25)) { :where(*) { corner-shape: superellipse(1.25); } } Set corner-shape: round on pills and circles.
+
+Chrome and Edge 139+ render it; Safari and Firefox skip the block and show the plain border-radius.
+When done, list every radius you changed as "element: old -> new".
+
+提示词原文：https://x.com/Kubai087/status/2115469767650021796
 
 ## 代码示意
 ```css
@@ -35,7 +52,7 @@ ID: nested-radius
 - 发布: 2026-10-28
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2115469767650021796
-- 收录时间: 2026-11-18
-- 文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。
+- 收录时间: 2026-11-19
+- 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
-本站解释、示例和提示词为二次创作。
+笔记解释由本站整理。

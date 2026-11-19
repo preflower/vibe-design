@@ -1,3 +1,4 @@
+import searchIndex from './search-index.js';
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 let toastTimer;
@@ -8,58 +9,257 @@ function announce(message) {
   toast.classList.add('visible');
   toastTimer = setTimeout(() => toast.classList.remove('visible'), 3500);
 }
-const input = $('#search');
-if (input) {
-  const grid = $('.entries-grid');
-  const cards = $$('.entry-card', grid);
-  const filters = $$('[data-category-filter]');
+// Sample the live strip through a cylindrical lens at the gate. The map
+// is cached by lens size; its strength follows the tension of the moving strip.
+function mountFilmTransport(roll) {
+  const film = $('.cs-film', roll);
+  const gate = $('.cs-cartridge', roll);
+  const lens = $('.cs-bend', gate);
+  const filter = $('#cs-film-curve', gate);
+  const motion = matchMedia('(prefers-reduced-motion: reduce)');
+
+  const displacement = $('feDisplacementMap', filter);
+  let lensHeight = 0;
+  let tension = 0;
+  let previousPosition = 0;
+  let previousTime = 0;
+  let scheduled = 0;
+  let entrance;
+
+  const light = document.createElement('canvas');
+  light.width = 96;
+  light.height = 72;
+  lens.append(light);
+  const paint = light.getContext('2d');
+  const field = paint.createImageData(light.width, light.height);
+  const sinArc = Math.sin(1.18);
+  let lastStrength = -1;
+
+  function shade() {
+    const strength = 1 + .55 * tension;
+    displacement.setAttribute('scale', String(lensHeight * strength));
+    if (Math.abs(lastStrength - strength) < .002) return;
+    lastStrength = strength;
+    // The displacement map stretches each row by the derivative of its
+    // arc length. Recover its surface normal to reflect a broad studio light.
+    for (let y = 0; y < light.height; y++) {
+      const depth = (y + .5) / light.height;
+      const stretch = 1 / Math.sqrt(1 - (depth * sinArc) ** 2);
+      const cosine = 1 / (1 + strength * (stretch - 1));
+      const reflectedAngle = 2 * Math.acos(cosine);
+      const contact = .86 * depth ** 10;
+      for (let x = 0; x < light.width; x++) {
+        const u = (x + .5) / light.width;
+        const across = (u - .24) / .44;
+        const along = (reflectedAngle - .90 - .34 * u) / .42;
+        const reflection = .29 * Math.exp(-across * across - along * along);
+        const shadow = contact + (1 - contact) * .43 * (1 - cosine);
+        // Composite the reflected light over the shaded print in one layer.
+        const alpha = shadow + reflection * (1 - shadow);
+        const value = Math.round(246 * reflection / Math.max(.0001, alpha));
+        const i = 4 * (y * light.width + x);
+        field.data[i] = field.data[i+1] = field.data[i+2] = value;
+        field.data[i+3] = Math.round(255 * alpha);
+      }
+    }
+    paint.putImageData(field, 0, 0);
+  }
+  function feedPosition() {
+    return gate.getBoundingClientRect().top - film.getBoundingClientRect().top;
+  }
+  function update(time) {
+    scheduled = 0;
+    const position = feedPosition();
+    const elapsed = Math.max(1, time - previousTime);
+    const speed = (position - previousPosition) / Math.min(64, elapsed);
+    previousPosition = position;
+    previousTime = time;
+    const target = motion.matches ? 0 : Math.tanh(speed / .85);
+    const response = target === 0 ? 160 : 70;
+    tension += (target - tension) * (1 - Math.exp(-Math.min(elapsed,64) / response));
+    if (Math.abs(tension) < .002 && target === 0) tension = 0;
+    shade();
+    if (!motion.matches && (target || tension || entrance?.playState === 'running')) wake();
+  }
+  function wake() {
+    if (!scheduled) scheduled = requestAnimationFrame(update);
+  }
+
+  function calibrate() {
+    const height = lens.offsetHeight;
+    if (!height) return;
+    const arcHeight = height * .72;
+    const radius = arcHeight / Math.sin(1.18);
+    const scale = height;
+    const map = document.createElement('canvas');
+    map.width = 1;
+    map.height = height;
+    const context = map.getContext('2d');
+    const pixels = context.createImageData(1, height);
+    for (let y = 0; y < height; y++) {
+      const projected = Math.min(y + .5, arcHeight);
+      const travel = radius * Math.asin(projected / radius);
+      pixels.data.set([128, Math.round(127.5 + 255*(travel-projected)/scale), 0, 255], y*4);
+    }
+    context.putImageData(pixels, 0, 0);
+    $('feImage', filter).setAttribute('href', map.toDataURL());
+    lensHeight = height;
+    shade();
+    lens.classList.add('is-ready');
+  }
+  calibrate();
+  new ResizeObserver(calibrate).observe(lens);
+
+  previousPosition = feedPosition();
+  previousTime = performance.now();
+  window.addEventListener('scroll', wake, {passive:true});
+  motion.addEventListener('change', () => { tension = 0; shade(); });
+
+  const navigation = performance.getEntriesByType('navigation')[0];
+  if (motion.matches || location.hash || scrollY || navigation?.type === 'back_forward') return;
+  const travel = Math.max(0, gate.getBoundingClientRect().top - roll.getBoundingClientRect().top);
+  entrance = film.animate([
+    {transform:'translateY('+travel+'px)'}, {transform:'translateY(0)'}
+  ], {duration:1450,easing:'cubic-bezier(.36,0,.23,1)'});
+  previousPosition = feedPosition();
+  wake();
+  film.addEventListener('focusin', () => entrance.finish(), {once:true});
+  motion.addEventListener('change', () => entrance.finish(), {once:true});
+}
+
+const grid = $('.cs-gallery');
+if (grid) {
+  let archiveQuery = '';
+  const notes = $$('[data-entry]', grid);
+  const topicButtons = $$('[data-topic-filter]');
+  let topic = 'all';
+  let oldGroup = '';
+  const sizeButtons = $$('[data-film-size]');
   const sort = $('#sort');
   let category = 'all';
-  function update(sync = true) {
-    const terms = input.value.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
-    let total = 0;
-    for (const card of cards) {
-      const match = (category === 'all' || card.dataset.category === category) && terms.every(t => card.dataset.search.includes(t));
-      card.hidden = !match;
-      if (match) total++;
-    }
-    const ordered = [...cards].sort((a,b) => sort.value === 'newest' ? b.dataset.date.localeCompare(a.dataset.date) || Number(a.dataset.order)-Number(b.dataset.order) : sort.value === 'title' ? $('.row-title>span',a).textContent.localeCompare($('.row-title>span',b).textContent,'en') : Number(a.dataset.order)-Number(b.dataset.order));
-    ordered.forEach(card => grid.append(card));
-    filters.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.categoryFilter === category)));
-    grid.classList.toggle('is-filtered', category !== 'all' || terms.length > 0 || sort.value !== 'curated');
-    $('#result-count').textContent = `${total} 条设计笔记${terms.length ? ' · 搜索结果' : ''}`;
-    $('.empty-state').hidden = total !== 0;
-    $('.clear-search').hidden = input.value.length === 0;
-    $('.search-key').hidden = input.value.length > 0;
-    if (sync) {
-      const url = new URL(location.href);
-      for (const key of ['q','category','sort']) url.searchParams.delete(key);
-      if (input.value.trim()) url.searchParams.set('q', input.value.trim());
-      if (category !== 'all') url.searchParams.set('category', category);
-      if (sort.value !== 'curated') url.searchParams.set('sort', sort.value);
-      history.replaceState(null,'',url.pathname + url.search + url.hash);
-    }
+  let size = 'standard';
+
+  let activeVideo = null;
+
+  function stopPreview() {
+    if (!activeVideo) return;
+    const video = activeVideo;
+    activeVideo = null;
+    video.pause();
+    video.remove();
+    video.removeAttribute('src');
+    video.load();
   }
+
+  for (const card of notes.filter(note => note.dataset.previewVideo)) {
+    card.addEventListener('pointerenter', event => {
+      if (event.pointerType !== 'mouse' || document.hidden) return;
+      stopPreview();
+      const video = document.createElement('video');
+      activeVideo = video;
+      video.className = 'cs-hover-video';
+      video.muted = true;
+      video.playsInline = true;
+      video.loop = true;
+      video.setAttribute('aria-hidden', 'true');
+      video.addEventListener('playing', () => video.classList.add('is-playing'), { once:true });
+      video.src = card.dataset.previewVideo;
+      $('.cs-image-link', card).append(video);
+      video.play().catch(() => {
+        if (video === activeVideo) stopPreview();
+      });
+    });
+    card.addEventListener('pointerleave', () => {
+      if (card.contains(activeVideo)) stopPreview();
+    });
+  }
+  window.addEventListener('pagehide', stopPreview);
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) stopPreview();
+  });
+
+  function markSelected(buttons, attribute, selected) {
+    buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset[attribute] === selected)));
+  }
+
+  function refreshFilm() {
+    $('.cs-film').dataset.size = size;
+    markSelected(sizeButtons, 'filmSize', size);
+  }
+
+  function refreshArchive() {
+    stopPreview();
+    const terms = archiveQuery.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    let total = 0;
+    for (const note of notes) {
+      note.hidden = (category !== 'all' && note.dataset.category !== category) ||
+        (oldGroup && note.dataset.filmGroup !== oldGroup) ||
+        (topic !== 'all' && note.dataset.topic !== topic) ||
+        !terms.every(term => note.dataset.search.includes(term));
+      if (!note.hidden) total++;
+    }
+    markSelected(topicButtons, 'topicFilter', category === 'all' && !oldGroup ? topic : '');
+    $('#result-count').textContent = `${total} 条设计笔记${terms.length ? ' · 搜索结果' : ''}`;
+    $('.cs-empty').hidden = total !== 0;
+  }
+
+  function sortNotes() {
+    const ordered = [...notes].sort((a, b) => {
+      if (sort.value === 'newest') return b.dataset.date.localeCompare(a.dataset.date) || Number(a.dataset.order) - Number(b.dataset.order);
+      if (sort.value === 'title') return a.dataset.english.localeCompare(b.dataset.english, 'en');
+      return Number(a.dataset.order) - Number(b.dataset.order);
+    });
+    grid.replaceChildren(...ordered);
+  }
+
+  function saveUrl() {
+    const url = new URL(location.href);
+    const values = {
+      q: archiveQuery.trim(), category: category === 'all' ? '' : category, sort: sort.value === 'curated' ? '' : sort.value,
+      film: oldGroup, topic: topic === 'all' ? '' : topic, size: size === 'standard' ? '' : size
+    };
+    for (const [name, value] of Object.entries(values)) {
+      if (value) url.searchParams.set(name, value);
+      else url.searchParams.delete(name);
+    }
+    history.replaceState(null, '', url.pathname + url.search + url.hash);
+  }
+
   function readUrl() {
     const params = new URLSearchParams(location.search);
-    input.value = params.get('q') || '';
-    category = ['term','style','technique'].includes(params.get('category')) ? params.get('category') : 'all';
-    sort.value = ['newest','title'].includes(params.get('sort')) ? params.get('sort') : 'curated';
-    update(false);
+    archiveQuery = params.get('q') || '';
+    category = notes.some(note => note.dataset.category === params.get('category')) ? params.get('category') : 'all';
+    sort.value = ['newest', 'title'].includes(params.get('sort')) ? params.get('sort') : 'curated';
+    const legacyTopics = { '印刷':'图形与排版', '形体':'界面与交互' };
+    const requestedTopic = params.get('film');
+    oldGroup = legacyTopics[requestedTopic] || requestedTopic || '';
+    if (!notes.some(note => note.dataset.filmGroup === oldGroup)) oldGroup = '';
+    topic = topicButtons.some(b => b.dataset.topicFilter === params.get('topic')) ? params.get('topic') : 'all';
+    size = params.get('size') === 'large' ? 'large' : 'standard';
+    sortNotes();
+    refreshFilm();
+    refreshArchive();
   }
-  input.addEventListener('input', () => update());
-  $('.search-form').addEventListener('submit', event => { event.preventDefault(); update(); });
-  filters.forEach(button => button.addEventListener('click', () => { category = button.dataset.categoryFilter; update(); }));
-  sort.addEventListener('change', () => update());
-  $('.clear-search').addEventListener('click', () => { input.value=''; update(); input.focus(); });
-  $('#reset-filters').addEventListener('click', () => { input.value=''; category='all'; sort.value='curated'; update(); input.focus(); });
-  document.addEventListener('keydown', event => {
-    const editing = /INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName) || document.activeElement.isContentEditable;
-    if (event.key === '/' && !editing && !event.metaKey && !event.ctrlKey && !event.altKey) { event.preventDefault(); input.focus(); }
-    if (event.key === 'Escape' && document.activeElement === input) { input.value=''; update(); }
+
+  function applySearch() { refreshArchive(); saveUrl(); }
+  function applyFilm() { refreshFilm(); saveUrl(); }
+  sizeButtons.forEach(button => button.addEventListener('click', () => { size = button.dataset.filmSize; applyFilm(); }));
+  topicButtons.forEach(button => button.addEventListener('click', () => {
+    category = 'all'; oldGroup = ''; topic = button.dataset.topicFilter; applySearch();
+  }));
+  sort.addEventListener('change', () => { sortNotes(); applySearch(); });
+  $('#reset-filters').addEventListener('click', () => {
+    archiveQuery = ''; category = 'all'; oldGroup = ''; topic = 'all'; sort.value = 'curated';
+    sortNotes(); applySearch(); topicButtons[0].focus();
+  });
+  $$('.cs-image-link img').forEach(img => {
+    const showMissing = () => { img.hidden = true; img.nextElementSibling.hidden = false; };
+    img.addEventListener('error', showMissing);
+    if (img.complete && !img.naturalWidth) showMissing();
   });
   window.addEventListener('popstate', readUrl);
   readUrl();
+  mountFilmTransport($('.cs-roll'));
 }
 $$('[data-copy]').forEach(button => button.addEventListener('click', async () => {
   const target = document.getElementById(button.dataset.copy);
@@ -74,141 +274,129 @@ $$('[data-copy]').forEach(button => button.addEventListener('click', async () =>
     announce('浏览器未允许自动复制，已选中文本，请手动复制。');
   }
 }));
-function ascii(density) {
-  const chars = ' .:+*#%@'; let out = '';
-  for (let y=-9;y<=9;y++) {
-    for (let x=-20;x<=20;x++) {
-      const d=(x/19)**2+(y/9)**2;
-      const v=d<1?Math.max(1,Math.round((1-Math.sqrt(d))*4+((x+y)/7+4)%3)):0;
-      out+=chars[Math.min(7,Math.round(v*density))];
+
+const seriesBook = $('.series-book');
+if (seriesBook) {
+  const shelf = seriesBook.parentElement;
+  const reader = $('.book-reader');
+  const trigger = $('summary', seriesBook);
+  let revision = 0;
+
+  async function turn(open, issue) {
+    const current = ++revision;
+    if (!reader.open) {
+      const box = seriesBook.getBoundingClientRect();
+      shelf.style.height = shelf.offsetHeight + 'px';
+      for (const [key,value] of Object.entries({x:box.x,y:box.y,w:box.width,h:box.height})) {
+        reader.style.setProperty('--shelf-' + key, value + 'px');
+      }
+      reader.append(seriesBook);
+      seriesBook.open = false;
+      reader.showModal();
+      seriesBook.getBoundingClientRect(); // Commit the shelf pose before the first turn.
     }
-    out+='\n';
+    reader.toggleAttribute('data-reading', open);
+    seriesBook.open = open;
+    const animations = seriesBook.getAnimations({subtree:true});
+    await Promise.allSettled(animations.map(animation => animation.finished));
+    if (revision !== current) return;
+    if (!open) {
+      reader.close();
+      shelf.append(seriesBook);
+      shelf.style.removeProperty('height');
+      trigger.focus({preventScroll:true});
+    } else if (issue) {
+      const paper = $('.book-paper', seriesBook);
+      paper.scrollTop += issue.getBoundingClientRect().top - paper.getBoundingClientRect().top - 16;
+    }
   }
-  return out;
+  trigger.addEventListener('click', event => {
+    event.preventDefault();
+    turn(!reader.hasAttribute('data-reading'));
+  });
+  reader.addEventListener('cancel', event => { event.preventDefault(); turn(false); });
+  reader.addEventListener('click', event => { if (event.target === reader) turn(false); });
+  function revealIssue() {
+    const issue = document.getElementById(location.hash.slice(1));
+    if (issue?.matches('.series-row') && seriesBook.contains(issue)) turn(true, issue);
+  }
+  window.addEventListener('hashchange', revealIssue);
+  revealIssue();
 }
-$$('[data-demo]').forEach(demo => {
-  const type = demo.dataset.demo;
-  const stage = $('.art', demo);
-  const status = $('[data-demo-status]', demo);
-  const live = $('[data-demo-announcement]', demo);
-  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const range = $('[data-demo-range]', demo);
-  if (range) range.addEventListener('input', () => {
-    const value = Number(range.value);
-    const output = $('output', demo);
-    if (type === 'radius') {
-      $('.radius-outer',demo).style.padding = `${value}px`;
-      $('.radius-inner',demo).style.borderRadius = `${32-value}px`;
-      $('.inner-measure',demo).textContent=`r ${32-value}`;
-      $('.radius-dot',demo).style.left=`${32-value}px`;
-      $('.radius-dot',demo).style.top=`${32-value}px`;
-      $('.radius-gap',demo).textContent=value;
-      output.textContent=`${value}px`;
-    } else if (type === 'stack') {
-      stage.style.setProperty('--spread', String(value / 100));
-      output.textContent = `${value}%`;
-    } else if (type === 'spacing') {
-      $$('.space-diagram>div',demo).forEach((row,i) => { const n = value*(i+1); row.style.setProperty('--n',`${n}px`); $('code',row).textContent=String(n).padStart(2,'0'); });
-      output.textContent=`${value}px`;
-    } else if (type === 'type') {
-      $('.type-big',demo).style.fontSize=`${value}px`;
-      output.textContent=`${value}px`;
-    } else if (type === 'ascii') {
-      $('.ascii-art',demo).textContent=ascii(value/10);
-      output.textContent=`${(value/10).toFixed(1)}×`;
+
+function mountGlobalSearch() {
+  const input = $('#search');
+  const palette = $('.search-palette');
+  const results = $('#palette-results');
+  const trigger = $('.global-search');
+  let selected = 0;
+  function selectResult(index) {
+    const rows = [...results.children];
+    if (!rows.length) { input.removeAttribute('aria-activedescendant'); return; }
+    selected = (index + rows.length) % rows.length;
+    rows.forEach((row,i) => row.setAttribute('aria-selected',String(i === selected)));
+    input.setAttribute('aria-activedescendant', rows[selected].id);
+    rows[selected].scrollIntoView({block:'nearest',behavior:'instant'});
+  }
+  function renderResults() {
+    const query = input.value.trim().toLowerCase();
+    const terms = query.split(/\s+/).filter(Boolean);
+    const matches = searchIndex.filter(note => terms.every(term => note.keywords.includes(term)));
+    const score = note => {
+      const names = [note.title.toLowerCase(), note.english.toLowerCase()];
+      if (names.includes(query)) return 3;
+      if (names.some(name => name.startsWith(query))) return 2;
+      return Number(names.some(name => name.includes(query)));
+    };
+    if (query) matches.sort((a,b) => score(b)-score(a));
+    results.replaceChildren(...matches.map(note => {
+      const link = document.createElement('a');
+      link.href = '/entries/' + note.id + '/';
+      link.textContent = note.title;
+      link.className = 'palette-result';
+      link.id = 'hit-' + note.id;
+      link.tabIndex = -1;
+      link.setAttribute('role','option');
+      if (note.cover) {
+        const thumb = document.createElement('img');
+        thumb.loading = 'lazy'; thumb.src = note.cover; thumb.alt = '';
+        link.prepend(thumb);
+      }
+      const english = document.createElement('small');
+      english.textContent = note.english;
+      link.append(english);
+      return link;
+    }));
+    $('.palette-empty').hidden = matches.length > 0;
+    $('.palette-help [role=status]').textContent = matches.length + ' 条笔记';
+    results.scrollTop = 0;
+    selectResult(0);
+  }
+  function openPalette() {
+    if (!palette.open) palette.showModal();
+    input.focus(); input.select(); renderResults();
+  }
+  trigger.addEventListener('click',openPalette);
+  $('.palette-close').addEventListener('click',() => palette.close());
+  palette.addEventListener('click',event => {
+    if (event.target !== palette) return;
+    const rect = palette.getBoundingClientRect();
+    if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) palette.close();
+  });
+  input.addEventListener('input',renderResults);
+  document.addEventListener('keydown',event => {
+    if (event.isComposing || event.keyCode === 229) return;
+    const editing = event.target.matches('input,textarea,select,[contenteditable=true]');
+    if (((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') ||
+        (event.key === '/' && !editing && !event.altKey && !event.ctrlKey && !event.metaKey)) {
+      event.preventDefault(); openPalette(); return;
+    }
+    if (!palette.open || event.target !== input) return;
+    if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+      event.preventDefault(); selectResult(selected + (event.key === 'ArrowDown' ? 1 : -1));
+    } else if (event.key === 'Enter') {
+      event.preventDefault(); results.children[selected]?.click();
     }
   });
-  $$('[data-color]',demo).forEach(button => button.addEventListener('click', () => {
-    const colors = {purple:'oklch(.51 .17 293)',green:'oklch(.48 .08 160)',orange:'oklch(.6 .13 45)'};
-    stage.style.setProperty('--demo-color',colors[button.dataset.color]);
-    $$('.color-choice',demo).forEach(b => b.setAttribute('aria-pressed',String(b===button)));
-    live.textContent=`action 变量已切换为${button.getAttribute('aria-label').slice(2)}`;
-  }));
-  if (type === 'corners') {
-    const supports = CSS.supports('corner-shape','superellipse(1.25)');
-    $('[data-support-note]',demo).textContent=supports?'当前浏览器支持连续圆角，可对比两种轮廓。':'当前浏览器不支持 corner-shape，右侧已回退为普通圆角。';
-  }
-  $$('[data-demo-action]',demo).forEach(button => {
-    const action=button.dataset.demoAction;
-    if(action==='toggle') button.setAttribute('aria-pressed','false');
-    button.addEventListener('click', () => {
-      if (action === 'easing') {
-        demo.dataset.active = String(demo.dataset.active !== 'true');
-        button.textContent = demo.dataset.active === 'true' ? '回到起点' : '比较缓动曲线';
-        live.textContent = demo.dataset.active === 'true' ? '三种曲线用同样的时间，以不同速度到达终点。' : '已回到起点。';
-        return;
-      }
-      if (action === 'toast') { announce('更改已保存。'); return; }
-      if (action === 'notification') {
-        const hidden=demo.dataset.noticeHidden!=='true';
-        demo.dataset.noticeHidden=String(hidden);
-        button.textContent=hidden?'重新显示通知':'关闭通知';
-        live.textContent=hidden?'通知已关闭。':'通知已显示，并将保持到你主动关闭。'; return;
-      }
-      if (action === 'holo') {
-        const turned=demo.dataset.turned!=='true'; demo.dataset.turned=String(turned);
-        const card=$('.holo-card',demo);
-        card.style.transform=turned?'rotate(8deg) rotateY(12deg) rotateX(-8deg)':'rotate(-12deg) rotateY(-10deg) rotateX(9deg)';
-        card.style.setProperty('--hx',turned?'80%':'30%');
-        card.style.setProperty('--hy',turned?'70%':'20%');
-        live.textContent='已切换卡片观察角度。'; return;
-      }
-      if(action==='up'||action==='down'){ moveItem(action==='up'?-1:1); return; }
-      const active=demo.dataset.active!=='true'; demo.dataset.active=String(active);
-      button.setAttribute('aria-pressed',String(active));
-      if(type==='alignment'){button.textContent=active?'恢复统一对齐':'对比：取消对齐';status.textContent=active?'当前：边缘错开':'当前：统一左对齐';}
-      else if(type==='book'){button.textContent=active?'合上这本小书':'翻开这本小书';status.textContent=reduced.matches&&active?'已开启；减少动态模式保留静态封面':active?'当前：翻开':'当前：合上';}
-      else if(type==='skeuo'){button.textContent=active?'松开控件':'按下控件';status.textContent=active?'当前：按下状态':'当前：抬起状态';}
-      else{button.textContent=active?'收起菜单':'展开菜单';status.textContent=active?'当前：展开':'当前：收起';}
-      live.textContent=status?.textContent||'示例状态已更新。';
-    });
-  });
-  if(type==='semantic') $('[data-native-switch]',demo).addEventListener('change', event => {
-    demo.dataset.switchOff=String(!event.target.checked);
-    live.textContent=event.target.checked?'演示状态：更新提醒已开启。':'演示状态：更新提醒已关闭。';
-  });
-  if(type==='holo') {
-    const card=$('.holo-card',demo); let rect; let frame;
-    stage.addEventListener('pointerenter',()=>{rect=stage.getBoundingClientRect();});
-    stage.addEventListener('pointermove',event=>{
-      if(reduced.matches||event.pointerType==='touch'||!rect)return;
-      cancelAnimationFrame(frame);
-      frame=requestAnimationFrame(()=>{
-        const x=Math.min(1,Math.max(0,(event.clientX-rect.left)/rect.width));
-        const y=Math.min(1,Math.max(0,(event.clientY-rect.top)/rect.height));
-        card.style.transform=`rotate(-5deg) rotateY(${(x-.5)*24}deg) rotateX(${(.5-y)*24}deg)`;
-        card.style.setProperty('--hx',`${x*100}%`);card.style.setProperty('--hy',`${y*100}%`);
-      });
-    });
-    stage.addEventListener('pointerleave',()=>{cancelAnimationFrame(frame);card.style.transform='';});
-  }
-  function refreshSort(selectedText) {
-    const select=$('#sort-item',demo);if(!select)return;
-    const rows=$$('.drag-stack>div',demo);
-    select.replaceChildren(...rows.map((row,i)=>new Option($('span',row).textContent,String(i))));
-    const selected=rows.findIndex(row=>$('span',row).textContent===selectedText);
-    select.value=String(Math.max(0,selected));
-    rows.forEach((row,i)=>{$('small',row).textContent=String(i+1).padStart(2,'0');row.classList.toggle('picked',i===Number(select.value));});
-    $('[data-demo-action=up]',demo).disabled=Number(select.value)===0;
-    $('[data-demo-action=down]',demo).disabled=Number(select.value)===rows.length-1;
-  }
-  function moveItem(delta) {
-    const select=$('#sort-item',demo),rows=$$('.drag-stack>div',demo),index=Number(select.value),next=index+delta;
-    if(next<0||next>=rows.length)return;
-    const row=rows[index],text=$('span',row).textContent;
-    if(delta<0)rows[next].before(row);else rows[next].after(row);
-    refreshSort(text);live.textContent=`${text}已移动到第 ${next+1} 位。`;
-  }
-  if(type==='drag') {
-    const stack=$('.drag-stack',demo),select=$('#sort-item',demo); let dragging;
-    $$('.drag-stack>div',demo).forEach(row=>{
-      row.draggable=true;
-      row.addEventListener('dragstart',event=>{dragging=row;event.dataTransfer.effectAllowed='move';event.dataTransfer.setData('text/plain',$('span',row).textContent);});
-      row.addEventListener('dragover',event=>{event.preventDefault();event.dataTransfer.dropEffect='move';});
-      row.addEventListener('drop',event=>{event.preventDefault();if(!dragging||dragging===row)return;const rows=[...stack.children];if(rows.indexOf(dragging)<rows.indexOf(row))row.after(dragging);else row.before(dragging);const text=$('span',dragging).textContent;refreshSort(text);live.textContent=`${text}已移动到第 ${select.selectedIndex+1} 位。`;dragging=null;});
-      row.addEventListener('dragend',()=>{dragging=null;});
-    });
-    select.addEventListener('change',()=>refreshSort(select.selectedOptions[0].textContent));
-    refreshSort('整理想法');
-  }
-});
+}
+mountGlobalSearch();

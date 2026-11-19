@@ -1,6 +1,7 @@
 export const expandedEntries = [
   {
     "id": "tactile-buttons",
+    "topic": "components",
     "title": "有触感的按钮",
     "english": "Tactile buttons",
     "category": "style",
@@ -28,6 +29,7 @@ export const expandedEntries = [
   },
   {
     "id": "cascade-safe-zone",
+    "topic": "components",
     "title": "级联菜单安全区",
     "english": "Menu aim",
     "category": "technique",
@@ -55,6 +57,7 @@ export const expandedEntries = [
   },
   {
     "id": "ordered-dither",
+    "topic": "visual",
     "title": "有序抖动",
     "english": "Ordered dithering",
     "category": "style",
@@ -82,6 +85,7 @@ export const expandedEntries = [
   },
   {
     "id": "mixed-typesetting",
+    "topic": "layout",
     "title": "中英混排",
     "english": "Mixed-language typesetting",
     "category": "technique",
@@ -109,6 +113,7 @@ export const expandedEntries = [
   },
   {
     "id": "wiki-navigation",
+    "topic": "components",
     "title": "文档与章节导航",
     "english": "Documentation navigation",
     "category": "technique",
@@ -136,6 +141,7 @@ export const expandedEntries = [
   },
   {
     "id": "overlay-choice",
+    "topic": "components",
     "title": "提示框、气泡与弹窗",
     "english": "Overlay choice",
     "category": "term",
@@ -164,6 +170,7 @@ export const expandedEntries = [
   },
   {
     "id": "liquid-glass",
+    "topic": "visual",
     "title": "液态玻璃",
     "english": "Liquid glass",
     "category": "style",
@@ -191,6 +198,7 @@ export const expandedEntries = [
   },
   {
     "id": "motion-easing",
+    "topic": "motion",
     "title": "动画缓动",
     "english": "Motion easing",
     "category": "term",
@@ -218,6 +226,7 @@ export const expandedEntries = [
   },
   {
     "id": "message-bubbles",
+    "topic": "visual",
     "title": "消息气泡材质",
     "english": "Chat bubble material",
     "category": "style",
@@ -245,6 +254,7 @@ export const expandedEntries = [
   },
   {
     "id": "halo-ripple",
+    "topic": "motion",
     "title": "扩散光环",
     "english": "Halo ripple",
     "category": "technique",
@@ -272,6 +282,7 @@ export const expandedEntries = [
   },
   {
     "id": "exit-motion",
+    "topic": "motion",
     "title": "退场与补位",
     "english": "Exit motion",
     "category": "technique",
@@ -299,6 +310,7 @@ export const expandedEntries = [
   },
   {
     "id": "loading-states",
+    "topic": "components",
     "title": "等待状态",
     "english": "Loading states",
     "category": "technique",
@@ -328,6 +340,7 @@ export const expandedEntries = [
   },
   {
     "id": "optimistic-ui",
+    "topic": "components",
     "title": "乐观更新",
     "english": "Optimistic UI",
     "category": "term",
@@ -355,6 +368,7 @@ export const expandedEntries = [
   },
   {
     "id": "scroll-cards",
+    "topic": "motion",
     "title": "卡片滚动叙事",
     "english": "Scroll-driven cards",
     "category": "technique",
@@ -382,6 +396,7 @@ export const expandedEntries = [
   },
   {
     "id": "optical-alignment",
+    "topic": "layout",
     "title": "光学对齐",
     "english": "Optical alignment",
     "category": "term",
@@ -409,6 +424,7 @@ export const expandedEntries = [
   },
   {
     "id": "onboarding-preview",
+    "topic": "components",
     "title": "上手引导的实时预览",
     "english": "Live onboarding preview",
     "category": "technique",
@@ -436,6 +452,7 @@ export const expandedEntries = [
   },
   {
     "id": "bento-grid",
+    "topic": "layout",
     "title": "动态便当布局",
     "english": "Animated Bento grid",
     "category": "technique",
@@ -463,6 +480,7 @@ export const expandedEntries = [
   },
   {
     "id": "icon-states",
+    "topic": "components",
     "title": "功能图标的状态",
     "english": "Icon states",
     "category": "technique",
@@ -490,6 +508,7 @@ export const expandedEntries = [
   },
   {
     "id": "icon-simplification",
+    "topic": "visual",
     "title": "图标的体积与简化",
     "english": "Icon simplification",
     "category": "technique",
@@ -517,6 +536,7 @@ export const expandedEntries = [
   },
   {
     "id": "glass-fallback",
+    "topic": "visual",
     "title": "玻璃材质的回退",
     "english": "Glass effect fallback",
     "category": "technique",
@@ -544,6 +564,7 @@ export const expandedEntries = [
   },
   {
     "id": "graphic-halftone",
+    "topic": "visual",
     "title": "半调纹理",
     "english": "Halftone texture",
     "category": "style",
@@ -568,5 +589,15 @@ export const expandedEntries = [
       "ordered-dither",
       "ascii"
     ]
+  },
+  {
+    id: 'choice-controls', topic: 'components', title: '选择控件的取舍', english: 'Choice controls', category: 'technique', visual: 'semantic',
+    source: 's020', tags: ['表单','开关','复选框','单选','下拉菜单','分段选择'],
+    summary: '先看选择何时生效，再看它是设置一个值，还是执行一个动作。',
+    definition: '在设置里拨动「允许通知」，用户预期它立即生效。表单里的订阅选项则可能要等保存后才生效。两者都只有选与不选两种状态，提交时机决定了控件给人的承诺。',
+    when: '审查设置页、填写后统一提交的表单，以及工具栏里的下拉入口时。',
+    steps: ['写下每个选择何时生效。独立且即时的开关项用 Switch，随表单保存的多选项用复选框。','区分值和动作。选语言后字段显示当前语言；选菜单里的「导出」则启动导出，入口名称保持原样。','比较选项数和长度。两到五个简短互斥项可平铺为分段选择；选项多或文字长时用下拉选择，必要时加入搜索和空状态。','需要同时展示所有候选项时，单选用 Radio，多选用复选框。若允许暂不决定，为单选题提供明确选项。'],
+    avoid: '把「开」和「关」做成两枚单选按钮，或让本应随表单保存的选择悄悄立即生效。',
+    related: ['semantic-components','overlay-choice','icon-states']
   }
 ];

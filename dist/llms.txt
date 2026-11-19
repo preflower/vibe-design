@@ -1,10 +1,10 @@
-# vibe-design
+# Vibe Design
 
-> 给用户与 AI 的静态设计知识库。37 条笔记，选题来自 31 篇公开帖子。
+> 给用户与 AI 的静态设计知识库。38 条笔记，选题来自 33 篇公开帖子。
 
 ## 阅读约定
 - 正文是本站解释，非原帖逐字摘录。
-- 提示词由 vibe-design 编写。
+- 提示词按条标明作者和出处。
 - 引用保留 source.url 和 author；转引案例保留 originalCreator。
 - 原帖文本经公开预览接口读取，视频未独立核验。
 - 规则结合实际语义使用；浏览器能力用运行时检测。
@@ -54,3 +54,4 @@
 - [图标的体积与简化 / Icon simplification](https://vibe-design.carefulgardenia8.chatgpt.site/entries/icon-simplification/index.md): 减掉次要体积线索，让小图标保留清楚的主轮廓。
 - [玻璃材质的回退 / Glass effect fallback](https://vibe-design.carefulgardenia8.chatgpt.site/entries/glass-fallback/index.md): 先让控件在基础样式中可读，再按能力增加材质效果。
 - [半调纹理 / Halftone texture](https://vibe-design.carefulgardenia8.chatgpt.site/entries/graphic-halftone/index.md): 用有限的点阵密度表达影调，呈现印刷式颗粒。
+- [选择控件的取舍 / Choice controls](https://vibe-design.carefulgardenia8.chatgpt.site/entries/choice-controls/index.md): 先看选择何时生效，再看它是设置一个值，还是执行一个动作。

@@ -4,7 +4,7 @@ const post = (id, published, title, details) => ({
   retrievedAt: '2026-11-18',
   verification: '已通过 FxTwitter 逐条读取原帖文本',
   retrievalUrl: `https://api.fxtwitter.com/Kubai087/status/${id}`,
-  note: '文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。',
+  note: '文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。',
   ...details
 });
 
@@ -27,6 +27,8 @@ export const sources = {
   s016: post("2120682993563922586", "2026-11-12", "999 个小技巧 · 016：轻提示与通知", {"discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F8gLAAIAAAATMjEyMTQ0OTE4NTAxNDg0NTc5NAgAAwAAAAIAAA", "episode": 16}),
   s017: post("2121449185014845794", "2026-11-14", "999 个小技巧 · 017：等待状态与乐观更新", {"discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F9kLAAIAAAATMjEyMTk1OTIxMjg0MjczNDAwMAgAAwAAAAIAAA", "episode": 17}),
   s018: post("2121892029403922717", "2026-11-15", "999 个小技巧 · 018：镭射质感", {"discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F9kLAAIAAAATMjEyMTk1OTIxMjg0MjczNDAwMAgAAwAAAAIAAA", "episode": 18}),
+  s020: post("2123217190052827633", "2026-11-19", "999 个小技巧 · 020：选择控件的取舍", {episode:20, retrievedAt:"2026-11-19"}),
+  menuAnchor: post("2123076115464098210", "2026-11-18", "下拉菜单从触发处展开", {retrievedAt:"2026-11-19",originalCreator:"Emil Kowalski",originalCreatorUrl:"https://x.com/emilkowalski"}),
   s019: post("2122492414598459820", "2026-11-17", "999 个小技巧 · 019：卡片滚动叙事", {"discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F%2DsLAAIAAAATMjEyMjU0NDI0NzQ5NjkzNzc2NggAAwAAAAIAAA", "episode": 19}),
   optical: post("2122514434069537097", "2026-11-17", "光学对齐的视觉重量", {"indexUrl": "https://tech.sinsc.com/items/p1tq0w6e3h4r08jyc165uzqo4", "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F%2DsLAAIAAAATMjEyMjU0NDI0NzQ5NjkzNzc2NggAAwAAAAIAAA"}),
   onboarding: post("2120033693012291853", "2026-11-10", "上手引导的实时反馈与步骤关系", {"discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F7gLAAIAAAATMjEyMDY4Mjk5MzU2MzkyMjU4NggAAwAAAAIAAA"}),
@@ -62,6 +64,7 @@ export const series = [
   { number: "017", title: "等待状态与乐观更新", source: sources.s017, entries: ["loading-states", "optimistic-ui"] },
   { number: "018", title: "镭射质感", source: sources.s018, entries: ["holographic"] },
   { number: "019", title: "卡片滚动叙事", source: sources.s019, entries: ["scroll-cards"] },
+  { number: "020", title: "选择控件的取舍", source: sources.s020, entries: ["choice-controls"] },
 ];
 
 export const coverage = {

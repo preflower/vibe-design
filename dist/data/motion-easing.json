@@ -1,5 +1,6 @@
 {
   "id": "motion-easing",
+  "topic": "motion",
   "title": "动画缓动",
   "english": "Motion easing",
   "category": "term",
@@ -14,7 +15,7 @@
     "retrievedAt": "2026-11-18",
     "verification": "已通过 FxTwitter 逐条读取原帖文本",
     "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2118143759984803898",
-    "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+    "note": "文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。",
     "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F4ILAAIAAAATMjExODI5MjEwMTk2ODY3MDkwMQgAAwAAAAIAAA",
     "episode": 11
   },
@@ -32,14 +33,19 @@
     "复用少量按角色命名的动效 token。"
   ],
   "avoid": "给弹窗、按钮和长时间循环套同一曲线，或夸大回弹幅度。",
-  "prompt": "整理当前动效的目的与速度曲线，给入场、退场、位置切换各一个角色。验证快速反复操作与减少动态偏好。",
+  "prompt": "Give the motion in my product the right easing curves, so things arrive, leave and move the way they should feel. Work inside my existing code and design system: keep what each animation does, how far it goes and what triggers it. Change how it moves over time, and its duration where that is off.\n\n0. Start from what exists\n- Find every transition and animation: CSS transitions and keyframes, animation libraries (Framer Motion, GSAP, the Web Animations API) and hand-written requestAnimationFrame loops. List each with its component, its trigger, its duration and its curve.\n- Flag the ones left on the CSS default `ease`, `linear` on something that moves, and `ease-in` on something that appears.\n\n1. The curves as tokens\nDefine them once, next to the other motion tokens, and use only these:\n- --ease-out: cubic-bezier(0, 0, .58, 1). Anything that enters: toasts, menus, popovers, dialogs, drawers.\n- --ease-out-strong: cubic-bezier(.22, 1, .36, 1). Small parts settling in right after a click: an icon, a label, a selected pill. It feels the most responsive.\n- --ease-in: cubic-bezier(.42, 0, 1, 1). Anything that leaves, and only that: a toast timing out, a dialog or drawer closing, a menu collapsing, a list item swiped away. It starts slow and leaves at full speed, so on an entrance it feels late and then stops with a bump.\n- --ease-in-out: cubic-bezier(.42, 0, .58, 1). Something that stays on screen and only changes place or size: the indicator under tabs or a segmented control, a carousel turning a page, items making room during a reorder, a sidebar resizing, smooth-scrolling to an anchor. Not for coming in: its slow start reads as lag.\n- --ease-overshoot: cubic-bezier(.34, 1.56, .64, 1). Runs about 10% past its place and comes back. Small, playful confirmations: a checkbox tick, a like, a badge count popping in, a switch knob settling. Never on a dialog, a drawer or anything larger than about 64px, and not on actions people repeat all day.\n- --ease-spring: linear(0, .32, .78, 1.04, 1.09, 1.06, 1.02, 1, .99, .99, 1). Things let go after a drag or a swipe, so they settle like an object: a bottom sheet snapping open or back, a card returning after a half swipe, pull-to-refresh springing back, a reordered item dropping into place. Prefer the animation library's own spring fed with the release velocity; use this token only where there is none, and fall back to --ease-out-strong where linear() is not supported.\n- linear: only for things that run rather than move: spinners, progress bars, marquees.\n- The CSS default `ease` is not a choice. Replace it wherever a curve was left unset.\n\n2. Durations\n- Small UI (toasts, tooltips, menus, checks): 150-250ms in, 120-200ms out. Exits are shorter than entrances.\n- Medium (dialogs, popovers with content, drawers): 250-350ms.\n- Large or full-screen (sheets, page transitions): 350-500ms. Longer feels slow.\n- Springs and overshoots: about 1.5x the plain duration, since the settle takes time.\n- Keep the durations as tokens beside the curves (--duration-sm, -md, -lg).\n\n3. Apply them by role\n- Entrances: ease-out, coming from where the thing belongs (a toast from the top edge, a menu from its trigger), over a short distance (8-24px), growing from 96% and fading in a little sooner than it moves. A light blur (about 8px) that clears as it lands is a nice touch on toasts.\n- Exits: ease-in, the same path reversed, and shorter.\n- Moves on screen: ease-in-out.\n- Parts inside something that has just appeared (its icon, its text, a count) may follow 100-200ms later on the strong ease-out, so it lands in steps rather than all at once.\n- Gestures: while the pointer or finger moves, follow it 1:1 with no easing. On release, finish on the spring, from the release velocity if the library allows.\n- Hover and press: 100-150ms ease-out. Never animate layout on hover.\n- Animate transform and opacity (filter sparingly), not top, left, width or height, which lay out and repaint every frame.\n\n4. Keep it consistent and accessible\n- One curve per role across the product. Don't tune each component by hand.\n- Respect prefers-reduced-motion: keep the opacity changes, drop movement and scale, and turn springs and overshoots into a plain 150ms fade.\n- Never make a user wait on an animation: nothing blocks input, and a new action interrupts the old animation from where it is.\n\n5. Deliver\n- First list every animation you found, its current curve and duration, and the role and curve you will give it.\n- Then add the tokens, switch each animation over, and list every file you touched.\n- Don't change what animates, how far it goes or what triggers it. If an animation has no clear role, ask me first.",
   "related": [
     "continuity",
     "drag-feedback"
   ],
   "number": "24",
   "contentType": "editorial-explanation",
-  "promptAuthor": "vibe-design",
+  "promptAuthor": "@Kubai087",
+  "promptKind": "original",
+  "promptSourceUrls": [
+    "https://x.com/Kubai087/status/2118143923571048817",
+    "https://x.com/Kubai087/status/2118144019545067872"
+  ],
   "episode": "011",
   "secondarySources": []
 }

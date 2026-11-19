@@ -15,7 +15,7 @@
       "const": 1
     },
     "name": {
-      "const": "vibe-design"
+      "type": "string"
     },
     "language": {
       "const": "zh-CN"
@@ -39,6 +39,7 @@
         "title",
         "english",
         "category",
+        "topic",
         "summary",
         "definition",
         "when",
@@ -60,6 +61,7 @@
         "english": {
           "type": "string"
         },
+        "topic": { "enum": ["layout", "visual", "components", "motion"] },
         "category": {
           "enum": [
             "term",

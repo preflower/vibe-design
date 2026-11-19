@@ -6,6 +6,12 @@ ID: graphic-halftone
 
 用有限的点阵密度表达影调，呈现印刷式颗粒。
 
+## 来源媒体
+- [图片 · @simoomdesign](https://x.com/simoomdesign/status/2114628102458663022)
+- [图片 · @simoomdesign](https://x.com/simoomdesign/status/2114628102458663022)
+- [图片 · @simoomdesign](https://x.com/simoomdesign/status/2114628102458663022)
+- [图片 · @simoomdesign](https://x.com/simoomdesign/status/2114628102458663022)
+
 ## 解释（本站整理）
 半调用重复单元中的点大小、密度或覆盖面积表现明暗。Kubai 点评一组落地页卡片时，把半调和 ASCII、Dither 视作不同的纹理选项。
 
@@ -20,7 +26,7 @@ ID: graphic-halftone
 ## 应避免的问题
 把半调与抖动当成完全相同的算法，或在细小文字下铺高对比点纹。
 
-## 提示词（vibe-design 编写，非原帖摘录）
+## 本站练习提示词（vibe-design）
 给指定装饰图试做半调版本，提供纹理开关，在实际尺寸比较主体和文字可读性。
 
 ## 来源
@@ -31,7 +37,7 @@ ID: graphic-halftone
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2114946376513786234
 - 案例原作者: @simoomdesign
 - 案例原帖: https://x.com/simoomdesign/status/2114628102458663022
-- 收录时间: 2026-11-18
-- 文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。
+- 收录时间: 2026-11-19
+- 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
-本站解释、示例和提示词为二次创作。
+笔记解释由本站整理。

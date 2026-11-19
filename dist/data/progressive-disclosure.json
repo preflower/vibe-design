@@ -1,5 +1,6 @@
 {
   "id": "progressive-disclosure",
+  "topic": "components",
   "title": "渐进披露",
   "english": "Progressive disclosure",
   "category": "technique",
@@ -14,7 +15,7 @@
     "retrievedAt": "2026-11-18",
     "verification": "已通过 FxTwitter 逐条读取原帖文本",
     "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2121615225816494303",
-    "note": "文本来自公开帖子预览。本站独立编写解释和示例，未重新发布原帖视频。",
+    "note": "文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。",
     "indexUrl": "https://tech.sinsc.com/items/h4hn7vc8vlxaeqvsa5w9jq8f4",
     "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F9kLAAIAAAATMjEyMTk1OTIxMjg0MjczNDAwMAgAAwAAAAIAAA"
   },
@@ -32,14 +33,18 @@
     "确保键盘与触屏都能打开，并保留展开后的阅读位置。"
   ],
   "avoid": "把费用、限制、错误原因等关键决策信息藏在 tooltip 里。",
-  "prompt": "按用户完成当前任务所需的信息整理文案。保留影响决策与操作的关键条件，将低频背景放入可访问的展开区域。不要把重要信息放进仅悬停可见的提示。",
+  "prompt": "1. 使用组件化管理的思路处理 UI 组件，建立样式与色彩的变量体系，形成 Design Token，保证风格连续。\n\n2. 参考业界成熟的组件库构建组件库的语义体系，建立 Do /Don't 范例，根据正确的语义和场景选择组件，修正当前产品中不合适的组件。\n\n3. 使用全局变量统一管理圆角，使用等距内缩体系。如条件可行且性能无忧，使用连续圆角。\n\n4. 建立全局间距体系，使用 4 的倍数。根据语义的逻辑嵌套关系分配元素间的间距。元素嵌套时，保证必要场景下上下左右间距一致。\n\n5. 移除不必要的 UX 文案。先明确当前页面定位，保留核心标题，关键键值对文案。说明文字符合书面表达规范，避免营销或口语化。根据用户可能的使用频率，在形式上采用 tooltip、alert 等方式作折叠，不必常驻显示。",
   "related": [
     "notification",
     "semantic-components"
   ],
   "number": "13",
   "contentType": "editorial-explanation",
-  "promptAuthor": "vibe-design",
+  "promptAuthor": "@Kubai087",
+  "promptKind": "instructions",
+  "promptSourceUrls": [
+    "https://x.com/Kubai087/status/2121615225816494303"
+  ],
   "episode": null,
   "secondarySources": []
 }
