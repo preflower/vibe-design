@@ -351,7 +351,7 @@ function mountGlobalSearch() {
     if (query) matches.sort((a,b) => score(b)-score(a));
     results.replaceChildren(...matches.map(note => {
       const link = document.createElement('a');
-      link.href = '/entries/' + note.id + '/';
+      link.href = new URL('entries/' + note.id + '/', import.meta.url).href;
       link.textContent = note.title;
       link.className = 'palette-result';
       link.id = 'hit-' + note.id;

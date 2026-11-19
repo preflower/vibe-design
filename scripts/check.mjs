@@ -45,6 +45,7 @@ for(const entry of entries){
 
 }
 async function files(folder){const result=[];for(const item of await readdir(folder,{withFileTypes:true})){const p=path.join(folder,item.name);if(item.isDirectory())result.push(...await files(p));else result.push(p);}return result;}
+const basePath = process.env.SITE_URL ? new URL(process.env.SITE_URL).pathname.replace(/\/$/, '') : '';
 let links=0;
 for(const file of await files(root)){
  if(!/\.(html|json|md|txt|css|js|svg|xml)$/.test(file))continue;
@@ -53,7 +54,8 @@ for(const file of await files(root)){
  if(!file.endsWith('.html'))continue;
  assert.ok(text.includes('lang="zh-CN"')&&/<h1(?:\s|>)/.test(text),'Missing document semantics');
  for(const match of text.matchAll(/(?:href|src|poster)="(\/[^"#]*)(?:#[^"]*)?"/g)){
-  const url=new URL(match[1],'http://local');let local=path.join(root,decodeURIComponent(url.pathname));
+  const url=new URL(match[1],'http://local');assert.ok(url.pathname.startsWith(basePath+'/'), 'Link outside site: '+url.pathname);
+  let local=path.join(root,decodeURIComponent(url.pathname.slice(basePath.length)));
   if((await stat(local)).isDirectory())local=path.join(local,'index.html');
   assert.ok((await stat(local)).isFile(),`Broken link ${match[1]} in ${file}`);links++;
  }
