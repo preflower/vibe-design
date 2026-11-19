@@ -201,7 +201,8 @@ if (grid) {
       if (!note.hidden) total++;
     }
     markSelected(topicButtons, 'topicFilter', category === 'all' && !oldGroup ? topic : '');
-    $('#result-count').textContent = `${total} 条设计笔记${terms.length ? ' · 搜索结果' : ''}`;
+    const hint = topicButtons.find(button => button.dataset.topicFilter === topic)?.title;
+    $('#result-count').textContent = `${total} 条设计笔记${terms.length ? ' · 搜索结果' : ''}${hint ? ' · ' + hint : ''}`;
     $('.cs-empty').hidden = total !== 0;
   }
 

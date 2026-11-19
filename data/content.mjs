@@ -5,7 +5,15 @@ export { sources, series, coverage } from './sources.mjs';
 
 export const updated = '2026-11-19';
 export const origin = 'https://vibe-design.carefulgardenia8.chatgpt.site';
-export const topics = { all:'全部内容', layout:'页面怎么排', visual:'外观怎么做', components:'控件怎么用', feedback:'操作后怎么反馈', motion:'元素怎么动', system:'怎样保持一致' };
+export const topics = { all:'全部内容', layout:'布局与排版', visual:'视觉表现', components:'界面组件', feedback:'交互反馈', motion:'动效设计', system:'设计系统' };
+export const topicHints = {
+  layout:'页面怎么排，标题和正文怎么分层',
+  visual:'外观怎么做，怎样表现光影和材质',
+  components:'控件怎么用，何时选按钮、开关或菜单',
+  feedback:'操作后怎么反馈，让人知道进度和结果',
+  motion:'元素怎么动，展开和退出怎样衔接',
+  system:'怎样保持一致，让圆角、间距等规则能反复使用'
+};
 export const categories = { all: '全部内容', term: '设计术语', style: '设计风格', guideline: '设计规范', technique: '设计技巧' };
 export const entries = [
   {

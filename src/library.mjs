@@ -1,5 +1,5 @@
 import { arrow, external } from './visuals.mjs';
-import { categories, entries, series, topics } from '../data/content.mjs';
+import { categories, entries, series, topics, topicHints } from '../data/content.mjs';
 import { coverFor } from './contact-media.mjs';
 
 const escapeAttribute = value => value.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
@@ -30,7 +30,7 @@ export const library = `<main id="main" class="contact-home">
   <section id="library" aria-label="设计笔记"><div class="cs-controls"><div class="cs-heading"><div><h1 lang="en">Vibe Design</h1><p class="cs-intro">从真实界面学设计，查看原帖示例和可复制的提示词。</p></div>
 </div>
     <div class="cs-bar"><div class="cs-filters" role="group" aria-label="按主题筛选">
-      ${Object.entries(topics).map(([id,label])=>`<button type="button" data-topic-filter="${id}" aria-pressed="${id==='all'}">${label} <small>${counts[id]}</small></button>`).join('')}</div>
+      ${Object.entries(topics).map(([id,label])=>`<button type="button" data-topic-filter="${id}"${topicHints[id] ? ` title="${topicHints[id]}"` : ''} aria-pressed="${id==='all'}">${label} <small>${counts[id]}</small></button>`).join('')}</div>
       <div class="cs-view">
       <select id="sort" aria-label="笔记排序"><option value="curated">编排顺序</option><option value="newest">按原帖日期</option><option value="title">英文名称</option></select>
       <button type="button" data-film-size="standard" aria-pressed="true">标准</button><button type="button" data-film-size="large" aria-pressed="false">放大</button></div></div>

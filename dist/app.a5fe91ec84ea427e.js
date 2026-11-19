@@ -1,4 +1,4 @@
-import searchIndex from './search-index.fc8b5b134846db2c.js';
+import searchIndex from './search-index.ac8697d0b7950023.js';
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 let toastTimer;
@@ -201,7 +201,8 @@ if (grid) {
       if (!note.hidden) total++;
     }
     markSelected(topicButtons, 'topicFilter', category === 'all' && !oldGroup ? topic : '');
-    $('#result-count').textContent = `${total} 条设计笔记${terms.length ? ' · 搜索结果' : ''}`;
+    const hint = topicButtons.find(button => button.dataset.topicFilter === topic)?.title;
+    $('#result-count').textContent = `${total} 条设计笔记${terms.length ? ' · 搜索结果' : ''}${hint ? ' · ' + hint : ''}`;
     $('.cs-empty').hidden = total !== 0;
   }
 
