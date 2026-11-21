@@ -3,7 +3,7 @@ import { expandedEntries } from './expanded.mjs';
 import { sources, series } from './sources.mjs';
 export { sources, series, coverage } from './sources.mjs';
 
-export const updated = '2026-11-19';
+export const updated = '2026-11-21';
 export const origin = 'https://vibe-design.carefulgardenia8.chatgpt.site';
 export const topics = { all:'全部内容', layout:'布局与排版', visual:'视觉表现', components:'交互模式', feedback:'交互反馈', motion:'动效设计', system:'设计系统与规范' };
 export const topicHints = {
@@ -27,9 +27,9 @@ export const entries = [
     code: '.outer { border-radius: 32px; padding: 12px; }\n.inner { border-radius: 20px; }', related: ['continuous-corners','spacing-scale','design-tokens']
   },
   {
-    id: 'design-tokens', topic: 'system', title: '设计变量', english: 'Design tokens', category: 'term', visual: 'tokens', source: 'system', tags: ['系统','一致性','变量'],
+    id: 'design-tokens', topic: 'system', title: '设计变量', english: 'Design tokens', category: 'term', visual: 'tokens', source: 'system', secondarySources: ['layeredSystem'], tags: ['系统','一致性','变量'],
     summary: '为颜色、间距和圆角命名，让设计拥有共同的词汇。',
-    definition: 'Design Token 是具有名字的设计决策，例如 surface、text-muted、space-4。组件引用名字，而不是各自写一套数值。修改一个语义变量，可以让相关组件保持一致。',
+    definition: 'Design Token 是具有名字的设计决策，例如 surface、text-muted、space-4。组件引用名字，而不是各自写一套数值。修改一个语义变量，可以让相关组件保持一致。Kubai 的分层示例先区分浅色与深色的色板，再让组件引用按用途命名的颜色。',
     when: '同一种颜色、间距或状态在多个组件里反复出现时。',
     steps: ['先收集界面中实际重复的值。','区分原始数值与用途名称，例如紫色与主要操作色。','让组件引用用途名称，再检查交互状态是否完整。'],
     avoid: '只把每一个硬编码数值改成变量，却仍然留下数十个含义相同的名字。',

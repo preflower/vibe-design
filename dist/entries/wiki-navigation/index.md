@@ -81,7 +81,7 @@ Polish the layout of my docs or help center pages: the header, the page list, th
 - 发布: 2026-11-01
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2116911391437443471
-- 收录时间: 2026-11-19
+- 收录时间: 2026-11-21
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。

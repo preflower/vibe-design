@@ -10,7 +10,7 @@ ID: design-tokens
 - [图片 · @Kubai087](https://x.com/Kubai087/status/2121615225816494303)
 
 ## 解释（本站整理）
-Design Token 是具有名字的设计决策，例如 surface、text-muted、space-4。组件引用名字，而不是各自写一套数值。修改一个语义变量，可以让相关组件保持一致。
+Design Token 是具有名字的设计决策，例如 surface、text-muted、space-4。组件引用名字，而不是各自写一套数值。修改一个语义变量，可以让相关组件保持一致。Kubai 的分层示例先区分浅色与深色的色板，再让组件引用按用途命名的颜色。
 
 ## 适用场景
 同一种颜色、间距或状态在多个组件里反复出现时。
@@ -52,7 +52,8 @@ Design Token 是具有名字的设计决策，例如 surface、text-muted、spac
 - 发布: 2026-11-14
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2121615225816494303
-- 收录时间: 2026-11-19
+- 收录时间: 2026-11-21
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
+- 相关来源: https://x.com/Kubai087/status/2123266417671958600
 
 笔记解释由本站整理。

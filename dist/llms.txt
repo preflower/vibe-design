@@ -1,6 +1,6 @@
 # Vibe Design
 
-> 给用户与 AI 的静态设计知识库。38 条笔记，选题来自 33 篇公开帖子。
+> 给用户与 AI 的静态设计知识库。40 条笔记，选题来自 37 篇公开帖子。
 
 ## 阅读约定
 - 正文是本站解释，非原帖逐字摘录。
@@ -55,3 +55,5 @@
 - [玻璃材质的回退 / Glass effect fallback](https://vibe-design.carefulgardenia8.chatgpt.site/entries/glass-fallback/index.md): 先让控件在基础样式中可读，再按能力增加材质效果。
 - [半调纹理 / Halftone texture](https://vibe-design.carefulgardenia8.chatgpt.site/entries/graphic-halftone/index.md): 用有限的点阵密度表达影调，呈现印刷式颗粒。
 - [选择控件的取舍 / Choice controls](https://vibe-design.carefulgardenia8.chatgpt.site/entries/choice-controls/index.md): 先看选择何时生效，再看它是设置一个值，还是执行一个动作。
+- [景深环形卡片 / Ring carousel](https://vibe-design.carefulgardenia8.chatgpt.site/entries/ring-carousel/index.md): 沿弧线排列卡片，连续改变曲率，让视角从环内过渡到环外。
+- [视差卡片 / Parallax card](https://vibe-design.carefulgardenia8.chatgpt.site/entries/parallax-card/index.md): 前景与背景随观看角度产生不同位移，一张平面卡片也能显出纵深。

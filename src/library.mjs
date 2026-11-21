@@ -23,7 +23,7 @@ const tasks = [
     'loading-states','optimistic-ui','toast','notification','onboarding-preview','drag-feedback','icon-states'
   ] },
   { id:'animate', label:'编排界面动效', hint:'找按压、展开、退场和滚动的参考', notes:[
-    'tactile-buttons','book-reveal','drag-feedback','exit-motion','scroll-cards','halo-ripple','continuity','motion-easing'
+    'tactile-buttons','book-reveal','drag-feedback','exit-motion','scroll-cards','ring-carousel','parallax-card','halo-ripple','continuity','motion-easing'
   ] },
   { id:'details', label:'打磨视觉细节', hint:'调整图标、材质和纹理', notes:[
     'optical-alignment','icon-simplification','tactile-buttons',

@@ -19,13 +19,27 @@
     "indexUrl": "https://tech.sinsc.com/items/h4hn7vc8vlxaeqvsa5w9jq8f4",
     "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F9kLAAIAAAATMjEyMTk1OTIxMjg0MjczNDAwMAgAAwAAAAIAAA"
   },
+  "secondarySources": [
+    {
+      "id": "2123266417671958600",
+      "author": "枯白 Kubai",
+      "handle": "@Kubai087",
+      "title": "从设计变量到任务范式的五个层次",
+      "published": "2026-11-19",
+      "url": "https://x.com/Kubai087/status/2123266417671958600",
+      "retrievedAt": "2026-11-21",
+      "verification": "已通过 FxTwitter 逐条读取原帖文本",
+      "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2123266417671958600",
+      "note": "文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。"
+    }
+  ],
   "tags": [
     "系统",
     "一致性",
     "变量"
   ],
   "summary": "为颜色、间距和圆角命名，让设计拥有共同的词汇。",
-  "definition": "Design Token 是具有名字的设计决策，例如 surface、text-muted、space-4。组件引用名字，而不是各自写一套数值。修改一个语义变量，可以让相关组件保持一致。",
+  "definition": "Design Token 是具有名字的设计决策，例如 surface、text-muted、space-4。组件引用名字，而不是各自写一套数值。修改一个语义变量，可以让相关组件保持一致。Kubai 的分层示例先区分浅色与深色的色板，再让组件引用按用途命名的颜色。",
   "when": "同一种颜色、间距或状态在多个组件里反复出现时。",
   "steps": [
     "先收集界面中实际重复的值。",
@@ -46,6 +60,5 @@
   "promptSourceUrls": [
     "https://x.com/Kubai087/status/2121615225816494303"
   ],
-  "episode": null,
-  "secondarySources": []
+  "episode": null
 }

@@ -27,6 +27,10 @@ export const sources = {
   s016: post("2120682993563922586", "2026-11-12", "999 个小技巧 · 016：轻提示与通知", {"discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F8gLAAIAAAATMjEyMTQ0OTE4NTAxNDg0NTc5NAgAAwAAAAIAAA", "episode": 16}),
   s017: post("2121449185014845794", "2026-11-14", "999 个小技巧 · 017：等待状态与乐观更新", {"discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F9kLAAIAAAATMjEyMTk1OTIxMjg0MjczNDAwMAgAAwAAAAIAAA", "episode": 17}),
   s018: post("2121892029403922717", "2026-11-15", "999 个小技巧 · 018：镭射质感", {"discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F9kLAAIAAAATMjEyMTk1OTIxMjg0MjczNDAwMAgAAwAAAAIAAA", "episode": 18}),
+  s021: post("2123579578098536608", "2026-11-20", "999 个小技巧 · 021：景深环形卡片与流体渐变", {episode:21, retrievedAt:"2026-11-21"}),
+  duotoneIcons: post("2124033523195806015", "2026-11-21", "双色动态功能图标", {retrievedAt:"2026-11-21"}),
+  layeredSystem: post("2123266417671958600", "2026-11-19", "从设计变量到任务范式的五个层次", {retrievedAt:"2026-11-21"}),
+  parallaxCard: post("2124108673089986975", "2026-11-21", "支持陀螺仪交互的视差纪念卡", {retrievedAt:"2026-11-21"}),
   s020: post("2123217190052827633", "2026-11-19", "999 个小技巧 · 020：选择控件的取舍", {episode:20, retrievedAt:"2026-11-19"}),
   menuAnchor: post("2123076115464098210", "2026-11-18", "下拉菜单从触发处展开", {retrievedAt:"2026-11-19",originalCreator:"Emil Kowalski",originalCreatorUrl:"https://x.com/emilkowalski"}),
   s019: post("2122492414598459820", "2026-11-17", "999 个小技巧 · 019：卡片滚动叙事", {"discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F%2DsLAAIAAAATMjEyMjU0NDI0NzQ5NjkzNzc2NggAAwAAAAIAAA", "episode": 19}),
@@ -65,6 +69,7 @@ export const series = [
   { number: "018", title: "镭射质感", source: sources.s018, entries: ["holographic"] },
   { number: "019", title: "卡片滚动叙事", source: sources.s019, entries: ["scroll-cards"] },
   { number: "020", title: "选择控件的取舍", source: sources.s020, entries: ["choice-controls"] },
+  { number: "021", title: "景深环形卡片与流体渐变", source: sources.s021, entries: ["ring-carousel"] },
 ];
 
 export const coverage = {

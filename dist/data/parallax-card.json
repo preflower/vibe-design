@@ -1,0 +1,46 @@
+{
+  "id": "parallax-card",
+  "topic": "motion",
+  "title": "视差卡片",
+  "english": "Parallax card",
+  "category": "technique",
+  "visual": "holo",
+  "source": {
+    "id": "2124108673089986975",
+    "author": "枯白 Kubai",
+    "handle": "@Kubai087",
+    "title": "支持陀螺仪交互的视差纪念卡",
+    "published": "2026-11-21",
+    "url": "https://x.com/Kubai087/status/2124108673089986975",
+    "retrievedAt": "2026-11-21",
+    "verification": "已通过 FxTwitter 逐条读取原帖文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2124108673089986975",
+    "note": "文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。"
+  },
+  "tags": [
+    "卡片",
+    "视差",
+    "陀螺仪"
+  ],
+  "summary": "前景与背景随观看角度产生不同位移，一张平面卡片也能显出纵深。",
+  "definition": "前后两层移动的距离不同，眼睛就能感到它们之间有距离。Kubai 的纪念卡支持在手机上倾斜设备来改变视角，也可以把效果导出成视频或静态图片。",
+  "when": "展示徽章、收藏卡或纪念卡，希望用户能从不同角度观察图案时。",
+  "steps": [
+    "挑一个轮廓清楚的前景，让它和背景在静止时也能区分。",
+    "缓慢改变视角，观察前景相对背景的位移。给背景留出余量，以免倾斜时露出空边。",
+    "把设备放平，检查名字与徽章是否仍然清楚，让静态卡片也能完整传达信息。"
+  ],
+  "avoid": "让文字移出阅读区域，或要求用户晃动设备才能读到关键信息。",
+  "prompt": "为现有收藏卡加入轻微的分层视差。保持卡框和文字可读，限制图案的移动范围，并提供静态呈现。",
+  "related": [
+    "holographic",
+    "ring-carousel"
+  ],
+  "number": "40",
+  "contentType": "editorial-explanation",
+  "promptAuthor": "vibe-design",
+  "promptKind": "editorial",
+  "promptSourceUrls": [],
+  "episode": null,
+  "secondarySources": []
+}

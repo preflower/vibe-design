@@ -486,13 +486,14 @@ export const expandedEntries = [
     "category": "guideline",
     "visual": "semantic",
     "source": "icons",
+    "secondarySources": ["duotoneIcons"],
     "tags": [
       "图标",
       "开关",
       "语义"
     ],
     "summary": "用成组图形和明确名称表达开启、关闭、展开与禁用。",
-    "definition": "功能图标延续控件语义。原帖提出用线性、实心和带斜线等变体表达状态，文字或辅助技术也应能读到状态。",
+    "definition": "功能图标延续控件语义。原帖提出用线性、实心和带斜线等变体表达状态，文字或辅助技术也应能读到状态。Kubai Icons 2.0 的原片展示了同组图标如何用双色区分图层，再让局部图形运动。",
     "when": "适合工具栏、收藏按钮、静音和显示开关。",
     "steps": [
       "为每个状态写下动作名称与可感知区别。",
@@ -599,5 +600,26 @@ export const expandedEntries = [
     steps: ['写下每个选择何时生效。独立且即时的开关项用 Switch，随表单保存的多选项用复选框。','区分值和动作。选语言后字段显示当前语言；选菜单里的「导出」则启动导出，入口名称保持原样。','比较选项数和长度。两到五个简短互斥项可平铺为分段选择；选项多或文字长时用下拉选择，必要时加入搜索和空状态。','需要同时展示所有候选项时，单选用 Radio，多选用复选框。若允许暂不决定，为单选题提供明确选项。'],
     avoid: '把「开」和「关」做成两枚单选按钮，或让本应随表单保存的选择悄悄立即生效。',
     related: ['semantic-components','overlay-choice','icon-states']
+  },
+  {
+    id: 'ring-carousel', topic: 'motion', title: '景深环形卡片', english: 'Ring carousel', category: 'technique', visual: 'cards',
+    source: 's021', tags: ['轮播','透视','景深','翻面','流体渐变'],
+    summary: '沿弧线排列卡片，连续改变曲率，让视角从环内过渡到环外。',
+    definition: '在 Kubai 的示例中，环内视角让两侧的卡更靠近观看者。转到环外时，正中的卡最清晰，两侧和后排逐渐失焦。两种视角共用同一条弧线，观看者可以跟住同一张卡。',
+    when: '在作品集或图片浏览器里同时展示一组有前后关系的画面时。',
+    steps: ['先用纯色卡片检查弧度和遮挡顺序。在环内视角下，两侧的卡应比中间的更大。','连续改变曲率切到环外，观察中心卡是否保持清晰，再给远处的卡加景深。','最后加上渐变和翻面。从中间向两边依次翻开，检查背面图片的方向。'],
+    avoid: '用模糊掩盖卡片错位。先关闭景深检查几何关系，再恢复材质。',
+    related: ['scroll-cards','motion-easing','parallax-card']
+  },
+  {
+    id: 'parallax-card', topic: 'motion', title: '视差卡片', english: 'Parallax card', category: 'technique', visual: 'holo',
+    source: 'parallaxCard', tags: ['卡片','视差','陀螺仪'],
+    summary: '前景与背景随观看角度产生不同位移，一张平面卡片也能显出纵深。',
+    definition: '前后两层移动的距离不同，眼睛就能感到它们之间有距离。Kubai 的纪念卡支持在手机上倾斜设备来改变视角，也可以把效果导出成视频或静态图片。',
+    when: '展示徽章、收藏卡或纪念卡，希望用户能从不同角度观察图案时。',
+    steps: ['挑一个轮廓清楚的前景，让它和背景在静止时也能区分。','缓慢改变视角，观察前景相对背景的位移。给背景留出余量，以免倾斜时露出空边。','把设备放平，检查名字与徽章是否仍然清楚，让静态卡片也能完整传达信息。'],
+    avoid: '让文字移出阅读区域，或要求用户晃动设备才能读到关键信息。',
+    prompt: '为现有收藏卡加入轻微的分层视差。保持卡框和文字可读，限制图案的移动范围，并提供静态呈现。',
+    related: ['holographic','ring-carousel']
   }
 ];
