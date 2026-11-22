@@ -621,5 +621,15 @@ export const expandedEntries = [
     avoid: '让文字移出阅读区域，或要求用户晃动设备才能读到关键信息。',
     prompt: '为现有收藏卡加入轻微的分层视差。保持卡框和文字可读，限制图案的移动范围，并提供静态呈现。',
     related: ['holographic','ring-carousel']
+  },
+  {
+    id: 'empty-states', topic: 'feedback', title: '空状态', english: 'Empty states', category: 'guideline', visual: 'semantic', source: 's022',
+    tags: ['空状态','无数据','搜索结果','首次使用','错误提示'],
+    summary: '内容区空着时，告诉用户为什么是空的，以及现在能做什么。',
+    definition: '刚注册的用户打开空白任务页，需要知道这里能放什么。已有任务的用户筛选出空列表，则需要知道哪些条件没有匹配。两人看到的都是零条记录，合适的标题和操作却不同。',
+    when: '设计首次使用的页面、没有匹配项的搜索结果，或暂时无法显示内容的卡片时。',
+    steps: ['先写出原因。首次使用可以给出「新建任务」，筛选无结果可以给出「清除筛选」，读取失败时提供重试。','再看空间。整页可用缩小的页面线框预告填充后的样子；对象明确时，一个文件或成员图标就够了。','卡片里把短标题和轻量操作排成一行。搜索下拉里保留原有行高，直接说明哪个关键词没有匹配项。'],
+    avoid: '请求还在进行时就显示「暂无数据」，或者在多张空卡片里重复放醒目的主按钮。',
+    related: ['loading-states','onboarding-preview','semantic-components']
   }
 ];

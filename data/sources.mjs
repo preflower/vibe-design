@@ -27,6 +27,7 @@ export const sources = {
   s016: post("2120682993563922586", "2026-11-12", "999 个小技巧 · 016：轻提示与通知", {"discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F8gLAAIAAAATMjEyMTQ0OTE4NTAxNDg0NTc5NAgAAwAAAAIAAA", "episode": 16}),
   s017: post("2121449185014845794", "2026-11-14", "999 个小技巧 · 017：等待状态与乐观更新", {"discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F9kLAAIAAAATMjEyMTk1OTIxMjg0MjczNDAwMAgAAwAAAAIAAA", "episode": 17}),
   s018: post("2121892029403922717", "2026-11-15", "999 个小技巧 · 018：镭射质感", {"discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F9kLAAIAAAATMjEyMTk1OTIxMjg0MjczNDAwMAgAAwAAAAIAAA", "episode": 18}),
+  s022: post("2124170395825873348", "2026-11-21", "999 个小技巧 · 022：空状态的三种画法", {episode:22, retrievedAt:"2026-11-22"}),
   s021: post("2123579578098536608", "2026-11-20", "999 个小技巧 · 021：景深环形卡片与流体渐变", {episode:21, retrievedAt:"2026-11-21"}),
   duotoneIcons: post("2124033523195806015", "2026-11-21", "双色动态功能图标", {retrievedAt:"2026-11-21"}),
   layeredSystem: post("2123266417671958600", "2026-11-19", "从设计变量到任务范式的五个层次", {retrievedAt:"2026-11-21"}),
@@ -70,6 +71,7 @@ export const series = [
   { number: "019", title: "卡片滚动叙事", source: sources.s019, entries: ["scroll-cards"] },
   { number: "020", title: "选择控件的取舍", source: sources.s020, entries: ["choice-controls"] },
   { number: "021", title: "景深环形卡片与流体渐变", source: sources.s021, entries: ["ring-carousel"] },
+  { number: "022", title: "空状态的三种画法", source: sources.s022, entries: ["empty-states"] },
 ];
 
 export const coverage = {

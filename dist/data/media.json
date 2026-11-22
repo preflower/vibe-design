@@ -760,5 +760,25 @@
       "localVideoWidth": 1040,
       "localVideoHeight": 720
     }
+  ],
+  "2124170395825873348": [
+    {
+      "type": "video",
+      "url": "https://video.twimg.com/amplify_video/2124165390314131456/vid/avc1/720x960/rRvZbiTgvkXN70fa.mp4?tag=29",
+      "poster": "/assets/source-media/2124170395825873348-1.jpg?v=9e7514e85327d289",
+      "posterSource": "https://pbs.twimg.com/amplify_video_thumb/2124165390314131456/img/vqKQLb323hpOpolP.jpg",
+      "sourceUrl": "https://x.com/Kubai087/status/2124170395825873348",
+      "author": "@Kubai087",
+      "authorName": "枯白 Kubai",
+      "width": 2160,
+      "height": 2880,
+      "alt": "空状态的三种画法 · 原帖视频",
+      "duration": 52.2,
+      "localVideo": "/assets/source-media/2124165390314131456.mp4?v=8f2da9b42bdab89d",
+      "localVideoSource": "https://video.twimg.com/amplify_video/2124165390314131456/vid/avc1/720x960/rRvZbiTgvkXN70fa.mp4?tag=29",
+      "localVideoBytes": 3122623,
+      "localVideoWidth": 720,
+      "localVideoHeight": 960
+    }
   ]
 }
