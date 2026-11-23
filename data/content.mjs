@@ -3,7 +3,7 @@ import { expandedEntries } from './expanded.mjs';
 import { sources, series } from './sources.mjs';
 export { sources, series, coverage } from './sources.mjs';
 
-export const updated = '2026-11-22';
+export const updated = '2026-11-23';
 export const origin = 'https://vibe-design.carefulgardenia8.chatgpt.site';
 export const topics = { all:'全部内容', layout:'布局与排版', visual:'视觉表现', components:'交互模式', feedback:'交互反馈', motion:'动效设计', system:'设计系统与规范' };
 export const topicHints = {
@@ -67,9 +67,9 @@ export const entries = [
     related: ['design-tokens','nested-radius','alignment']
   },
   {
-    id: 'continuity', topic: 'motion', title: '界面连续性', english: 'UI continuity', category: 'guideline', visual: 'continuity', source: 's015', secondarySources: ['continuity','menuAnchor'], tags: ['动效','状态','交互'],
+    id: 'continuity', topic: 'motion', title: '界面连续性', english: 'UI continuity', category: 'guideline', visual: 'continuity', source: 's015', secondarySources: ['continuity','menuAnchor','demoVideo','demoCursor'], tags: ['动效','状态','交互'],
     summary: '状态变了，用户仍然知道自己刚刚操作了什么。',
-    definition: '界面连续性让用户在状态切换时保留对元素身份、位置和关系的理解。例如按钮展开成菜单时，菜单从触发位置生长出来，比远处突然出现一个面板更容易追踪。',
+    definition: '界面连续性让用户在状态切换时保留对元素身份、位置和关系的理解。例如按钮展开成菜单时，菜单从触发位置生长出来，比远处突然出现一个面板更容易追踪。Kubai 在教程演示中保留了光标。镜头快速切换时，观看者可以跟着指针找到下一处操作。',
     when: '菜单、抽屉、手风琴、详情展开，以及其他会改变空间关系的交互。',
     steps: ['识别状态变化前后仍然属于同一个对象的元素。','菜单在按钮下方打开时，让缩放原点靠近按钮。若菜单翻到按钮上方，原点也移到菜单下缘。','检查周围内容的变化，并提供减少动态效果的版本。'],
     avoid: '把所有出现和消失都处理成淡入淡出，或者为了过渡延迟用户操作。',

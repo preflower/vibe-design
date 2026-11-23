@@ -19,13 +19,29 @@
     "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5FugLAAIAAAATMjExNDk0NjM3NjUxMzc4NjIzNAgAAwAAAAIAAA",
     "episode": 2
   },
+  "secondarySources": [
+    {
+      "id": "2124467225503645764",
+      "author": "枯白 Kubai",
+      "handle": "@Kubai087",
+      "title": "Leyang 的子菜单斜向移动案例",
+      "published": "2026-11-22",
+      "url": "https://x.com/Kubai087/status/2124467225503645764",
+      "retrievedAt": "2026-11-23",
+      "verification": "已通过 FxTwitter 逐条读取原帖文本",
+      "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2124467225503645764",
+      "note": "文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。",
+      "originalCreator": "Leyang",
+      "originalCreatorUrl": "https://x.com/quanruzhuoxiu/status/2124466296939245649"
+    }
+  ],
   "tags": [
     "菜单",
     "光标",
     "延时"
   ],
   "summary": "给斜向移动的鼠标留一条进入子菜单的路。",
-  "definition": "父菜单和子菜单横向分列时，指针可能斜穿过其他行。用指针前一位置与子菜单近侧两个角形成三角区，判断用户是否正在朝子菜单移动。",
+  "definition": "父菜单和子菜单横向分列时，指针可能斜穿过其他行。用指针前一位置与子菜单近侧两个角形成三角区，判断用户是否正在朝子菜单移动。Leyang 在作品复盘中举了一个例子：鼠标斜着移向子菜单时，让原菜单多等一下，指针就能穿过相邻行抵达目标。",
   "when": "适合使用鼠标的桌面级联菜单。",
   "steps": [
     "判断指针是否进入朝向子菜单的区域。",
@@ -45,6 +61,5 @@
   "promptSourceUrls": [
     "https://x.com/Kubai087/status/2114729985143677258"
   ],
-  "episode": "002",
-  "secondarySources": []
+  "episode": "002"
 }

@@ -96,7 +96,7 @@ Follow the page's light or dark theme and the project's tokens.
 - 发布: 2026-10-27
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2115091203465290087
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 - 相关来源: https://x.com/Kubai087/status/2115766256913785271
 

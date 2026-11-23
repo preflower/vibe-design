@@ -10,9 +10,10 @@ ID: continuity
 - [视频 · @Kubai087](https://x.com/Kubai087/status/2120320609255043510)
 - [视频 · @stackedlol](https://x.com/stackedlol/status/2118435466769060227)
 - [视频 · @emilkowalski](https://x.com/Kubai087/status/2123076115464098210)
+- [视频 · @Kubai087](https://x.com/Kubai087/status/2124440619120759238)
 
 ## 解释（本站整理）
-界面连续性让用户在状态切换时保留对元素身份、位置和关系的理解。例如按钮展开成菜单时，菜单从触发位置生长出来，比远处突然出现一个面板更容易追踪。
+界面连续性让用户在状态切换时保留对元素身份、位置和关系的理解。例如按钮展开成菜单时，菜单从触发位置生长出来，比远处突然出现一个面板更容易追踪。Kubai 在教程演示中保留了光标。镜头快速切换时，观看者可以跟着指针找到下一处操作。
 
 ## 适用场景
 菜单、抽屉、手风琴、详情展开，以及其他会改变空间关系的交互。
@@ -97,8 +98,8 @@ Put the frequent, disorienting ones with low cost first. Then ask me which ones 
 - 发布: 2026-11-11
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2120320609255043510
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
-- 相关来源: https://x.com/Kubai087/status/2118570408953987093, https://x.com/Kubai087/status/2123076115464098210
+- 相关来源: https://x.com/Kubai087/status/2118570408953987093, https://x.com/Kubai087/status/2123076115464098210, https://x.com/Kubai087/status/2124440619120759238, https://x.com/Kubai087/status/2124511000015859990
 
 笔记解释由本站整理。

@@ -1,6 +1,6 @@
 # Vibe Design 完整设计笔记
 
-整理时间: 2026-11-22
+整理时间: 2026-11-23
 
 解释由本站编写。提示词作者按条标注。每条保留原帖与读取方式。请结合项目语义使用，不要将本文当作作者逐字表述。
 
@@ -58,7 +58,7 @@ When done, list every radius you changed as "element: old -> new".
 - 发布: 2026-10-28
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2115469767650021796
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -119,7 +119,7 @@ Design Token 是具有名字的设计决策，例如 surface、text-muted、spac
 - 发布: 2026-11-14
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2121615225816494303
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 - 相关来源: https://x.com/Kubai087/status/2123266417671958600
 
@@ -164,7 +164,7 @@ ID: skeuomorphism
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2118582684008251830
 - 案例原作者: Levi Kline (@levibkline)
 - 案例原帖: https://x.com/levibkline/status/2118371924594348505
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -227,7 +227,7 @@ When done, list every radius you changed as "element: old -> new".
 - 发布: 2026-10-28
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2115469767650021796
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -278,7 +278,7 @@ ID: spacing-scale
 - 发布: 2026-11-14
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2121615225816494303
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -297,9 +297,10 @@ ID: continuity
 - [视频 · @Kubai087](https://x.com/Kubai087/status/2120320609255043510)
 - [视频 · @stackedlol](https://x.com/stackedlol/status/2118435466769060227)
 - [视频 · @emilkowalski](https://x.com/Kubai087/status/2123076115464098210)
+- [视频 · @Kubai087](https://x.com/Kubai087/status/2124440619120759238)
 
 ## 解释（本站整理）
-界面连续性让用户在状态切换时保留对元素身份、位置和关系的理解。例如按钮展开成菜单时，菜单从触发位置生长出来，比远处突然出现一个面板更容易追踪。
+界面连续性让用户在状态切换时保留对元素身份、位置和关系的理解。例如按钮展开成菜单时，菜单从触发位置生长出来，比远处突然出现一个面板更容易追踪。Kubai 在教程演示中保留了光标。镜头快速切换时，观看者可以跟着指针找到下一处操作。
 
 ## 适用场景
 菜单、抽屉、手风琴、详情展开，以及其他会改变空间关系的交互。
@@ -384,9 +385,9 @@ Put the frequent, disorienting ones with low cost first. Then ask me which ones 
 - 发布: 2026-11-11
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2120320609255043510
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
-- 相关来源: https://x.com/Kubai087/status/2118570408953987093, https://x.com/Kubai087/status/2123076115464098210
+- 相关来源: https://x.com/Kubai087/status/2118570408953987093, https://x.com/Kubai087/status/2123076115464098210, https://x.com/Kubai087/status/2124440619120759238, https://x.com/Kubai087/status/2124511000015859990
 
 笔记解释由本站整理。
 
@@ -510,7 +511,7 @@ For each one I pick, show me a short before and after (values and motion), in my
 - 发布: 2026-11-12
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2120682993563922586
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -635,7 +636,7 @@ For each one I pick, show me a short before and after (values and motion), in my
 - 发布: 2026-11-12
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2120682993563922586
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -797,7 +798,7 @@ These are suggestions; check them against my stack and its versions, and choose 
 - 发布: 2026-11-15
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2121892029403922717
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -902,7 +903,7 @@ Follow the page's light or dark theme and the project's tokens.
 - 发布: 2026-10-27
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2115091203465290087
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 - 相关来源: https://x.com/Kubai087/status/2115766256913785271
 
@@ -946,7 +947,7 @@ ID: alignment
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2115384977227661661
 - 案例原作者: @jaydwivedi_
 - 案例原帖: https://x.com/jaydwivedi_/status/2115379248013717822
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -989,7 +990,7 @@ ID: typography-scale
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2115384977227661661
 - 案例原作者: @jaydwivedi_
 - 案例原帖: https://x.com/jaydwivedi_/status/2115379248013717822
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -1040,7 +1041,7 @@ ID: progressive-disclosure
 - 发布: 2026-11-14
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2121615225816494303
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -1107,7 +1108,7 @@ with reduced motion keep only the line.
 - 发布: 2026-10-29
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2115823717024735708
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -1342,7 +1343,7 @@ tokens, and keep the cover exactly as the card is today.
 - 发布: 2026-10-30
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2116198373040759107
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -1393,7 +1394,7 @@ ID: semantic-components
 - 发布: 2026-11-14
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2121615225816494303
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -1491,7 +1492,7 @@ lg (16px label, u = 16/14 px, so height 45.7px, radius 11.4px, lift shadow
 - 发布: 2026-10-25
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2114378773655326873
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -1510,7 +1511,7 @@ ID: cascade-safe-zone
 - [视频 · @Kubai087](https://x.com/Kubai087/status/2114729985143677258)
 
 ## 解释（本站整理）
-父菜单和子菜单横向分列时，指针可能斜穿过其他行。用指针前一位置与子菜单近侧两个角形成三角区，判断用户是否正在朝子菜单移动。
+父菜单和子菜单横向分列时，指针可能斜穿过其他行。用指针前一位置与子菜单近侧两个角形成三角区，判断用户是否正在朝子菜单移动。Leyang 在作品复盘中举了一个例子：鼠标斜着移向子菜单时，让原菜单多等一下，指针就能穿过相邻行抵达目标。
 
 ## 适用场景
 适合使用鼠标的桌面级联菜单。
@@ -1560,8 +1561,9 @@ Keep every timing value as a named constant in one place, and keep the safe-zone
 - 发布: 2026-10-26
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2114729985143677258
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
+- 相关来源: https://x.com/Kubai087/status/2124467225503645764
 
 笔记解释由本站整理。
 
@@ -1664,7 +1666,7 @@ Follow the page's light or dark theme and the project's tokens.
 - 发布: 2026-10-27
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2115091203465290087
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -1760,7 +1762,7 @@ Polish the typography in my product with a set of CSS switches. Change only how 
 - 发布: 2026-10-31
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2116555064227811412
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -1850,7 +1852,7 @@ Polish the layout of my docs or help center pages: the header, the page list, th
 - 发布: 2026-11-01
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2116911391437443471
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -1933,7 +1935,7 @@ Fill in only what is missing, with the design system's existing parts.
 - 发布: 2026-11-03
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2117314098165862612
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -2035,7 +2037,7 @@ Hover brightens the tint by about 14% instead of lifting a shadow.
 - 发布: 2026-11-04
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2117782193108082923
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -2121,7 +2123,7 @@ Define them once, next to the other motion tokens, and use only these:
 - 发布: 2026-11-05
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2118143759984803898
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -2286,7 +2288,7 @@ The bubble rises from about 40px below its place and comes in the material's way
 - 发布: 2026-11-06
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2118508433704169726
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -2410,7 +2412,7 @@ These are suggestions from what worked in the demo and what each platform offers
 - 发布: 2026-11-08
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2119359092334743735
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 - 期号说明: 原帖未标数字。根据发布时间、012/014 的顺序与公开系列整理交叉判断为 013。
 
@@ -2551,7 +2553,7 @@ These are suggestions; check them against my stack and its versions, and prefer 
 - 发布: 2026-11-10
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2119831380276523207
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -2670,7 +2672,7 @@ These are suggestions; check them against my stack and its versions, and prefer 
 - 发布: 2026-11-14
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2121449185014845794
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -2789,7 +2791,7 @@ These are suggestions; check them against my stack and its versions, and prefer 
 - 发布: 2026-11-14
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2121449185014845794
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -2938,7 +2940,7 @@ Check these against my stack and versions.
 - 发布: 2026-11-17
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2122492414598459820
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -2979,7 +2981,7 @@ ID: optical-alignment
 - 发布: 2026-11-17
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2122514434069537097
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -3020,7 +3022,7 @@ ID: onboarding-preview
 - 发布: 2026-11-10
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2120033693012291853
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -3121,7 +3123,7 @@ Overall: quiet, neutral, precise. Hairlines instead of borders, soft shadows tin
 - 发布: 2026-10-28
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2115393082472681875
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -3163,7 +3165,7 @@ ID: icon-states
 - 发布: 2026-11-02
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2117125759487934952
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 - 相关来源: https://x.com/Kubai087/status/2124033523195806015
 
@@ -3218,7 +3220,7 @@ ID: icon-simplification
 - 发布: 2026-10-29
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2115674219602452656
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -3259,7 +3261,7 @@ ID: glass-fallback
 - 发布: 2026-11-05
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2118292026756321720
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -3305,7 +3307,7 @@ ID: graphic-halftone
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2114946376513786234
 - 案例原作者: @simoomdesign
 - 案例原帖: https://x.com/simoomdesign/status/2114628102458663022
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -3380,7 +3382,7 @@ Use my components, or the platform's own controls when I have none. Keep the val
 - 发布: 2026-11-19
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2123217190052827633
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -3505,7 +3507,7 @@ These are suggestions; check them against my stack and versions.
 - 发布: 2026-11-20
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2123579578098536608
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -3546,7 +3548,7 @@ ID: parallax-card
 - 发布: 2026-11-21
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2124108673089986975
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。
@@ -3688,7 +3690,7 @@ These are suggestions; check them against my stack and its versions, and prefer 
 - 发布: 2026-11-21
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2124170395825873348
-- 收录时间: 2026-11-22
+- 收录时间: 2026-11-23
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。

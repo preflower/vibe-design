@@ -780,5 +780,25 @@
       "localVideoWidth": 720,
       "localVideoHeight": 960
     }
+  ],
+  "2124440619120759238": [
+    {
+      "type": "video",
+      "url": "https://video.twimg.com/amplify_video/2124440350555299841/vid/avc1/1096x720/rjRr2bneTqwL_Pjt.mp4?tag=29",
+      "poster": "/assets/source-media/2124440619120759238-1.jpg?v=c4c1263f45de5324",
+      "posterSource": "https://pbs.twimg.com/amplify_video_thumb/2124440350555299841/img/WBYJEqqW_wHBqzsA.jpg",
+      "sourceUrl": "https://x.com/Kubai087/status/2124440619120759238",
+      "author": "@Kubai087",
+      "authorName": "枯白 Kubai",
+      "width": 3812,
+      "height": 2504,
+      "alt": "Vibe Design Tips 发布演示",
+      "duration": 40.79,
+      "localVideo": "/assets/source-media/2124440350555299841.mp4?v=0b454b7f5c1590d5",
+      "localVideoSource": "https://video.twimg.com/amplify_video/2124440350555299841/vid/avc1/1096x720/rjRr2bneTqwL_Pjt.mp4?tag=29",
+      "localVideoBytes": 4018334,
+      "localVideoWidth": 1096,
+      "localVideoHeight": 720
+    }
   ]
 }
