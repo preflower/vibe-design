@@ -3,7 +3,7 @@ import { expandedEntries } from './expanded.mjs';
 import { sources, series } from './sources.mjs';
 export { sources, series, coverage } from './sources.mjs';
 
-export const updated = '2026-11-23';
+export const updated = '2026-11-24';
 export const origin = 'https://vibe-design.carefulgardenia8.chatgpt.site';
 export const topics = { all:'全部内容', layout:'布局与排版', visual:'视觉表现', components:'交互模式', feedback:'交互反馈', motion:'动效设计', system:'设计系统与规范' };
 export const topicHints = {
@@ -47,11 +47,11 @@ export const entries = [
     related: ['holographic','design-tokens']
   },
   {
-    id: 'continuous-corners', topic: 'system', title: '连续圆角', english: 'Continuous corners', category: 'guideline', visual: 'corners', source: 's004', tags: ['超椭圆','CSS','形状'],
+    id: 'continuous-corners', topic: 'system', title: '连续圆角', english: 'Continuous corners', category: 'guideline', visual: 'corners', source: 's004', secondarySources: ['cornerCurve'], tags: ['超椭圆','CSS','形状'],
     summary: '在设计规范里约定哪些组件使用连续圆角，让同类组件在各页面保持相同的轮廓。',
     definition: '普通圆角由直线接圆弧，连接处的曲率会发生跳变。连续圆角通过不同的曲线形状缓和这个变化。超椭圆是构建这类柔和轮廓的一种方法，并不代表任意参数都具备相同效果。',
     when: '应用图标、大型面板和需要柔和轮廓的容器。',
-    steps: ['先约定采用连续圆角的组件，例如大面板；这些组件共用同一曲线，并保留普通圆角作为回退。','把 corner-shape 作为渐进增强，用 @supports 检测。','在目标浏览器检查实际轮廓，圆形和胶囊仍保留 round。'],
+    steps: ['先约定采用连续圆角的组件，例如大面板；这些组件共用同一曲线，并保留普通圆角作为回退。','对照 Mark Davis 的曲线示例，沿轮廓观察直线接入弯角的位置。实现时用 @supports 检测 corner-shape。','在目标浏览器检查实际轮廓，圆形和胶囊仍保留 round。'],
     avoid: '把特定浏览器版本的兼容结论当作永久事实。本站用运行时能力检测，并展示明确的回退状态。',
     prompt: '为指定容器添加连续圆角的渐进增强。先保留现有 border-radius，在 @supports 内设置 corner-shape。圆形与胶囊保持 round，并说明不支持时的回退外观。',
     code: '.shape { border-radius: 32px; }\n@supports (corner-shape: superellipse(1.25)) {\n  .shape { corner-shape: superellipse(1.25); }\n}', related: ['nested-radius']

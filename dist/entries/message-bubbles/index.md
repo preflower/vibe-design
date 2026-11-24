@@ -8,9 +8,11 @@ ID: message-bubbles
 
 ## 来源媒体
 - [视频 · @Kubai087](https://x.com/Kubai087/status/2118508433704169726)
+- [图片 · @ninthbit_ai](https://x.com/ninthbit_ai/status/2124867730985890055)
+- [图片 · @ninthbit_ai](https://x.com/ninthbit_ai/status/2124867730985890055)
 
 ## 解释（本站整理）
-原帖以磨砂、像素、Aqua、共享渐变、拟物和纯色六种方案探索气泡。材质也要服务发言方识别、文本阅读和连续消息分组。
+原帖以磨砂、像素、Aqua、共享渐变、拟物和纯色六种方案探索气泡。材质也要服务发言方识别、文本阅读和连续消息分组。Kieran Zhang 把气泡用于复古 Aqua 聊天主题，原帖附有两张界面截图。
 
 ## 适用场景
 适合需要形成清晰视觉语言的聊天或 Agent 界面。
@@ -156,7 +158,8 @@ The bubble rises from about 40px below its place and comes in the material's way
 - 发布: 2026-11-06
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2118508433704169726
-- 收录时间: 2026-11-23
+- 收录时间: 2026-11-24
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
+- 相关来源: https://x.com/Kubai087/status/2124870165238354274
 
 笔记解释由本站整理。

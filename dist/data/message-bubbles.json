@@ -19,13 +19,29 @@
     "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F5YLAAIAAAATMjExOTM1MDc5MjYyMDc0NTAzMggAAwAAAAIAAA",
     "episode": 12
   },
+  "secondarySources": [
+    {
+      "id": "2124870165238354274",
+      "author": "枯白 Kubai",
+      "handle": "@Kubai087",
+      "title": "Aqua 聊天界面的气泡案例",
+      "published": "2026-11-23",
+      "url": "https://x.com/Kubai087/status/2124870165238354274",
+      "retrievedAt": "2026-11-24",
+      "verification": "已通过 FxTwitter 逐条读取原帖文本",
+      "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2124870165238354274",
+      "note": "文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。",
+      "originalCreator": "Kieran Zhang",
+      "originalCreatorUrl": "https://x.com/ninthbit_ai/status/2124867730985890055"
+    }
+  ],
   "tags": [
     "对话",
     "气泡",
     "材质"
   ],
   "summary": "给聊天界面选择一套表面语言和匹配的反馈。",
-  "definition": "原帖以磨砂、像素、Aqua、共享渐变、拟物和纯色六种方案探索气泡。材质也要服务发言方识别、文本阅读和连续消息分组。",
+  "definition": "原帖以磨砂、像素、Aqua、共享渐变、拟物和纯色六种方案探索气泡。材质也要服务发言方识别、文本阅读和连续消息分组。Kieran Zhang 把气泡用于复古 Aqua 聊天主题，原帖附有两张界面截图。",
   "when": "适合需要形成清晰视觉语言的聊天或 Agent 界面。",
   "steps": [
     "从纯色方案建立正文对比。",
@@ -45,6 +61,5 @@
   "promptSourceUrls": [
     "https://x.com/Kubai087/status/2118508837796037053"
   ],
-  "episode": "012",
-  "secondarySources": []
+  "episode": "012"
 }

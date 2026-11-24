@@ -1,6 +1,6 @@
 # Vibe Design
 
-> 给用户与 AI 的静态设计知识库。41 条笔记，选题来自 41 篇公开帖子。
+> 给用户与 AI 的静态设计知识库。42 条笔记，选题来自 45 篇公开帖子。
 
 ## 阅读约定
 - 正文是本站解释，非原帖逐字摘录。
@@ -58,3 +58,4 @@
 - [景深环形卡片 / Ring carousel](https://vibe-design.carefulgardenia8.chatgpt.site/entries/ring-carousel/index.md): 沿弧线排列卡片，连续改变曲率，让视角从环内过渡到环外。
 - [视差卡片 / Parallax card](https://vibe-design.carefulgardenia8.chatgpt.site/entries/parallax-card/index.md): 前景与背景随观看角度产生不同位移，一张平面卡片也能显出纵深。
 - [空状态 / Empty states](https://vibe-design.carefulgardenia8.chatgpt.site/entries/empty-states/index.md): 内容区空着时，告诉用户为什么是空的，以及现在能做什么。
+- [移动网页适配 / Mobile web adaptation](https://vibe-design.carefulgardenia8.chatgpt.site/entries/mobile-web-adaptation/index.md): 用手机点按、滚动和打开弹窗，检查桌面布局缩窄后容易漏掉的交互。

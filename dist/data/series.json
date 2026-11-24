@@ -479,6 +479,26 @@
       "entries": [
         "empty-states"
       ]
+    },
+    {
+      "number": "023",
+      "title": "移动网页适配",
+      "source": {
+        "id": "2125029129619644704",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 023：移动网页适配",
+        "published": "2026-11-24",
+        "url": "https://x.com/Kubai087/status/2125029129619644704",
+        "retrievedAt": "2026-11-24",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2125029129619644704",
+        "note": "文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。",
+        "episode": 23
+      },
+      "entries": [
+        "mobile-web-adaptation"
+      ]
     }
   ]
 }

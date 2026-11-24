@@ -233,13 +233,14 @@ export const expandedEntries = [
     "category": "style",
     "visual": "bubbles",
     "source": "s012",
+    "secondarySources": ["aquaChat"],
     "tags": [
       "对话",
       "气泡",
       "材质"
     ],
     "summary": "给聊天界面选择一套表面语言和匹配的反馈。",
-    "definition": "原帖以磨砂、像素、Aqua、共享渐变、拟物和纯色六种方案探索气泡。材质也要服务发言方识别、文本阅读和连续消息分组。",
+    "definition": "原帖以磨砂、像素、Aqua、共享渐变、拟物和纯色六种方案探索气泡。材质也要服务发言方识别、文本阅读和连续消息分组。Kieran Zhang 把气泡用于复古 Aqua 聊天主题，原帖附有两张界面截图。",
     "when": "适合需要形成清晰视觉语言的聊天或 Agent 界面。",
     "steps": [
       "从纯色方案建立正文对比。",
@@ -632,5 +633,15 @@ export const expandedEntries = [
     steps: ['先写出原因。首次使用可以给出「新建任务」，筛选无结果可以给出「清除筛选」，读取失败时提供重试。','再看空间。整页可用缩小的页面线框预告填充后的样子；对象明确时，一个文件或成员图标就够了。','卡片里把短标题和轻量操作排成一行。搜索下拉里保留原有行高，直接说明哪个关键词没有匹配项。'],
     avoid: '请求还在进行时就显示「暂无数据」，或者在多张空卡片里重复放醒目的主按钮。',
     related: ['loading-states','onboarding-preview','semantic-components']
+  },
+  {
+    id: 'mobile-web-adaptation', topic: 'system', title: '移动网页适配', english: 'Mobile web adaptation', category: 'guideline', visual: 'semantic',
+    source: 's023', secondarySources: ['mobileReading'], tags: ['移动端','触控','底部导航','Safari','PWA'],
+    summary: '用手机点按、滚动和打开弹窗，检查桌面布局缩窄后容易漏掉的交互。',
+    definition: '桌面标签栏搬到手机后，拇指可能够不到；原本用鼠标触发的悬停效果，也可能在抬手后继续保留。Kubai 在移动阅读页里把常用导航放到底部，向下阅读时收起，向上滚动或点按时展开。',
+    when: '把已有网站适配到手机，尤其是有长文、固定导航或全屏弹窗的页面时。',
+    steps: ['点按后移开手指，检查是否留下黑块或悬停态。若关闭默认点击高亮，要提供清楚的按压反馈，并保留键盘焦点。','用一只手切换常用栏目，再上下滚动。检查收起的底栏是否容易找回，最后一行内容是否被遮住。','在 Safari 真机上打开和关闭弹窗，比较屏幕边缘、浏览器工具栏与页面背景的颜色。','如果支持添加到主屏幕，再从桌面图标冷启动一次，检查启动页、导航和底部安全区。'],
+    avoid: '只在桌面浏览器里缩窄窗口，就认定触控、浏览器工具栏和独立启动都已适配。',
+    related: ['wiki-navigation','tactile-buttons','continuity']
   }
 ];

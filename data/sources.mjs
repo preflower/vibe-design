@@ -30,6 +30,10 @@ export const sources = {
   demoCursor: post("2124511000015859990", "2026-11-22", "演示切换时用光标引导视线", {retrievedAt:"2026-11-23"}),
   demoVideo: post("2124440619120759238", "2026-11-22", "Vibe Design Tips 发布演示", {retrievedAt:"2026-11-23"}),
   menuPractice: post("2124467225503645764", "2026-11-22", "Leyang 的子菜单斜向移动案例", {retrievedAt:"2026-11-23",originalCreator:"Leyang",originalCreatorUrl:"https://x.com/quanruzhuoxiu/status/2124466296939245649"}),
+  s023: post("2125029129619644704", "2026-11-24", "999 个小技巧 · 023：移动网页适配", {episode:23, retrievedAt:"2026-11-24"}),
+  mobileReading: post("2124901875090968996", "2026-11-23", "移动阅读与伸缩底栏演示", {retrievedAt:"2026-11-24"}),
+  cornerCurve: post("2124738096772288883", "2026-11-23", "用曲线连接处的反光观察连续性", {retrievedAt:"2026-11-24",originalCreator:"Mark Davis",originalCreatorUrl:"https://x.com/MarkFonts/status/2124304805006897439"}),
+  aquaChat: post("2124870165238354274", "2026-11-23", "Aqua 聊天界面的气泡案例", {retrievedAt:"2026-11-24",originalCreator:"Kieran Zhang",originalCreatorUrl:"https://x.com/ninthbit_ai/status/2124867730985890055"}),
   s022: post("2124170395825873348", "2026-11-21", "999 个小技巧 · 022：空状态的三种画法", {episode:22, retrievedAt:"2026-11-22"}),
   s021: post("2123579578098536608", "2026-11-20", "999 个小技巧 · 021：景深环形卡片与流体渐变", {episode:21, retrievedAt:"2026-11-21"}),
   duotoneIcons: post("2124033523195806015", "2026-11-21", "双色动态功能图标", {retrievedAt:"2026-11-21"}),
@@ -75,6 +79,7 @@ export const series = [
   { number: "020", title: "选择控件的取舍", source: sources.s020, entries: ["choice-controls"] },
   { number: "021", title: "景深环形卡片与流体渐变", source: sources.s021, entries: ["ring-carousel"] },
   { number: "022", title: "空状态的三种画法", source: sources.s022, entries: ["empty-states"] },
+  { number: "023", title: "移动网页适配", source: sources.s023, entries: ["mobile-web-adaptation"] },
 ];
 
 export const coverage = {

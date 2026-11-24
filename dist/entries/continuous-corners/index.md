@@ -8,6 +8,10 @@ ID: continuous-corners
 
 ## 来源媒体
 - [视频 · @Kubai087](https://x.com/Kubai087/status/2115469767650021796)
+- [图片 · @MarkFonts](https://x.com/MarkFonts/status/2124304805006897439)
+- [图片 · @MarkFonts](https://x.com/MarkFonts/status/2124304805006897439)
+- [图片 · @MarkFonts](https://x.com/MarkFonts/status/2124304805006897439)
+- [图片 · @MarkFonts](https://x.com/MarkFonts/status/2124304805006897439)
 
 ## 解释（本站整理）
 普通圆角由直线接圆弧，连接处的曲率会发生跳变。连续圆角通过不同的曲线形状缓和这个变化。超椭圆是构建这类柔和轮廓的一种方法，并不代表任意参数都具备相同效果。
@@ -17,7 +21,7 @@ ID: continuous-corners
 
 ## 怎么用
 - 先约定采用连续圆角的组件，例如大面板；这些组件共用同一曲线，并保留普通圆角作为回退。
-- 把 corner-shape 作为渐进增强，用 @supports 检测。
+- 对照 Mark Davis 的曲线示例，沿轮廓观察直线接入弯角的位置。实现时用 @supports 检测 corner-shape。
 - 在目标浏览器检查实际轮廓，圆形和胶囊仍保留 round。
 
 ## 应避免的问题
@@ -54,7 +58,8 @@ When done, list every radius you changed as "element: old -> new".
 - 发布: 2026-10-28
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2115469767650021796
-- 收录时间: 2026-11-23
+- 收录时间: 2026-11-24
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
+- 相关来源: https://x.com/Kubai087/status/2124738096772288883
 
 笔记解释由本站整理。

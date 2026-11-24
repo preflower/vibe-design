@@ -12,7 +12,7 @@ const tasks = [
     'skeuomorphism','liquid-glass','ascii'
   ] },
   { id:'build', label:'建立设计规范', hint:'统一字号、间距、圆角和组件用法', notes:[
-    'design-tokens','typography-scale','spacing-scale','nested-radius','continuous-corners','semantic-components','choice-controls','icon-states'
+    'mobile-web-adaptation','design-tokens','typography-scale','spacing-scale','nested-radius','continuous-corners','semantic-components','choice-controls','icon-states'
   ] },
   { id:'layout', label:'组织页面内容', hint:'排版、对齐、分组与章节导航', notes:[
     'bento-grid','typography-scale','spacing-scale','alignment','optical-alignment','mixed-typesetting',
