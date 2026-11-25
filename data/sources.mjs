@@ -30,6 +30,10 @@ export const sources = {
   demoCursor: post("2124511000015859990", "2026-11-22", "演示切换时用光标引导视线", {retrievedAt:"2026-11-23"}),
   demoVideo: post("2124440619120759238", "2026-11-22", "Vibe Design Tips 发布演示", {retrievedAt:"2026-11-23"}),
   menuPractice: post("2124467225503645764", "2026-11-22", "Leyang 的子菜单斜向移动案例", {retrievedAt:"2026-11-23",originalCreator:"Leyang",originalCreatorUrl:"https://x.com/quanruzhuoxiu/status/2124466296939245649"}),
+  s024: post("2125220063301271808", "2026-11-24", "999 个小技巧 · 024：程序化点阵加载", {episode:24, retrievedAt:"2026-11-25"}),
+  blurGradient: post("2125089189679259724", "2026-11-24", "用模糊色块叠出渐变", {retrievedAt:"2026-11-25",originalCreator:"Hamad Tanveer",originalCreatorUrl:"https://x.com/uiux_hamad/status/2124824980726951962"}),
+  folderMorph: post("2125258824445743576", "2026-11-24", "从文件夹图标的首尾帧开始", {retrievedAt:"2026-11-25"}),
+  musify: post("2125378936158704001", "2026-11-25", "Musify 浅听的音符轮廓", {retrievedAt:"2026-11-25"}),
   s023: post("2125029129619644704", "2026-11-24", "999 个小技巧 · 023：移动网页适配", {episode:23, retrievedAt:"2026-11-24"}),
   mobileReading: post("2124901875090968996", "2026-11-23", "移动阅读与伸缩底栏演示", {retrievedAt:"2026-11-24"}),
   cornerCurve: post("2124738096772288883", "2026-11-23", "用曲线连接处的反光观察连续性", {retrievedAt:"2026-11-24",originalCreator:"Mark Davis",originalCreatorUrl:"https://x.com/MarkFonts/status/2124304805006897439"}),
@@ -80,6 +84,7 @@ export const series = [
   { number: "021", title: "景深环形卡片与流体渐变", source: sources.s021, entries: ["ring-carousel"] },
   { number: "022", title: "空状态的三种画法", source: sources.s022, entries: ["empty-states"] },
   { number: "023", title: "移动网页适配", source: sources.s023, entries: ["mobile-web-adaptation"] },
+  { number: "024", title: "程序化点阵加载", source: sources.s024, entries: ["dot-grid-loading"] },
 ];
 
 export const coverage = {

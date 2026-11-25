@@ -34,7 +34,7 @@ ID: typography-scale
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2115384977227661661
 - 案例原作者: @jaydwivedi_
 - 案例原帖: https://x.com/jaydwivedi_/status/2115379248013717822
-- 收录时间: 2026-11-24
+- 收录时间: 2026-11-25
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。

@@ -98,7 +98,7 @@ Put the frequent, disorienting ones with low cost first. Then ask me which ones 
 - 发布: 2026-11-11
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2120320609255043510
-- 收录时间: 2026-11-24
+- 收录时间: 2026-11-25
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 - 相关来源: https://x.com/Kubai087/status/2118570408953987093, https://x.com/Kubai087/status/2123076115464098210, https://x.com/Kubai087/status/2124440619120759238, https://x.com/Kubai087/status/2124511000015859990
 

@@ -488,14 +488,14 @@ export const expandedEntries = [
     "category": "guideline",
     "visual": "semantic",
     "source": "icons",
-    "secondarySources": ["duotoneIcons"],
+    "secondarySources": ["duotoneIcons", "folderMorph"],
     "tags": [
       "图标",
       "开关",
       "语义"
     ],
     "summary": "用成组图形和明确名称表达开启、关闭、展开与禁用。",
-    "definition": "功能图标延续控件语义。原帖提出用线性、实心和带斜线等变体表达状态，文字或辅助技术也应能读到状态。Kubai Icons 2.0 的原片展示了同组图标如何用双色区分图层，再让局部图形运动。",
+    "definition": "功能图标延续控件语义。原帖提出用线性、实心和带斜线等变体表达状态，文字或辅助技术也应能读到状态。Kubai Icons 2.0 的原片展示了同组图标如何用双色区分图层，再让局部图形运动。在文件夹图标的演示里，作者先在 Figma 画好首帧和尾帧，再用形变连接两个轮廓。",
     "when": "适合工具栏、收藏按钮、静音和显示开关。",
     "steps": [
       "为每个状态写下动作名称与可感知区别。",
@@ -517,12 +517,13 @@ export const expandedEntries = [
     "category": "technique",
     "visual": "optical",
     "source": "iconsimple",
+    "secondarySources": ["musify"],
     "tags": [
       "图标",
       "渐变",
       "小尺寸"
     ],
-    "summary": "减掉次要体积线索，让小图标保留清楚的主轮廓。",
+    "summary": "减掉次要体积线索，让小图标保留清楚的主轮廓。Musify 用倾斜的八分音符表达音乐，只在符尾加入像素阶梯。",
     "definition": "原帖从 AI 生成图标出发，建议减少不必要的高光、阴影和纹理，用更简单的色阶建立主体。",
     "when": "适合小尺寸 App 图标和被过度渲染的图形。",
     "steps": [
@@ -643,5 +644,25 @@ export const expandedEntries = [
     steps: ['点按后移开手指，检查是否留下黑块或悬停态。若关闭默认点击高亮，要提供清楚的按压反馈，并保留键盘焦点。','用一只手切换常用栏目，再上下滚动。检查收起的底栏是否容易找回，最后一行内容是否被遮住。','在 Safari 真机上打开和关闭弹窗，比较屏幕边缘、浏览器工具栏与页面背景的颜色。','如果支持添加到主屏幕，再从桌面图标冷启动一次，检查启动页、导航和底部安全区。'],
     avoid: '只在桌面浏览器里缩窄窗口，就认定触控、浏览器工具栏和独立启动都已适配。',
     related: ['wiki-navigation','tactile-buttons','continuity']
+  },
+  {
+    id: 'dot-grid-loading', topic: 'feedback', title: '程序化点阵加载', english: 'Procedural dot-grid loading', category: 'technique', visual: 'loading', source: 's024',
+    tags: ['点阵','加载','图像生成','入场动效'],
+    summary: '在成图的位置先显示一片起伏的点阵，图片准备好后从同一区域显现。',
+    definition: '每个点都有自己的位置。让大小或亮度随位置和时间变化，整片点阵就能形成波纹。Kubai 把等待时的点阵和成图时的揭示效果分开设置，同一种等待动画可以接上不同的入场方式。',
+    when: '生成图片需要等待，并且页面已经知道图片将出现在哪里时。',
+    steps: ['先给结果留出固定区域，并用文字说明正在生成。','选一种容易辨认的变化，例如让一圈点从中心向外依次变亮，观察边缘处是否仍然连贯。','图片解码完成后在原位揭示。减少动态效果时直接显示结果；失败时结束点阵并给出重试入口。'],
+    avoid: '把循环的点阵当成进度条。它只能表示仍在等待，无法告诉用户还剩多久。',
+    related: ['loading-states','halo-ripple','continuity']
+  },
+  {
+    id: 'blurred-color-gradient', topic: 'visual', title: '模糊色块渐变', english: 'Blurred color gradients', category: 'technique', visual: 'holo', source: 'blurGradient',
+    tags: ['渐变','模糊','混合模式','Figma'],
+    summary: '把不同颜色放在独立图层上，模糊交界，就能分别控制每一片颜色的位置和范围。',
+    definition: '想让左下角保留一团暖色、右侧透出冷色，可以先按构图摆放色块。模糊决定颜色过渡有多宽，图层的混合模式决定重叠处怎样显色。',
+    when: '背景里有多个色彩中心，需要单独移动某个亮区或调整色块的交界时。',
+    steps: ['先铺底色，再用两三个形状确定主要色区。','增加图层模糊，让色块之间留有交叠。移动其中一块，检查亮区是否仍在想强调的位置。','在实际背景上对比普通叠加和混合模式，最后放回标题检查可读性。'],
+    avoid: '一次改变所有色块的透明度、模糊与混合模式，导致难以判断是哪一层让颜色变灰。',
+    related: ['holographic','message-bubbles']
   }
 ];

@@ -115,7 +115,7 @@ These are suggestions from what worked in the demo and what each platform offers
 - 发布: 2026-11-08
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2119359092334743735
-- 收录时间: 2026-11-24
+- 收录时间: 2026-11-25
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 - 期号说明: 原帖未标数字。根据发布时间、012/014 的顺序与公开系列整理交叉判断为 013。
 

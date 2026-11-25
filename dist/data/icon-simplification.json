@@ -19,12 +19,26 @@
     "indexUrl": "https://tech.sinsc.com/items/nrm50sy775qm4kayhzq2334g1",
     "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5FyYLAAIAAAATMjExNTcyMjA5Njg5ODk3Nzc5MggAAwAAAAIAAA"
   },
+  "secondarySources": [
+    {
+      "id": "2125378936158704001",
+      "author": "枯白 Kubai",
+      "handle": "@Kubai087",
+      "title": "Musify 浅听的音符轮廓",
+      "published": "2026-11-25",
+      "url": "https://x.com/Kubai087/status/2125378936158704001",
+      "retrievedAt": "2026-11-25",
+      "verification": "已通过 FxTwitter 逐条读取原帖文本",
+      "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2125378936158704001",
+      "note": "文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。"
+    }
+  ],
   "tags": [
     "图标",
     "渐变",
     "小尺寸"
   ],
-  "summary": "减掉次要体积线索，让小图标保留清楚的主轮廓。",
+  "summary": "减掉次要体积线索，让小图标保留清楚的主轮廓。Musify 用倾斜的八分音符表达音乐，只在符尾加入像素阶梯。",
   "definition": "原帖从 AI 生成图标出发，建议减少不必要的高光、阴影和纹理，用更简单的色阶建立主体。",
   "when": "适合小尺寸 App 图标和被过度渲染的图形。",
   "steps": [
@@ -45,6 +59,5 @@
   "promptSourceUrls": [
     "https://x.com/Kubai087/status/2115674219602452656"
   ],
-  "episode": null,
-  "secondarySources": []
+  "episode": null
 }

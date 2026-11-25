@@ -1,6 +1,6 @@
 # Vibe Design
 
-> 给用户与 AI 的静态设计知识库。42 条笔记，选题来自 45 篇公开帖子。
+> 给用户与 AI 的静态设计知识库。44 条笔记，选题来自 49 篇公开帖子。
 
 ## 阅读约定
 - 正文是本站解释，非原帖逐字摘录。
@@ -51,7 +51,7 @@
 - [上手引导的实时预览 / Live onboarding preview](https://vibe-design.carefulgardenia8.chatgpt.site/entries/onboarding-preview/index.md): 用户一选，预览就反映选择对产品的实际影响。
 - [动态便当布局 / Animated Bento grid](https://vibe-design.carefulgardenia8.chatgpt.site/entries/bento-grid/index.md): 让每个格子说明一个真实功能，并用大小表达优先级。
 - [功能图标的状态 / Icon states](https://vibe-design.carefulgardenia8.chatgpt.site/entries/icon-states/index.md): 用成组图形和明确名称表达开启、关闭、展开与禁用。
-- [图标的体积与简化 / Icon simplification](https://vibe-design.carefulgardenia8.chatgpt.site/entries/icon-simplification/index.md): 减掉次要体积线索，让小图标保留清楚的主轮廓。
+- [图标的体积与简化 / Icon simplification](https://vibe-design.carefulgardenia8.chatgpt.site/entries/icon-simplification/index.md): 减掉次要体积线索，让小图标保留清楚的主轮廓。Musify 用倾斜的八分音符表达音乐，只在符尾加入像素阶梯。
 - [玻璃材质的回退 / Glass effect fallback](https://vibe-design.carefulgardenia8.chatgpt.site/entries/glass-fallback/index.md): 先让控件在基础样式中可读，再按能力增加材质效果。
 - [半调纹理 / Halftone texture](https://vibe-design.carefulgardenia8.chatgpt.site/entries/graphic-halftone/index.md): 用有限的点阵密度表达影调，呈现印刷式颗粒。
 - [选择控件的取舍 / Choice controls](https://vibe-design.carefulgardenia8.chatgpt.site/entries/choice-controls/index.md): 先看选择何时生效，再看它是设置一个值，还是执行一个动作。
@@ -59,3 +59,5 @@
 - [视差卡片 / Parallax card](https://vibe-design.carefulgardenia8.chatgpt.site/entries/parallax-card/index.md): 前景与背景随观看角度产生不同位移，一张平面卡片也能显出纵深。
 - [空状态 / Empty states](https://vibe-design.carefulgardenia8.chatgpt.site/entries/empty-states/index.md): 内容区空着时，告诉用户为什么是空的，以及现在能做什么。
 - [移动网页适配 / Mobile web adaptation](https://vibe-design.carefulgardenia8.chatgpt.site/entries/mobile-web-adaptation/index.md): 用手机点按、滚动和打开弹窗，检查桌面布局缩窄后容易漏掉的交互。
+- [程序化点阵加载 / Procedural dot-grid loading](https://vibe-design.carefulgardenia8.chatgpt.site/entries/dot-grid-loading/index.md): 在成图的位置先显示一片起伏的点阵，图片准备好后从同一区域显现。
+- [模糊色块渐变 / Blurred color gradients](https://vibe-design.carefulgardenia8.chatgpt.site/entries/blurred-color-gradient/index.md): 把不同颜色放在独立图层上，模糊交界，就能分别控制每一片颜色的位置和范围。

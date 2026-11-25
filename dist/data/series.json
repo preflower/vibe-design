@@ -499,6 +499,26 @@
       "entries": [
         "mobile-web-adaptation"
       ]
+    },
+    {
+      "number": "024",
+      "title": "程序化点阵加载",
+      "source": {
+        "id": "2125220063301271808",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 024：程序化点阵加载",
+        "published": "2026-11-24",
+        "url": "https://x.com/Kubai087/status/2125220063301271808",
+        "retrievedAt": "2026-11-25",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2125220063301271808",
+        "note": "文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。",
+        "episode": 24
+      },
+      "entries": [
+        "dot-grid-loading"
+      ]
     }
   ]
 }

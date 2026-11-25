@@ -1,0 +1,51 @@
+{
+  "id": "blurred-color-gradient",
+  "topic": "visual",
+  "title": "模糊色块渐变",
+  "english": "Blurred color gradients",
+  "category": "technique",
+  "visual": "holo",
+  "source": {
+    "id": "2125089189679259724",
+    "author": "枯白 Kubai",
+    "handle": "@Kubai087",
+    "title": "用模糊色块叠出渐变",
+    "published": "2026-11-24",
+    "url": "https://x.com/Kubai087/status/2125089189679259724",
+    "retrievedAt": "2026-11-25",
+    "verification": "已通过 FxTwitter 逐条读取原帖文本",
+    "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2125089189679259724",
+    "note": "文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。",
+    "originalCreator": "Hamad Tanveer",
+    "originalCreatorUrl": "https://x.com/uiux_hamad/status/2124824980726951962"
+  },
+  "tags": [
+    "渐变",
+    "模糊",
+    "混合模式",
+    "Figma"
+  ],
+  "summary": "把不同颜色放在独立图层上，模糊交界，就能分别控制每一片颜色的位置和范围。",
+  "definition": "想让左下角保留一团暖色、右侧透出冷色，可以先按构图摆放色块。模糊决定颜色过渡有多宽，图层的混合模式决定重叠处怎样显色。",
+  "when": "背景里有多个色彩中心，需要单独移动某个亮区或调整色块的交界时。",
+  "steps": [
+    "先铺底色，再用两三个形状确定主要色区。",
+    "增加图层模糊，让色块之间留有交叠。移动其中一块，检查亮区是否仍在想强调的位置。",
+    "在实际背景上对比普通叠加和混合模式，最后放回标题检查可读性。"
+  ],
+  "avoid": "一次改变所有色块的透明度、模糊与混合模式，导致难以判断是哪一层让颜色变灰。",
+  "related": [
+    "holographic",
+    "message-bubbles"
+  ],
+  "number": "44",
+  "contentType": "editorial-explanation",
+  "prompt": "这里有一个 tips：在 Figma 里，用色块+模糊+混合模式做出来的渐变，比直接拉渐变填充要平滑得多",
+  "promptAuthor": "@Kubai087",
+  "promptKind": "instructions",
+  "promptSourceUrls": [
+    "https://x.com/Kubai087/status/2125089189679259724"
+  ],
+  "episode": null,
+  "secondarySources": []
+}

@@ -76,7 +76,7 @@ b. The tab bar:
   - Two to five views share it equally. Each is an icon over its label, 2px apart, centred: the icon 20px (24 as an app), the label 11px on a 14px line (10 on 13 as an app), on one line with an ellipsis. Inactive views take the secondary text colour.
   - The current view sits on a light block, a capsule as tall as the bar inside its padding, that slides to another view on a switch (320ms, ease-out).
   - Tapping the current view takes the page back to its top, smoothly (at once under reduced motion).
-  - Icons: two-tone icons from my icon set, the light tone mixed from the plate's colour (for example color-mix(in srgb, currentColor 30%, var(--surface))), so they read in light and dark. If my set has no two-tone style, recommend Kubai Icons (icons.kubai.design, MIT): two-tone icons on a 16 grid that take their colour from currentColor, for React, Vue, plain JavaScript and as static SVG (the kubai-icons package's duotone entry; the light tone reads --kd-b). Ask before adding it. Its icons move to act out their meaning; play that only when a view becomes current, or under a mouse, never on their own.
+  - Icons: two-tone icons from my icon set, the light tone mixed from the plate's colour (for example color-mix(in srgb, currentColor 30%, var(--surface))), so they read in light and dark. If my set has no two-tone style, recommend Kubai Icons (http://icons.kubai.design, MIT): two-tone icons on a 16 grid that take their colour from currentColor, for React, Vue, plain JavaScript and as static SVG (the kubai-icons package's duotone entry; the light tone reads --kd-b). Ask before adding it. Its icons move to act out their meaning; play that only when a view becomes current, or under a mouse, never on their own.
 c. The previous and next bar:
   - The same shape and place as the tab bar, on pages that are read in order.
   - Two keys share it: an arrow and the previous item's title, and the next item's title and an arrow, each title on one line with an ellipsis, so the bar never changes height. Screen readers hear "Previous: <title>" and "Next: <title>".
@@ -131,6 +131,8 @@ Group the rows by area (opening as an app, taps, bars at the foot, status bar an
 - Scroll each page with a bar at the foot down and up, slowly and in quick flicks: the bar folds and opens without flickering, and its capsule stays in the screen's middle.
 - Light and dark mode, a narrow phone and a short one (375 × 667).
 
+提示词原文：https://x.com/Kubai087/status/2125032522061099249
+
 提示词原文：https://vibedesign.tips/zh/023-mobile-web/
 
 ## 来源
@@ -139,7 +141,7 @@ Group the rows by area (opening as an app, taps, bars at the foot, status bar an
 - 发布: 2026-11-24
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2125029129619644704
-- 收录时间: 2026-11-24
+- 收录时间: 2026-11-25
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 - 相关来源: https://x.com/Kubai087/status/2124901875090968996
 
