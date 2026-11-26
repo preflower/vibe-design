@@ -19,7 +19,7 @@ const tasks = [
     'progressive-disclosure','wiki-navigation'
   ] },
   { id:'controls', label:'设计组件与反馈', hint:'选用控件，处理等待、成功和失败', notes:[
-    'semantic-components','choice-controls','overlay-choice','cascade-safe-zone','progressive-disclosure',
+    'semantic-components','choice-controls','overlay-choice','hover-timing','cascade-safe-zone','progressive-disclosure',
     'dot-grid-loading','empty-states','loading-states','optimistic-ui','toast','notification','onboarding-preview','drag-feedback','icon-states'
   ] },
   { id:'animate', label:'编排界面动效', hint:'找按压、展开、退场和滚动的参考', notes:[

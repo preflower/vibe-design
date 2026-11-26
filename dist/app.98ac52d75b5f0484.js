@@ -1,4 +1,4 @@
-import searchIndex from './search-index.607952486fa29d31.js';
+import searchIndex from './search-index.e693b8a8e9e7bba9.js';
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 let toastTimer;

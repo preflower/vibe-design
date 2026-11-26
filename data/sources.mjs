@@ -30,6 +30,8 @@ export const sources = {
   demoCursor: post("2124511000015859990", "2026-11-22", "演示切换时用光标引导视线", {retrievedAt:"2026-11-23"}),
   demoVideo: post("2124440619120759238", "2026-11-22", "Vibe Design Tips 发布演示", {retrievedAt:"2026-11-23"}),
   menuPractice: post("2124467225503645764", "2026-11-22", "Leyang 的子菜单斜向移动案例", {retrievedAt:"2026-11-23",originalCreator:"Leyang",originalCreatorUrl:"https://x.com/quanruzhuoxiu/status/2124466296939245649"}),
+  s025: post("2125741330328391991", "2026-11-26", "999 个小技巧 · 025：悬停延时", {episode:25, retrievedAt:"2026-11-26"}),
+  opticalButton: post("2125461223072485874", "2026-11-25", "用模糊检查按钮内容的视觉中心", {retrievedAt:"2026-11-26",originalCreator:"Yuki Masaki",originalCreatorUrl:"https://x.com/_youmaro/status/2125459492406186305"}),
   s024: post("2125220063301271808", "2026-11-24", "999 个小技巧 · 024：程序化点阵加载", {episode:24, retrievedAt:"2026-11-25"}),
   blurGradient: post("2125089189679259724", "2026-11-24", "用模糊色块叠出渐变", {retrievedAt:"2026-11-25",originalCreator:"Hamad Tanveer",originalCreatorUrl:"https://x.com/uiux_hamad/status/2124824980726951962"}),
   folderMorph: post("2125258824445743576", "2026-11-24", "从文件夹图标的首尾帧开始", {retrievedAt:"2026-11-25"}),
@@ -85,6 +87,7 @@ export const series = [
   { number: "022", title: "空状态的三种画法", source: sources.s022, entries: ["empty-states"] },
   { number: "023", title: "移动网页适配", source: sources.s023, entries: ["mobile-web-adaptation"] },
   { number: "024", title: "程序化点阵加载", source: sources.s024, entries: ["dot-grid-loading"] },
+  { number: "025", title: "悬停延时", source: sources.s025, entries: ["hover-timing"] },
 ];
 
 export const coverage = {

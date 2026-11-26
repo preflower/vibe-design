@@ -1,6 +1,6 @@
 # Vibe Design
 
-> 给用户与 AI 的静态设计知识库。44 条笔记，选题来自 49 篇公开帖子。
+> 给用户与 AI 的静态设计知识库。45 条笔记，选题来自 51 篇公开帖子。
 
 ## 阅读约定
 - 正文是本站解释，非原帖逐字摘录。
@@ -61,3 +61,4 @@
 - [移动网页适配 / Mobile web adaptation](https://vibe-design.carefulgardenia8.chatgpt.site/entries/mobile-web-adaptation/index.md): 用手机点按、滚动和打开弹窗，检查桌面布局缩窄后容易漏掉的交互。
 - [程序化点阵加载 / Procedural dot-grid loading](https://vibe-design.carefulgardenia8.chatgpt.site/entries/dot-grid-loading/index.md): 在成图的位置先显示一片起伏的点阵，图片准备好后从同一区域显现。
 - [模糊色块渐变 / Blurred color gradients](https://vibe-design.carefulgardenia8.chatgpt.site/entries/blurred-color-gradient/index.md): 把不同颜色放在独立图层上，模糊交界，就能分别控制每一片颜色的位置和范围。
+- [悬停延时 / Hover timing](https://vibe-design.carefulgardenia8.chatgpt.site/entries/hover-timing/index.md): 光标路过时稍等，用户开始逐个查看时立即切换，移向浮层时给手留一点余地。

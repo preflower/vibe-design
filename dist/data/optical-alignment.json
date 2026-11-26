@@ -19,13 +19,29 @@
     "indexUrl": "https://tech.sinsc.com/items/p1tq0w6e3h4r08jyc165uzqo4",
     "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F%2DsLAAIAAAATMjEyMjU0NDI0NzQ5NjkzNzc2NggAAwAAAAIAAA"
   },
+  "secondarySources": [
+    {
+      "id": "2125461223072485874",
+      "author": "枯白 Kubai",
+      "handle": "@Kubai087",
+      "title": "用模糊检查按钮内容的视觉中心",
+      "published": "2026-11-25",
+      "url": "https://x.com/Kubai087/status/2125461223072485874",
+      "retrievedAt": "2026-11-26",
+      "verification": "已通过 FxTwitter 逐条读取原帖文本",
+      "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2125461223072485874",
+      "note": "文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。",
+      "originalCreator": "Yuki Masaki",
+      "originalCreatorUrl": "https://x.com/_youmaro/status/2125459492406186305"
+    }
+  ],
   "tags": [
     "图标",
     "视觉重心",
     "对齐"
   ],
   "summary": "元素的几何中心与看起来的中心有时不在同一处。",
-  "definition": "尖角、不对称轮廓和字形的视觉重量会偏离边界框中心。原帖推荐观察模糊后的形状，抓住较大的明暗区域再微调。",
+  "definition": "尖角、不对称轮廓和字形的视觉重量会偏离边界框中心。原帖推荐观察模糊后的形状，抓住较大的明暗区域再微调。Yuki Masaki 的演示把按钮内的图标和文字模糊成一团，再比较它与左右圆弧之间的空隙，据此微调内边距或内容位置。",
   "when": "适合三角播放图标、文字与图标并排以及不规则品牌标志。",
   "steps": [
     "先用几何对齐建立基线。",
@@ -43,6 +59,5 @@
   "promptAuthor": "vibe-design",
   "promptKind": "editorial",
   "promptSourceUrls": [],
-  "episode": null,
-  "secondarySources": []
+  "episode": null
 }

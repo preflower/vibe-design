@@ -35,7 +35,7 @@ ID: skeuomorphism
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2118582684008251830
 - 案例原作者: Levi Kline (@levibkline)
 - 案例原帖: https://x.com/levibkline/status/2118371924594348505
-- 收录时间: 2026-11-25
+- 收录时间: 2026-11-26
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。

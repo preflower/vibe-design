@@ -3,7 +3,7 @@
   "version": 1,
   "name": "Vibe Design",
   "language": "zh-CN",
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "editorialPolicy": "解释由本站编写，提示词按条保留作者与出处。",
   "entries": [
     {
@@ -1678,13 +1678,29 @@
         "indexUrl": "https://tech.sinsc.com/items/p1tq0w6e3h4r08jyc165uzqo4",
         "discoveryUrl": "https://teapawt.org/Kubai087?cursor=DAAHCgABHXX4BJo%5F%5F%2DsLAAIAAAATMjEyMjU0NDI0NzQ5NjkzNzc2NggAAwAAAAIAAA"
       },
+      "secondarySources": [
+        {
+          "id": "2125461223072485874",
+          "author": "枯白 Kubai",
+          "handle": "@Kubai087",
+          "title": "用模糊检查按钮内容的视觉中心",
+          "published": "2026-11-25",
+          "url": "https://x.com/Kubai087/status/2125461223072485874",
+          "retrievedAt": "2026-11-26",
+          "verification": "已通过 FxTwitter 逐条读取原帖文本",
+          "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2125461223072485874",
+          "note": "文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。",
+          "originalCreator": "Yuki Masaki",
+          "originalCreatorUrl": "https://x.com/_youmaro/status/2125459492406186305"
+        }
+      ],
       "tags": [
         "图标",
         "视觉重心",
         "对齐"
       ],
       "summary": "元素的几何中心与看起来的中心有时不在同一处。",
-      "definition": "尖角、不对称轮廓和字形的视觉重量会偏离边界框中心。原帖推荐观察模糊后的形状，抓住较大的明暗区域再微调。",
+      "definition": "尖角、不对称轮廓和字形的视觉重量会偏离边界框中心。原帖推荐观察模糊后的形状，抓住较大的明暗区域再微调。Yuki Masaki 的演示把按钮内的图标和文字模糊成一团，再比较它与左右圆弧之间的空隙，据此微调内边距或内容位置。",
       "when": "适合三角播放图标、文字与图标并排以及不规则品牌标志。",
       "steps": [
         "先用几何对齐建立基线。",
@@ -1702,8 +1718,7 @@
       "promptAuthor": "vibe-design",
       "promptKind": "editorial",
       "promptSourceUrls": [],
-      "episode": null,
-      "secondarySources": []
+      "episode": null
     },
     {
       "id": "onboarding-preview",
@@ -2406,6 +2421,59 @@
         "https://x.com/Kubai087/status/2125089189679259724"
       ],
       "episode": null,
+      "secondarySources": []
+    },
+    {
+      "id": "hover-timing",
+      "topic": "components",
+      "title": "悬停延时",
+      "english": "Hover timing",
+      "category": "technique",
+      "visual": "cascade",
+      "source": {
+        "id": "2125741330328391991",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 025：悬停延时",
+        "published": "2026-11-26",
+        "url": "https://x.com/Kubai087/status/2125741330328391991",
+        "retrievedAt": "2026-11-26",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2125741330328391991",
+        "note": "文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。",
+        "episode": 25
+      },
+      "tags": [
+        "工具提示",
+        "悬停",
+        "延迟",
+        "浮层",
+        "工具栏"
+      ],
+      "summary": "光标路过时稍等，用户开始逐个查看时立即切换，移向浮层时给手留一点余地。",
+      "definition": "一排工具按钮若碰到就弹出提示，光标横穿时会闪过一串标签。但用户已经停下来读了第一个提示，移向相邻按钮时，再等一次就显得迟钝。可以让同组提示共享这个浏览状态。",
+      "when": "给工具栏加文字提示、给头像加资料卡，或设计需要移动指针进入的浮层时。",
+      "steps": [
+        "先横穿工具栏，再停在一个按钮上。作者示例让首次打开等待 300–500ms，一旦打开，移到同组相邻按钮就立刻换成对应提示。",
+        "按遮挡范围调整等待时间。单行解释可以较快出现，大张预览卡可从 500ms 起试，观察是否会挡住用户正要点击的内容。",
+        "把指针从触发器移向资料卡，检查两者之间的空隙。用透明区域连通路径，并在离开时保留 150–300ms 的返回时间。",
+        "另外用键盘和触屏走一遍，确保悬停中提供的信息也能通过聚焦或点按取得。"
+      ],
+      "avoid": "把同一个计时器套在所有交互上，导致同组提示反复等待，或光标还没到达浮层就关闭。",
+      "related": [
+        "cascade-safe-zone",
+        "overlay-choice",
+        "motion-easing"
+      ],
+      "number": "45",
+      "contentType": "editorial-explanation",
+      "prompt": "Review everything in my product that opens on hover, and decide for each one how long it waits before it opens, how long it stays once the pointer leaves, and what happens when the pointer moves on to the next one. Then, if I want it, change the ones I approve. This is about judgment first: diagnose and recommend, and change only what I approve.\n\nThis is a change to my product, not a demo. Work inside my code, on my stack, with my components, tokens and motion. Do not add a dependency without asking. Every value below is a default to start from.\n\nThe rule behind all of it: the larger an overlay is, the more of the page it covers and the more there is to click inside it, the longer it waits before it opens and the longer it stays when the pointer leaves. Once the person has shown they want to look, stop making them wait.\n\n0. Read the product first\n- Find everything that opens on hover: tooltips on icon buttons and on cut-off text, hover cards (people, links, mentions, tags), previews (a document or file beside a list, a link preview, an image enlarged on hover, a panel that opens from a navigation item), and menus or submenus that open on hover.\n- For each one, note: what triggers it and how close the triggers sit to each other (a toolbar, a row of avatars, a list); how big the overlay is and what it covers; whether there is anything to click inside it; how far it sits from its trigger; and how it is timed today (no delay, one fixed delay, its own timers, a library's defaults).\n- Find the shared pieces: a Tooltip, HoverCard or Popover component, the library behind them if any (Radix, Floating UI, Headless UI, MUI, Ant Design, a hand-written hook), the timers they use, and how touch and keyboard are handled.\n- Tell me in a few lines what you found before going on.\n\n1. Sort each one by size\na. Label: a tooltip. A few words, nothing to click.\n  - Opens after the pointer has rested on the trigger for 500ms. Moving to another trigger starts the wait again.\n  - Once one label is showing, moving to a neighbour shows its label at once. While the pointer is still inside the group (a toolbar, including the gaps between buttons), the label moves to the new trigger and changes its text in place: no fade out and back.\n  - Leaving the group hides it at once. For 400ms after that, the next label in the group still shows at once; after that, the 500ms wait is back.\n  - Pressing the trigger hides its label, and it does not show again until the pointer has left that trigger.\nb. Card: a hover card with buttons or links in it (Follow, Message, Open).\n  - Opens after 700ms on the trigger.\n  - Leaving the trigger or the card starts a 300ms grace time; coming back within it keeps the card open.\n  - The gap between the trigger and the card counts as the card: cover it with an invisible area as wide as the card, so crossing it never starts the grace time.\n  - While a card is open, resting on another trigger of the same kind swaps the card's content in place (see 2): the card slides to its new trigger and its content cross-fades; it does not close and open again.\n  - Escape or a click outside closes it at once.\nc. Preview: a large panel that covers part of the page (a document beside a list, a link or file preview).\n  - Opens after 900ms on the trigger.\n  - Leaving starts a 400ms grace time. The list, the panel and any gap between them all count as inside.\n  - Rows the pointer crosses quickly on its way to the panel do not count (see 2); resting on another row swaps the panel's content in place.\nd. Should not open on hover at all: anything whose main job is an action, anything that needs typing, and menus that are a choice rather than a glance. Open those on click, and say which ones these are.\nPick the kind by what the overlay is, not by what component it uses today: a \"tooltip\" with a button in it is a card.\n\n2. Reading the pointer\n- Keep the pointer's last few positions and work out its speed over the last 90ms. It is moving fast above about 0.1px per ms (10px in 100ms); below that it is slowing down or resting.\n- Waiting to open: the timer starts when the pointer enters a trigger and starts again whenever it enters another one, so a pointer passing over a row of triggers opens nothing.\n- Swapping while open: another trigger takes the open card or preview only after the pointer has been slow on it for about 60ms (about 100-150ms after it stops). Triggers crossed fast are passed over.\n- When the panel sits to one side and the person may move at an angle across other triggers, the speed check is usually enough. If it is not, add a safe triangle from the pointer to the panel's near edge, as for cascading menus.\n- All timers run on one clock, are cancelled when the pointer moves on, and are cleared when the component unmounts. Only one overlay of each kind is open at a time.\n\n3. Rules for every one\n- Motion: a label fades in over about 140ms and out over 60ms; a card fades in with a 4px drop over about 200ms and out over 120ms; a preview fades in with an 8px slide over about 250ms and out over 140ms. Swaps in place cross-fade over about 200ms. Closing is always faster than opening.\n- Nothing around the trigger moves when an overlay opens or closes.\n- Keyboard: focus on a trigger shows its label at once; a card or preview opens on Enter or after the same delay as hover; Escape closes it and returns focus to the trigger. Labels are linked with aria-describedby.\n- Touch has no hover. Under @media (hover: none), labels show on long press or as visible text, and cards and previews open on tap. Keep :hover styles inside @media (hover: hover), so a tapped button does not stay in its hover look.\n- Reduced motion: no drop, slide or scale; fades only.\n- If the product uses a library, set its own options rather than adding timers next to it. For example: Radix Tooltip.Provider delayDuration 500 and skipDelayDuration 400; Radix HoverCard openDelay 700 and closeDelay 300; Floating UI useHover with delay { open, close } and handleClose: safePolygon() for cards and previews, and useDelayGroup for labels.\n\n4. The report\nBefore changing anything, give me one table, one row per place:\n| Place | Kind (label, card, preview, or click instead) | Today (open delay, close, gap, moving to the next) | Problem | Change | Values |\nThen list the shared changes (a hover-intent helper, the library settings) separately from the per-place ones. Ask me which rows to change, and change only those.\n\n5. Check the result\n- Sweeping the pointer across a toolbar opens no labels; resting on one opens it after 500ms; moving along the toolbar changes it at once, in place, with no flicker; leaving for more than 400ms brings the wait back.\n- A card opens after 700ms, and the pointer can cross the gap and press a button inside it. Slipping out of the card and back within 300ms keeps it open.\n- Moving at an angle from a list to its preview, across other rows, never changes the preview. Resting on another row swaps it in place, without closing.\n- Touch and keyboard reach everything that hover reaches.",
+      "promptAuthor": "@Kubai087",
+      "promptKind": "original",
+      "promptSourceUrls": [
+        "https://vibedesign.tips/zh/025-hover-timing/"
+      ],
+      "episode": "025",
       "secondarySources": []
     }
   ]

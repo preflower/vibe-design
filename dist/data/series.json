@@ -519,6 +519,26 @@
       "entries": [
         "dot-grid-loading"
       ]
+    },
+    {
+      "number": "025",
+      "title": "悬停延时",
+      "source": {
+        "id": "2125741330328391991",
+        "author": "枯白 Kubai",
+        "handle": "@Kubai087",
+        "title": "999 个小技巧 · 025：悬停延时",
+        "published": "2026-11-26",
+        "url": "https://x.com/Kubai087/status/2125741330328391991",
+        "retrievedAt": "2026-11-26",
+        "verification": "已通过 FxTwitter 逐条读取原帖文本",
+        "retrievalUrl": "https://api.fxtwitter.com/Kubai087/status/2125741330328391991",
+        "note": "文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。",
+        "episode": 25
+      },
+      "entries": [
+        "hover-timing"
+      ]
     }
   ]
 }

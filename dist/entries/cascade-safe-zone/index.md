@@ -60,7 +60,7 @@ Keep every timing value as a named constant in one place, and keep the safe-zone
 - 发布: 2026-10-26
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2114729985143677258
-- 收录时间: 2026-11-25
+- 收录时间: 2026-11-26
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 - 相关来源: https://x.com/Kubai087/status/2124467225503645764
 

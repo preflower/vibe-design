@@ -1020,5 +1020,45 @@
       "height": 4096,
       "alt": "Musify 音符图标 · 4"
     }
+  ],
+  "2125741330328391991": [
+    {
+      "type": "video",
+      "url": "https://video.twimg.com/amplify_video/2125626625404583939/vid/avc1/720x960/vr8GMODe07HvhuHW.mp4?tag=29",
+      "poster": "/assets/source-media/2125741330328391991-1.jpg",
+      "posterSource": "https://pbs.twimg.com/amplify_video_thumb/2125626625404583939/img/Afffh1L0t-Rq9M_J.jpg",
+      "sourceUrl": "https://x.com/Kubai087/status/2125741330328391991",
+      "author": "@Kubai087",
+      "authorName": "枯白 Kubai",
+      "width": 2160,
+      "height": 2880,
+      "alt": "悬停延时与同组提示切换",
+      "duration": 50.616,
+      "localVideo": "/assets/source-media/2125626625404583939.mp4",
+      "localVideoSource": "https://video.twimg.com/amplify_video/2125626625404583939/vid/avc1/720x960/vr8GMODe07HvhuHW.mp4?tag=29",
+      "localVideoWidth": 720,
+      "localVideoHeight": 960,
+      "localVideoBytes": 3137325
+    }
+  ],
+  "2125461223072485874": [
+    {
+      "type": "video",
+      "url": "https://video.twimg.com/amplify_video/2125458601506754560/vid/avc1/720x720/cxb_4JuYwsJ8JT4_.mp4?tag=14",
+      "poster": "/assets/source-media/2125459492406186305-1.jpg",
+      "posterSource": "https://pbs.twimg.com/amplify_video_thumb/2125458601506754560/img/hGdf04QZ0QMGt6mz.jpg",
+      "sourceUrl": "https://x.com/_youmaro/status/2125459492406186305",
+      "author": "@_youmaro",
+      "authorName": "Yuki Masaki",
+      "width": 1080,
+      "height": 1080,
+      "alt": "模糊按钮内容以比较视觉留白",
+      "duration": 25,
+      "localVideo": "/assets/source-media/2125458601506754560.mp4",
+      "localVideoSource": "https://video.twimg.com/amplify_video/2125458601506754560/vid/avc1/720x720/cxb_4JuYwsJ8JT4_.mp4?tag=14",
+      "localVideoWidth": 720,
+      "localVideoHeight": 720,
+      "localVideoBytes": 463059
+    }
   ]
 }
