@@ -158,7 +158,7 @@ The bubble rises from about 40px below its place and comes in the material's way
 - 发布: 2026-11-06
 - 读取方式: 已通过 FxTwitter 逐条读取原帖文本
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2118508433704169726
-- 收录时间: 2026-11-26
+- 收录时间: 2026-11-27
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 - 相关来源: https://x.com/Kubai087/status/2124870165238354274
 

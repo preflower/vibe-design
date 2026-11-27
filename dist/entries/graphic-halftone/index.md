@@ -37,7 +37,7 @@ ID: graphic-halftone
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2114946376513786234
 - 案例原作者: @simoomdesign
 - 案例原帖: https://x.com/simoomdesign/status/2114628102458663022
-- 收录时间: 2026-11-26
+- 收录时间: 2026-11-27
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。

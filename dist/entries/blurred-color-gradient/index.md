@@ -36,7 +36,7 @@ ID: blurred-color-gradient
 - 预览接口: https://api.fxtwitter.com/Kubai087/status/2125089189679259724
 - 案例原作者: Hamad Tanveer
 - 案例原帖: https://x.com/uiux_hamad/status/2124824980726951962
-- 收录时间: 2026-11-26
+- 收录时间: 2026-11-27
 - 文本来自公开帖子预览。笔记解释由本站整理；提示词和媒体分别标注作者与出处。
 
 笔记解释由本站整理。

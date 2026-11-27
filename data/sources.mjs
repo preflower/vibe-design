@@ -30,6 +30,7 @@ export const sources = {
   demoCursor: post("2124511000015859990", "2026-11-22", "演示切换时用光标引导视线", {retrievedAt:"2026-11-23"}),
   demoVideo: post("2124440619120759238", "2026-11-22", "Vibe Design Tips 发布演示", {retrievedAt:"2026-11-23"}),
   menuPractice: post("2124467225503645764", "2026-11-22", "Leyang 的子菜单斜向移动案例", {retrievedAt:"2026-11-23",originalCreator:"Leyang",originalCreatorUrl:"https://x.com/quanruzhuoxiu/status/2124466296939245649"}),
+  readingProgress: post("2126103713727058041", "2026-11-27", "底栏收起时显示阅读进度", {retrievedAt:"2026-11-27"}),
   s025: post("2125741330328391991", "2026-11-26", "999 个小技巧 · 025：悬停延时", {episode:25, retrievedAt:"2026-11-26"}),
   opticalButton: post("2125461223072485874", "2026-11-25", "用模糊检查按钮内容的视觉中心", {retrievedAt:"2026-11-26",originalCreator:"Yuki Masaki",originalCreatorUrl:"https://x.com/_youmaro/status/2125459492406186305"}),
   s024: post("2125220063301271808", "2026-11-24", "999 个小技巧 · 024：程序化点阵加载", {episode:24, retrievedAt:"2026-11-25"}),

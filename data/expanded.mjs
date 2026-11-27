@@ -638,9 +638,9 @@ export const expandedEntries = [
   },
   {
     id: 'mobile-web-adaptation', topic: 'system', title: '移动网页适配', english: 'Mobile web adaptation', category: 'guideline', visual: 'semantic',
-    source: 's023', secondarySources: ['mobileReading'], tags: ['移动端','触控','底部导航','Safari','PWA'],
+    source: 's023', secondarySources: ['mobileReading','readingProgress'], tags: ['移动端','触控','底部导航','Safari','PWA'],
     summary: '用手机点按、滚动和打开弹窗，检查桌面布局缩窄后容易漏掉的交互。',
-    definition: '桌面标签栏搬到手机后，拇指可能够不到；原本用鼠标触发的悬停效果，也可能在抬手后继续保留。Kubai 在移动阅读页里把常用导航放到底部，向下阅读时收起，向上滚动或点按时展开。',
+    definition: '桌面标签栏搬到手机后，拇指可能够不到；原本用鼠标触发的悬停效果，也可能在抬手后继续保留。Kubai 在移动阅读页里把常用导航放到底部，向下阅读时收起，向上滚动或点按时展开。在后续演示里，收起的底栏改用数字显示阅读进度，让读者在导航让出空间后仍知道自己读到了哪里。',
     when: '把已有网站适配到手机，尤其是有长文、固定导航或全屏弹窗的页面时。',
     steps: ['点按后移开手指，检查是否留下黑块或悬停态。若关闭默认点击高亮，要提供清楚的按压反馈，并保留键盘焦点。','用一只手切换常用栏目，再上下滚动。检查收起的底栏是否容易找回，最后一行内容是否被遮住。','在 Safari 真机上打开和关闭弹窗，比较屏幕边缘、浏览器工具栏与页面背景的颜色。','如果支持添加到主屏幕，再从桌面图标冷启动一次，检查启动页、导航和底部安全区。'],
     avoid: '只在桌面浏览器里缩窄窗口，就认定触控、浏览器工具栏和独立启动都已适配。',

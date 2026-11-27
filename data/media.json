@@ -1060,5 +1060,25 @@
       "localVideoHeight": 720,
       "localVideoBytes": 463059
     }
+  ],
+  "2126103713727058041": [
+    {
+      "type": "video",
+      "url": "https://video.twimg.com/amplify_video/2125998552447127552/vid/avc1/720x960/EOAMh3RXnCLTIUqA.mp4?tag=29",
+      "poster": "/assets/source-media/2126103713727058041-1.jpg",
+      "posterSource": "https://pbs.twimg.com/amplify_video_thumb/2125998552447127552/img/hJdzGmgX2cAxKeUp.jpg",
+      "sourceUrl": "https://x.com/Kubai087/status/2126103713727058041",
+      "author": "@Kubai087",
+      "authorName": "枯白 Kubai",
+      "width": 2368,
+      "height": 3158,
+      "alt": "底部工具栏收起后显示阅读进度",
+      "duration": 19.673,
+      "localVideo": "/assets/source-media/2125998552447127552.mp4",
+      "localVideoSource": "https://video.twimg.com/amplify_video/2125998552447127552/vid/avc1/720x960/EOAMh3RXnCLTIUqA.mp4?tag=29",
+      "localVideoWidth": 720,
+      "localVideoHeight": 960,
+      "localVideoBytes": 2198558
+    }
   ]
 }

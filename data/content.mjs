@@ -3,7 +3,7 @@ import { expandedEntries } from './expanded.mjs';
 import { sources, series } from './sources.mjs';
 export { sources, series, coverage } from './sources.mjs';
 
-export const updated = '2026-11-26';
+export const updated = '2026-11-27';
 export const origin = 'https://vibe-design.carefulgardenia8.chatgpt.site';
 export const topics = { all:'全部内容', layout:'布局与排版', visual:'视觉表现', components:'交互模式', feedback:'交互反馈', motion:'动效设计', system:'设计系统与规范' };
 export const topicHints = {
